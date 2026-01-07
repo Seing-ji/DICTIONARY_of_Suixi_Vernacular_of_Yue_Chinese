@@ -12,9 +12,7 @@
             --text-color: #333;
             --border-color: #ddd;
             --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            --success-color: #28a745;
-            --warning-color: #ffc107;
-            --error-color: #dc3545;
+            --audio-color: #4a6fa5;
         }
         
         * {
@@ -39,7 +37,6 @@
             border-radius: 10px;
             box-shadow: var(--shadow);
             overflow: hidden;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         header {
@@ -47,14 +44,12 @@
             color: white;
             padding: 25px 20px;
             text-align: center;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         h1 {
             font-size: 2rem;
             margin-bottom: 10px;
             font-weight: 600;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .description {
@@ -62,14 +57,12 @@
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .search-section {
             padding: 25px;
             border-bottom: 1px solid var(--border-color);
             background: #f9fafc;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .search-mode {
@@ -79,7 +72,6 @@
             overflow: hidden;
             background: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .mode-btn {
@@ -92,7 +84,6 @@
             font-size: 1.2rem;
             transition: all 0.3s;
             font-weight: 500;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .mode-btn.active {
@@ -103,7 +94,6 @@
         .search-box {
             display: flex;
             margin-bottom: 15px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         #search-input {
@@ -114,7 +104,6 @@
             font-size: 1.2rem;
             outline: none;
             transition: border-color 0.3s;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         #search-input:focus {
@@ -131,7 +120,6 @@
             transition: background 0.3s;
             font-size: 1.2rem;
             font-weight: 500;
-            font-family: 'Times New Roman', 'Iansui', serif;
         }
         
         #search-button:hover {
@@ -143,7 +131,6 @@
             align-items: center;
             gap: 15px;
             margin-bottom: 15px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .exact-match-option {
@@ -165,13 +152,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .info-icon {
             color: var(--primary-color);
             font-weight: bold;
-            font-family: 'Times New Roman', 'Iansui', serif;
             font-size: 1.1rem;
         }
         
@@ -181,20 +166,92 @@
             border-radius: 5px;
             padding: 15px;
             margin-top: 15px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .config-section h3 {
             margin-bottom: 10px;
             color: #856404;
-            font-family: 'Iansui', 'Times New Roman', serif;
             font-size: 1.3rem;
+        }
+        
+        /* 音量控制样式 */
+        .volume-control {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .volume-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .volume-header h4 {
+            color: #495057;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .volume-value {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+            min-width: 40px;
+            text-align: right;
+        }
+        
+        .volume-slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .volume-icon {
+            color: var(--audio-color);
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .volume-slider {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            background: #dee2e6;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--audio-color);
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .volume-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--audio-color);
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
         
         .results-section {
             padding: 25px;
             min-height: 400px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .results-header {
@@ -204,13 +261,11 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid var(--border-color);
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .results-count {
             font-size: 1.2rem;
             color: #666;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .result-item {
@@ -221,7 +276,6 @@
             border-left: 4px solid var(--primary-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .result-item:hover {
@@ -229,14 +283,12 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        /* 统一字符显示大小 - 确保两种模式下一致 */
         .character {
             font-size: 2.5rem;
             margin-bottom: 15px;
             font-weight: bold;
             text-align: center;
             color: var(--primary-color);
-            font-family: 'Iansui', 'Times New Roman', serif;
             line-height: 1.2;
             background-color: #fff9c4;
             padding: 5px 10px;
@@ -248,12 +300,10 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 15px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .detail-item {
             margin-bottom: 10px;
-            font-family: 'Iansui', 'Times New Roman', serif;
             font-size: 1.2rem;
             display: flex;
             align-items: flex-start;
@@ -265,12 +315,10 @@
             margin-right: 8px;
             display: inline-block;
             min-width: 60px;
-            font-family: 'Iansui', 'Times New Roman', serif;
             font-size: 1.2rem;
             flex-shrink: 0;
         }
         
-        /* 统一BVZ字段样式 */
         .bvz-value {
             font-family: 'Times New Roman', 'Iansui', serif !important;
             font-size: 1.4rem;
@@ -278,24 +326,63 @@
             line-height: 1.3;
         }
         
+        /* 简洁音频按钮 */
+        .audio-container {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        
+        .audio-play-btn {
+            background: white;
+            color: var(--audio-color);
+            border: 1px solid var(--audio-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .audio-play-btn:hover {
+            background: var(--audio-color);
+            color: white;
+        }
+        
+        .audio-play-btn.playing {
+            background: var(--audio-color);
+            color: white;
+            border-color: var(--audio-color);
+        }
+        
+        .audio-play-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
         .no-results {
             text-align: center;
             padding: 60px 20px;
             color: #666;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .no-results-icon {
             font-size: 3rem;
             margin-bottom: 15px;
             opacity: 0.5;
-            font-family: 'Times New Roman', 'Iansui', serif;
         }
         
         .loading {
             text-align: center;
             padding: 60px 20px;
-            font-family: 'Iansui', 'Times New Roman', serif;
         }
         
         .spinner {
@@ -315,22 +402,11 @@
         
         .error-message {
             background: #f8d7da;
-            color: var(--error-color);
+            color: #dc3545;
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
-            border-left: 4px solid var(--error-color);
-            font-family: 'Iansui', 'Times New Roman', serif;
-        }
-        
-        .debug-info {
-            background: #e9ecef;
-            padding: 10px;
-            border-radius: 4px;
-            font-family: 'Times New Roman', 'Iansui', serif;
-            font-size: 1rem;
-            margin-top: 10px;
-            overflow-x: auto;
+            border-left: 4px solid #dc3545;
         }
         
         footer {
@@ -340,13 +416,6 @@
             color: #666;
             border-top: 1px solid var(--border-color);
             background: #f9fafc;
-            font-family: 'Iansui', 'Times New Roman', serif;
-        }
-        
-        /* 特别针对英文内容的样式 */
-        .english-text, #search-button, .info-icon, .debug-info, .no-results-icon {
-            font-family: 'Times New Roman', 'Iansui', serif !important;
-            font-size: 1.2rem;
         }
         
         @media (max-width: 768px) {
@@ -364,56 +433,14 @@
                 gap: 10px;
             }
             
-            .mode-btn, #search-input, #search-button, .search-info, .detail-item, .label {
-                font-size: 1.1rem;
-            }
-            
-            .bvz-value {
-                font-size: 1.3rem;
-            }
-            
-            .search-options {
+            .volume-header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
+                gap: 5px;
             }
             
-            h1 {
-                font-size: 1.6rem;
-            }
-            
-            .search-box {
-                flex-direction: column;
-            }
-            
-            #search-input {
-                border-radius: 5px;
-                margin-bottom: 10px;
-                font-size: 1.1rem;
-            }
-            
-            #search-button {
-                border-radius: 5px;
-                padding: 14px;
-                font-size: 1.1rem;
-            }
-            
-            .mode-btn, .search-info, .detail-item, .label {
-                font-size: 1rem;
-            }
-            
-            .character {
-                font-size: 2rem;
-            }
-            
-            .bvz-value {
-                font-size: 1.2rem;
+            .volume-value {
+                text-align: left;
             }
         }
     </style>
@@ -451,6 +478,19 @@
             <div class="config-section">
                 <h3>數據狀態</h3>
                 <div id="data-status">正在初始化...</div>
+                
+                <!-- 音量控制 -->
+                <div class="volume-control">
+                    <div class="volume-header">
+                        <h4>音量控制</h4>
+                        <div class="volume-value" id="volume-value">70%</div>
+                    </div>
+                    <div class="volume-slider-container">
+                        <div class="volume-icon">🔈</div>
+                        <input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider">
+                        <div class="volume-icon">🔊</div>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -467,10 +507,19 @@
     </div>
 
     <script>
-        // 配置部分 - 使用您的GitHub JSON URL
+        // 配置
         const CONFIG = {
             JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
-            MAX_RESULTS: 1000
+            MAX_RESULTS: 1000,
+            AUDIO_CACHE: new Map(),
+            // 预加载策略配置
+            PRELOAD_IMMEDIATE: 3,  // 立即预加载前3个结果的音频
+            PRELOAD_PRIORITY: 10,  // 高优先级预加载前10个
+            PRELOAD_BACKGROUND: 20, // 后台预加载接下来20个
+            // 音量配置（默认70%，适合大多数发音音频）
+            DEFAULT_VOLUME: 0.7,
+            MIN_VOLUME: 0.0,
+            MAX_VOLUME: 1.0
         };
         
         // 全局变量
@@ -478,6 +527,11 @@
         let currentMode = 'character';
         let exactMatch = false;
         let searchTimeout = null;
+        let currentAudio = null;
+        let currentPlayingButton = null;
+        let currentResults = []; // 当前搜索结果
+        let audioPreloadController = null; // 用于取消预加载
+        let currentVolume = CONFIG.DEFAULT_VOLUME; // 当前音量（0.0-1.0）
         
         // DOM元素
         const searchInput = document.getElementById('search-input');
@@ -487,18 +541,22 @@
         const searchHint = document.getElementById('search-hint');
         const dataStatus = document.getElementById('data-status');
         const exactMatchCheckbox = document.getElementById('exact-match');
+        const volumeSlider = document.getElementById('volume-slider');
+        const volumeValue = document.getElementById('volume-value');
         
-        // 初始化函数
+        // 初始化
         async function init() {
             dataStatus.textContent = '正在初始化...';
             
             try {
                 await loadDictionaryData();
-                
-                // 添加事件监听器
                 setupEventListeners();
+                updateSearchHint();
                 
-                // 聚焦搜索框
+                // 设置初始音量
+                setVolume(CONFIG.DEFAULT_VOLUME);
+                updateVolumeDisplay();
+                
                 searchInput.focus();
                 
             } catch (error) {
@@ -509,7 +567,6 @@
         
         // 设置事件监听器
         function setupEventListeners() {
-            // 模式切换
             modeButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     modeButtons.forEach(btn => btn.classList.remove('active'));
@@ -522,59 +579,303 @@
                 });
             });
             
-            // 精确匹配复选框
             exactMatchCheckbox.addEventListener('change', function() {
                 exactMatch = this.checked;
                 updateSearchHint();
-                // 复选框改变时立即搜索
                 const query = searchInput.value.trim();
-                if (query) {
-                    handleSearch();
-                }
+                if (query) performSearch(query);
             });
             
-            // 搜索功能 - 使用防抖
             searchInput.addEventListener('input', function() {
-                // 清除之前的定时器
-                if (searchTimeout) {
-                    clearTimeout(searchTimeout);
-                }
+                if (searchTimeout) clearTimeout(searchTimeout);
                 
                 const query = this.value.trim();
-                
-                // 如果输入为空，显示提示信息
                 if (!query) {
                     showMessage('請輸入內容進行查詢');
                     return;
                 }
                 
-                // 设置新的定时器，延迟300毫秒执行搜索
-                searchTimeout = setTimeout(() => {
-                    performSearch(query);
-                }, 300);
+                searchTimeout = setTimeout(() => performSearch(query), 300);
             });
             
-            searchButton.addEventListener('click', function() {
+            searchButton.addEventListener('click', () => {
                 const query = searchInput.value.trim();
-                if (query) {
-                    performSearch(query);
+                if (query) performSearch(query);
+            });
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) performSearch(query);
                 }
             });
             
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const query = this.value.trim();
-                    if (query) {
-                        performSearch(query);
+            // 音量滑块事件
+            volumeSlider.addEventListener('input', handleVolumeChange);
+            volumeSlider.addEventListener('change', handleVolumeChange);
+            
+            // 添加键盘快捷键（可选功能）
+            document.addEventListener('keydown', handleKeyboardShortcuts);
+        }
+        
+        // 处理音量变化
+        function handleVolumeChange() {
+            const sliderValue = parseInt(volumeSlider.value);
+            const volume = sliderValue / 100; // 转换为0.0-1.0
+            
+            setVolume(volume);
+            updateVolumeDisplay();
+            
+            // 如果当前有音频正在播放，立即应用新音量
+            if (currentAudio) {
+                currentAudio.volume = currentVolume;
+            }
+        }
+        
+        // 设置音量
+        function setVolume(volume) {
+            // 确保音量在合理范围内
+            currentVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, volume));
+            
+            // 保存到localStorage，下次打开时记住设置
+            try {
+                localStorage.setItem('dictionary_volume', currentVolume.toString());
+            } catch (e) {
+                console.log('无法保存音量设置到本地存储');
+            }
+        }
+        
+        // 更新音量显示
+        function updateVolumeDisplay() {
+            const percentage = Math.round(currentVolume * 100);
+            volumeValue.textContent = `${percentage}%`;
+            volumeSlider.value = percentage;
+        }
+        
+        // 从localStorage加载音量设置
+        function loadVolumeFromStorage() {
+            try {
+                const savedVolume = localStorage.getItem('dictionary_volume');
+                if (savedVolume !== null) {
+                    const volume = parseFloat(savedVolume);
+                    if (!isNaN(volume) && volume >= 0 && volume <= 1) {
+                        setVolume(volume);
+                        return true;
                     }
+                }
+            } catch (e) {
+                console.log('无法从本地存储加载音量设置');
+            }
+            return false;
+        }
+        
+        // 键盘快捷键（可选功能）
+        function handleKeyboardShortcuts(event) {
+            // 只在没有聚焦在输入框时生效
+            if (document.activeElement === searchInput) return;
+            
+            switch(event.key) {
+                case '+':
+                case '=':
+                    // 增加音量
+                    event.preventDefault();
+                    adjustVolume(0.1);
+                    break;
+                case '-':
+                case '_':
+                    // 降低音量
+                    event.preventDefault();
+                    adjustVolume(-0.1);
+                    break;
+                case '0':
+                    // 静音/恢复
+                    event.preventDefault();
+                    toggleMute();
+                    break;
+            }
+        }
+        
+        // 调整音量（增量）
+        function adjustVolume(delta) {
+            let newVolume = currentVolume + delta;
+            newVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, newVolume));
+            
+            setVolume(newVolume);
+            updateVolumeDisplay();
+            
+            // 如果当前有音频正在播放，立即应用新音量
+            if (currentAudio) {
+                currentAudio.volume = currentVolume;
+            }
+        }
+        
+        // 切换静音
+        function toggleMute() {
+            if (currentVolume > 0) {
+                // 保存当前音量然后静音
+                localStorage.setItem('dictionary_last_volume', currentVolume.toString());
+                setVolume(0);
+            } else {
+                // 恢复上次的音量
+                try {
+                    const lastVolume = localStorage.getItem('dictionary_last_volume');
+                    const volume = lastVolume ? parseFloat(lastVolume) : CONFIG.DEFAULT_VOLUME;
+                    setVolume(volume);
+                } catch (e) {
+                    setVolume(CONFIG.DEFAULT_VOLUME);
+                }
+            }
+            
+            updateVolumeDisplay();
+            
+            // 如果当前有音频正在播放，立即应用新音量
+            if (currentAudio) {
+                currentAudio.volume = currentVolume;
+            }
+        }
+        
+        // 执行搜索
+        async function performSearch(query) {
+            // 取消之前的预加载
+            if (audioPreloadController) {
+                audioPreloadController.abort();
+                audioPreloadController = null;
+            }
+            
+            // 执行搜索
+            const results = searchDictionary(query);
+            currentResults = results; // 保存当前结果
+            
+            // 立即显示结果
+            displayResults(results, query);
+            
+            // 启动智能预加载
+            startSmartPreload(results);
+        }
+        
+        // 智能预加载策略
+        function startSmartPreload(results) {
+            if (!results.length) return;
+            
+            // 创建新的AbortController用于控制预加载
+            audioPreloadController = new AbortController();
+            const signal = audioPreloadController.signal;
+            
+            // 阶段1：立即预加载前3个（用户最可能点击的）
+            const immediateUrls = getAudioUrls(results, 0, CONFIG.PRELOAD_IMMEDIATE);
+            preloadAudioBatch(immediateUrls, 'high', signal).then(() => {
+                // 阶段1完成后，启用前3个按钮
+                enableAudioButtons(0, CONFIG.PRELOAD_IMMEDIATE);
+                
+                // 阶段2：预加载前10个（高优先级）
+                const priorityUrls = getAudioUrls(results, CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
+                return preloadAudioBatch(priorityUrls, 'medium', signal);
+            }).then(() => {
+                // 阶段2完成后，启用接下来的按钮
+                enableAudioButtons(CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
+                
+                // 阶段3：后台预加载接下来的20个（低优先级）
+                const backgroundUrls = getAudioUrls(results, CONFIG.PRELOAD_PRIORITY, CONFIG.PRELOAD_PRIORITY + CONFIG.PRELOAD_BACKGROUND);
+                return preloadAudioBatch(backgroundUrls, 'low', signal);
+            }).then(() => {
+                // 阶段3完成后，启用所有按钮
+                enableAudioButtons(CONFIG.PRELOAD_PRIORITY, results.length);
+            }).catch(err => {
+                if (err.name !== 'AbortError') {
+                    console.warn('预加载部分失败:', err);
                 }
             });
         }
         
-        // 执行搜索
-        function performSearch(query) {
-            const results = searchDictionary(query);
-            displayResults(results, query);
+        // 获取音频URL列表
+        function getAudioUrls(results, start, end) {
+            const urls = [];
+            const limit = Math.min(end, results.length);
+            
+            for (let i = start; i < limit; i++) {
+                const item = results[i];
+                if (item.audioUrl && !CONFIG.AUDIO_CACHE.has(item.audioUrl)) {
+                    urls.push(item.audioUrl);
+                }
+            }
+            return urls;
+        }
+        
+        // 批量预加载音频
+        async function preloadAudioBatch(urls, priority = 'medium', signal) {
+            if (!urls.length) return;
+            
+            console.log(`开始${priority}优先级预加载 ${urls.length} 个音频`);
+            
+            // 根据优先级调整并发数
+            let concurrency = 1;
+            if (priority === 'high') concurrency = 3;
+            else if (priority === 'medium') concurrency = 2;
+            else concurrency = 1;
+            
+            // 分批预加载
+            for (let i = 0; i < urls.length; i += concurrency) {
+                if (signal.aborted) break;
+                
+                const batch = urls.slice(i, i + concurrency);
+                const promises = batch.map(url => preloadSingleAudio(url, signal));
+                
+                await Promise.all(promises);
+                
+                // 批次间延迟，避免阻塞
+                if (i + concurrency < urls.length && !signal.aborted) {
+                    await new Promise(resolve => setTimeout(resolve, priority === 'high' ? 0 : 50));
+                }
+            }
+        }
+        
+        // 预加载单个音频
+        async function preloadSingleAudio(audioUrl, signal) {
+            // 检查是否已在缓存中
+            if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
+                return CONFIG.AUDIO_CACHE.get(audioUrl);
+            }
+            
+            try {
+                // 使用AbortSignal允许取消
+                const response = await fetch(audioUrl, { signal });
+                if (!response.ok) return null;
+                
+                const blob = await response.blob();
+                
+                // 修复MIME类型
+                let audioBlob = blob;
+                if (!blob.type.startsWith('audio/')) {
+                    audioBlob = new Blob([blob], { type: 'audio/mpeg' });
+                }
+                
+                const blobUrl = URL.createObjectURL(audioBlob);
+                CONFIG.AUDIO_CACHE.set(audioUrl, blobUrl);
+                return blobUrl;
+                
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    console.warn('音频预加载失败:', audioUrl, error);
+                }
+                return null;
+            }
+        }
+        
+        // 启用音频按钮
+        function enableAudioButtons(start, end) {
+            const buttons = resultsContainer.querySelectorAll('.audio-play-btn');
+            const limit = Math.min(end, buttons.length);
+            
+            for (let i = start; i < limit; i++) {
+                const button = buttons[i];
+                if (button.disabled) {
+                    const audioUrl = decodeURIComponent(button.getAttribute('data-audio-url'));
+                    if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
+                        button.disabled = false;
+                        button.title = '點擊播放發音';
+                    }
+                }
+            }
         }
         
         // 加载字典数据
@@ -583,33 +884,22 @@
             dataStatus.textContent = '正在從GitHub加載數據...';
             
             try {
-                console.log('正在從以下URL加載數據:', CONFIG.JSON_URL);
-                
-                // 直接使用fetch
                 const response = await fetch(CONFIG.JSON_URL);
-                
                 if (!response.ok) {
-                    throw new Error(`HTTP錯誤! 狀態: ${response.status} - ${response.statusText}`);
+                    throw new Error(`HTTP錯誤! 狀態: ${response.status}`);
                 }
                 
                 const text = await response.text();
-                console.log('原始響應:', text.substring(0, 500));
-                
-                // 尝试解析JSON
-                let data;
-                try {
-                    data = JSON.parse(text);
-                } catch (parseError) {
-                    console.error('JSON解析錯誤:', parseError);
-                    throw new Error('JSON格式不正確: ' + parseError.message);
-                }
-                
-                // 处理数据格式
+                const data = JSON.parse(text);
                 dictionaryData = processData(data);
                 
+                const itemsWithAudio = dictionaryData.filter(item => item.audioUrl).length;
                 dataStatus.textContent = `數據加載成功! 共 ${dictionaryData.length} 條記錄`;
+                if (itemsWithAudio > 0) {
+                    dataStatus.textContent += ` | ${itemsWithAudio} 條記錄包含音頻`;
+                }
+                
                 showMessage('數據加載成功! 請輸入內容進行查詢');
-                console.log('成功加載數據，共', dictionaryData.length, '條記錄');
                 
             } catch (error) {
                 console.error('加載數據失敗:', error);
@@ -624,32 +914,30 @@
                 throw new Error('數據格式不正確');
             }
             
-            // 如果数据是对象而不是数组，转换为数组
-            let dataArray;
-            if (Array.isArray(data)) {
-                dataArray = data;
-            } else {
-                // 如果是对象，提取所有值组成数组
-                dataStatus.textContent = '檢測到對象格式數據，正在轉換...';
-                dataArray = Object.values(data);
-            }
+            let dataArray = Array.isArray(data) ? data : Object.values(data);
             
-            // 过滤无效数据并确保字段存在
-            const processedData = dataArray.filter(item => {
-                return item && (item.單字 || item.BVZ);
-            }).map(item => {
-                return {
-                    單字: item.單字 || '',
-                    BVZ: item.BVZ || '',
-                    Note: item.Note || item.note || ''
-                };
-            });
-            
-            console.log('處理後的數據樣例:', processedData.slice(0, 3));
-            return processedData;
+            return dataArray
+                .filter(item => item && (item.單字 || item.BVZ))
+                .map(item => {
+                    // 修复音频URL - 使用jsDelivr CDN确保可播放
+                    let audioUrl = item.audio || '';
+                    if (audioUrl && audioUrl.includes('github.com')) {
+                        // 转换为jsDelivr CDN URL
+                        audioUrl = audioUrl
+                            .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
+                            .replace('/main/', '/');
+                    }
+                    
+                    return {
+                        單字: item.單字 || '',
+                        BVZ: item.BVZ || '',
+                        Note: item.Note || item.note || '',
+                        audioUrl: audioUrl
+                    };
+                });
         }
         
-        // 更新搜索提示 - 使用英文括号
+        // 更新搜索提示
         function updateSearchHint() {
             if (currentMode === 'character') {
                 searchInput.placeholder = '請輸入要查詢的漢字(多字用空格分隔)...';
@@ -668,24 +956,9 @@
             }
         }
         
-        // 搜索处理函数
-        function handleSearch() {
-            const query = searchInput.value.trim();
-            
-            if (!query) {
-                showMessage('請輸入內容進行查詢');
-                return;
-            }
-            
-            const results = searchDictionary(query);
-            displayResults(results, query);
-        }
-        
-        // 搜索字典数据 - 优化性能
+        // 搜索字典数据
         function searchDictionary(query) {
-            if (!dictionaryData || dictionaryData.length === 0) {
-                return [];
-            }
+            if (!dictionaryData.length) return [];
             
             const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
             const results = [];
@@ -693,7 +966,7 @@
             if (currentMode === 'character') {
                 // 汉字查BVZ模式
                 if (exactMatch) {
-                    // 精确匹配模式 - 使用Set提高性能
+                    // 精确匹配：汉字完全相等
                     const termSet = new Set(searchTerms);
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
@@ -702,14 +975,14 @@
                         }
                     }
                 } else {
-                    // 模糊匹配模式 - 优化循环
+                    // 模糊匹配：汉字包含搜索词
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
                         if (item.單字) {
                             for (let j = 0; j < searchTerms.length; j++) {
                                 if (item.單字.includes(searchTerms[j])) {
                                     results.push(item);
-                                    break; // 找到一个匹配就跳出内层循环
+                                    break;
                                 }
                             }
                         }
@@ -718,7 +991,7 @@
             } else {
                 // BVZ反查汉字模式
                 if (exactMatch) {
-                    // 精确匹配模式 - 使用Set提高性能
+                    // 精确匹配：BVZ完全相等
                     const termSet = new Set(searchTerms);
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
@@ -727,14 +1000,14 @@
                         }
                     }
                 } else {
-                    // 模糊匹配模式 - 优化循环
+                    // 模糊匹配：BVZ包含搜索词
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
                         if (item.BVZ) {
                             for (let j = 0; j < searchTerms.length; j++) {
                                 if (item.BVZ.includes(searchTerms[j])) {
                                     results.push(item);
-                                    break; // 找到一个匹配就跳出内层循环
+                                    break;
                                 }
                             }
                         }
@@ -747,7 +1020,7 @@
         
         // 显示搜索结果
         function displayResults(results, query) {
-            if (results.length === 0) {
+            if (!results.length) {
                 showMessage(`沒有找到與"${query}"相關的結果`);
                 return;
             }
@@ -759,39 +1032,148 @@
                 </div>
             `;
             
-            // 使用文档片段提高性能
-            const fragment = document.createDocumentFragment();
-            const tempDiv = document.createElement('div');
-            
-            results.forEach(item => {
-                const character = item.單字 || '';
-                const bvz = item.BVZ || '';
-                const note = item.Note || '';
+            results.forEach((item, index) => {
+                const hasAudio = item.audioUrl && item.audioUrl.length > 0;
+                const audioId = `audio-${Date.now()}-${index}`;
+                const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
+                
+                // 前3个结果默认启用（会立即预加载）
+                const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
                 
                 html += `
-                    <div class="result-item">
-                        <div class="character">${character}</div>
+                    <div class="result-item" data-index="${index}">
+                        <div class="character">${item.單字}</div>
                         <div class="details">
                             <div class="detail-item">
                                 <span class="label">BVZ:</span> 
-                                <span class="bvz-value">${bvz}</span>
+                                <span class="bvz-value">${item.BVZ}</span>
+                                ${hasAudio ? `
+                                <div class="audio-container">
+                                    <button class="audio-play-btn" 
+                                            data-audio-id="${audioId}" 
+                                            data-audio-url="${encodeURIComponent(item.audioUrl)}"
+                                            title="點擊播放發音"
+                                            ${isPreloaded || isTopResult ? '' : 'disabled'}>
+                                        ▶
+                                    </button>
+                                </div>
+                                ` : ''}
                             </div>
+                            ${item.Note ? `
                             <div class="detail-item">
                                 <span class="label">注釋:</span> 
-                                <span>${note}</span>
+                                <span>${item.Note}</span>
                             </div>
+                            ` : ''}
                         </div>
                     </div>
                 `;
             });
             
-            tempDiv.innerHTML = html;
-            while (tempDiv.firstChild) {
-                fragment.appendChild(tempDiv.firstChild);
+            resultsContainer.innerHTML = html;
+            
+            // 添加音频按钮事件
+            const audioButtons = resultsContainer.querySelectorAll('.audio-play-btn');
+            audioButtons.forEach(button => {
+                button.addEventListener('click', handleAudioPlay);
+            });
+        }
+        
+        // 处理音频播放
+        async function handleAudioPlay(event) {
+            const button = event.currentTarget;
+            const audioUrl = decodeURIComponent(button.getAttribute('data-audio-url'));
+            
+            if (!audioUrl) return;
+            
+            // 如果已经在播放，停止它
+            if (currentAudio && currentPlayingButton === button) {
+                stopCurrentAudio();
+                return;
             }
             
-            resultsContainer.innerHTML = '';
-            resultsContainer.appendChild(fragment);
+            // 停止当前正在播放的音频
+            if (currentAudio) {
+                stopCurrentAudio();
+            }
+            
+            // 检查缓存
+            let audioBlobUrl = CONFIG.AUDIO_CACHE.get(audioUrl);
+            
+            if (!audioBlobUrl) {
+                // 如果不在缓存，立即下载（这种情况很少发生）
+                console.log('音频不在缓存，立即下载:', audioUrl);
+                try {
+                    const response = await fetch(audioUrl);
+                    const blob = await response.blob();
+                    audioBlobUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
+                    CONFIG.AUDIO_CACHE.set(audioUrl, audioBlobUrl);
+                } catch (error) {
+                    console.error('音频下载失败:', error);
+                    return;
+                }
+            }
+            
+            // 播放音频（应用当前音量）
+            playAudio(audioBlobUrl, button);
+        }
+        
+        // 播放音频
+        function playAudio(audioUrl, button) {
+            currentAudio = new Audio(audioUrl);
+            currentPlayingButton = button;
+            
+            // 应用当前音量设置
+            currentAudio.volume = currentVolume;
+            
+            // 更新按钮状态
+            button.textContent = '⏸';
+            button.classList.add('playing');
+            button.title = '點擊暫停';
+            
+            // 音频事件处理
+            currentAudio.addEventListener('error', (e) => {
+                console.error('音频播放错误:', currentAudio.error);
+                resetAudioButton(button);
+                currentAudio = null;
+                currentPlayingButton = null;
+            });
+            
+            currentAudio.addEventListener('ended', () => {
+                resetAudioButton(button);
+                currentAudio = null;
+                currentPlayingButton = null;
+            });
+            
+            // 开始播放
+            currentAudio.play().catch(error => {
+                console.error('播放失败:', error);
+                resetAudioButton(button);
+                currentAudio = null;
+                currentPlayingButton = null;
+            });
+        }
+        
+        // 停止当前音频
+        function stopCurrentAudio() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                
+                if (currentPlayingButton) {
+                    resetAudioButton(currentPlayingButton);
+                }
+                
+                currentAudio = null;
+                currentPlayingButton = null;
+            }
+        }
+        
+        // 重置音频按钮状态
+        function resetAudioButton(button) {
+            button.textContent = '▶';
+            button.classList.remove('playing');
+            button.title = '播放發音';
         }
         
         // 显示加载状态
@@ -819,17 +1201,23 @@
             resultsContainer.innerHTML = `
                 <div class="error-message">
                     <strong>錯誤:</strong> ${message}
-                    <div class="debug-info">
-                        <div>當前URL: ${CONFIG.JSON_URL}</div>
-                        <div>數據長度: ${dictionaryData.length}</div>
-                        <div>請檢查: 1. URL是否正確 2. JSON格式是否正確 3. 網絡連接</div>
-                        <div>如果問題持續，請嘗試刷新頁面或檢查控制台錯誤信息</div>
-                    </div>
                 </div>
             `;
         }
         
-        // 页面加载完成后初始化
+        // 清理Blob URL
+        window.addEventListener('beforeunload', () => {
+            CONFIG.AUDIO_CACHE.forEach(blobUrl => {
+                URL.revokeObjectURL(blobUrl);
+            });
+            CONFIG.AUDIO_CACHE.clear();
+            
+            if (audioPreloadController) {
+                audioPreloadController.abort();
+            }
+        });
+        
+        // 初始化
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>

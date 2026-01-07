@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel转JSON转换器</title>
+    <title>方言字典音频映射工具</title>
     <style>
+        /* ... CSS样式保持不变 ... */
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +20,7 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 10px;
@@ -43,18 +44,42 @@
             opacity: 0.9;
         }
         
-        .converter-section {
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
             padding: 25px;
+        }
+        
+        .upload-section {
+            flex: 1;
+            min-width: 350px;
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+        
+        .preview-section {
+            flex: 2;
+            min-width: 400px;
+            padding: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #4a6fa5;
+            border-bottom: 2px solid #4a6fa5;
+            padding-bottom: 8px;
         }
         
         .upload-area {
             border: 2px dashed #4a6fa5;
             border-radius: 8px;
-            padding: 40px;
+            padding: 30px;
             text-align: center;
             margin-bottom: 20px;
             background: #f8f9fa;
             transition: all 0.3s;
+            cursor: pointer;
         }
         
         .upload-area:hover {
@@ -64,6 +89,11 @@
         .upload-area.dragover {
             background: #e3f2fd;
             border-color: #2196f3;
+        }
+        
+        .upload-area h3 {
+            margin-bottom: 10px;
+            color: #4a6fa5;
         }
         
         .file-input {
@@ -85,8 +115,37 @@
             background: #6b8cbc;
         }
         
-        .preview-section {
-            margin: 20px 0;
+        .file-list {
+            margin-top: 20px;
+        }
+        
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: #f9fafc;
+        }
+        
+        .file-name {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .file-size {
+            color: #666;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .file-count {
+            color: #4a6fa5;
+            font-weight: bold;
         }
         
         .preview-table {
@@ -99,6 +158,7 @@
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+            font-size: 0.9rem;
         }
         
         .preview-table th {
@@ -118,7 +178,22 @@
             white-space: pre-wrap;
         }
         
-        .download-btn {
+        .mapping-info {
+            background: #e8f4fd;
+            border: 1px solid #b6d4fe;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .process-btn {
             background: #28a745;
             color: white;
             border: none;
@@ -126,34 +201,219 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            margin: 10px 5px;
         }
         
-        .download-btn:disabled {
+        .process-btn:disabled {
             background: #6c757d;
             cursor: not-allowed;
         }
         
-        .instructions {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
+        .download-btn {
+            background: #17a2b8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
             border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
-        .instructions h3 {
-            color: #856404;
-            margin-bottom: 10px;
+        .reset-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
+        .status-message {
             padding: 10px;
             border-radius: 5px;
             margin: 10px 0;
             display: none;
+        }
+        
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .github-section {
+            background: #f9f2f9;
+            border: 1px solid #e9d7e9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .github-section h3 {
+            color: #6f42c1;
+            margin-bottom: 10px;
+        }
+        
+        /* 未匹配字条样式 */
+        .unmatched-section {
+            margin-top: 30px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .unmatched-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .unmatched-count {
+            background: #dc3545;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .unmatched-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .unmatched-table th {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .unmatched-table td {
+            padding: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .unmatched-table tr:hover {
+            background: #fff5f5;
+        }
+        
+        .unmatched-table .index {
+            width: 40px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .unmatched-table .character {
+            font-weight: bold;
+            color: #333;
+            width: 100px;
+        }
+        
+        .unmatched-table .bvz {
+            font-family: monospace;
+            color: #4a6fa5;
+            font-weight: bold;
+            width: 150px;
+        }
+        
+        .unmatched-table .note {
+            color: #666;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .unmatched-table .status {
+            width: 100px;
+            text-align: center;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .status-matched {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-unmatched {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .unmatched-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .export-unmatched-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .export-unmatched-btn:hover {
+            background: #c82333;
+        }
+        
+        .unmatched-pagination {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        .pagination-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .pagination-btn:hover {
+            background: #5a6268;
+        }
+        
+        .pagination-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .page-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0 10px;
         }
         
         footer {
@@ -163,113 +423,341 @@
             border-top: 1px solid #ddd;
             background: #f9fafc;
         }
+        
+        .tab-container {
+            margin-top: 20px;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: #4a6fa5;
+            border-bottom-color: #4a6fa5;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .upload-section {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .unmatched-controls {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+            
+            .tab-buttons {
+                flex-wrap: wrap;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Excel转JSON转换器</h1>
-            <p class="description">专为方言字典设计的Excel到JSON转换工具</p>
+            <h1>方言字典音频映射工具</h1>
+            <p class="description">将Excel数据与音频文件结合，生成包含音频映射的JSON文件</p>
         </header>
         
-        <section class="converter-section">
-            <div class="instructions">
-                <h3>使用说明</h3>
-                <p>1. Excel文件应包含以下列：<strong>單字</strong>、<strong>BVZ</strong>、<strong>Note</strong></p>
-                <p>2. 支持 .xlsx 和 .xls 格式</p>
-                <p>3. 转换后的JSON文件可直接用于方言字典网站</p>
-            </div>
-            
-            <div class="upload-area" id="uploadArea">
-                <p>拖放Excel文件到这里，或点击选择文件</p>
-                <input type="file" id="fileInput" class="file-input" accept=".xlsx,.xls">
-                <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
-                    选择Excel文件
-                </button>
-            </div>
-            
-            <div class="error-message" id="errorMessage"></div>
-            
-            <div class="preview-section" id="previewSection" style="display: none;">
-                <h3>数据预览</h3>
-                <table class="preview-table" id="previewTable">
-                    <thead>
-                        <tr>
-                            <th>單字</th>
-                            <th>BVZ</th>
-                            <th>Note</th>
-                        </tr>
-                    </thead>
-                    <tbody id="previewBody">
-                    </tbody>
-                </table>
+        <div class="main-content">
+            <!-- 左侧：上传区域 -->
+            <div class="upload-section">
+                <h2 class="section-title">上传文件</h2>
                 
-                <h3>JSON输出</h3>
-                <div class="json-output" id="jsonOutput"></div>
+                <div class="mapping-info">
+                    <h3>映射规则说明</h3>
+                    <p>1. Excel文件必须包含 <strong>單字</strong>、<strong>BVZ</strong>、<strong>Note</strong> 列</p>
+                    <p>2. 音频文件名必须与BVZ字段精确匹配（支持.mp3、.wav、.ogg格式）</p>
+                    <p>3. 生成的JSON中将包含音频URL字段，格式为：<code>"audio": "https://github.com/用户名/仓库名/音频文件名.mp3"</code></p>
+                </div>
                 
-                <button class="download-btn" id="downloadBtn" disabled onclick="downloadJSON()">
-                    下载JSON文件
-                </button>
-                <button class="upload-btn" onclick="resetConverter()">
-                    重新选择文件
-                </button>
+                <div class="upload-area" id="excelUploadArea">
+                    <h3>上传Excel文件</h3>
+                    <p>拖放Excel文件到这里，或点击选择文件</p>
+                    <input type="file" id="excelInput" class="file-input" accept=".xlsx,.xls">
+                    <button class="upload-btn" onclick="document.getElementById('excelInput').click()">
+                        选择Excel文件
+                    </button>
+                </div>
+                
+                <div id="excelFileInfo" class="file-list"></div>
+                
+                <div class="upload-area" id="audioUploadArea">
+                    <h3>上传音频文件</h3>
+                    <p>拖放音频文件到这里，或点击选择文件</p>
+                    <input type="file" id="audioInput" class="file-input" accept=".mp3,.wav,.ogg" multiple>
+                    <button class="upload-btn" onclick="document.getElementById('audioInput').click()">
+                        选择音频文件
+                    </button>
+                </div>
+                
+                <div id="audioFileInfo" class="file-list"></div>
+                
+                <div class="github-section">
+                    <h3>GitHub仓库配置</h3>
+                    <div class="form-group">
+                        <label for="githubUsername">GitHub用户名：</label>
+                        <input type="text" id="githubUsername" placeholder="例如：Seing-ji" style="width: 100%; padding: 8px; margin: 5px 0;">
+                    </div>
+                    <div class="form-group">
+                        <label for="githubRepo">仓库名称：</label>
+                        <input type="text" id="githubRepo" placeholder="例如：DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese" style="width: 100%; padding: 8px; margin: 5px 0;">
+                    </div>
+                    <div class="form-group">
+                        <label for="audioFolder">音频文件夹路径（可选）：</label>
+                        <input type="text" id="audioFolder" placeholder="例如：audio/" style="width: 100%; padding: 8px; margin: 5px 0;">
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="process-btn" id="processBtn" onclick="processFiles()" disabled>处理文件并生成JSON</button>
+                    <button class="reset-btn" onclick="resetAll()">重置</button>
+                </div>
+                
+                <div id="statusMessage" class="status-message"></div>
             </div>
-        </section>
+            
+            <!-- 右侧：预览区域 -->
+            <div class="preview-section">
+                <h2 class="section-title">数据预览</h2>
+                
+                <div id="mappingStats" style="margin-bottom: 20px;"></div>
+                
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="preview">数据预览</button>
+                        <button class="tab-btn" data-tab="unmatched" id="unmatchedTabBtn">未匹配字条</button>
+                        <button class="tab-btn" data-tab="json">JSON输出</button>
+                    </div>
+                    
+                    <!-- 数据预览标签页 -->
+                    <div id="previewTab" class="tab-content active">
+                        <div id="previewSection">
+                            <h3>前10条数据预览</h3>
+                            <table class="preview-table" id="previewTable">
+                                <thead>
+                                    <tr>
+                                        <th>單字</th>
+                                        <th>BVZ</th>
+                                        <th>音频文件</th>
+                                        <th>音频URL</th>
+                                        <th>Note</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="previewBody">
+                                </tbody>
+                            </table>
+                            
+                            <div class="action-buttons">
+                                <button class="download-btn" id="downloadBtn" onclick="downloadJSON()" disabled>下载JSON文件</button>
+                                <button class="download-btn" id="downloadMappingBtn" onclick="downloadMappingCSV()" disabled>下载映射关系表</button>
+                            </div>
+                        </div>
+                        
+                        <div id="instructions" style="display: block;">
+                            <div class="mapping-info">
+                                <h3>使用说明</h3>
+                                <p>1. 首先上传Excel文件（必须包含BVZ列）</p>
+                                <p>2. 然后上传音频文件（文件名必须与BVZ字段匹配）</p>
+                                <p>3. 配置GitHub仓库信息（用于生成音频URL）</p>
+                                <p>4. 点击"处理文件并生成JSON"按钮</p>
+                                <p>5. 下载生成的JSON文件，可直接用于方言字典网站</p>
+                                <p><strong>注意：</strong>音频文件上传仅用于验证映射关系，实际音频文件需上传到GitHub仓库</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 未匹配字条标签页 -->
+                    <div id="unmatchedTab" class="tab-content">
+                        <div class="unmatched-section">
+                            <div class="unmatched-header">
+                                <h3>未匹配音频的字条列表</h3>
+                                <div class="unmatched-count" id="unmatchedCount">0 条</div>
+                            </div>
+                            
+                            <div id="unmatchedList">
+                                <p style="text-align: center; color: #666; padding: 40px 0;">
+                                    暂无未匹配的字条，或尚未处理数据
+                                </p>
+                            </div>
+                            
+                            <div class="unmatched-controls" id="unmatchedControls" style="display: none;">
+                                <button class="export-unmatched-btn" id="exportUnmatchedBtn" onclick="exportUnmatchedCSV()">
+                                    导出未匹配字条CSV
+                                </button>
+                                <div class="unmatched-pagination" id="unmatchedPagination">
+                                    <button class="pagination-btn" id="prevPageBtn" onclick="changeUnmatchedPage(-1)" disabled>上一页</button>
+                                    <span class="page-info" id="pageInfo">第 1 页 / 共 1 页</span>
+                                    <button class="pagination-btn" id="nextPageBtn" onclick="changeUnmatchedPage(1)" disabled>下一页</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- JSON输出标签页 -->
+                    <div id="jsonTab" class="tab-content">
+                        <h3>JSON输出</h3>
+                        <div class="json-output" id="jsonOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <footer>
-            <p>方言字典工具 - Excel转JSON转换器</p>
+            <p>方言字典音频映射工具 - 支持BVZ与音频文件的精确映射</p>
         </footer>
     </div>
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
-        let currentJSONData = null;
+        // 全局变量
+        let excelData = null;
+        let audioFiles = [];
+        let processedData = null;
+        
+        // 新增：统一存储映射统计和未匹配字条
+        let mappingInfo = {
+            total: 0,
+            matched: 0,
+            unmatched: 0,
+            unmatchedItems: []
+        };
+        
+        let currentUnmatchedPage = 1;
+        const UNMATCHED_ITEMS_PER_PAGE = 20;
         
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
-            const fileInput = document.getElementById('fileInput');
-            const uploadArea = document.getElementById('uploadArea');
+            setupDragAndDrop();
+            setupFileInputs();
+            setupTabSwitching();
+            updateProcessButton();
+        });
+        
+        // 设置拖放功能
+        function setupDragAndDrop() {
+            const excelArea = document.getElementById('excelUploadArea');
+            const audioArea = document.getElementById('audioUploadArea');
             
-            // 文件选择事件
-            fileInput.addEventListener('change', handleFileSelect);
+            // Excel区域拖放
+            setupDropZone(excelArea, 'excel');
             
-            // 拖放功能
-            uploadArea.addEventListener('dragover', function(e) {
+            // 音频区域拖放
+            setupDropZone(audioArea, 'audio');
+        }
+        
+        function setupDropZone(element, type) {
+            element.addEventListener('dragover', function(e) {
                 e.preventDefault();
-                uploadArea.classList.add('dragover');
+                element.classList.add('dragover');
             });
             
-            uploadArea.addEventListener('dragleave', function() {
-                uploadArea.classList.remove('dragover');
+            element.addEventListener('dragleave', function() {
+                element.classList.remove('dragover');
             });
             
-            uploadArea.addEventListener('drop', function(e) {
+            element.addEventListener('drop', function(e) {
                 e.preventDefault();
-                uploadArea.classList.remove('dragover');
+                element.classList.remove('dragover');
                 
                 const files = e.dataTransfer.files;
                 if (files.length > 0) {
-                    handleFile(files[0]);
+                    if (type === 'excel') {
+                        handleExcelFile(files[0]);
+                    } else if (type === 'audio') {
+                        handleAudioFiles(files);
+                    }
                 }
             });
-        });
-        
-        function handleFileSelect(e) {
-            const file = e.target.files[0];
-            if (file) {
-                handleFile(file);
-            }
         }
         
-        function handleFile(file) {
-            const errorMessage = document.getElementById('errorMessage');
-            errorMessage.style.display = 'none';
+        // 设置文件输入
+        function setupFileInputs() {
+            const excelInput = document.getElementById('excelInput');
+            const audioInput = document.getElementById('audioInput');
             
+            excelInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    handleExcelFile(e.target.files[0]);
+                }
+            });
+            
+            audioInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    handleAudioFiles(e.target.files);
+                }
+            });
+        }
+        
+        // 设置标签页切换
+        function setupTabSwitching() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的active类
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // 添加当前按钮的active类
+                    this.classList.add('active');
+                    
+                    // 隐藏所有标签内容
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // 显示对应的标签内容
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId + 'Tab').classList.add('active');
+                });
+            });
+        }
+        
+        // 处理Excel文件
+        function handleExcelFile(file) {
             // 检查文件类型
             if (!file.name.match(/\.(xlsx|xls)$/)) {
-                showError('请选择Excel文件 (.xlsx 或 .xls)');
+                showStatus('请选择Excel文件 (.xlsx 或 .xls)', 'error');
                 return;
             }
+            
+            // 显示文件信息
+            displayFileInfo('excelFileInfo', file);
             
             const reader = new FileReader();
             
@@ -286,36 +774,77 @@
                     const jsonData = XLSX.utils.sheet_to_json(worksheet);
                     
                     if (jsonData.length === 0) {
-                        showError('Excel文件中没有数据');
+                        showStatus('Excel文件中没有数据', 'error');
                         return;
                     }
                     
                     // 处理数据格式
-                    const processedData = processData(jsonData);
-                    currentJSONData = processedData;
+                    excelData = processExcelData(jsonData);
                     
-                    // 显示预览
-                    showPreview(processedData);
-                    showJSON(processedData);
+                    showStatus(`成功加载Excel数据，共 ${excelData.length} 条记录`, 'success');
                     
-                    // 启用下载按钮
-                    document.getElementById('downloadBtn').disabled = false;
+                    // 如果已有音频文件，更新映射统计
+                    if (audioFiles.length > 0) {
+                        updateMappingStats();
+                    }
+                    
+                    updateProcessButton();
                     
                 } catch (error) {
-                    showError('文件读取失败: ' + error.message);
+                    showStatus('Excel文件读取失败: ' + error.message, 'error');
                 }
             };
             
             reader.onerror = function() {
-                showError('文件读取失败');
+                showStatus('文件读取失败', 'error');
             };
             
             reader.readAsArrayBuffer(file);
         }
         
-        function processData(data) {
+        // 处理音频文件
+        function handleAudioFiles(files) {
+            // 过滤音频文件
+            const audioFileList = Array.from(files).filter(file => 
+                file.name.match(/\.(mp3|wav|ogg)$/i)
+            );
+            
+            if (audioFileList.length === 0) {
+                showStatus('请选择音频文件 (.mp3, .wav, .ogg)', 'error');
+                return;
+            }
+            
+            // 添加到音频文件列表
+            audioFileList.forEach(file => {
+                // 避免重复
+                if (!audioFiles.some(f => f.name === file.name)) {
+                    audioFiles.push(file);
+                }
+            });
+            
+            // 显示文件信息
+            displayAudioFileInfo();
+            
+            showStatus(`成功加载 ${audioFileList.length} 个音频文件`, 'success');
+            
+            // 如果已有Excel数据，更新映射统计
+            if (excelData) {
+                updateMappingStats();
+            }
+            
+            updateProcessButton();
+        }
+        
+        // 处理Excel数据格式
+        function processExcelData(data) {
             return data.map(item => {
-                const processedItem = {};
+                const processedItem = {
+                    單字: '',
+                    BVZ: '',
+                    Note: '',
+                    audioFile: '',
+                    audioURL: ''
+                };
                 
                 // 处理列名映射
                 if (item['单字'] !== undefined && item['單字'] === undefined) {
@@ -326,12 +855,16 @@
                 
                 if (item['bvz'] !== undefined && item['BVZ'] === undefined) {
                     processedItem['BVZ'] = item['bvz'] || '';
+                } else if (item['Bvz'] !== undefined && item['BVZ'] === undefined) {
+                    processedItem['BVZ'] = item['Bvz'] || '';
                 } else {
                     processedItem['BVZ'] = item['BVZ'] || '';
                 }
                 
                 if (item['note'] !== undefined && item['Note'] === undefined) {
                     processedItem['Note'] = item['note'] || '';
+                } else if (item['notes'] !== undefined && item['Note'] === undefined) {
+                    processedItem['Note'] = item['notes'] || '';
                 } else {
                     processedItem['Note'] = item['Note'] || '';
                 }
@@ -340,7 +873,7 @@
                 Object.keys(processedItem).forEach(key => {
                     if (processedItem[key] === null || processedItem[key] === undefined) {
                         processedItem[key] = '';
-                    } else {
+                    } else if (key !== 'audioFile' && key !== 'audioURL') {
                         processedItem[key] = String(processedItem[key]).trim();
                     }
                 });
@@ -349,6 +882,330 @@
             });
         }
         
+        // 显示文件信息
+        function displayFileInfo(containerId, file) {
+            const container = document.getElementById(containerId);
+            const fileSize = formatFileSize(file.size);
+            
+            container.innerHTML = `
+                <div class="file-item">
+                    <div class="file-name">${file.name}</div>
+                    <div class="file-size">${fileSize}</div>
+                </div>
+            `;
+        }
+        
+        // 显示音频文件信息
+        function displayAudioFileInfo() {
+            const container = document.getElementById('audioFileInfo');
+            
+            if (audioFiles.length === 0) {
+                container.innerHTML = '<p>未选择音频文件</p>';
+                return;
+            }
+            
+            let html = `<p class="file-count">已选择 ${audioFiles.length} 个音频文件</p>`;
+            
+            // 只显示前5个文件
+            const displayFiles = audioFiles.slice(0, 5);
+            
+            displayFiles.forEach(file => {
+                const fileSize = formatFileSize(file.size);
+                html += `
+                    <div class="file-item">
+                        <div class="file-name">${file.name}</div>
+                        <div class="file-size">${fileSize}</div>
+                    </div>
+                `;
+            });
+            
+            if (audioFiles.length > 5) {
+                html += `<p>... 以及其他 ${audioFiles.length - 5} 个文件</p>`;
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        // 更新映射统计
+        function updateMappingStats() {
+            if (!excelData) return;
+            
+            // 提取音频文件名（不含扩展名）
+            const audioFileNames = audioFiles.map(file => {
+                const name = file.name;
+                return name.substring(0, name.lastIndexOf('.'));
+            });
+            
+            // 统计匹配情况
+            mappingInfo.total = excelData.length;
+            mappingInfo.matched = 0;
+            mappingInfo.unmatched = 0;
+            
+            // 只统计有BVZ值的字条
+            excelData.forEach(item => {
+                const bvz = item.BVZ.trim();
+                if (bvz && audioFileNames.includes(bvz)) {
+                    mappingInfo.matched++;
+                } else if (bvz) {
+                    mappingInfo.unmatched++;
+                }
+            });
+            
+            displayMappingStats();
+        }
+        
+        // 显示映射统计
+        function displayMappingStats() {
+            const container = document.getElementById('mappingStats');
+            
+            container.innerHTML = `
+                <div class="mapping-info">
+                    <h3>映射统计</h3>
+                    <p>Excel数据总数: ${mappingInfo.total}</p>
+                    <p>已匹配音频: <span style="color: #28a745; font-weight: bold;">${mappingInfo.matched}</span></p>
+                    <p>未匹配音频: <span style="color: ${mappingInfo.unmatched > 0 ? '#dc3545' : '#666'}; font-weight: bold;">${mappingInfo.unmatched}</span></p>
+                    <p>匹配率: <strong>${mappingInfo.total > 0 ? ((mappingInfo.matched / mappingInfo.total) * 100).toFixed(1) : 0}%</strong></p>
+                </div>
+            `;
+            
+            // 更新未匹配标签按钮的计数
+            const unmatchedTabBtn = document.getElementById('unmatchedTabBtn');
+            if (mappingInfo.unmatched > 0) {
+                unmatchedTabBtn.innerHTML = `未匹配字条 <span style="background: #dc3545; color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.8rem; margin-left: 5px;">${mappingInfo.unmatched}</span>`;
+            } else {
+                unmatchedTabBtn.textContent = '未匹配字条';
+            }
+        }
+        
+        // 更新处理按钮状态
+        function updateProcessButton() {
+            const processBtn = document.getElementById('processBtn');
+            processBtn.disabled = !(excelData && excelData.length > 0);
+        }
+        
+        // 处理文件并生成JSON
+        function processFiles() {
+            if (!excelData || excelData.length === 0) {
+                showStatus('请先上传Excel文件', 'error');
+                return;
+            }
+            
+            const githubUsername = document.getElementById('githubUsername').value.trim();
+            const githubRepo = document.getElementById('githubRepo').value.trim();
+            const audioFolder = document.getElementById('audioFolder').value.trim();
+            
+            if (!githubUsername || !githubRepo) {
+                showStatus('请填写GitHub用户名和仓库名称', 'error');
+                return;
+            }
+            
+            // 创建音频文件名映射
+            const audioFileNames = audioFiles.map(file => {
+                const name = file.name;
+                return {
+                    fullName: name,
+                    nameWithoutExt: name.substring(0, name.lastIndexOf('.')),
+                    extension: name.substring(name.lastIndexOf('.') + 1)
+                };
+            });
+            
+            // 重置映射信息
+            mappingInfo.unmatchedItems = [];
+            
+            // 处理数据，添加音频URL
+            processedData = excelData.map(item => {
+                const processedItem = { ...item };
+                const bvz = item.BVZ.trim();
+                
+                // 查找匹配的音频文件
+                const matchedAudio = audioFileNames.find(audio => 
+                    audio.nameWithoutExt === bvz
+                );
+                
+                if (matchedAudio) {
+                    processedItem.audioFile = matchedAudio.fullName;
+                    
+                    // 构建GitHub音频URL
+                    const folderPath = audioFolder ? `${audioFolder}/` : '';
+                    processedItem.audioURL = `https://raw.githubusercontent.com/${githubUsername}/${githubRepo}/main/${folderPath}${matchedAudio.fullName}`;
+                    processedItem.matched = true;
+                } else {
+                    processedItem.audioFile = '';
+                    processedItem.audioURL = '';
+                    processedItem.matched = false;
+                    
+                    // 如果BVZ不为空，添加到未匹配列表
+                    if (bvz) {
+                        mappingInfo.unmatchedItems.push({
+                            單字: item.單字,
+                            BVZ: bvz,
+                            Note: item.Note
+                        });
+                    }
+                }
+                
+                return processedItem;
+            });
+            
+            // 更新未匹配计数
+            mappingInfo.unmatched = mappingInfo.unmatchedItems.length;
+            
+            // 显示未匹配字条
+            displayUnmatchedItems();
+            
+            // 显示预览
+            showPreview(processedData);
+            showJSON(processedData);
+            
+            // 启用下载按钮
+            document.getElementById('downloadBtn').disabled = false;
+            document.getElementById('downloadMappingBtn').disabled = false;
+            
+            // 显示数据预览标签页
+            document.getElementById('previewSection').style.display = 'block';
+            document.getElementById('instructions').style.display = 'none';
+            
+            // 更新映射统计显示
+            displayMappingStats();
+            
+            showStatus(`成功处理数据！共 ${processedData.length} 条记录，其中 ${mappingInfo.matched} 条有音频映射，${mappingInfo.unmatched} 条未匹配`, 'success');
+        }
+        
+        // 显示未匹配字条
+        function displayUnmatchedItems() {
+            const container = document.getElementById('unmatchedList');
+            const unmatchedCountElement = document.getElementById('unmatchedCount');
+            
+            // 更新计数显示
+            unmatchedCountElement.textContent = `${mappingInfo.unmatchedItems.length} 条`;
+            
+            if (mappingInfo.unmatchedItems.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #666; padding: 40px 0;">所有字条都已成功匹配音频文件！</p>';
+                document.getElementById('unmatchedControls').style.display = 'none';
+                return;
+            }
+            
+            // 计算分页
+            const totalPages = Math.ceil(mappingInfo.unmatchedItems.length / UNMATCHED_ITEMS_PER_PAGE);
+            
+            // 确保当前页码有效
+            if (currentUnmatchedPage > totalPages) {
+                currentUnmatchedPage = totalPages;
+            }
+            if (currentUnmatchedPage < 1) {
+                currentUnmatchedPage = 1;
+            }
+            
+            const startIndex = (currentUnmatchedPage - 1) * UNMATCHED_ITEMS_PER_PAGE;
+            const endIndex = Math.min(startIndex + UNMATCHED_ITEMS_PER_PAGE, mappingInfo.unmatchedItems.length);
+            const pageItems = mappingInfo.unmatchedItems.slice(startIndex, endIndex);
+            
+            // 创建表格
+            let html = `
+                <table class="unmatched-table">
+                    <thead>
+                        <tr>
+                            <th class="index">#</th>
+                            <th class="character">單字</th>
+                            <th class="bvz">BVZ</th>
+                            <th class="note">注釋</th>
+                            <th class="status">状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            pageItems.forEach((item, index) => {
+                const globalIndex = startIndex + index + 1;
+                
+                html += `
+                    <tr>
+                        <td class="index">${globalIndex}</td>
+                        <td class="character">${escapeHtml(item.單字)}</td>
+                        <td class="bvz">${escapeHtml(item.BVZ)}</td>
+                        <td class="note" title="${escapeHtml(item.Note)}">${escapeHtml(item.Note) || '无'}</td>
+                        <td class="status">
+                            <span class="status-badge status-unmatched">未匹配</span>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            html += `</tbody></table>`;
+            
+            container.innerHTML = html;
+            
+            // 更新分页控件
+            updatePaginationControls(totalPages);
+            
+            // 显示控制按钮
+            document.getElementById('unmatchedControls').style.display = 'flex';
+        }
+        
+        // 更新分页控件
+        function updatePaginationControls(totalPages) {
+            const prevBtn = document.getElementById('prevPageBtn');
+            const nextBtn = document.getElementById('nextPageBtn');
+            const pageInfo = document.getElementById('pageInfo');
+            
+            // 更新按钮状态
+            prevBtn.disabled = currentUnmatchedPage <= 1;
+            nextBtn.disabled = currentUnmatchedPage >= totalPages;
+            
+            // 更新页码信息
+            pageInfo.textContent = `第 ${currentUnmatchedPage} 页 / 共 ${totalPages} 页`;
+        }
+        
+        // 切换未匹配字条页面
+        function changeUnmatchedPage(direction) {
+            const totalPages = Math.ceil(mappingInfo.unmatchedItems.length / UNMATCHED_ITEMS_PER_PAGE);
+            const newPage = currentUnmatchedPage + direction;
+            
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentUnmatchedPage = newPage;
+                displayUnmatchedItems();
+            }
+        }
+        
+        // 导出未匹配字条CSV
+        function exportUnmatchedCSV() {
+            if (mappingInfo.unmatchedItems.length === 0) {
+                showStatus('没有未匹配的字条可导出', 'error');
+                return;
+            }
+            
+            // 创建CSV内容
+            let csvContent = "序号,單字,BVZ,Note,状态\n";
+            
+            mappingInfo.unmatchedItems.forEach((item, index) => {
+                const row = [
+                    index + 1,
+                    `"${item.單字}"`,
+                    `"${item.BVZ}"`,
+                    `"${item.Note}"`,
+                    '"未匹配音频"'
+                ].join(',');
+                
+                csvContent += row + "\n";
+            });
+            
+            const blob = new Blob(['\ufeff' + csvContent], {
+                type: 'text/csv;charset=utf-8'
+            });
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `未匹配字条_${new Date().toISOString().slice(0,10)}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showStatus(`已导出 ${mappingInfo.unmatchedItems.length} 条未匹配字条`, 'success');
+        }
+        
+        // 显示预览
         function showPreview(data) {
             const previewBody = document.getElementById('previewBody');
             previewBody.innerHTML = '';
@@ -358,54 +1215,184 @@
             
             displayData.forEach(item => {
                 const row = document.createElement('tr');
+                
+                // 检查是否有音频映射
+                const hasAudio = item.matched;
+                const audioCell = hasAudio ? 
+                    `<span style="color: #28a745;">✓ ${item.audioFile}</span>` : 
+                    `<span style="color: #dc3545;">✗ 未匹配</span>`;
+                
+                const audioURLCell = item.audioURL ? 
+                    `<span title="${item.audioURL}">${item.audioURL.substring(0, 40)}...</span>` : 
+                    '无';
+                
                 row.innerHTML = `
                     <td>${escapeHtml(item.單字)}</td>
                     <td>${escapeHtml(item.BVZ)}</td>
+                    <td>${audioCell}</td>
+                    <td>${audioURLCell}</td>
                     <td>${escapeHtml(item.Note)}</td>
                 `;
                 previewBody.appendChild(row);
             });
-            
-            // 显示预览区域
-            document.getElementById('previewSection').style.display = 'block';
         }
         
+        // 显示JSON
         function showJSON(data) {
             const jsonOutput = document.getElementById('jsonOutput');
-            jsonOutput.textContent = JSON.stringify(data, null, 2);
+            
+            // 创建只包含必要字段的JSON（不含audioFile字段）
+            const jsonData = data.map(item => {
+                return {
+                    單字: item.單字,
+                    BVZ: item.BVZ,
+                    Note: item.Note,
+                    audio: item.audioURL || ''  // 使用audio字段存储音频URL
+                };
+            });
+            
+            jsonOutput.textContent = JSON.stringify(jsonData, null, 2);
         }
         
+        // 下载JSON文件
         function downloadJSON() {
-            if (!currentJSONData) return;
+            if (!processedData) return;
             
-            const blob = new Blob([JSON.stringify(currentJSONData, null, 2)], {
+            // 创建只包含必要字段的JSON
+            const jsonData = processedData.map(item => {
+                return {
+                    單字: item.單字,
+                    BVZ: item.BVZ,
+                    Note: item.Note,
+                    audio: item.audioURL || ''  // 使用audio字段存储音频URL
+                };
+            });
+            
+            const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
                 type: 'application/json'
             });
             
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'dictionary.json';
+            a.download = 'dictionary_with_audio.json';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
+            
+            showStatus('JSON文件下载成功！', 'success');
         }
         
-        function resetConverter() {
-            document.getElementById('fileInput').value = '';
+        // 下载映射关系CSV
+        function downloadMappingCSV() {
+            if (!processedData) return;
+            
+            // 创建CSV内容
+            let csvContent = "單字,BVZ,Note,音频文件,音频URL,匹配状态\n";
+            
+            processedData.forEach(item => {
+                const hasAudio = item.matched;
+                const status = hasAudio ? "已匹配" : "未匹配";
+                
+                const row = [
+                    `"${item.單字}"`,
+                    `"${item.BVZ}"`,
+                    `"${item.Note}"`,
+                    `"${item.audioFile}"`,
+                    `"${item.audioURL}"`,
+                    `"${status}"`
+                ].join(',');
+                
+                csvContent += row + "\n";
+            });
+            
+            const blob = new Blob(['\ufeff' + csvContent], {
+                type: 'text/csv;charset=utf-8'
+            });
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'audio_mapping_report.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showStatus('映射关系表下载成功！', 'success');
+        }
+        
+        // 重置所有
+        function resetAll() {
+            excelData = null;
+            audioFiles = [];
+            processedData = null;
+            mappingInfo = {
+                total: 0,
+                matched: 0,
+                unmatched: 0,
+                unmatchedItems: []
+            };
+            currentUnmatchedPage = 1;
+            
+            // 重置UI
+            document.getElementById('excelFileInfo').innerHTML = '';
+            document.getElementById('audioFileInfo').innerHTML = '';
             document.getElementById('previewSection').style.display = 'none';
+            document.getElementById('instructions').style.display = 'block';
             document.getElementById('downloadBtn').disabled = true;
-            document.getElementById('errorMessage').style.display = 'none';
-            currentJSONData = null;
+            document.getElementById('downloadMappingBtn').disabled = true;
+            document.getElementById('mappingStats').innerHTML = '';
+            document.getElementById('githubUsername').value = '';
+            document.getElementById('githubRepo').value = '';
+            document.getElementById('audioFolder').value = '';
+            
+            // 重置未匹配字条显示
+            document.getElementById('unmatchedList').innerHTML = '<p style="text-align: center; color: #666; padding: 40px 0;">暂无未匹配的字条，或尚未处理数据</p>';
+            document.getElementById('unmatchedControls').style.display = 'none';
+            document.getElementById('unmatchedCount').textContent = '0 条';
+            
+            // 重置未匹配标签按钮
+            document.getElementById('unmatchedTabBtn').textContent = '未匹配字条';
+            
+            // 重置标签页
+            document.querySelector('[data-tab="preview"]').click();
+            
+            // 重置文件输入
+            document.getElementById('excelInput').value = '';
+            document.getElementById('audioInput').value = '';
+            
+            showStatus('已重置所有数据', 'info');
+            updateProcessButton();
         }
         
-        function showError(message) {
-            const errorMessage = document.getElementById('errorMessage');
-            errorMessage.textContent = message;
-            errorMessage.style.display = 'block';
+        // 显示状态消息
+        function showStatus(message, type) {
+            const statusElement = document.getElementById('statusMessage');
+            
+            statusElement.textContent = message;
+            statusElement.className = `status-message status-${type}`;
+            statusElement.style.display = 'block';
+            
+            // 3秒后自动隐藏
+            setTimeout(() => {
+                statusElement.style.display = 'none';
+            }, 3000);
         }
         
+        // 格式化文件大小
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        // HTML转义
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
