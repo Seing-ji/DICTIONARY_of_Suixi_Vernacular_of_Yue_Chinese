@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遂溪遂城白話音典 - 數據維護系統</title>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6b8cbc;
+            --background-color: #f5f7fa;
+            --text-color: #333;
+            --border-color: #ddd;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --error-color: #dc3545;
+            --audio-color: #17a2b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', 'Iansui', serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            font-family: 'Iansui', 'Times New Roman', serif;
+        }
+        
+        .maintenance-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .description {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 15px;
+        }
+        
+        /* 控制按钮区域 */
+        .control-panel {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .header-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: 'Times New Roman', 'Iansui', serif;
+        }
+        
+        .header-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 25px;
+            padding: 25px;
+            min-height: 600px;
+        }
+        
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* 编辑区域 - 参考词典样式 */
+        .edit-section {
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .edit-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        /* 表单样式 - 参考词典样式 */
+        .form-group {
+            margin-bottom: 18px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+            font-size: 1.05rem;
+            font-family: 'Iansui', 'Times New Roman', serif;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s;
+            font-family: 'Times New Roman', 'Iansui', serif;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+        
+        /* 汉字显示 - 参考词典 */
+        .character-display {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--primary-color);
+            margin: 15px 0;
+            background-color: #fff9c4;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #ffeaa7;
+            font-family: 'Iansui', 'Times New Roman', serif;
+        }
+        
+        /* 音频上传区域 */
+        .audio-section {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f8f9fa;
+            margin: 15px 0;
+        }
+        
+        .audio-section:hover {
+            border-color: var(--audio-color);
+        }
+        
+        .audio-section h4 {
+            color: var(--audio-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .audio-upload {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .audio-upload input[type="file"] {
+            display: none;
+        }
+        
+        .upload-btn {
+            background: var(--audio-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        
+        .upload-btn:hover {
+            background: #138496;
+        }
+        
+        .audio-preview {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .audio-preview audio {
+            width: 100%;
+        }
+        
+        /* 按钮组 - 参考词典 */
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-family: 'Times New Roman', 'Iansui', serif;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-success {
+            background: var(--success-color);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-warning {
+            background: var(--warning-color);
+            color: #212529;
+        }
+        
+        .btn-warning:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-danger {
+            background: var(--error-color);
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* 数据列表区域 - 参考词典样式 */
+        .list-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .list-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        /* 搜索栏 - 参考词典 */
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1.05rem;
+            font-family: 'Times New Roman', 'Iansui', serif;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .search-btn {
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            transition: background 0.3s;
+        }
+        
+        .search-btn:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* 数据表格 - 参考词典 */
+        .data-table-container {
+            overflow-x: auto;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+        
+        .data-table th {
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary-color);
+            font-size: 1.05rem;
+        }
+        
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+        
+        .data-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* 操作按钮 - 参考词典 */
+        .action-buttons {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .action-btn {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            font-family: 'Times New Roman', 'Iansui', serif;
+        }
+        
+        .edit-btn {
+            background: var(--warning-color);
+            color: #212529;
+            border: 1px solid #ffc107;
+        }
+        
+        .edit-btn:hover {
+            background: #e0a800;
+        }
+        
+        .delete-btn {
+            background: var(--error-color);
+            color: white;
+            border: 1px solid #dc3545;
+        }
+        
+        .delete-btn:hover {
+            background: #c82333;
+        }
+        
+        .play-btn {
+            background: var(--audio-color);
+            color: white;
+            border: 1px solid #17a2b8;
+        }
+        
+        .play-btn:hover {
+            background: #138496;
+        }
+        
+        /* 状态信息 - 参考词典配置区域 */
+        .status-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+            color: #856404;
+        }
+        
+        .status-info h3 {
+            margin-bottom: 10px;
+            color: #856404;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #ffeaa7;
+            padding-bottom: 5px;
+        }
+        
+        /* 模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            animation: slideUp 0.3s;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .modal-header h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .close-modal:hover {
+            background: #f8f9fa;
+        }
+        
+        /* 分页 - 参考词典 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Times New Roman', 'Iansui', serif;
+        }
+        
+        .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .page-btn:hover:not(.active) {
+            background: #f8f9fa;
+        }
+        
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* 导入导出区域 */
+        .import-export {
+            background: #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .import-export h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .import-export-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-bar {
+                flex-direction: column;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .control-panel {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-btn {
+                width: 90%;
+            }
+            
+            .character-display {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* 音频状态 */
+        .audio-status {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .audio-status.ready {
+            color: var(--success-color);
+        }
+        
+        .audio-status.error {
+            color: var(--error-color);
+        }
+        
+        /* JSON预览 */
+        .json-preview {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        /* GitHub配置区域 */
+        .github-config {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .github-config h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .github-info {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        /* 特殊字符提示 */
+        .special-char-hint {
+            margin-top: 5px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            background: #f0f7ff;
+            padding: 5px 8px;
+            border-radius: 4px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        /* 文件名预览 */
+        .filename-preview {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            border: 1px dashed #dee2e6;
+        }
+        
+        .filename-preview .label {
+            color: #555;
+            font-weight: bold;
+        }
+        
+        .filename-preview .value {
+            color: var(--success-color);
+            font-weight: bold;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <header>
+            <h1>遂溪遂城白話音典 - 數據維護系統</h1>
+            <p class="description">支持增刪改查字典數據，管理漢字、BVZ、注釋和音頻文件</p>
+            
+            <div class="control-panel">
+                <button class="header-btn" id="import-json-btn">導入JSON文件</button>
+                <button class="header-btn" id="export-json-btn">導出JSON文件</button>
+                <button class="header-btn" id="load-sample-btn">加載示例數據</button>
+                <button class="header-btn" id="clear-all-btn">清空所有數據</button>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <!-- 左侧：编辑区域 -->
+            <section class="edit-section">
+                <h2>數據編輯</h2>
+                
+                <div class="character-display" id="character-display">字</div>
+                
+                <div class="form-group">
+                    <label for="character-input">漢字 (單字)</label>
+                    <input type="text" id="character-input" placeholder="輸入漢字，如：東">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bvz-input">白話字 (BVZ)</label>
+                    <input type="text" id="bvz-input" placeholder="輸入BVZ拼音，如：dōng" style="font-size: 1.2rem;">
+                    <div class="special-char-hint">
+                        💡 支持並保留特殊字符：ấ ã ẫ ả ă â đ ê ô ơ ư 等越南語字符
+                    </div>
+                    <div class="filename-preview" id="filename-preview" style="display: none;">
+                        <span class="label">生成文件名：</span><span class="value" id="filename-value"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="note-input">注釋</label>
+                    <textarea id="note-input" placeholder="輸入注釋，如：方向"></textarea>
+                </div>
+                
+                <div class="audio-section">
+                    <h4>音頻管理</h4>
+                    
+                    <div class="form-group">
+                        <label for="audio-url-input">音頻URL</label>
+                        <input type="text" id="audio-url-input" placeholder="https://.../audio.mp3">
+                        <div class="github-info" id="github-url-info"></div>
+                    </div>
+                    
+                    <div class="audio-upload">
+                        <input type="file" id="audio-file-input" accept="audio/*">
+                        <label for="audio-file-input" class="upload-btn">選擇音頻文件</label>
+                        <span id="audio-file-name" style="font-size: 0.9rem; color: #666;"></span>
+                    </div>
+                    
+                    <div class="audio-preview" id="audio-preview" style="display: none;">
+                        <audio controls id="audio-player">
+                            您的瀏覽器不支持音頻播放
+                        </audio>
+                        <div class="audio-status" id="audio-preview-status"></div>
+                    </div>
+                </div>
+                
+                <div class="github-config">
+                    <h4>GitHub音頻配置</h4>
+                    <div class="form-group">
+                        <label for="github-username">GitHub用戶名</label>
+                        <input type="text" id="github-username" value="Seing-ji">
+                    </div>
+                    <div class="form-group">
+                        <label for="github-repo">音頻倉庫名</label>
+                        <input type="text" id="github-repo" value="BVZ_Audio_for_editing">
+                    </div>
+                    <div class="github-info">
+                        音頻URL格式：https://raw.githubusercontent.com/[用戶名]/[倉庫名]/main/[文件名].mp3<br>
+                        <strong>注意：</strong>特殊字符會直接使用，不進行URL編碼
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="add-btn">新增記錄</button>
+                    <button class="btn btn-success" id="update-btn" disabled>更新記錄</button>
+                    <button class="btn btn-warning" id="clear-btn">清空表單</button>
+                    <button class="btn btn-danger" id="delete-btn" disabled>刪除記錄</button>
+                </div>
+                
+                <div class="status-info">
+                    <h3>操作說明</h3>
+                    <p>• 新增記錄：填寫完整信息後點擊"新增記錄"</p>
+                    <p>• 編輯記錄：在右側列表點擊"編輯"按鈕</p>
+                    <p>• 更新記錄：編輯後點擊"更新記錄"保存修改</p>
+                    <p>• 刪除記錄：選擇記錄後點擊"刪除記錄"</p>
+                    <p>• <strong>BVZ特殊字符：</strong>系統會直接使用ấ/ã/ẫ/ả等原始字符，不進行URL編碼</p>
+                </div>
+            </section>
+            
+            <!-- 右侧：数据列表区域 -->
+            <section class="list-section">
+                <h2>數據列表</h2>
+                
+                <div class="search-bar">
+                    <input type="text" class="search-input" id="list-search" placeholder="搜索漢字、BVZ或注釋...">
+                    <button class="search-btn" id="search-btn">搜索</button>
+                </div>
+                
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">漢字</th>
+                                <th style="width: 20%;">BVZ</th>
+                                <th style="width: 35%;">注釋</th>
+                                <th style="width: 20%;">音頻</th>
+                                <th style="width: 10%;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-table-body">
+                            <!-- 数据行将通过JavaScript动态生成 -->
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 40px;">
+                                    正在加載數據...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination" id="pagination">
+                    <!-- 分页按钮将通过JavaScript动态生成 -->
+                </div>
+                
+                <div class="status-info">
+                    <h3>數據統計</h3>
+                    <div id="data-stats">正在統計...</div>
+                </div>
+                
+                <div class="import-export">
+                    <h4>數據導入/導出</h4>
+                    <div class="import-export-buttons">
+                        <button class="btn" id="import-local-btn">從JSON導入</button>
+                        <button class="btn btn-primary" id="export-local-btn">導出為JSON</button>
+                        <button class="btn btn-success" id="export-csv-btn">導出為CSV</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- 导入JSON模态框 -->
+        <div class="modal" id="import-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>導入JSON數據</h3>
+                    <button class="close-modal" id="close-import-modal">&times;</button>
+                </div>
+                <p>選擇導入方式：</p>
+                <div style="margin: 15px 0;">
+                    <input type="file" id="json-file-input" accept=".json" style="display: none;">
+                    <button class="btn" id="select-json-file" style="margin-right: 10px;">選擇JSON文件</button>
+                    <button class="btn btn-primary" id="paste-json">粘貼JSON數據</button>
+                </div>
+                
+                <div id="json-preview-container" style="display: none;">
+                    <h4>數據預覽</h4>
+                    <div class="json-preview" id="json-preview"></div>
+                    <div style="margin-top: 10px;">
+                        <label>
+                            <input type="checkbox" id="merge-data" checked>
+                            合併到現有數據（不勾選則替換所有數據）
+                        </label>
+                    </div>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <button class="btn btn-success" id="confirm-import">確認導入</button>
+                        <button class="btn" id="cancel-import">取消</button>
+                    </div>
+                </div>
+                
+                <div id="json-paste-container" style="display: none; margin-top: 15px;">
+                    <h4>粘貼JSON數據</h4>
+                    <textarea id="json-textarea" style="width: 100%; height: 150px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: monospace;" placeholder="在此粘貼JSON數據..."></textarea>
+                    <div style="margin-top: 10px; display: flex; gap: 10px;">
+                        <button class="btn btn-success" id="confirm-paste">導入數據</button>
+                        <button class="btn" id="cancel-paste">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 删除确认模态框 -->
+        <div class="modal" id="delete-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>確認刪除</h3>
+                    <button class="close-modal" id="close-delete-modal">&times;</button>
+                </div>
+                <p>確定要刪除這條記錄嗎？此操作無法撤銷。</p>
+                <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end;">
+                    <button class="btn" id="cancel-delete">取消</button>
+                    <button class="btn btn-danger" id="confirm-delete">確定刪除</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 清空数据确认模态框 -->
+        <div class="modal" id="clear-all-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>確認清空所有數據</h3>
+                    <button class="close-modal" id="close-clear-modal">&times;</button>
+                </div>
+                <p>確定要清空所有數據嗎？此操作無法撤銷。</p>
+                <p style="color: var(--error-color); margin-top: 10px;">將會刪除所有記錄！</p>
+                <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end;">
+                    <button class="btn" id="cancel-clear">取消</button>
+                    <button class="btn btn-danger" id="confirm-clear">確定清空</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 配置
+        const CONFIG = {
+            STORAGE_KEY: 'suixi_dictionary_data',
+            ITEMS_PER_PAGE: 10,
+            MAX_FILE_SIZE: 5 * 1024 * 1024, // 5MB
+            SUPPORTED_AUDIO_TYPES: ['audio/mpeg', 'audio/wav', 'audio/ogg', 'audio/webm', 'audio/x-m4a']
+        };
+        
+        // 全局变量
+        let dictionaryData = [];
+        let currentPage = 1;
+        let totalPages = 1;
+        let currentSearch = '';
+        let currentEditId = null;
+        let audioFile = null;
+        
+        // DOM元素
+        const characterInput = document.getElementById('character-input');
+        const bvzInput = document.getElementById('bvz-input');
+        const filenamePreview = document.getElementById('filename-preview');
+        const filenameValue = document.getElementById('filename-value');
+        const noteInput = document.getElementById('note-input');
+        const audioUrlInput = document.getElementById('audio-url-input');
+        const audioFileInput = document.getElementById('audio-file-input');
+        const audioFileName = document.getElementById('audio-file-name');
+        const audioPlayer = document.getElementById('audio-player');
+        const audioPreview = document.getElementById('audio-preview');
+        const audioPreviewStatus = document.getElementById('audio-preview-status');
+        const characterDisplay = document.getElementById('character-display');
+        const githubUsernameInput = document.getElementById('github-username');
+        const githubRepoInput = document.getElementById('github-repo');
+        const githubUrlInfo = document.getElementById('github-url-info');
+        
+        const addBtn = document.getElementById('add-btn');
+        const updateBtn = document.getElementById('update-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const deleteBtn = document.getElementById('delete-btn');
+        
+        const dataTableBody = document.getElementById('data-table-body');
+        const pagination = document.getElementById('pagination');
+        const dataStats = document.getElementById('data-stats');
+        const listSearch = document.getElementById('list-search');
+        const searchBtn = document.getElementById('search-btn');
+        
+        // 导入导出按钮
+        const importJsonBtn = document.getElementById('import-json-btn');
+        const exportJsonBtn = document.getElementById('export-json-btn');
+        const loadSampleBtn = document.getElementById('load-sample-btn');
+        const clearAllBtn = document.getElementById('clear-all-btn');
+        const importLocalBtn = document.getElementById('import-local-btn');
+        const exportLocalBtn = document.getElementById('export-local-btn');
+        const exportCsvBtn = document.getElementById('export-csv-btn');
+        
+        // 模态框
+        const importModal = document.getElementById('import-modal');
+        const closeImportModal = document.getElementById('close-import-modal');
+        const selectJsonFile = document.getElementById('select-json-file');
+        const pasteJson = document.getElementById('paste-json');
+        const jsonFileInput = document.getElementById('json-file-input');
+        const jsonPreviewContainer = document.getElementById('json-preview-container');
+        const jsonPreview = document.getElementById('json-preview');
+        const confirmImport = document.getElementById('confirm-import');
+        const cancelImport = document.getElementById('cancel-import');
+        const jsonPasteContainer = document.getElementById('json-paste-container');
+        const jsonTextarea = document.getElementById('json-textarea');
+        const confirmPaste = document.getElementById('confirm-paste');
+        const cancelPaste = document.getElementById('cancel-paste');
+        
+        const deleteModal = document.getElementById('delete-modal');
+        const closeDeleteModal = document.getElementById('close-delete-modal');
+        const cancelDelete = document.getElementById('cancel-delete');
+        const confirmDelete = document.getElementById('confirm-delete');
+        
+        const clearAllModal = document.getElementById('clear-all-modal');
+        const closeClearModal = document.getElementById('close-clear-modal');
+        const cancelClear = document.getElementById('cancel-clear');
+        const confirmClear = document.getElementById('confirm-clear');
+        
+        // 初始化
+        async function init() {
+            await loadDictionaryData();
+            setupEventListeners();
+            renderDataTable();
+            updateStats();
+            
+            // 监听汉字输入，更新显示
+            characterInput.addEventListener('input', updateCharacterDisplay);
+            bvzInput.addEventListener('input', () => {
+                updateGitHubUrlPreview();
+                updateFilenamePreview();
+            });
+            githubUsernameInput.addEventListener('input', updateGitHubUrlPreview);
+            githubRepoInput.addEventListener('input', updateGitHubUrlPreview);
+            
+            updateCharacterDisplay();
+            updateGitHubUrlPreview();
+            updateFilenamePreview();
+        }
+        
+        // 更新文件名预览
+        function updateFilenamePreview() {
+            const bvz = bvzInput.value.trim();
+            
+            if (bvz) {
+                // 使用原始字符，只进行最小清理（移除路径分隔符等）
+                const cleaned = cleanFilenameForUrl(bvz);
+                filenameValue.textContent = cleaned + '.mp3';
+                filenamePreview.style.display = 'block';
+                
+                // 检查是否包含特殊字符
+                const hasSpecialChars = /[ấãẫảăâđêôơư]/i.test(bvz);
+                if (hasSpecialChars) {
+                    filenamePreview.style.backgroundColor = '#f0f9ff';
+                    filenamePreview.style.borderColor = '#b3e0ff';
+                    filenameValue.style.color = 'var(--primary-color)';
+                } else {
+                    filenameValue.style.color = 'var(--success-color)';
+                }
+            } else {
+                filenamePreview.style.display = 'none';
+            }
+        }
+        
+        // 清理文件名（保留特殊字符）
+        function cleanFilenameForUrl(filename) {
+            if (!filename) return '';
+            
+            // 只移除可能影响文件系统的字符，保留所有语言的特殊字符
+            // 保留：字母、数字、越南语字符、中文、连字符、下划线、点
+            // 移除：路径分隔符、控制字符等
+            let cleaned = filename
+                .replace(/[\/\\:*?"<>|]/g, '_')  // 移除文件系统不允许的字符
+                .replace(/\s+/g, '_')             // 空格替换为下划线
+                .replace(/_{2,}/g, '_')           // 多个下划线合并为一个
+                .replace(/^_+|_+$/g, '');         // 移除开头和结尾的下划线
+            
+            // 确保长度合理
+            if (cleaned.length > 100) {
+                cleaned = cleaned.substring(0, 100);
+            }
+            
+            return cleaned;
+        }
+        
+        // 更新汉字显示
+        function updateCharacterDisplay() {
+            const char = characterInput.value.trim();
+            characterDisplay.textContent = char || '字';
+            
+            // 如果只有一个字符，放大显示
+            if (char.length === 1) {
+                characterDisplay.style.fontSize = '3.5rem';
+            } else {
+                characterDisplay.style.fontSize = '3rem';
+            }
+            
+            // 更新GitHub URL预览
+            updateGitHubUrlPreview();
+        }
+        
+        // 更新GitHub URL预览
+        function updateGitHubUrlPreview() {
+            const username = githubUsernameInput.value.trim() || 'Seing-ji';
+            const repo = githubRepoInput.value.trim() || 'BVZ_Audio_for_editing';
+            const bvz = bvzInput.value.trim();
+            
+            if (bvz) {
+                // 使用原始字符，不进行URL编码
+                const cleanedBvz = cleanFilenameForUrl(bvz);
+                const githubUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/${cleanedBvz}.mp3`;
+                
+                githubUrlInfo.innerHTML = `生成URL: <span style="font-family: monospace; color: var(--primary-color);">${githubUrl}</span>`;
+                
+                // 显示提示信息
+                const hasSpecialChars = /[ấãẫảăâđêôơư]/i.test(bvz);
+                if (hasSpecialChars) {
+                    githubUrlInfo.innerHTML += `<br><span style="color: var(--warning-color); font-size: 0.85rem;">
+                        💡 包含特殊字符，URL中直接使用原始字符
+                    </span>`;
+                }
+                
+                // 如果有音频文件已选择，更新文件名提示
+                if (audioFile) {
+                    const fileExt = getFileExtension(audioFile.name);
+                    audioPreviewStatus.textContent = `建議文件名: ${cleanedBvz}.${fileExt}`;
+                    audioPreviewStatus.className = 'audio-status ready';
+                }
+            } else {
+                githubUrlInfo.textContent = '輸入BVZ後自動生成GitHub URL';
+                githubUrlInfo.style.color = '#666';
+            }
+        }
+        
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 表单按钮
+            addBtn.addEventListener('click', addRecord);
+            updateBtn.addEventListener('click', updateRecord);
+            clearBtn.addEventListener('click', clearForm);
+            deleteBtn.addEventListener('click', showDeleteModal);
+            
+            // 音频文件上传
+            audioFileInput.addEventListener('change', handleAudioFileUpload);
+            audioUrlInput.addEventListener('input', handleAudioUrlInput);
+            
+            // 搜索
+            searchBtn.addEventListener('click', () => {
+                currentSearch = listSearch.value.trim();
+                currentPage = 1;
+                renderDataTable();
+            });
+            
+            listSearch.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    currentSearch = listSearch.value.trim();
+                    currentPage = 1;
+                    renderDataTable();
+                }
+            });
+            
+            // 控制面板按钮
+            importJsonBtn.addEventListener('click', () => importModal.style.display = 'flex');
+            exportJsonBtn.addEventListener('click', exportToJson);
+            loadSampleBtn.addEventListener('click', loadSampleData);
+            clearAllBtn.addEventListener('click', () => clearAllModal.style.display = 'flex');
+            
+            // 本地导入导出按钮
+            importLocalBtn.addEventListener('click', () => importModal.style.display = 'flex');
+            exportLocalBtn.addEventListener('click', exportToJson);
+            exportCsvBtn.addEventListener('click', exportToCsv);
+            
+            // 导入模态框
+            closeImportModal.addEventListener('click', () => {
+                importModal.style.display = 'none';
+                resetImportModal();
+            });
+            
+            selectJsonFile.addEventListener('click', () => jsonFileInput.click());
+            jsonFileInput.addEventListener('change', handleJsonFileSelect);
+            pasteJson.addEventListener('click', showJsonPaste);
+            
+            confirmImport.addEventListener('click', confirmJsonImport);
+            cancelImport.addEventListener('click', () => {
+                jsonPreviewContainer.style.display = 'none';
+                jsonFileInput.value = '';
+            });
+            
+            confirmPaste.addEventListener('click', confirmJsonPaste);
+            cancelPaste.addEventListener('click', () => {
+                jsonPasteContainer.style.display = 'none';
+                jsonTextarea.value = '';
+            });
+            
+            // 删除模态框
+            closeDeleteModal.addEventListener('click', () => deleteModal.style.display = 'none');
+            cancelDelete.addEventListener('click', () => deleteModal.style.display = 'none');
+            confirmDelete.addEventListener('click', deleteRecord);
+            
+            // 清空数据模态框
+            closeClearModal.addEventListener('click', () => clearAllModal.style.display = 'none');
+            cancelClear.addEventListener('click', () => clearAllModal.style.display = 'none');
+            confirmClear.addEventListener('click', clearAllData);
+            
+            // 点击模态框外部关闭
+            window.addEventListener('click', (e) => {
+                if (e.target === importModal) {
+                    importModal.style.display = 'none';
+                    resetImportModal();
+                }
+                if (e.target === deleteModal) deleteModal.style.display = 'none';
+                if (e.target === clearAllModal) clearAllModal.style.display = 'none';
+            });
+        }
+        
+        // 重置导入模态框
+        function resetImportModal() {
+            jsonPreviewContainer.style.display = 'none';
+            jsonPasteContainer.style.display = 'none';
+            jsonFileInput.value = '';
+            jsonTextarea.value = '';
+        }
+        
+        // 处理JSON文件选择
+        function handleJsonFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const jsonData = JSON.parse(e.target.result);
+                    displayJsonPreview(jsonData);
+                } catch (error) {
+                    alert('JSON文件格式錯誤: ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        // 显示JSON粘贴界面
+        function showJsonPaste() {
+            jsonPasteContainer.style.display = 'block';
+            jsonPreviewContainer.style.display = 'none';
+        }
+        
+        // 显示JSON预览
+        function displayJsonPreview(jsonData) {
+            jsonPreview.textContent = JSON.stringify(jsonData, null, 2);
+            jsonPreviewContainer.style.display = 'block';
+            jsonPasteContainer.style.display = 'none';
+        }
+        
+        // 确认导入JSON
+        function confirmJsonImport() {
+            try {
+                const jsonText = jsonPreview.textContent;
+                const jsonData = JSON.parse(jsonText);
+                importJsonData(jsonData);
+            } catch (error) {
+                alert('JSON數據格式錯誤: ' + error.message);
+            }
+        }
+        
+        // 确认粘贴导入
+        function confirmJsonPaste() {
+            try {
+                const jsonText = jsonTextarea.value;
+                if (!jsonText.trim()) {
+                    alert('請輸入JSON數據');
+                    return;
+                }
+                const jsonData = JSON.parse(jsonText);
+                importJsonData(jsonData);
+            } catch (error) {
+                alert('JSON數據格式錯誤: ' + error.message);
+            }
+        }
+        
+        // 导入JSON数据
+        function importJsonData(jsonData) {
+            if (!Array.isArray(jsonData)) {
+                alert('JSON數據必須是數組格式');
+                return;
+            }
+            
+            // 验证数据结构
+            const validData = jsonData.filter(item => {
+                return item && (item.單字 || item.BVZ);
+            }).map(item => {
+                return {
+                    id: generateId(),
+                    單字: item.單字 || '',
+                    BVZ: item.BVZ || '',
+                    Note: item.Note || item.note || '',
+                    Audio: item.Audio || item.audio || ''
+                };
+            });
+            
+            if (validData.length === 0) {
+                alert('未找到有效的數據');
+                return;
+            }
+            
+            // 检查是否合并数据
+            const merge = document.getElementById('merge-data').checked;
+            
+            if (merge) {
+                // 合并数据，避免重复
+                const existingCharacters = new Set(dictionaryData.map(item => item.單字));
+                const newData = validData.filter(item => !existingCharacters.has(item.單字));
+                
+                dictionaryData = [...dictionaryData, ...newData];
+                alert(`成功導入 ${newData.length} 條新記錄（跳過 ${validData.length - newData.length} 條重複記錄）`);
+            } else {
+                // 替换所有数据
+                dictionaryData = validData;
+                alert(`成功導入 ${validData.length} 條記錄`);
+            }
+            
+            // 保存并刷新
+            if (saveData()) {
+                importModal.style.display = 'none';
+                resetImportModal();
+                currentPage = 1;
+                renderDataTable();
+                updateStats();
+            }
+        }
+        
+        // 加载示例数据
+        function loadSampleData() {
+            if (dictionaryData.length > 0 && !confirm('當前已有數據，是否用示例數據替換？')) {
+                return;
+            }
+            
+            dictionaryData = getSampleData();
+            if (saveData()) {
+                currentPage = 1;
+                renderDataTable();
+                updateStats();
+                alert('示例數據加載成功！');
+            }
+        }
+        
+        // 清空所有数据
+        function clearAllData() {
+            dictionaryData = [];
+            if (saveData()) {
+                clearAllModal.style.display = 'none';
+                clearForm();
+                currentPage = 1;
+                renderDataTable();
+                updateStats();
+                alert('所有數據已清空！');
+            }
+        }
+        
+        // 加载字典数据
+        async function loadDictionaryData() {
+            try {
+                const savedData = localStorage.getItem(CONFIG.STORAGE_KEY);
+                
+                if (savedData) {
+                    dictionaryData = JSON.parse(savedData);
+                } else {
+                    dictionaryData = getSampleData();
+                    saveData();
+                }
+                
+                console.log(`已加載 ${dictionaryData.length} 條記錄`);
+            } catch (error) {
+                console.error('加載數據失敗:', error);
+                dictionaryData = [];
+            }
+        }
+        
+        // 获取示例数据（包含特殊字符示例）
+        function getSampleData() {
+            return [
+                {
+                    id: generateId(),
+                    單字: "東",
+                    BVZ: "dōng",
+                    Note: "方向，太陽升起的方向",
+                    Audio: "https://cdn.jsdelivr.net/gh/Seing-ji/BVZ_Audio_for_editing/dōng.mp3"
+                },
+                {
+                    id: generateId(),
+                    單字: "安",
+                    BVZ: "ấn",
+                    Note: "平靜，安全",
+                    Audio: "https://cdn.jsdelivr.net/gh/Seing-ji/BVZ_Audio_for_editing/ấn.mp3"
+                },
+                {
+                    id: generateId(),
+                    單字: "雨",
+                    BVZ: "ủ",
+                    Note: "降水",
+                    Audio: "https://cdn.jsdelivr.net/gh/Seing-ji/BVZ_Audio_for_editing/ủ.mp3"
+                },
+                {
+                    id: generateId(),
+                    單字: "家",
+                    BVZ: "gia",
+                    Note: "家庭",
+                    Audio: ""
+                },
+                {
+                    id: generateId(),
+                    單字: "語",
+                    BVZ: "ngữ",
+                    Note: "語言",
+                    Audio: "https://cdn.jsdelivr.net/gh/Seing-ji/BVZ_Audio_for_editing/ngữ.mp3"
+                },
+                {
+                    id: generateId(),
+                    單字: "試",
+                    BVZ: "thí",
+                    Note: "測試",
+                    Audio: ""
+                }
+            ];
+        }
+        
+        // 保存数据到LocalStorage
+        function saveData() {
+            try {
+                localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(dictionaryData));
+                console.log('數據已保存');
+                return true;
+            } catch (error) {
+                console.error('保存數據失敗:', error);
+                alert('保存數據失敗，請檢查瀏覽器存儲空間');
+                return false;
+            }
+        }
+        
+        // 生成唯一ID
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+        
+        // 获取文件扩展名
+        function getFileExtension(filename) {
+            return filename.split('.').pop().toLowerCase();
+        }
+        
+        // 处理音频文件上传
+        function handleAudioFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // 检查文件大小
+            if (file.size > CONFIG.MAX_FILE_SIZE) {
+                alert(`文件太大！最大支持 ${CONFIG.MAX_FILE_SIZE / 1024 / 1024}MB`);
+                audioFileInput.value = '';
+                return;
+            }
+            
+            // 检查文件类型
+            if (!CONFIG.SUPPORTED_AUDIO_TYPES.includes(file.type)) {
+                alert('不支持的音頻格式！請上傳 MP3、WAV 或 OGG 文件');
+                audioFileInput.value = '';
+                return;
+            }
+            
+            audioFile = file;
+            audioFileName.textContent = file.name;
+            
+            // 获取GitHub配置
+            const username = githubUsernameInput.value.trim() || 'Seing-ji';
+            const repo = githubRepoInput.value.trim() || 'BVZ_Audio_for_editing';
+            const bvz = bvzInput.value.trim();
+            
+            if (bvz) {
+                // 对BVZ进行最小清理，保留特殊字符
+                const cleanedBvz = cleanFilenameForUrl(bvz);
+                
+                // 获取文件扩展名
+                const fileExt = getFileExtension(file.name);
+                
+                // 生成GitHub URL（使用原始字符）
+                const githubUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/${cleanedBvz}.${fileExt}`;
+                
+                // 自动填充到URL输入框
+                audioUrlInput.value = githubUrl;
+                handleAudioUrlInput(); // 触发URL输入处理
+                
+                // 显示提示
+                audioPreviewStatus.textContent = `已生成GitHub URL。請將文件命名為: ${cleanedBvz}.${fileExt}`;
+                audioPreviewStatus.className = 'audio-status ready';
+                
+                // 检查文件名是否包含特殊字符
+                const hasSpecialChars = /[ấãẫảăâđêôơư]/i.test(bvz);
+                if (hasSpecialChars) {
+                    audioPreviewStatus.innerHTML += `<br><span style="color: var(--warning-color);">
+                        ⚠️ 文件名包含特殊字符，請確保文件系統支持這些字符
+                    </span>`;
+                }
+            } else {
+                // 如果没有BVZ，使用本地预览
+                const objectUrl = URL.createObjectURL(file);
+                audioPlayer.src = objectUrl;
+                audioPreview.style.display = 'block';
+                audioPreviewStatus.textContent = `已選擇: ${file.name} (${(file.size / 1024).toFixed(1)}KB) - 請填寫BVZ以生成GitHub URL`;
+                audioPreviewStatus.className = 'audio-status';
+                audioPlayer.load();
+            }
+        }
+        
+        // 处理音频URL输入
+        function handleAudioUrlInput() {
+            const url = audioUrlInput.value.trim();
+            if (url) {
+                audioFile = null;
+                audioFileInput.value = '';
+                audioFileName.textContent = '';
+                
+                // 验证URL
+                try {
+                    new URL(url);
+                    audioPlayer.src = url;
+                    audioPreview.style.display = 'block';
+                    
+                    // 检查URL是否包含特殊字符
+                    const hasSpecialChars = /[ấãẫảăâđêôơư]/i.test(url);
+                    
+                    if (hasSpecialChars) {
+                        audioPreviewStatus.innerHTML = `URL: ${url}<br><span style="color: var(--warning-color);">
+                            ⚠️ URL包含特殊字符，請確保服務器支持
+                        </span>`;
+                    } else {
+                        audioPreviewStatus.textContent = `URL: ${url}`;
+                    }
+                    
+                    audioPreviewStatus.className = 'audio-status ready';
+                    audioPlayer.load();
+                } catch (error) {
+                    audioPreviewStatus.textContent = '無效的URL格式';
+                    audioPreviewStatus.className = 'audio-status error';
+                }
+            } else {
+                audioPreview.style.display = 'none';
+            }
+        }
+        
+        // 验证表单
+        function validateForm() {
+            const character = characterInput.value.trim();
+            const bvz = bvzInput.value.trim();
+            const audioUrl = audioUrlInput.value.trim();
+            
+            if (!character) {
+                alert('請輸入漢字');
+                characterInput.focus();
+                return false;
+            }
+            
+            if (!bvz) {
+                alert('請輸入BVZ拼音');
+                bvzInput.focus();
+                return false;
+            }
+            
+            // 检查BVZ是否包含特殊字符
+            const hasSpecialChars = /[ấãẫảăâđêôơư]/i.test(bvz);
+            if (hasSpecialChars) {
+                // 显示提醒但不阻止提交
+                console.log(`BVZ包含特殊字符: ${bvz}，URL將直接使用原始字符`);
+            }
+            
+            // 如果有音频URL但格式不正确，提示
+            if (audioUrl && !audioUrl.startsWith('http')) {
+                if (!confirm('音频URL不是有效的网络地址。建议使用GitHub raw URL格式（以https://开头）。是否继续？')) {
+                    audioUrlInput.focus();
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        // 添加记录
+        function addRecord() {
+            if (!validateForm()) return;
+            
+            const character = characterInput.value.trim();
+            const bvz = bvzInput.value.trim();
+            const note = noteInput.value.trim();
+            const audioUrl = audioUrlInput.value.trim();
+            
+            // 检查是否已存在相同汉字
+            const exists = dictionaryData.some(item => item.單字 === character);
+            if (exists) {
+                if (!confirm(`漢字"${character}"已存在，是否更新？`)) {
+                    return;
+                }
+                // 找到并更新现有记录
+                const existingIndex = dictionaryData.findIndex(item => item.單字 === character);
+                dictionaryData[existingIndex] = {
+                    ...dictionaryData[existingIndex],
+                    BVZ: bvz,
+                    Note: note,
+                    Audio: audioUrl
+                };
+            } else {
+                // 添加新记录
+                const newRecord = {
+                    id: generateId(),
+                    單字: character,
+                    BVZ: bvz,
+                    Note: note,
+                    Audio: audioUrl
+                };
+                
+                dictionaryData.unshift(newRecord);
+            }
+            
+            if (saveData()) {
+                clearForm();
+                renderDataTable();
+                updateStats();
+                alert('記錄已保存！');
+            }
+        }
+        
+        // 更新记录
+        function updateRecord() {
+            if (!currentEditId) return;
+            if (!validateForm()) return;
+            
+            const index = dictionaryData.findIndex(item => item.id === currentEditId);
+            if (index === -1) return;
+            
+            dictionaryData[index] = {
+                ...dictionaryData[index],
+                單字: characterInput.value.trim(),
+                BVZ: bvzInput.value.trim(),
+                Note: noteInput.value.trim(),
+                Audio: audioUrlInput.value.trim()
+            };
+            
+            if (saveData()) {
+                clearForm();
+                renderDataTable();
+                updateStats();
+                alert('記錄已更新！');
+            }
+        }
+        
+        // 清空表单
+        function clearForm() {
+            characterInput.value = '';
+            bvzInput.value = '';
+            noteInput.value = '';
+            audioUrlInput.value = '';
+            audioFileInput.value = '';
+            audioFileName.textContent = '';
+            audioPreview.style.display = 'none';
+            audioFile = null;
+            
+            // 重置按钮状态
+            updateBtn.disabled = true;
+            deleteBtn.disabled = true;
+            addBtn.disabled = false;
+            
+            currentEditId = null;
+            
+            updateCharacterDisplay();
+            updateGitHubUrlPreview();
+            updateFilenamePreview();
+            characterInput.focus();
+        }
+        
+        // 编辑记录
+        function editRecord(id) {
+            const record = dictionaryData.find(item => item.id === id);
+            if (!record) return;
+            
+            characterInput.value = record.單字 || '';
+            bvzInput.value = record.BVZ || '';
+            noteInput.value = record.Note || '';
+            
+            if (record.Audio) {
+                audioUrlInput.value = record.Audio;
+                handleAudioUrlInput();
+            } else {
+                audioUrlInput.value = '';
+                audioPreview.style.display = 'none';
+            }
+            
+            currentEditId = id;
+            
+            // 更新按钮状态
+            updateBtn.disabled = false;
+            deleteBtn.disabled = false;
+            addBtn.disabled = true;
+            
+            updateCharacterDisplay();
+            updateGitHubUrlPreview();
+            updateFilenamePreview();
+            characterInput.focus();
+        }
+        
+        // 显示删除确认模态框
+        function showDeleteModal() {
+            if (!currentEditId) return;
+            
+            const record = dictionaryData.find(item => item.id === currentEditId);
+            if (record) {
+                deleteModal.style.display = 'flex';
+            }
+        }
+        
+        // 删除记录
+        function deleteRecord() {
+            if (!currentEditId) return;
+            
+            const index = dictionaryData.findIndex(item => item.id === currentEditId);
+            if (index === -1) return;
+            
+            dictionaryData.splice(index, 1);
+            
+            if (saveData()) {
+                deleteModal.style.display = 'none';
+                clearForm();
+                renderDataTable();
+                updateStats();
+                alert('記錄已刪除！');
+            }
+        }
+        
+        // 渲染数据表格
+        function renderDataTable() {
+            // 过滤数据
+            let filteredData = dictionaryData;
+            if (currentSearch) {
+                const searchLower = currentSearch.toLowerCase();
+                filteredData = dictionaryData.filter(item => 
+                    (item.單字 && item.單字.toLowerCase().includes(searchLower)) ||
+                    (item.BVZ && item.BVZ.toLowerCase().includes(searchLower)) ||
+                    (item.Note && item.Note.toLowerCase().includes(searchLower))
+                );
+            }
+            
+            // 计算分页
+            const startIndex = (currentPage - 1) * CONFIG.ITEMS_PER_PAGE;
+            const endIndex = startIndex + CONFIG.ITEMS_PER_PAGE;
+            const pageData = filteredData.slice(startIndex, endIndex);
+            totalPages = Math.ceil(filteredData.length / CONFIG.ITEMS_PER_PAGE);
+            
+            // 清空表格
+            dataTableBody.innerHTML = '';
+            
+            if (pageData.length === 0) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td colspan="5" style="text-align: center; padding: 40px;">
+                        ${currentSearch ? '沒有找到匹配的記錄' : '暫無數據'}
+                    </td>
+                `;
+                dataTableBody.appendChild(row);
+            } else {
+                // 添加数据行
+                pageData.forEach(item => {
+                    const row = document.createElement('tr');
+                    
+                    // 限制注释长度
+                    const notePreview = item.Note && item.Note.length > 30 
+                        ? item.Note.substring(0, 30) + '...' 
+                        : item.Note || '';
+                    
+                    // 检查BVZ是否包含特殊字符
+                    const hasSpecialChars = item.BVZ && /[ấãẫảăâđêôơư]/i.test(item.BVZ);
+                    const bvzCellStyle = hasSpecialChars ? 
+                        'font-family: "Times New Roman", "Iansui", serif; font-size: 1.1rem; color: var(--primary-color);' : 
+                        'font-family: "Times New Roman", "Iansui", serif; font-size: 1.1rem;';
+                    
+                    row.innerHTML = `
+                        <td><strong>${item.單字 || ''}</strong></td>
+                        <td style="${bvzCellStyle}">${item.BVZ || ''}</td>
+                        <td title="${item.Note || ''}">${notePreview}</td>
+                        <td>
+                            ${item.Audio ? 
+                                `<button class="action-btn play-btn" onclick="playAudio('${item.Audio}')">播放</button>` : 
+                                '<span style="color: #999; font-size: 0.9rem;">無音頻</span>'}
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="action-btn edit-btn" onclick="editRecord('${item.id}')">編輯</button>
+                                <button class="action-btn delete-btn" onclick="setDeleteRecord('${item.id}')">刪除</button>
+                            </div>
+                        </td>
+                    `;
+                    dataTableBody.appendChild(row);
+                });
+            }
+            
+            // 渲染分页
+            renderPagination(filteredData.length);
+        }
+        
+        // 设置删除记录
+        function setDeleteRecord(id) {
+            editRecord(id);
+            showDeleteModal();
+        }
+        
+        // 播放音频
+        function playAudio(url) {
+            // 在新窗口中播放音频
+            const audioWindow = window.open('', '_blank');
+            audioWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>播放音頻</title>
+                    <style>
+                        body { margin: 20px; text-align: center; font-family: 'Times New Roman', 'Iansui', serif; }
+                        audio { margin: 20px 0; width: 300px; }
+                        .container { max-width: 400px; margin: 0 auto; }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h3>音頻播放</h3>
+                        <audio controls autoplay>
+                            <source src="${url}" type="audio/mpeg">
+                            您的瀏覽器不支持音頻播放
+                        </audio>
+                        <br>
+                        <button onclick="window.close()" style="padding: 8px 20px; background: #4a6fa5; color: white; border: none; border-radius: 4px; cursor: pointer;">關閉</button>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+        
+        // 渲染分页
+        function renderPagination(totalItems) {
+            pagination.innerHTML = '';
+            
+            if (totalPages <= 1) return;
+            
+            // 添加上一页按钮
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'page-btn';
+            prevBtn.textContent = '‹';
+            prevBtn.title = '上一頁';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderDataTable();
+                }
+            });
+            pagination.appendChild(prevBtn);
+            
+            // 添加页码按钮
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, startPage + 4);
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderDataTable();
+                });
+                pagination.appendChild(pageBtn);
+            }
+            
+            // 添加下一页按钮
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'page-btn';
+            nextBtn.textContent = '›';
+            nextBtn.title = '下一頁';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderDataTable();
+                }
+            });
+            pagination.appendChild(nextBtn);
+        }
+        
+        // 更新统计信息
+        function updateStats() {
+            const total = dictionaryData.length;
+            const withAudio = dictionaryData.filter(item => item.Audio).length;
+            const withoutAudio = total - withAudio;
+            const audioPercentage = total > 0 ? Math.round(withAudio/total*100) : 0;
+            
+            // 统计包含特殊字符的记录
+            const specialCharItems = dictionaryData.filter(item => {
+                const bvz = item.BVZ || '';
+                return /[ấãẫảăâđêôơư]/i.test(bvz);
+            });
+            
+            dataStats.innerHTML = `
+                <p>• 總記錄數: <strong>${total}</strong> 條</p>
+                <p>• 包含音頻: <strong>${withAudio}</strong> 條 (${audioPercentage}%)</p>
+                <p>• 無音頻: <strong>${withoutAudio}</strong> 條</p>
+                <p>• 特殊字符記錄: <strong>${specialCharItems.length}</strong> 條</p>
+            `;
+        }
+        
+        // 导出为JSON
+        function exportToJson() {
+            // 准备导出数据（去除内部ID）
+            const dataToExport = dictionaryData.map(item => ({
+                單字: item.單字,
+                BVZ: item.BVZ,
+                Note: item.Note,
+                audio: item.Audio
+            }));
+            
+            const jsonString = JSON.stringify(dataToExport, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            const date = new Date().toISOString().split('T')[0];
+            a.download = `suixi_dictionary_${date}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // 显示GitHub上传提示
+            showGitHubUploadInstructions();
+        }
+        
+        // 显示GitHub上传说明
+        function showGitHubUploadInstructions() {
+            const username = githubUsernameInput.value.trim() || 'Seing-ji';
+            const repo = githubRepoInput.value.trim() || 'BVZ_Audio_for_editing';
+            
+            // 统计有特殊BVZ字符的记录
+            const specialBvzItems = dictionaryData.filter(item => {
+                const bvz = item.BVZ || '';
+                return /[ấãẫảăâđêôơư]/i.test(bvz);
+            });
+            
+            let specialCharMessage = '';
+            if (specialBvzItems.length > 0) {
+                specialCharMessage = `\n\n🔤 特殊字符處理：\n   系統保留了 ${specialBvzItems.length} 條記錄的特殊字符\n   音頻文件名直接使用原始字符\n   例如：ấn.mp3, ủ.mp3, ngữ.mp3`;
+            }
+            
+            alert(`✅ JSON文件已生成，包含 ${dictionaryData.length} 條記錄${specialCharMessage}\n\n📁 下一步操作：\n1. 將JSON文件上傳到字典倉庫\n2. 檢查所有音頻URL是否正確\n3. 將音頻文件上傳到：\n   https://github.com/${username}/${repo}\n\n📝 音頻文件命名：\n• 特殊字符文件名直接使用原始字符\n• 例如：ấn.mp3, ủ.mp3, ngữ.mp3\n• 請確保文件系統和服務器支持這些特殊字符\n• 確保文件名與URL中的一致`);
+        }
+        
+        // 导出为CSV
+        function exportToCsv() {
+            const headers = ['單字', 'BVZ', 'Note', 'audio'];
+            const csvRows = [
+                headers.join(','),
+                ...dictionaryData.map(item => [
+                    `"${(item.單字 || '').replace(/"/g, '""')}"`,
+                    `"${(item.BVZ || '').replace(/"/g, '""')}"`,
+                    `"${(item.Note || '').replace(/"/g, '""')}"`,
+                    `"${(item.Audio || '').replace(/"/g, '""')}"`
+                ].join(','))
+            ];
+            
+            const csvString = csvRows.join('\n');
+            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            const date = new Date().toISOString().split('T')[0];
+            a.download = `suixi_dictionary_${date}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert(`CSV文件已生成，包含 ${dictionaryData.length} 條記錄`);
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', init);
+        
+        // 使函数在全局可访问（用于onclick）
+        window.editRecord = editRecord;
+        window.setDeleteRecord = setDeleteRecord;
+        window.playAudio = playAudio;
+    </script>
+</body>
+</html>

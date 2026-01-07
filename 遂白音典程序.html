@@ -326,7 +326,7 @@
             line-height: 1.3;
         }
         
-        /* 简洁音频按钮 */
+        /* 简洁音频按钮 - 使用CSS背景图片 */
         .audio-container {
             display: inline-flex;
             align-items: center;
@@ -345,27 +345,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 0; /* 隐藏文本 */
             transition: all 0.2s;
             padding: 0;
             margin: 0;
-            font-family: Arial, sans-serif;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%234a6fa5'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px 12px;
         }
         
         .audio-play-btn:hover {
-            background: var(--audio-color);
-            color: white;
+            background-color: var(--audio-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
         }
         
         .audio-play-btn.playing {
-            background: var(--audio-color);
-            color: white;
-            border-color: var(--audio-color);
+            background-color: var(--audio-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
         }
         
         .audio-play-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%234a6fa5' opacity='0.5'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
         }
         
         .no-results {
@@ -512,11 +515,9 @@
             JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
             MAX_RESULTS: 1000,
             AUDIO_CACHE: new Map(),
-            // 预加载策略配置
-            PRELOAD_IMMEDIATE: 3,  // 立即预加载前3个结果的音频
-            PRELOAD_PRIORITY: 10,  // 高优先级预加载前10个
-            PRELOAD_BACKGROUND: 20, // 后台预加载接下来20个
-            // 音量配置（默认70%，适合大多数发音音频）
+            PRELOAD_IMMEDIATE: 3,
+            PRELOAD_PRIORITY: 10,
+            PRELOAD_BACKGROUND: 20,
             DEFAULT_VOLUME: 0.7,
             MIN_VOLUME: 0.0,
             MAX_VOLUME: 1.0
@@ -529,9 +530,9 @@
         let searchTimeout = null;
         let currentAudio = null;
         let currentPlayingButton = null;
-        let currentResults = []; // 当前搜索结果
-        let audioPreloadController = null; // 用于取消预加载
-        let currentVolume = CONFIG.DEFAULT_VOLUME; // 当前音量（0.0-1.0）
+        let currentResults = [];
+        let audioPreloadController = null;
+        let currentVolume = CONFIG.DEFAULT_VOLUME;
         
         // DOM元素
         const searchInput = document.getElementById('search-input');
@@ -553,7 +554,6 @@
                 setupEventListeners();
                 updateSearchHint();
                 
-                // 设置初始音量
                 setVolume(CONFIG.DEFAULT_VOLUME);
                 updateVolumeDisplay();
                 
@@ -610,23 +610,20 @@
                 }
             });
             
-            // 音量滑块事件
             volumeSlider.addEventListener('input', handleVolumeChange);
             volumeSlider.addEventListener('change', handleVolumeChange);
             
-            // 添加键盘快捷键（可选功能）
             document.addEventListener('keydown', handleKeyboardShortcuts);
         }
         
         // 处理音量变化
         function handleVolumeChange() {
             const sliderValue = parseInt(volumeSlider.value);
-            const volume = sliderValue / 100; // 转换为0.0-1.0
+            const volume = sliderValue / 100;
             
             setVolume(volume);
             updateVolumeDisplay();
             
-            // 如果当前有音频正在播放，立即应用新音量
             if (currentAudio) {
                 currentAudio.volume = currentVolume;
             }
@@ -634,10 +631,8 @@
         
         // 设置音量
         function setVolume(volume) {
-            // 确保音量在合理范围内
             currentVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, volume));
             
-            // 保存到localStorage，下次打开时记住设置
             try {
                 localStorage.setItem('dictionary_volume', currentVolume.toString());
             } catch (e) {
@@ -669,33 +664,29 @@
             return false;
         }
         
-        // 键盘快捷键（可选功能）
+        // 键盘快捷键
         function handleKeyboardShortcuts(event) {
-            // 只在没有聚焦在输入框时生效
             if (document.activeElement === searchInput) return;
             
             switch(event.key) {
                 case '+':
                 case '=':
-                    // 增加音量
                     event.preventDefault();
                     adjustVolume(0.1);
                     break;
                 case '-':
                 case '_':
-                    // 降低音量
                     event.preventDefault();
                     adjustVolume(-0.1);
                     break;
                 case '0':
-                    // 静音/恢复
                     event.preventDefault();
                     toggleMute();
                     break;
             }
         }
         
-        // 调整音量（增量）
+        // 调整音量
         function adjustVolume(delta) {
             let newVolume = currentVolume + delta;
             newVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, newVolume));
@@ -703,7 +694,6 @@
             setVolume(newVolume);
             updateVolumeDisplay();
             
-            // 如果当前有音频正在播放，立即应用新音量
             if (currentAudio) {
                 currentAudio.volume = currentVolume;
             }
@@ -712,11 +702,9 @@
         // 切换静音
         function toggleMute() {
             if (currentVolume > 0) {
-                // 保存当前音量然后静音
                 localStorage.setItem('dictionary_last_volume', currentVolume.toString());
                 setVolume(0);
             } else {
-                // 恢复上次的音量
                 try {
                     const lastVolume = localStorage.getItem('dictionary_last_volume');
                     const volume = lastVolume ? parseFloat(lastVolume) : CONFIG.DEFAULT_VOLUME;
@@ -728,7 +716,6 @@
             
             updateVolumeDisplay();
             
-            // 如果当前有音频正在播放，立即应用新音量
             if (currentAudio) {
                 currentAudio.volume = currentVolume;
             }
@@ -736,20 +723,16 @@
         
         // 执行搜索
         async function performSearch(query) {
-            // 取消之前的预加载
             if (audioPreloadController) {
                 audioPreloadController.abort();
                 audioPreloadController = null;
             }
             
-            // 执行搜索
             const results = searchDictionary(query);
-            currentResults = results; // 保存当前结果
+            currentResults = results;
             
-            // 立即显示结果
             displayResults(results, query);
             
-            // 启动智能预加载
             startSmartPreload(results);
         }
         
@@ -757,28 +740,21 @@
         function startSmartPreload(results) {
             if (!results.length) return;
             
-            // 创建新的AbortController用于控制预加载
             audioPreloadController = new AbortController();
             const signal = audioPreloadController.signal;
             
-            // 阶段1：立即预加载前3个（用户最可能点击的）
             const immediateUrls = getAudioUrls(results, 0, CONFIG.PRELOAD_IMMEDIATE);
             preloadAudioBatch(immediateUrls, 'high', signal).then(() => {
-                // 阶段1完成后，启用前3个按钮
                 enableAudioButtons(0, CONFIG.PRELOAD_IMMEDIATE);
                 
-                // 阶段2：预加载前10个（高优先级）
                 const priorityUrls = getAudioUrls(results, CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
                 return preloadAudioBatch(priorityUrls, 'medium', signal);
             }).then(() => {
-                // 阶段2完成后，启用接下来的按钮
                 enableAudioButtons(CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
                 
-                // 阶段3：后台预加载接下来的20个（低优先级）
                 const backgroundUrls = getAudioUrls(results, CONFIG.PRELOAD_PRIORITY, CONFIG.PRELOAD_PRIORITY + CONFIG.PRELOAD_BACKGROUND);
                 return preloadAudioBatch(backgroundUrls, 'low', signal);
             }).then(() => {
-                // 阶段3完成后，启用所有按钮
                 enableAudioButtons(CONFIG.PRELOAD_PRIORITY, results.length);
             }).catch(err => {
                 if (err.name !== 'AbortError') {
@@ -807,13 +783,11 @@
             
             console.log(`开始${priority}优先级预加载 ${urls.length} 个音频`);
             
-            // 根据优先级调整并发数
             let concurrency = 1;
             if (priority === 'high') concurrency = 3;
             else if (priority === 'medium') concurrency = 2;
             else concurrency = 1;
             
-            // 分批预加载
             for (let i = 0; i < urls.length; i += concurrency) {
                 if (signal.aborted) break;
                 
@@ -822,7 +796,6 @@
                 
                 await Promise.all(promises);
                 
-                // 批次间延迟，避免阻塞
                 if (i + concurrency < urls.length && !signal.aborted) {
                     await new Promise(resolve => setTimeout(resolve, priority === 'high' ? 0 : 50));
                 }
@@ -831,19 +804,16 @@
         
         // 预加载单个音频
         async function preloadSingleAudio(audioUrl, signal) {
-            // 检查是否已在缓存中
             if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
                 return CONFIG.AUDIO_CACHE.get(audioUrl);
             }
             
             try {
-                // 使用AbortSignal允许取消
                 const response = await fetch(audioUrl, { signal });
                 if (!response.ok) return null;
                 
                 const blob = await response.blob();
                 
-                // 修复MIME类型
                 let audioBlob = blob;
                 if (!blob.type.startsWith('audio/')) {
                     audioBlob = new Blob([blob], { type: 'audio/mpeg' });
@@ -919,10 +889,8 @@
             return dataArray
                 .filter(item => item && (item.單字 || item.BVZ))
                 .map(item => {
-                    // 修复音频URL - 使用jsDelivr CDN确保可播放
                     let audioUrl = item.audio || '';
                     if (audioUrl && audioUrl.includes('github.com')) {
-                        // 转换为jsDelivr CDN URL
                         audioUrl = audioUrl
                             .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
                             .replace('/main/', '/');
@@ -964,9 +932,7 @@
             const results = [];
             
             if (currentMode === 'character') {
-                // 汉字查BVZ模式
                 if (exactMatch) {
-                    // 精确匹配：汉字完全相等
                     const termSet = new Set(searchTerms);
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
@@ -975,7 +941,6 @@
                         }
                     }
                 } else {
-                    // 模糊匹配：汉字包含搜索词
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
                         if (item.單字) {
@@ -989,9 +954,7 @@
                     }
                 }
             } else {
-                // BVZ反查汉字模式
                 if (exactMatch) {
-                    // 精确匹配：BVZ完全相等
                     const termSet = new Set(searchTerms);
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
@@ -1000,7 +963,6 @@
                         }
                     }
                 } else {
-                    // 模糊匹配：BVZ包含搜索词
                     for (let i = 0; i < dictionaryData.length; i++) {
                         const item = dictionaryData[i];
                         if (item.BVZ) {
@@ -1036,8 +998,6 @@
                 const hasAudio = item.audioUrl && item.audioUrl.length > 0;
                 const audioId = `audio-${Date.now()}-${index}`;
                 const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
-                
-                // 前3个结果默认启用（会立即预加载）
                 const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
                 
                 html += `
@@ -1054,7 +1014,6 @@
                                             data-audio-url="${encodeURIComponent(item.audioUrl)}"
                                             title="點擊播放發音"
                                             ${isPreloaded || isTopResult ? '' : 'disabled'}>
-                                        ▶
                                     </button>
                                 </div>
                                 ` : ''}
@@ -1101,7 +1060,7 @@
             let audioBlobUrl = CONFIG.AUDIO_CACHE.get(audioUrl);
             
             if (!audioBlobUrl) {
-                // 如果不在缓存，立即下载（这种情况很少发生）
+                // 如果不在缓存，立即下载
                 console.log('音频不在缓存，立即下载:', audioUrl);
                 try {
                     const response = await fetch(audioUrl);
@@ -1114,7 +1073,7 @@
                 }
             }
             
-            // 播放音频（应用当前音量）
+            // 播放音频
             playAudio(audioBlobUrl, button);
         }
         
@@ -1126,8 +1085,7 @@
             // 应用当前音量设置
             currentAudio.volume = currentVolume;
             
-            // 更新按钮状态
-            button.textContent = '⏸';
+            // 更新按钮状态 - 添加playing类，CSS会自动切换图标
             button.classList.add('playing');
             button.title = '點擊暫停';
             
@@ -1171,7 +1129,6 @@
         
         // 重置音频按钮状态
         function resetAudioButton(button) {
-            button.textContent = '▶';
             button.classList.remove('playing');
             button.title = '播放發音';
         }
