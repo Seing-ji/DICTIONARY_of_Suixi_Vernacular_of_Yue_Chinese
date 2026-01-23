@@ -34,7 +34,7 @@
         }
         
         .dictionary-container {
-            max-width: 960px;
+            max-width: 1000px; /* 稍微增加最大宽度 */
             margin: 0 auto;
             background: white;
             border-radius: 8px;
@@ -109,6 +109,8 @@
             padding: 24px;
             border-bottom: 1px solid var(--border-color);
             background: #f9fafc;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .search-mode {
@@ -118,6 +120,7 @@
             overflow: hidden;
             background: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            width: 100%;
         }
         
         .mode-btn {
@@ -151,7 +154,6 @@
             display: flex;
             margin-bottom: 16px;
             width: 100%;
-            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -169,6 +171,7 @@
             min-width: 0;
             height: 52px;
             width: 100%;
+            box-sizing: border-box;
         }
         
         #character-search-input:focus,
@@ -228,6 +231,7 @@
             gap: 20px;
             margin-bottom: 16px;
             flex-wrap: wrap;
+            width: 100%;
         }
         
         .exact-match-option {
@@ -262,6 +266,7 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             transition: all 0.2s;
             height: 54px;
+            box-sizing: border-box;
         }
         
         #category-select:hover {
@@ -275,50 +280,75 @@
             box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.3);
         }
         
-        /* 新增说明列表样式 */
+        /* 改进的说明列表样式 - 自动调整宽度 */
         .instructions-list {
             margin-top: 12px;
-            padding: 12px;
+            padding: 15px;
             background: #f8f9fa;
             border-radius: 5px;
             border: 1px solid #e9ecef;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            overflow: visible;
         }
         
         .instructions-list h4 {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: #495057;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
         
         .instructions-item {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 0.95rem;
-            line-height: 1.4;
+            line-height: 1.5;
             display: flex;
             align-items: flex-start;
+            width: 100%;
+            flex-wrap: nowrap;
+            min-height: 24px;
+            box-sizing: border-box;
         }
         
         .instruction-number {
             display: inline-block;
-            min-width: 24px;
+            width: 28px;
             font-weight: 500;
             color: var(--primary-color);
             margin-right: 8px;
             flex-shrink: 0;
+            flex-grow: 0;
+            line-height: 1.5;
+            text-align: right;
         }
         
         .instruction-content {
             flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: normal;
+            line-height: 1.5;
+            box-sizing: border-box;
         }
         
         .instruction-link {
             color: #2c5282;
             text-decoration: none;
             font-weight: 500;
+            word-break: break-all;
         }
         
         .instruction-link:hover {
             text-decoration: underline;
+        }
+        
+        /* 特殊处理长文本项 */
+        .instructions-item.long-text .instruction-content {
+            font-size: 0.92rem;
+            line-height: 1.4;
         }
         
         .search-info {
@@ -335,6 +365,8 @@
             border-radius: 5px;
             padding: 16px;
             margin-top: 16px;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .config-section h3 {
@@ -346,6 +378,7 @@
         .data-status-container {
             margin-bottom: 16px;
             font-size: 1.1rem;
+            word-break: break-word;
         }
         
         .volume-control {
@@ -354,6 +387,8 @@
             background: #f8f9fa;
             border-radius: 5px;
             border: 1px solid #e9ecef;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .volume-header {
@@ -361,6 +396,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
+            width: 100%;
         }
         
         .volume-header h4 {
@@ -381,6 +417,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            width: 100%;
         }
         
         .volume-icon {
@@ -388,6 +425,7 @@
             font-size: 1.2rem;
             width: 28px;
             text-align: center;
+            flex-shrink: 0;
         }
         
         .volume-slider {
@@ -425,6 +463,8 @@
         .results-section {
             padding: 24px;
             min-height: 320px;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .results-header {
@@ -434,6 +474,7 @@
             margin-bottom: 20px;
             padding-bottom: 12px;
             border-bottom: 1px solid var(--border-color);
+            width: 100%;
         }
         
         .results-count {
@@ -449,6 +490,8 @@
             border-left: 4px solid var(--primary-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .vocab-result .result-item {
@@ -475,6 +518,8 @@
             padding: 6px 12px;
             border-radius: 5px;
             display: inline-block;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .vocab-result .character {
@@ -491,6 +536,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 16px;
+            width: 100%;
         }
         
         .detail-item {
@@ -499,6 +545,7 @@
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
+            width: 100%;
         }
         
         .label {
@@ -546,6 +593,8 @@
             background: #f8f9fa;
             border-radius: 5px;
             border: 1px solid #e9ecef;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .example-header {
@@ -556,12 +605,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 100%;
         }
         
         .example-text {
             font-size: 1.1rem;
             margin-bottom: 10px;
             line-height: 1.6;
+            word-wrap: break-word;
         }
         
         .example-bvz {
@@ -577,6 +628,7 @@
             color: #666;
             font-style: italic;
             margin-bottom: 10px;
+            word-wrap: break-word;
         }
         
         .audio-container {
@@ -635,6 +687,8 @@
             text-align: center;
             padding: 48px 16px;
             color: #666;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .no-results-icon {
@@ -646,6 +700,8 @@
         .loading {
             text-align: center;
             padding: 48px 16px;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .spinner {
@@ -678,6 +734,9 @@
             border-radius: 5px;
             margin: 16px 0;
             border-left: 4px solid #dc3545;
+            width: 100%;
+            box-sizing: border-box;
+            word-wrap: break-word;
         }
         
         footer {
@@ -687,6 +746,8 @@
             color: #666;
             border-top: 1px solid var(--border-color);
             background: #f9fafc;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         /* ==================== 移动端适配优化 ==================== */
@@ -784,11 +845,27 @@
             }
             
             .instructions-list {
-                padding: 10px;
+                padding: 12px;
             }
             
             .instructions-item {
                 font-size: 0.9rem;
+                flex-wrap: wrap;
+            }
+            
+            .instruction-number {
+                width: 24px;
+                text-align: left;
+            }
+            
+            .instruction-content {
+                width: calc(100% - 32px);
+            }
+            
+            /* 移动端特殊处理长文本 */
+            .instructions-item.long-text .instruction-content {
+                font-size: 0.85rem;
+                line-height: 1.3;
             }
             
             .config-section {
@@ -953,6 +1030,20 @@
                 height: 48px;
             }
             
+            .instructions-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .instruction-number {
+                margin-bottom: 2px;
+                text-align: left;
+            }
+            
+            .instruction-content {
+                width: 100%;
+            }
+            
             .audio-play-btn {
                 width: 26px;
                 height: 26px;
@@ -962,13 +1053,13 @@
         
         @media (min-width: 769px) and (max-width: 1024px) {
             .dictionary-container {
-                max-width: 90%;
+                max-width: 95%;
             }
         }
         
         @media (min-width: 1025px) {
             .search-box {
-                max-width: 960px;
+                max-width: 100%;
             }
             
             #character-search-input,
@@ -1023,7 +1114,7 @@
                 </div>
             </div>
             
-            <!-- 新增说明列表 -->
+            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1043,22 +1134,24 @@
                         <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
                     </div>
                 </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">iv.</span>
+                    <div class="instruction-content">
+                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                    </div>
+                </div>
                 <div class="instructions-item">
-    <span class="instruction-number">iv.</span>
-    <div class="instruction-content">
-        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-    </div>
-</div>
-    <span class="instruction-number">v.</span>
-    <div class="instruction-content">
-        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
-    </div>
-</div>
-    <span class="instruction-number">vi.</span>
-    <div class="instruction-content">
-        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
-    </div>
-</div>
+                    <span class="instruction-number">v.</span>
+                    <div class="instruction-content">
+                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                    </div>
+                </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">vi.</span>
+                    <div class="instruction-content">
+                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -1087,7 +1180,7 @@
                 </div>
             </div>
             
-            <!-- 新增说明列表 -->
+            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1107,22 +1200,24 @@
                         <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
                     </div>
                 </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">iv.</span>
+                    <div class="instruction-content">
+                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                    </div>
+                </div>
                 <div class="instructions-item">
-    <span class="instruction-number">iv.</span>
-    <div class="instruction-content">
-        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-    </div>
-</div>
-    <span class="instruction-number">v.</span>
-    <div class="instruction-content">
-        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
-    </div>
-</div>
-    <span class="instruction-number">vi.</span>
-    <div class="instruction-content">
-        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
-    </div>
-</div>
+                    <span class="instruction-number">v.</span>
+                    <div class="instruction-content">
+                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                    </div>
+                </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">vi.</span>
+                    <div class="instruction-content">
+                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -1150,7 +1245,7 @@
                 </div>
             </div>
             
-            <!-- 新增说明列表 -->
+            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1170,26 +1265,28 @@
                         <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
                     </div>
                 </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">iv.</span>
+                    <div class="instruction-content">
+                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                    </div>
+                </div>
                 <div class="instructions-item">
-    <span class="instruction-number">iv.</span>
-    <div class="instruction-content">
-        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-    </div>
-</div>
-    <span class="instruction-number">v.</span>
-    <div class="instruction-content">
-        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
-    </div>
-</div>
-    <span class="instruction-number">vi.</span>
-    <div class="instruction-content">
-        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
-    </div>
-</div>
+                    <span class="instruction-number">v.</span>
+                    <div class="instruction-content">
+                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                    </div>
+                </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">vi.</span>
+                    <div class="instruction-content">
+                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代
+                    </div>
+                </div>
             </div>
         </section>
         
-        <!-- 修改后的config-section，移除已迁移的内容 -->
+        <!-- 修改后的config-section -->
         <div class="config-section">
             <h3>數據狀態</h3>
             <div class="data-status-container" id="data-status">正在初始化……</div>
@@ -1221,6 +1318,7 @@
     </div>
 
     <script>
+        // JavaScript代码保持不变，与您之前的代码完全相同
         // 配置 - 严格按照原方案
         const CONFIG = {
             DICTIONARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
