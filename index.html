@@ -1731,42 +1731,42 @@
         function updateSearchHint() {
             if (currentMainMode === 'character') {
                 if (currentSubMode === 'character') {
-                    searchInputs.character.placeholder = '請輸入要查詢的漢字(多字用逗號分隔)...';
+                    searchInputs.character.placeholder = '請輸入要查詢的漢字（多字用逗號分隔）...';
                     if (exactMatch) {
-                        searchHints.character.textContent = '輸入漢字查詢對應的白話字(BVZ)和注釋(精確匹配模式)';
+                        searchHints.character.textContent = '輸入漢字查詢對應的白話字(BVZ)和注釋（精確匹配模式）';
                     } else {
-                        searchHints.character.textContent = '輸入漢字查詢對應的白話字(BVZ)和注釋(支持多字查詢, 用逗號分隔)';
+                        searchHints.character.textContent = '輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢, 用逗號分隔）';
                     }
                 } else {
-                    searchInputs.character.placeholder = '請輸入白話字(BVZ)(多個用逗號分隔)...';
+                    searchInputs.character.placeholder = '請輸入白話字（BVZ）（多個用逗號分隔）...';
                     if (exactMatch) {
-                        searchHints.character.textContent = '輸入白話字(BVZ)反查對應的漢字和注釋(精確匹配模式)';
+                        searchHints.character.textContent = '輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式）';
                     } else {
-                        searchHints.character.textContent = '輸入白話字(BVZ)反查對應的漢字和注釋(支持多個BVZ查詢, 用逗號分隔)';
+                        searchHints.character.textContent = '輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢, 用逗號分隔）';
                     }
                 }
             } else if (currentMainMode === 'vocab') {
                 if (currentSubMode === 'vocab-bvz') {
-                    searchInputs.vocab.placeholder = '請輸入白話字(BVZ)(多個用逗號分隔)...';
+                    searchInputs.vocab.placeholder = '請輸入白話字（BVZ）（多個用逗號分隔）...';
                     if (exactMatch) {
-                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義(精確匹配模式)';
+                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義（精確匹配模式）';
                     } else {
-                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義(模糊匹配模式，忽略連字符)';
+                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）';
                     }
                 } else {
-                    searchInputs.vocab.placeholder = '請輸入詞條(多個用逗號分隔)...';
+                    searchInputs.vocab.placeholder = '請輸入詞條（多個用逗號分隔）...';
                     if (exactMatch) {
-                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義(精確匹配模式)';
+                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義（精確匹配模式）';
                     } else {
-                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義(支持多個詞條查詢, 用逗號分隔)';
+                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義（支持多個詞條查詢, 用逗號分隔）';
                     }
                 }
             } else if (currentMainMode === 'definition') {
-                searchInputs.definition.placeholder = '請輸入釋義關鍵詞(多個用逗號分隔)...';
+                searchInputs.definition.placeholder = '請輸入釋義關鍵詞（多個用逗號分隔）...';
                 if (exactMatch) {
-                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ(精確匹配模式)';
+                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）';
                 } else {
-                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ(支持多個關鍵詞查詢, 用逗號分隔)';
+                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢, 用逗號分隔）';
                 }
             }
         }
