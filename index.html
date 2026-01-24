@@ -31,15 +31,17 @@
             padding: 12px;
             font-family: 'Iansui', 'Times New Roman', serif;
             font-size: 1em;
+            scroll-behavior: smooth; /* 添加平滑滚动 */
         }
         
         .dictionary-container {
-            max-width: 1000px; /* 稍微增加最大宽度 */
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 8px;
             box-shadow: var(--shadow);
             overflow: hidden;
+            position: relative;
         }
         
         header {
@@ -465,6 +467,18 @@
             min-height: 320px;
             width: 100%;
             box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .results-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: none;
+            overflow: visible;
         }
         
         .results-header {
@@ -492,6 +506,23 @@
             transition: transform 0.2s, box-shadow 0.2s;
             width: 100%;
             box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        .result-item:nth-child(1) { animation-delay: 0.1s; }
+        .result-item:nth-child(2) { animation-delay: 0.2s; }
+        .result-item:nth-child(3) { animation-delay: 0.3s; }
+        .result-item:nth-child(4) { animation-delay: 0.4s; }
+        .result-item:nth-child(5) { animation-delay: 0.5s; }
+        .result-item:nth-child(n+6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .vocab-result .result-item {
@@ -689,6 +720,14 @@
             color: #666;
             width: 100%;
             box-sizing: border-box;
+            opacity: 0;
+            animation: fadeIn 0.5s ease 0.3s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         
         .no-results-icon {
@@ -748,6 +787,39 @@
             background: #f9fafc;
             width: 100%;
             box-sizing: border-box;
+        }
+        
+        /* 返回顶部按钮 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
         }
         
         /* ==================== 移动端适配优化 ==================== */
@@ -967,6 +1039,14 @@
                 width: 28px;
                 height: 28px;
             }
+            
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1049,6 +1129,14 @@
                 height: 26px;
                 margin-left: 8px;
             }
+            
+            .scroll-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
         
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -1081,6 +1169,9 @@
     </style>
 </head>
 <body>
+    <!-- 返回顶部按钮 -->
+    <button class="scroll-to-top" id="scroll-to-top" title="返回顶部">↑</button>
+    
     <div class="dictionary-container">
         <header>
             <h1>遂城白話多功能音典</h1>
@@ -1305,10 +1396,11 @@
             </div>
         </div>
         
+        <!-- 结果区域 -->
         <section class="results-section" id="results-container">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>正在加載字典數據……</p>
+            <div class="no-results">
+                <div class="no-results-icon">🔍</div>
+                <p>請輸入搜索內容並點擊搜索按鈕查看結果</p>
             </div>
         </section>
         
@@ -1318,7 +1410,6 @@
     </div>
 
     <script>
-        // JavaScript代码保持不变，与您之前的代码完全相同
         // 配置 - 严格按照原方案
         const CONFIG = {
             DICTIONARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
@@ -1350,6 +1441,7 @@
         let audioPreloadController = null;
         let currentVolume = CONFIG.DEFAULT_VOLUME;
         let categoryOptions = new Set();
+        let isSearching = false; // 新增：标记是否正在搜索
         
         // DOM元素
         const modeTabs = document.querySelectorAll('.mode-tab');
@@ -1398,6 +1490,7 @@
         const dataStatus = document.getElementById('data-status');
         const volumeSlider = document.getElementById('volume-slider');
         const volumeValue = document.getElementById('volume-value');
+        const scrollToTopButton = document.getElementById('scroll-to-top');
         
         // 初始化
         async function init() {
@@ -1414,6 +1507,9 @@
                 updateVolumeDisplay();
                 
                 searchInputs.character.focus();
+                
+                // 添加滚动监听
+                window.addEventListener('scroll', handleScroll);
                 
             } catch (error) {
                 console.error('初始化失敗：', error);
@@ -1479,7 +1575,8 @@
                     dataStatus.textContent += ` | 分類：${categoryOptions.size} 個`;
                 }
                 
-                showMessage('數據加載成功！請選擇查詢模式並輸入內容進行查詢');
+                // 显示初始提示
+                showInitialMessage();
                 
             } catch (error) {
                 console.error('加載數據失敗：', error);
@@ -1639,7 +1736,8 @@
                     
                     exactMatch = exactMatchCheckboxes[currentMainMode].checked;
                     
-                    showMessage('請輸入內容進行查詢');
+                    // 清空结果区域
+                    showInitialMessage();
                     
                     clearSearchInputs();
                     searchInputs[currentMainMode].focus();
@@ -1665,9 +1763,6 @@
                         
                         currentSubMode = this.dataset.mode;
                         updateSearchHint();
-                        
-                        const query = searchInputs[currentMainMode].value.trim();
-                        if (query) performSearch(query);
                     });
                 });
             });
@@ -1676,43 +1771,52 @@
                 exactMatchCheckboxes[mode].addEventListener('change', function() {
                     exactMatch = this.checked;
                     updateSearchHint();
-                    const query = searchInputs[currentMainMode].value.trim();
-                    if (query) performSearch(query);
                 });
             });
             
+            // 修改输入事件监听器 - 移除自动搜索
             Object.keys(searchInputs).forEach(mode => {
                 searchInputs[mode].addEventListener('input', function() {
+                    // 仅清除搜索超时，不执行搜索
                     if (searchTimeout) clearTimeout(searchTimeout);
                     
                     const query = this.value.trim();
                     if (!query) {
-                        showMessage('請輸入內容進行查詢');
-                        return;
+                        showInitialMessage();
                     }
-                    
-                    searchTimeout = setTimeout(() => performSearch(query), 300);
                 });
                 
+                // 保留Enter键搜索
                 searchInputs[mode].addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') {
                         const query = searchInputs[mode].value.trim();
-                        if (query) performSearch(query);
+                        if (query) {
+                            e.preventDefault(); // 防止表单提交
+                            performSearch(query);
+                        }
                     }
                 });
             });
             
+            // 搜索按钮事件 - 主要搜索方式
             Object.keys(searchButtons).forEach(mode => {
                 searchButtons[mode].addEventListener('click', () => {
                     const query = searchInputs[mode].value.trim();
-                    if (query) performSearch(query);
+                    if (query) {
+                        performSearch(query);
+                    } else {
+                        showMessage('請輸入搜索內容');
+                    }
                 });
             });
             
             Object.keys(categorySelects).forEach(mode => {
                 categorySelects[mode].addEventListener('change', function() {
-                    const query = searchInputs[currentMainMode].value.trim();
-                    if (query) performSearch(query);
+                    // 仅在已经搜索过的情况下重新搜索
+                    if (isSearching) {
+                        const query = searchInputs[currentMainMode].value.trim();
+                        if (query) performSearch(query);
+                    }
                 });
             });
             
@@ -1720,6 +1824,29 @@
             volumeSlider.addEventListener('change', handleVolumeChange);
             
             document.addEventListener('keydown', handleKeyboardShortcuts);
+            
+            // 返回顶部按钮事件
+            scrollToTopButton.addEventListener('click', scrollToTop);
+        }
+        
+        // 处理滚动
+        function handleScroll() {
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            
+            // 显示/隐藏返回顶部按钮
+            if (scrollPosition > 300) {
+                scrollToTopButton.classList.add('visible');
+            } else {
+                scrollToTopButton.classList.remove('visible');
+            }
+        }
+        
+        // 滚动到顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
         
         function handleVolumeChange() {
@@ -1913,10 +2040,23 @@
                 audioPreloadController = null;
             }
             
+            isSearching = true; // 标记正在搜索
+            
             const results = searchData(query);
             currentResults = results;
             
             displayResults(results, query);
+            
+            // 显示结果区域
+            showResultsArea();
+            
+            // 滚动到结果区域
+            setTimeout(() => {
+                resultsContainer.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
             
             startSmartPreload(results);
         }
@@ -2212,6 +2352,23 @@
             }
         }
         
+        // 显示初始消息
+        function showInitialMessage() {
+            resultsContainer.innerHTML = `
+                <div class="no-results">
+                    <div class="no-results-icon">🔍</div>
+                    <p>請輸入搜索內容並點擊搜索按鈕查看結果</p>
+                </div>
+            `;
+            resultsContainer.classList.remove('visible');
+            isSearching = false;
+        }
+        
+        // 显示结果区域
+        function showResultsArea() {
+            resultsContainer.classList.add('visible');
+        }
+        
         // 显示搜索结果
         function displayResults(results, query) {
             if (!results.length) {
@@ -2333,6 +2490,37 @@
             });
         }
         
+        // 显示消息
+        function showMessage(message) {
+            resultsContainer.innerHTML = `
+                <div class="no-results">
+                    <div class="no-results-icon">🔍</div>
+                    <p>${message}</p>
+                </div>
+            `;
+            showResultsArea();
+        }
+        
+        // 显示加载状态
+        function showLoading() {
+            resultsContainer.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>正在加載字典數據……</p>
+                </div>
+            `;
+        }
+        
+        // 显示错误
+        function showError(message) {
+            resultsContainer.innerHTML = `
+                <div class="error-message">
+                    <strong>錯誤：</strong> ${message}
+                </div>
+            `;
+            showResultsArea();
+        }
+        
         // 处理音频播放
         async function handleAudioPlay(event) {
             const button = event.currentTarget;
@@ -2417,35 +2605,6 @@
         function resetAudioButton(button) {
             button.classList.remove('playing');
             button.title = '播放發音';
-        }
-        
-        // 显示加载状态
-        function showLoading() {
-            resultsContainer.innerHTML = `
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>正在加載字典數據……</p>
-                </div>
-            `;
-        }
-        
-        // 显示消息
-        function showMessage(message) {
-            resultsContainer.innerHTML = `
-                <div class="no-results">
-                    <div class="no-results-icon">🔍</div>
-                    <p>${message}</p>
-                </div>
-            `;
-        }
-        
-        // 显示错误
-        function showError(message) {
-            resultsContainer.innerHTML = `
-                <div class="error-message">
-                    <strong>錯誤：</strong> ${message}
-                </div>
-            `;
         }
         
         // 清理Blob URL
