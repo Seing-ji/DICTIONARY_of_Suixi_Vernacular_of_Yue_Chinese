@@ -7354,5 +7354,19 @@
     "詞條類別": "動物名詞-昆蟲",
     "釋義": "蟑螂",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-zầk.mp3"
+  },
+  {
+    "詞條": "媙□",
+    "BVZ": "vây-zei",
+    "詞條類別": "謂詞",
+    "釋義": "（人）美麗的，靚的；威風的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vây-zei.mp3",
+    "examples": [
+      {
+        "例句": "著新衫，好~。\n〔穿新衣，好靚麗。〕",
+        "例句的BVZ轉寫": "Zjợk xâng sam, hóu vây-zei.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zjợk xâng sam, hóu vây-zei..mp3"
+      }
+    ]
   }
 ]
