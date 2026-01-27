@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>遂城白話多功能音典</title>
+    <!-- 加载霞鹜文楷字体 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/style.css">
     <style>
         :root {
             --primary-color: #4a6fa5;
@@ -21,7 +23,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Times New Roman', 'Iansui', serif;
         }
         
         body {
@@ -29,9 +30,9 @@
             color: var(--text-color);
             line-height: 1.5;
             padding: 12px;
-            font-family: 'Iansui', 'Times New Roman', serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
             font-size: 1em;
-            scroll-behavior: smooth; /* 添加平滑滚动 */
+            scroll-behavior: smooth;
         }
         
         .dictionary-container {
@@ -55,6 +56,7 @@
             font-size: 2.2rem;
             margin-bottom: 12px;
             font-weight: 600;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .description {
@@ -62,6 +64,7 @@
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .mode-section {
@@ -89,6 +92,7 @@
             flex: 1;
             min-width: 120px;
             text-align: center;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .mode-tab.active {
@@ -135,6 +139,7 @@
             font-size: 1.105rem;
             transition: all 0.3s;
             font-weight: 500;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .mode-btn.active {
@@ -174,6 +179,7 @@
             height: 52px;
             width: 100%;
             box-sizing: border-box;
+            font-family: "Times New Roman", "Arial", sans-serif;
         }
         
         #character-search-input:focus,
@@ -205,6 +211,7 @@
             white-space: nowrap;
             height: 52px;
             flex-shrink: 0;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         #character-search-button:hover {
@@ -241,6 +248,7 @@
             align-items: center;
             gap: 8px;
             font-size: 1.02rem;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .exact-match-checkbox {
@@ -255,6 +263,7 @@
             gap: 12px;
             font-size: 1.02rem;
             padding: 8px 0;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         #category-select {
@@ -269,6 +278,7 @@
             transition: all 0.2s;
             height: 54px;
             box-sizing: border-box;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         #category-select:hover {
@@ -282,7 +292,6 @@
             box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.3);
         }
         
-        /* 改进的说明列表样式 - 自动调整宽度 */
         .instructions-list {
             margin-top: 12px;
             padding: 15px;
@@ -300,6 +309,7 @@
             color: #495057;
             font-size: 1.1rem;
             font-weight: 600;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instructions-item {
@@ -312,6 +322,7 @@
             flex-wrap: nowrap;
             min-height: 24px;
             box-sizing: border-box;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-number {
@@ -324,6 +335,7 @@
             flex-grow: 0;
             line-height: 1.5;
             text-align: right;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-content {
@@ -334,6 +346,7 @@
             word-break: normal;
             line-height: 1.5;
             box-sizing: border-box;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-link {
@@ -341,13 +354,13 @@
             text-decoration: none;
             font-weight: 500;
             word-break: break-all;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-link:hover {
             text-decoration: underline;
         }
         
-        /* 特殊处理长文本项 */
         .instructions-item.long-text .instruction-content {
             font-size: 0.92rem;
             line-height: 1.4;
@@ -375,12 +388,14 @@
             margin-bottom: 12px;
             color: #856404;
             font-size: 1.4rem;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .data-status-container {
             margin-bottom: 16px;
             font-size: 1.1rem;
             word-break: break-word;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .volume-control {
@@ -405,6 +420,7 @@
             color: #495057;
             font-size: 1.1rem;
             margin: 0;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .volume-value {
@@ -413,6 +429,7 @@
             font-size: 1rem;
             min-width: 50px;
             text-align: right;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .volume-slider-container {
@@ -494,6 +511,7 @@
         .results-count {
             font-size: 1.3rem;
             color: #666;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .result-item {
@@ -551,6 +569,7 @@
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .vocab-result .character {
@@ -577,6 +596,7 @@
             align-items: center;
             flex-wrap: nowrap;
             width: 100%;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .label {
@@ -588,6 +608,7 @@
             font-size: 1.15rem;
             flex-shrink: 0;
             white-space: nowrap;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .vocab-result .label {
@@ -599,7 +620,7 @@
         }
         
         .bvz-value {
-            font-family: 'Times New Roman', 'Iansui', serif !important;
+            font-family: "Times New Roman", "Arial", sans-serif;
             font-size: 1.3rem;
             font-weight: bold;
             line-height: 1.3;
@@ -616,6 +637,7 @@
             margin-left: 12px;
             font-weight: normal;
             white-space: nowrap;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .example-container {
@@ -637,6 +659,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .example-text {
@@ -644,10 +667,11 @@
             margin-bottom: 10px;
             line-height: 1.6;
             word-wrap: break-word;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .example-bvz {
-            font-family: 'Times New Roman', 'Iansui', serif !important;
+            font-family: "Times New Roman", "Arial", sans-serif;
             font-size: 1.15rem;
             color: #4a6fa5;
             margin-bottom: 12px;
@@ -660,6 +684,7 @@
             font-style: italic;
             margin-bottom: 10px;
             word-wrap: break-word;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .audio-container {
@@ -776,6 +801,7 @@
             width: 100%;
             box-sizing: border-box;
             word-wrap: break-word;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         footer {
@@ -787,9 +813,9 @@
             background: #f9fafc;
             width: 100%;
             box-sizing: border-box;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
-        /* 返回顶部按钮 */
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
@@ -810,6 +836,7 @@
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
+            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .scroll-to-top.visible {
@@ -821,8 +848,6 @@
             background: var(--secondary-color);
             transform: translateY(-3px);
         }
-        
-        /* ==================== 移动端适配优化 ==================== */
         
         @media (max-width: 768px) {
             body {
@@ -934,7 +959,6 @@
                 width: calc(100% - 32px);
             }
             
-            /* 移动端特殊处理长文本 */
             .instructions-item.long-text .instruction-content {
                 font-size: 0.85rem;
                 line-height: 1.3;
@@ -1169,7 +1193,6 @@
     </style>
 </head>
 <body>
-    <!-- 返回顶部按钮 -->
     <button class="scroll-to-top" id="scroll-to-top" title="返回顶部">↑</button>
     
     <div class="dictionary-container">
@@ -1186,7 +1209,6 @@
             </div>
         </section>
         
-        <!-- 漢字與BVZ互查模式 -->
         <section class="search-section character-search" id="character-search-section">
             <div class="search-mode">
                 <button class="mode-btn active" data-mode="character">漢字查BVZ</button>
@@ -1205,7 +1227,6 @@
                 </div>
             </div>
             
-            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1258,7 +1279,6 @@
             </div>
         </section>
         
-        <!-- BVZ/詞條查釋義模式 -->
         <section class="search-section vocab-search" id="vocab-search-section" style="display:none;">
             <div class="search-mode">
                 <button class="mode-btn vocab-active" data-mode="vocab-bvz">BVZ查釋義</button>
@@ -1283,7 +1303,6 @@
                 </div>
             </div>
             
-            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1332,10 +1351,10 @@
                     <div class="instruction-content">
                         <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
                     </div>
+                </div>
             </div>
         </section>
         
-        <!-- 釋義反查模式 -->
         <section class="search-section definition-search" id="definition-search-section" style="display:none;">
             <div class="search-mode">
                 <button class="mode-btn definition-active" data-mode="definition">釋義反查</button>
@@ -1359,7 +1378,6 @@
                 </div>
             </div>
             
-            <!-- 改进的说明列表 -->
             <div class="instructions-list">
                 <h4>使用說明：</h4>
                 <div class="instructions-item">
@@ -1408,15 +1426,14 @@
                     <div class="instruction-content">
                         <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
                     </div>
+                </div>
             </div>
         </section>
         
-        <!-- 修改后的config-section -->
         <div class="config-section">
             <h3>數據狀態</h3>
             <div class="data-status-container" id="data-status">正在初始化……</div>
             
-            <!-- 保留音量控制 -->
             <div class="volume-control">
                 <div class="volume-header">
                     <h4>音量控制</h4>
@@ -1430,7 +1447,6 @@
             </div>
         </div>
         
-        <!-- 结果区域 -->
         <section class="results-section" id="results-container">
             <div class="no-results">
                 <div class="no-results-icon">🔍</div>
@@ -1444,7 +1460,6 @@
     </div>
 
     <script>
-        // 配置 - 严格按照原方案
         const CONFIG = {
             DICTIONARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
             VOCABULARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/VOCABULARY.json',
@@ -1462,7 +1477,6 @@
             SPACE_SEPARATOR: /\s+/
         };
         
-        // 全局变量
         let dictionaryData = [];
         let vocabularyData = [];
         let currentMainMode = 'character';
@@ -1475,9 +1489,8 @@
         let audioPreloadController = null;
         let currentVolume = CONFIG.DEFAULT_VOLUME;
         let categoryOptions = new Set();
-        let isSearching = false; // 新增：标记是否正在搜索
+        let isSearching = false;
         
-        // DOM元素
         const modeTabs = document.querySelectorAll('.mode-tab');
         const searchSections = {
             character: document.getElementById('character-search-section'),
@@ -1526,7 +1539,6 @@
         const volumeValue = document.getElementById('volume-value');
         const scrollToTopButton = document.getElementById('scroll-to-top');
         
-        // 初始化
         async function init() {
             dataStatus.textContent = '正在初始化……';
             
@@ -1542,7 +1554,6 @@
                 
                 searchInputs.character.focus();
                 
-                // 添加滚动监听
                 window.addEventListener('scroll', handleScroll);
                 
             } catch (error) {
@@ -1551,7 +1562,6 @@
             }
         }
         
-        // 加载所有数据
         async function loadAllData() {
             showLoading();
             dataStatus.textContent = '正在從GitHub加載字典數據……';
@@ -1609,7 +1619,6 @@
                     dataStatus.textContent += ` | 分類：${categoryOptions.size} 個`;
                 }
                 
-                // 显示初始提示
                 showInitialMessage();
                 
             } catch (error) {
@@ -1619,7 +1628,6 @@
             }
         }
         
-        // 处理字典数据格式
         function processDictionaryData(data) {
             if (!data || typeof data !== 'object') {
                 throw new Error('字典數據格式不正確');
@@ -1647,7 +1655,6 @@
                 });
         }
         
-        // 处理词汇数据格式
         function processVocabularyData(data) {
             if (!data || typeof data !== 'object') {
                 throw new Error('詞彙數據格式不正確');
@@ -1712,7 +1719,6 @@
             return processedData;
         }
         
-        // 提取分类选项
         function extractCategories() {
             categoryOptions.clear();
             
@@ -1727,7 +1733,6 @@
             updateCategorySelects();
         }
         
-        // 更新分类选择下拉框
         function updateCategorySelects() {
             categorySelects.vocab.innerHTML = '<option value="all">全部類別</option>';
             categorySelects.definition.innerHTML = '<option value="all">全部類別</option>';
@@ -1748,7 +1753,6 @@
             });
         }
         
-        // 设置事件监听器
         function setupEventListeners() {
             modeTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
@@ -1770,7 +1774,6 @@
                     
                     exactMatch = exactMatchCheckboxes[currentMainMode].checked;
                     
-                    // 清空结果区域
                     showInitialMessage();
                     
                     clearSearchInputs();
@@ -1808,10 +1811,8 @@
                 });
             });
             
-            // 修改输入事件监听器 - 移除自动搜索
             Object.keys(searchInputs).forEach(mode => {
                 searchInputs[mode].addEventListener('input', function() {
-                    // 仅清除搜索超时，不执行搜索
                     if (searchTimeout) clearTimeout(searchTimeout);
                     
                     const query = this.value.trim();
@@ -1820,19 +1821,17 @@
                     }
                 });
                 
-                // 保留Enter键搜索
                 searchInputs[mode].addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') {
                         const query = searchInputs[mode].value.trim();
                         if (query) {
-                            e.preventDefault(); // 防止表单提交
+                            e.preventDefault();
                             performSearch(query);
                         }
                     }
                 });
             });
             
-            // 搜索按钮事件 - 主要搜索方式
             Object.keys(searchButtons).forEach(mode => {
                 searchButtons[mode].addEventListener('click', () => {
                     const query = searchInputs[mode].value.trim();
@@ -1846,7 +1845,6 @@
             
             Object.keys(categorySelects).forEach(mode => {
                 categorySelects[mode].addEventListener('change', function() {
-                    // 仅在已经搜索过的情况下重新搜索
                     if (isSearching) {
                         const query = searchInputs[currentMainMode].value.trim();
                         if (query) performSearch(query);
@@ -1859,15 +1857,12 @@
             
             document.addEventListener('keydown', handleKeyboardShortcuts);
             
-            // 返回顶部按钮事件
             scrollToTopButton.addEventListener('click', scrollToTop);
         }
         
-        // 处理滚动
         function handleScroll() {
             const scrollPosition = window.scrollY || document.documentElement.scrollTop;
             
-            // 显示/隐藏返回顶部按钮
             if (scrollPosition > 300) {
                 scrollToTopButton.classList.add('visible');
             } else {
@@ -1875,7 +1870,6 @@
             }
         }
         
-        // 滚动到顶部
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -1981,14 +1975,12 @@
             }
         }
         
-        // 清除所有搜索输入框
         function clearSearchInputs() {
             Object.values(searchInputs).forEach(input => {
                 input.value = '';
             });
         }
         
-        // 重置子模式
         function resetSubMode() {
             if (currentMainMode === 'character') {
                 currentSubMode = 'character';
@@ -2013,7 +2005,6 @@
             }
         }
         
-        // 更新结果容器类名
         function updateResultsContainerClass() {
             resultsContainer.className = 'results-section';
             if (currentMainMode === 'vocab') {
@@ -2023,7 +2014,6 @@
             }
         }
         
-        // 更新搜索提示
         function updateSearchHint() {
             if (currentMainMode === 'character') {
                 if (currentSubMode === 'character') {
@@ -2067,24 +2057,21 @@
             }
         }
         
-        // 执行搜索
         async function performSearch(query) {
             if (audioPreloadController) {
                 audioPreloadController.abort();
                 audioPreloadController = null;
             }
             
-            isSearching = true; // 标记正在搜索
+            isSearching = true;
             
             const results = searchData(query);
             currentResults = results;
             
             displayResults(results, query);
             
-            // 显示结果区域
             showResultsArea();
             
-            // 滚动到结果区域
             setTimeout(() => {
                 resultsContainer.scrollIntoView({
                     behavior: 'smooth',
@@ -2095,7 +2082,6 @@
             startSmartPreload(results);
         }
         
-        // 搜索数据
         function searchData(query) {
             if (currentMainMode === 'character') {
                 return searchDictionary(query);
@@ -2107,7 +2093,6 @@
             return [];
         }
         
-        // 搜索字典数据
         function searchDictionary(query) {
             if (!dictionaryData.length) return [];
             
@@ -2163,7 +2148,6 @@
             return results.slice(0, CONFIG.MAX_RESULTS);
         }
         
-        // 搜索词汇数据
         function searchVocabulary(query) {
             if (!vocabularyData.length) return [];
             
@@ -2227,7 +2211,6 @@
             return results.slice(0, CONFIG.MAX_RESULTS);
         }
         
-        // 搜索释义
         function searchDefinition(query) {
             if (!vocabularyData.length) return [];
             
@@ -2269,7 +2252,6 @@
             return results.slice(0, CONFIG.MAX_RESULTS);
         }
         
-        // 智能预加载策略
         function startSmartPreload(results) {
             if (!results.length) return;
             
@@ -2296,7 +2278,6 @@
             });
         }
         
-        // 获取音频URL列表
         function getAudioUrls(results, start, end) {
             const urls = [];
             const limit = Math.min(end, results.length);
@@ -2315,7 +2296,6 @@
             return urls;
         }
         
-        // 批量预加载音频
         async function preloadAudioBatch(urls, priority = 'medium', signal) {
             if (!urls.length) return;
             
@@ -2340,7 +2320,6 @@
             }
         }
         
-        // 预加载单个音频
         async function preloadSingleAudio(audioUrl, signal) {
             if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
                 return CONFIG.AUDIO_CACHE.get(audioUrl);
@@ -2369,7 +2348,6 @@
             }
         }
         
-        // 启用音频按钮
         function enableAudioButtons(start, end) {
             const buttons = resultsContainer.querySelectorAll('.audio-play-btn');
             const limit = Math.min(end * 2, buttons.length);
@@ -2386,7 +2364,6 @@
             }
         }
         
-        // 显示初始消息
         function showInitialMessage() {
             resultsContainer.innerHTML = `
                 <div class="no-results">
@@ -2398,12 +2375,10 @@
             isSearching = false;
         }
         
-        // 显示结果区域
         function showResultsArea() {
             resultsContainer.classList.add('visible');
         }
         
-        // 显示搜索结果
         function displayResults(results, query) {
             if (!results.length) {
                 showMessage(`沒有找到與"${query}"相關的結果`);
@@ -2524,7 +2499,6 @@
             });
         }
         
-        // 显示消息
         function showMessage(message) {
             resultsContainer.innerHTML = `
                 <div class="no-results">
@@ -2535,7 +2509,6 @@
             showResultsArea();
         }
         
-        // 显示加载状态
         function showLoading() {
             resultsContainer.innerHTML = `
                 <div class="loading">
@@ -2545,7 +2518,6 @@
             `;
         }
         
-        // 显示错误
         function showError(message) {
             resultsContainer.innerHTML = `
                 <div class="error-message">
@@ -2555,7 +2527,6 @@
             showResultsArea();
         }
         
-        // 处理音频播放
         async function handleAudioPlay(event) {
             const button = event.currentTarget;
             const audioUrl = decodeURIComponent(button.getAttribute('data-audio-url'));
@@ -2589,7 +2560,6 @@
             playAudio(audioBlobUrl, button);
         }
         
-        // 播放音频
         function playAudio(audioUrl, button) {
             currentAudio = new Audio(audioUrl);
             currentPlayingButton = button;
@@ -2620,7 +2590,6 @@
             });
         }
         
-        // 停止当前音频
         function stopCurrentAudio() {
             if (currentAudio) {
                 currentAudio.pause();
@@ -2635,13 +2604,11 @@
             }
         }
         
-        // 重置音频按钮状态
         function resetAudioButton(button) {
             button.classList.remove('playing');
             button.title = '播放發音';
         }
         
-        // 清理Blob URL
         window.addEventListener('beforeunload', () => {
             CONFIG.AUDIO_CACHE.forEach(blobUrl => {
                 URL.revokeObjectURL(blobUrl);
@@ -2653,7 +2620,6 @@
             }
         });
         
-        // 初始化
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
