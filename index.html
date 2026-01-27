@@ -30,7 +30,7 @@
             color: var(--text-color);
             line-height: 1.5;
             padding: 12px;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
             font-size: 1em;
             scroll-behavior: smooth;
         }
@@ -56,7 +56,7 @@
             font-size: 2.2rem;
             margin-bottom: 12px;
             font-weight: 600;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .description {
@@ -64,7 +64,7 @@
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .mode-section {
@@ -92,7 +92,7 @@
             flex: 1;
             min-width: 120px;
             text-align: center;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .mode-tab.active {
@@ -139,7 +139,7 @@
             font-size: 1.105rem;
             transition: all 0.3s;
             font-weight: 500;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .mode-btn.active {
@@ -179,7 +179,28 @@
             height: 52px;
             width: 100%;
             box-sizing: border-box;
-            font-family: "Times New Roman", "Arial", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        /* BVZ输入模式使用Arial字体 */
+        .bvz-input-mode {
+            font-family: Arial, sans-serif !important;
+        }
+        
+        /* 词汇搜索的BVZ模式使用Arial字体 */
+        .vocab-bvz-mode {
+            font-family: Arial, sans-serif !important;
+        }
+        
+        /* 所有搜索结果中的BVZ值使用Arial字体 */
+        .bvz-value, .example-bvz {
+            font-family: Arial, sans-serif !important;
+        }
+        
+        #character-search-input::placeholder,
+        #vocab-search-input::placeholder,
+        #definition-search-input::placeholder {
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         #character-search-input:focus,
@@ -211,7 +232,7 @@
             white-space: nowrap;
             height: 52px;
             flex-shrink: 0;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         #character-search-button:hover {
@@ -248,7 +269,7 @@
             align-items: center;
             gap: 8px;
             font-size: 1.02rem;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .exact-match-checkbox {
@@ -263,7 +284,7 @@
             gap: 12px;
             font-size: 1.02rem;
             padding: 8px 0;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         #category-select {
@@ -278,7 +299,7 @@
             transition: all 0.2s;
             height: 54px;
             box-sizing: border-box;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         #category-select:hover {
@@ -309,7 +330,7 @@
             color: #495057;
             font-size: 1.1rem;
             font-weight: 600;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .instructions-item {
@@ -322,7 +343,6 @@
             flex-wrap: nowrap;
             min-height: 24px;
             box-sizing: border-box;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-number {
@@ -335,7 +355,7 @@
             flex-grow: 0;
             line-height: 1.5;
             text-align: right;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .instruction-content {
@@ -346,7 +366,11 @@
             word-break: normal;
             line-height: 1.5;
             box-sizing: border-box;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        .instruction-latin {
+            font-family: Arial, sans-serif !important;
         }
         
         .instruction-link {
@@ -354,7 +378,6 @@
             text-decoration: none;
             font-weight: 500;
             word-break: break-all;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .instruction-link:hover {
@@ -388,14 +411,14 @@
             margin-bottom: 12px;
             color: #856404;
             font-size: 1.4rem;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .data-status-container {
             margin-bottom: 16px;
             font-size: 1.1rem;
             word-break: break-word;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .volume-control {
@@ -420,7 +443,7 @@
             color: #495057;
             font-size: 1.1rem;
             margin: 0;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .volume-value {
@@ -429,7 +452,7 @@
             font-size: 1rem;
             min-width: 50px;
             text-align: right;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: Arial, sans-serif !important;
         }
         
         .volume-slider-container {
@@ -511,7 +534,7 @@
         .results-count {
             font-size: 1.3rem;
             color: #666;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .result-item {
@@ -569,7 +592,7 @@
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .vocab-result .character {
@@ -596,7 +619,6 @@
             align-items: center;
             flex-wrap: nowrap;
             width: 100%;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
         }
         
         .label {
@@ -608,7 +630,7 @@
             font-size: 1.15rem;
             flex-shrink: 0;
             white-space: nowrap;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .vocab-result .label {
@@ -620,7 +642,7 @@
         }
         
         .bvz-value {
-            font-family: "Times New Roman", "Arial", sans-serif;
+            font-family: Arial, sans-serif !important;
             font-size: 1.3rem;
             font-weight: bold;
             line-height: 1.3;
@@ -637,7 +659,7 @@
             margin-left: 12px;
             font-weight: normal;
             white-space: nowrap;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .example-container {
@@ -659,7 +681,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .example-text {
@@ -667,11 +689,11 @@
             margin-bottom: 10px;
             line-height: 1.6;
             word-wrap: break-word;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .example-bvz {
-            font-family: "Times New Roman", "Arial", sans-serif;
+            font-family: Arial, sans-serif !important;
             font-size: 1.15rem;
             color: #4a6fa5;
             margin-bottom: 12px;
@@ -684,7 +706,7 @@
             font-style: italic;
             margin-bottom: 10px;
             word-wrap: break-word;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .audio-container {
@@ -801,7 +823,7 @@
             width: 100%;
             box-sizing: border-box;
             word-wrap: break-word;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         footer {
@@ -813,7 +835,7 @@
             background: #f9fafc;
             width: 100%;
             box-sizing: border-box;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         .scroll-to-top {
@@ -836,7 +858,7 @@
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
-            font-family: "LXGW WenKai", "霞鹜文楷", "Microsoft YaHei", "SimHei", sans-serif;
+            font-family: Arial, sans-serif !important;
         }
         
         .scroll-to-top.visible {
@@ -901,6 +923,19 @@
                 padding: 12px 15px;
                 width: 100%;
                 height: auto;
+                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+            }
+            
+            /* 移动端BVZ输入模式字体 */
+            #character-search-input.bvz-input-mode,
+            #vocab-search-input.vocab-bvz-mode {
+                font-family: Arial, sans-serif !important;
+            }
+            
+            #character-search-input::placeholder,
+            #vocab-search-input::placeholder,
+            #definition-search-input::placeholder {
+                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
             }
             
             #character-search-button,
@@ -1180,6 +1215,19 @@
                 font-size: 1.275rem;
                 padding: 18px 24px;
                 height: 56px;
+                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+            }
+            
+            /* 桌面端BVZ输入模式字体 */
+            #character-search-input.bvz-input-mode,
+            #vocab-search-input.vocab-bvz-mode {
+                font-family: Arial, sans-serif !important;
+            }
+            
+            #character-search-input::placeholder,
+            #vocab-search-input::placeholder,
+            #definition-search-input::placeholder {
+                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
             }
             
             #character-search-button,
@@ -1255,19 +1303,19 @@
                 <div class="instructions-item long-text">
                     <span class="instruction-number">v.</span>
                     <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端〔Unikey-TELEX〕、移動端〔Laban Key-TELEX〕
+                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
                     </div>
                 </div>
                 <div class="instructions-item">
                     <span class="instruction-number">vi.</span>
                     <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
                     </div>
                 </div>                
                 <div class="instructions-item long-text">
                     <span class="instruction-number">vii.</span>
                     <div class="instruction-content">
-                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我
+                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我
                     </div>
                 </div>
                 <div class="instructions-item long-text">
@@ -1331,19 +1379,19 @@
                 <div class="instructions-item long-text">
                     <span class="instruction-number">v.</span>
                     <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端〔Unikey-TELEX〕、移動端〔Laban Key-TELEX〕
+                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
                     </div>
                 </div>
                 <div class="instructions-item">
                     <span class="instruction-number">vi.</span>
                     <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
                     </div>
                 </div>
                 <div class="instructions-item long-text">
                     <span class="instruction-number">vii.</span>
                     <div class="instruction-content">
-                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
+                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
                     </div>
                 </div>
                 <div class="instructions-item long-text">
@@ -1406,19 +1454,19 @@
                 <div class="instructions-item long-text">
                     <span class="instruction-number">v.</span>
                     <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端〔Unikey-TELEX〕、移動端〔Laban Key-TELEX〕
+                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
                     </div>
                 </div>
                 <div class="instructions-item">
                     <span class="instruction-number">vi.</span>
                     <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> E-mail〔vamos-daniel@foxmail.com〕、Wechat〔DanielMonstrinho〕
+                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
                     </div>
                 </div>
                 <div class="instructions-item long-text">
                     <span class="instruction-number">vii.</span>
                     <div class="instruction-content">
-                        <strong>我係：</strong> 「Ngàng Sềng-jĩ」｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
+                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
                     </div>
                 </div>
                 <div class="instructions-item long-text">
@@ -1455,11 +1503,29 @@
         </section>
         
         <footer>
-            <p>方言字典數據由GitHub提供支持 | 設計：Sềng-jĩ Ngàng</p>
+            <p>方言字典數據由GitHub提供支持 | 設計：<span class="instruction-latin">Sềng-jĩ Ngàng</span></p>
         </footer>
     </div>
 
     <script>
+        // 确保HTML实体字符正确解析
+        document.addEventListener('DOMContentLoaded', function() {
+            // 处理HTML实体编码问题
+            const fixHtmlEntities = function() {
+                const elements = document.querySelectorAll('.instruction-content, .instructions-item, .description, h1, h2, h3, h4, p, span, div');
+                elements.forEach(el => {
+                    if (el.innerHTML.includes('&') && !el.innerHTML.includes('&lt;') && !el.innerHTML.includes('&gt;')) {
+                        const original = el.innerHTML;
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = original;
+                        el.innerHTML = tempDiv.innerHTML;
+                    }
+                });
+            };
+            
+            setTimeout(fixHtmlEntities, 100);
+        });
+
         const CONFIG = {
             DICTIONARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
             VOCABULARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/VOCABULARY.json',
@@ -1539,6 +1605,30 @@
         const volumeValue = document.getElementById('volume-value');
         const scrollToTopButton = document.getElementById('scroll-to-top');
         
+        // 根据当前模式更新输入框字体
+        function updateInputFont() {
+            // 移除所有字体类
+            Object.values(searchInputs).forEach(input => {
+                input.classList.remove('bvz-input-mode', 'vocab-bvz-mode');
+            });
+            
+            // 根据当前模式设置字体
+            if (currentMainMode === 'character') {
+                if (currentSubMode === 'bvz') {
+                    // BVZ反查汉字模式使用Arial字体
+                    searchInputs.character.classList.add('bvz-input-mode');
+                }
+                // 汉字查BVZ模式使用默认字体（Iansui）
+            } else if (currentMainMode === 'vocab') {
+                if (currentSubMode === 'vocab-bvz') {
+                    // BVZ查释义模式使用Arial字体
+                    searchInputs.vocab.classList.add('vocab-bvz-mode');
+                }
+                // 词条查释义模式使用默认字体（Iansui）
+            }
+            // definition模式使用默认字体（Iansui）
+        }
+        
         async function init() {
             dataStatus.textContent = '正在初始化……';
             
@@ -1551,6 +1641,9 @@
                     setVolume(CONFIG.DEFAULT_VOLUME);
                 }
                 updateVolumeDisplay();
+                
+                // 初始设置字体
+                updateInputFont();
                 
                 searchInputs.character.focus();
                 
@@ -1777,6 +1870,10 @@
                     showInitialMessage();
                     
                     clearSearchInputs();
+                    
+                    // 更新输入框字体
+                    updateInputFont();
+                    
                     searchInputs[currentMainMode].focus();
                 });
             });
@@ -1800,6 +1897,9 @@
                         
                         currentSubMode = this.dataset.mode;
                         updateSearchHint();
+                        
+                        // 更新输入框字体
+                        updateInputFont();
                     });
                 });
             });
