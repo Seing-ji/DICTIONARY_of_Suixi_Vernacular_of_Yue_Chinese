@@ -182,19 +182,19 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
-        /* BVZ输入模式使用Arial字体 */
+        /* BVZ输入模式使用Times New Roman字体 */
         .bvz-input-mode {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
-        /* 词汇搜索的BVZ模式使用Arial字体 */
+        /* 词汇搜索的BVZ模式使用Times New Roman字体 */
         .vocab-bvz-mode {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
-        /* 所有搜索结果中的BVZ值使用Arial字体 */
+        /* 所有搜索结果中的BVZ值使用Times New Roman字体 */
         .bvz-value, .example-bvz {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
         #character-search-input::placeholder,
@@ -370,7 +370,7 @@
         }
         
         .instruction-latin {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
         .instruction-link {
@@ -452,7 +452,7 @@
             font-size: 1rem;
             min-width: 50px;
             text-align: right;
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
         .volume-slider-container {
@@ -642,7 +642,7 @@
         }
         
         .bvz-value {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
             font-size: 1.3rem;
             font-weight: bold;
             line-height: 1.3;
@@ -693,7 +693,7 @@
         }
         
         .example-bvz {
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
             font-size: 1.15rem;
             color: #4a6fa5;
             margin-bottom: 12px;
@@ -858,7 +858,7 @@
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
-            font-family: Arial, sans-serif !important;
+            font-family: "Times New Roman", Times, serif !important;
         }
         
         .scroll-to-top.visible {
@@ -929,7 +929,7 @@
             /* 移动端BVZ输入模式字体 */
             #character-search-input.bvz-input-mode,
             #vocab-search-input.vocab-bvz-mode {
-                font-family: Arial, sans-serif !important;
+                font-family: "Times New Roman", Times, serif !important;
             }
             
             #character-search-input::placeholder,
@@ -1221,7 +1221,7 @@
             /* 桌面端BVZ输入模式字体 */
             #character-search-input.bvz-input-mode,
             #vocab-search-input.vocab-bvz-mode {
-                font-family: Arial, sans-serif !important;
+                font-family: "Times New Roman", Times, serif !important;
             }
             
             #character-search-input::placeholder,
@@ -1508,17 +1508,38 @@
     </div>
 
     <script>
+        // 修复Blogger编码问题：添加HTML编码解码函数
+        function decodeHtmlEntities(str) {
+            if (!str) return str;
+            
+            const entities = {
+                '&amp;': '&',
+                '&lt;': '<',
+                '&gt;': '>',
+                '&quot;': '"',
+                '&#39;': "'",
+                '&#039;': "'",
+                '&#x27;': "'",
+                '&#x2F;': '/',
+                '&#x60;': '`',
+                '&#x3D;': '=',
+                '&#x2B;': '+'
+            };
+            
+            return str.replace(/&[a-z0-9#]+;/gi, (match) => {
+                return entities[match] || match;
+            });
+        }
+        
         // 确保HTML实体字符正确解析
         document.addEventListener('DOMContentLoaded', function() {
             // 处理HTML实体编码问题
             const fixHtmlEntities = function() {
                 const elements = document.querySelectorAll('.instruction-content, .instructions-item, .description, h1, h2, h3, h4, p, span, div');
                 elements.forEach(el => {
-                    if (el.innerHTML.includes('&') && !el.innerHTML.includes('&lt;') && !el.innerHTML.includes('&gt;')) {
-                        const original = el.innerHTML;
-                        const tempDiv = document.createElement('div');
-                        tempDiv.innerHTML = original;
-                        el.innerHTML = tempDiv.innerHTML;
+                    const original = el.innerHTML;
+                    if (original.includes('&')) {
+                        el.innerHTML = decodeHtmlEntities(original);
                     }
                 });
             };
@@ -1615,18 +1636,18 @@
             // 根据当前模式设置字体
             if (currentMainMode === 'character') {
                 if (currentSubMode === 'bvz') {
-                    // BVZ反查汉字模式使用Arial字体
+                    // BVZ反查汉字模式使用Times New Roman字体
                     searchInputs.character.classList.add('bvz-input-mode');
                 }
-                // 汉字查BVZ模式使用默认字体（Iansui）
+                // 汉字查BVZ模式使用默认字体（霞鹜文楷）
             } else if (currentMainMode === 'vocab') {
                 if (currentSubMode === 'vocab-bvz') {
-                    // BVZ查释义模式使用Arial字体
+                    // BVZ查释义模式使用Times New Roman字体
                     searchInputs.vocab.classList.add('vocab-bvz-mode');
                 }
-                // 词条查释义模式使用默认字体（Iansui）
+                // 词条查释义模式使用默认字体（霞鹜文楷）
             }
-            // definition模式使用默认字体（Iansui）
+            // definition模式使用默认字体（霞鹜文楷）
         }
         
         async function init() {
@@ -1698,25 +1719,31 @@
                 const vocabItemsWithExample = vocabularyData.filter(item => item.例句 && item.例句.trim()).length;
                 const vocabItemsWithExampleAudio = vocabularyData.filter(item => item.例句音頻 && item.例句音頻.trim()).length;
                 
-                dataStatus.textContent = `數據加載成功！字典：${dictionaryData.length} 條，詞彙：${vocabularyData.length} 條`;
+                // 修复Blogger编码问题：使用HTML实体编码显示状态信息
+                const statusText = `數據加載成功！字典：${dictionaryData.length} 條，詞彙：${vocabularyData.length} 條`;
+                let fullStatusText = statusText;
+                
                 if (dictItemsWithAudio + vocabItemsWithAudio > 0) {
-                    dataStatus.textContent += ` | 音頻：${dictItemsWithAudio + vocabItemsWithAudio} 條`;
+                    fullStatusText += ` | 音頻：${dictItemsWithAudio + vocabItemsWithAudio} 條`;
                 }
                 if (vocabItemsWithExample > 0) {
-                    dataStatus.textContent += ` | 例句：${vocabItemsWithExample} 條`;
+                    fullStatusText += ` | 例句：${vocabItemsWithExample} 條`;
                 }
                 if (vocabItemsWithExampleAudio > 0) {
-                    dataStatus.textContent += ` | 例句音頻：${vocabItemsWithExampleAudio} 條`;
+                    fullStatusText += ` | 例句音頻：${vocabItemsWithExampleAudio} 條`;
                 }
                 if (categoryOptions.size > 0) {
-                    dataStatus.textContent += ` | 分類：${categoryOptions.size} 個`;
+                    fullStatusText += ` | 分類：${categoryOptions.size} 個`;
                 }
+                
+                dataStatus.textContent = decodeHtmlEntities(fullStatusText);
                 
                 showInitialMessage();
                 
             } catch (error) {
                 console.error('加載數據失敗：', error);
-                dataStatus.textContent = `數據加載失敗：${error.message}`;
+                // 修复Blogger编码问题：错误消息也使用HTML实体编码
+                dataStatus.textContent = decodeHtmlEntities(`數據加載失敗：${error.message}`);
                 throw error;
             }
         }
@@ -1739,9 +1766,9 @@
                     }
                     
                     return {
-                        單字: item.單字 || '',
-                        BVZ: item.BVZ || '',
-                        Note: item.Note || item.note || '',
+                        單字: decodeHtmlEntities(item.單字 || ''),
+                        BVZ: decodeHtmlEntities(item.BVZ || ''),
+                        Note: decodeHtmlEntities(item.Note || item.note || ''),
                         audioUrl: audioUrl,
                         type: 'dictionary'
                     };
@@ -1760,10 +1787,10 @@
                 .map(item => {
                     console.log('原始詞彙數據：', item);
                     
-                    let 詞條 = item.詞條 || item.word || item.词条 || '';
-                    let BVZ = item.BVZ || item.bvz || '';
-                    let 釋義 = item.釋義 || item.释义 || item.definition || '';
-                    let 詞條類別 = item.詞條類別 || item.category || item.分类 || '';
+                    let 詞條 = decodeHtmlEntities(item.詞條 || item.word || item.词条 || '');
+                    let BVZ = decodeHtmlEntities(item.BVZ || item.bvz || '');
+                    let 釋義 = decodeHtmlEntities(item.釋義 || item.释义 || item.definition || '');
+                    let 詞條類別 = decodeHtmlEntities(item.詞條類別 || item.category || item.分类 || '');
                     
                     let audioUrl = item.vocabularyAudio || item.音頻 || item.audio || '';
                     if (audioUrl && audioUrl.includes('github.com')) {
@@ -1779,10 +1806,10 @@
                     
                     if (item.examples && Array.isArray(item.examples) && item.examples.length > 0) {
                         const example = item.examples[0];
-                        例句 = example.例句 || example.sentence || '';
-                        例句BVZ = example.例句的BVZ轉寫 || example.bvzTranscription || example.例句BVZ || '';
+                        例句 = decodeHtmlEntities(example.例句 || example.sentence || '');
+                        例句BVZ = decodeHtmlEntities(example.例句的BVZ轉寫 || example.bvzTranscription || example.例句BVZ || '');
                         例句音頻 = example.exampleAudio || example.audio || '';
-                        例句翻譯 = example.translation || '';
+                        例句翻譯 = decodeHtmlEntities(example.translation || '');
                         
                         if (例句音頻 && 例句音頻.includes('github.com')) {
                             例句音頻 = 例句音頻
@@ -2591,7 +2618,7 @@
                 }
             });
             
-            resultsContainer.innerHTML = html;
+            resultsContainer.innerHTML = decodeHtmlEntities(html);
             
             const audioButtons = resultsContainer.querySelectorAll('.audio-play-btn');
             audioButtons.forEach(button => {
@@ -2600,30 +2627,30 @@
         }
         
         function showMessage(message) {
-            resultsContainer.innerHTML = `
+            resultsContainer.innerHTML = decodeHtmlEntities(`
                 <div class="no-results">
                     <div class="no-results-icon">🔍</div>
                     <p>${message}</p>
                 </div>
-            `;
+            `);
             showResultsArea();
         }
         
         function showLoading() {
-            resultsContainer.innerHTML = `
+            resultsContainer.innerHTML = decodeHtmlEntities(`
                 <div class="loading">
                     <div class="spinner"></div>
                     <p>正在加載字典數據……</p>
                 </div>
-            `;
+            `);
         }
         
         function showError(message) {
-            resultsContainer.innerHTML = `
+            resultsContainer.innerHTML = decodeHtmlEntities(`
                 <div class="error-message">
                     <strong>錯誤：</strong> ${message}
                 </div>
-            `;
+            `);
             showResultsArea();
         }
         
