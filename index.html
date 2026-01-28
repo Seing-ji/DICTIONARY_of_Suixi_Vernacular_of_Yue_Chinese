@@ -980,6 +980,7 @@
                 padding: 12px;
             }
             
+            /* 移动端保持原有字体大小 */
             .instructions-item {
                 font-size: 0.9rem;
                 flex-wrap: wrap;
@@ -1202,6 +1203,19 @@
             .dictionary-container {
                 max-width: 95%;
             }
+            
+            /* 平板端使用10%增大 */
+            .instructions-item {
+                font-size: 1.045rem !important; /* 0.95rem × 1.10 */
+            }
+            
+            .instructions-item.long-text .instruction-content {
+                font-size: 1.012rem !important; /* 0.92rem × 1.10 */
+            }
+            
+            .instructions-list h4 {
+                font-size: 1.21rem !important; /* 1.1rem × 1.10 */
+            }
         }
         
         @media (min-width: 1025px) {
@@ -1236,6 +1250,19 @@
                 padding: 0 40px;
                 font-size: 1.275rem;
                 height: 56px;
+            }
+            
+            /* 电脑端使用说明部分字体增大13% */
+            .instructions-item {
+                font-size: 1.0735rem !important; /* 0.95rem × 1.13 = 1.0735rem */
+            }
+            
+            .instructions-item.long-text .instruction-content {
+                font-size: 1.0396rem !important; /* 0.92rem × 1.13 = 1.0396rem */
+            }
+            
+            .instructions-list h4 {
+                font-size: 1.243rem !important; /* 1.1rem × 1.13 = 1.243rem */
             }
         }
     </style>
