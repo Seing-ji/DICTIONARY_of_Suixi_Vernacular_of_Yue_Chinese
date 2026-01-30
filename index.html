@@ -537,6 +537,32 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
+        .random-banner {
+            background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+            border-left: 4px solid #4a6fa5;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        .random-banner .banner-icon {
+            font-size: 1.4rem;
+        }
+        
+        .random-banner.vocab-banner {
+            background: linear-gradient(135deg, #f0f8e8, #e8f5e8);
+            border-left-color: #5d7a30;
+        }
+        
+        .random-banner.definition-banner {
+            background: linear-gradient(135deg, #f8e8e8, #f5e8e8);
+            border-left-color: #a05252;
+        }
+        
         .result-item {
             background: white;
             border-radius: 8px;
@@ -1023,6 +1049,11 @@
                 font-size: 1rem;
             }
             
+            .random-banner {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
             .result-item {
                 padding: 15px;
                 margin-bottom: 15px;
@@ -1387,42 +1418,50 @@
                 <div class="instructions-item">
                     <span class="instruction-number">ii.</span>
                     <div class="instruction-content">
-                        <strong>音系特徵說明：</strong> 
-                        <a href="https://github.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/blob/main/README.md" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
+                        <strong>新增瀏覽功能：</strong> 
+                        <span style="color: #5d7a30; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；</span>
+                        <span style="color: #5d7a30; font-weight: bold;">② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span>
                     </div>
                 </div>
                 <div class="instructions-item">
                     <span class="instruction-number">iii.</span>
                     <div class="instruction-content">
-                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
+                        <strong>音系特徵說明：</strong> 
+                        <a href="https://github.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/blob/main/README.md" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
                     </div>
                 </div>
-                <div class="instructions-item long-text">
+                <div class="instructions-item">
                     <span class="instruction-number">iv.</span>
                     <div class="instruction-content">
-                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
                     </div>
                 </div>
                 <div class="instructions-item long-text">
                     <span class="instruction-number">v.</span>
                     <div class="instruction-content">
+                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                    </div>
+                </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">vi.</span>
+                    <div class="instruction-content">
                         <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
                     </div>
                 </div>
                 <div class="instructions-item">
-                    <span class="instruction-number">vi.</span>
+                    <span class="instruction-number">vii.</span>
                     <div class="instruction-content">
                         <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
                     </div>
                 </div>
                 <div class="instructions-item long-text">
-                    <span class="instruction-number">vii.</span>
+                    <span class="instruction-number">viii.</span>
                     <div class="instruction-content">
                         <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
                     </div>
                 </div>
                 <div class="instructions-item long-text">
-                    <span class="instruction-number">viii.</span>
+                    <span class="instruction-number">ix.</span>
                     <div class="instruction-content">
                         <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
                     </div>
@@ -1462,42 +1501,50 @@
                 <div class="instructions-item">
                     <span class="instruction-number">ii.</span>
                     <div class="instruction-content">
-                        <strong>音系特徵說明：</strong> 
-                        <a href="https://github.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/blob/main/README.md" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
+                        <strong>新增瀏覽功能：</strong> 
+                        <span style="color: #a05252; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；</span>
+                        <span style="color: #a05252; font-weight: bold;">② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span>
                     </div>
                 </div>
                 <div class="instructions-item">
                     <span class="instruction-number">iii.</span>
                     <div class="instruction-content">
-                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
+                        <strong>音系特徵說明：</strong> 
+                        <a href="https://github.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/blob/main/README.md" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
                     </div>
                 </div>
-                <div class="instructions-item long-text">
+                <div class="instructions-item">
                     <span class="instruction-number">iv.</span>
                     <div class="instruction-content">
-                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
                     </div>
                 </div>
                 <div class="instructions-item long-text">
                     <span class="instruction-number">v.</span>
                     <div class="instruction-content">
+                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
+                    </div>
+                </div>
+                <div class="instructions-item long-text">
+                    <span class="instruction-number">vi.</span>
+                    <div class="instruction-content">
                         <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
                     </div>
                 </div>
                 <div class="instructions-item">
-                    <span class="instruction-number">vi.</span>
+                    <span class="instruction-number">vii.</span>
                     <div class="instruction-content">
                         <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
                     </div>
                 </div>
                 <div class="instructions-item long-text">
-                    <span class="instruction-number">vii.</span>
+                    <span class="instruction-number">viii.</span>
                     <div class="instruction-content">
                         <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我｜僅以此送給我終將消逝的一家人💙
                     </div>
                 </div>
                 <div class="instructions-item long-text">
-                    <span class="instruction-number">viii.</span>
+                    <span class="instruction-number">ix.</span>
                     <div class="instruction-content">
                         <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
                     </div>
@@ -1989,6 +2036,15 @@
             Object.keys(searchButtons).forEach(mode => {
                 searchButtons[mode].addEventListener('click', () => {
                     const query = searchInputs[mode].value.trim();
+                    
+                    // 新增功能：搜索框为空时的处理
+                    if (currentMainMode === 'vocab' || currentMainMode === 'definition') {
+                        if (!query) {
+                            handleEmptySearch(mode);
+                            return;
+                        }
+                    }
+                    
                     if (query) {
                         performSearch(query);
                     } else {
@@ -2012,6 +2068,164 @@
             document.addEventListener('keydown', handleKeyboardShortcuts);
             
             scrollToTopButton.addEventListener('click', scrollToTop);
+        }
+        
+        // 处理空搜索的情况
+        function handleEmptySearch(mode) {
+            const selectedCategory = categorySelects[mode].value;
+            
+            let results = [];
+            
+            // 如果选择了特定分类
+            if (selectedCategory !== 'all') {
+                // 显示该分类下的所有词条
+                results = vocabularyData.filter(item => item.類別 === selectedCategory);
+                
+                if (results.length === 0) {
+                    showMessage(`分類"${selectedCategory}"中沒有找到詞條`);
+                    return;
+                }
+                
+                currentResults = results;
+                displayResultsWithBanner(results, `分類"${selectedCategory}"下的所有詞條 (共${results.length}條)`);
+            } else {
+                // 显示随机10个词条
+                results = getRandomVocabularyItems(10);
+                
+                if (results.length === 0) {
+                    showMessage('詞彙庫中沒有數據');
+                    return;
+                }
+                
+                currentResults = results;
+                displayResultsWithBanner(results, '隨機推薦詞條');
+            }
+            
+            showResultsArea();
+            
+            setTimeout(() => {
+                resultsContainer.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+            
+            startSmartPreload(results);
+        }
+        
+        // 获取随机词条
+        function getRandomVocabularyItems(count) {
+            if (vocabularyData.length === 0) return [];
+            
+            // 复制数组以避免修改原数组
+            const shuffled = [...vocabularyData];
+            
+            // Fisher-Yates洗牌算法
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            
+            // 返回前count个
+            return shuffled.slice(0, Math.min(count, shuffled.length));
+        }
+        
+        // 显示带横幅的结果
+        function displayResultsWithBanner(results, bannerText) {
+            if (!results.length) {
+                showMessage('沒有找到結果');
+                return;
+            }
+            
+            const bannerClass = currentMainMode === 'vocab' ? 'vocab-banner' : 'definition-banner';
+            const bannerIcon = currentMainMode === 'vocab' ? '📚' : '🔍';
+            
+            let html = `
+                <div class="results-header">
+                    <h2>搜索結果</h2>
+                    <div class="results-count">找到 ${results.length} 條結果</div>
+                </div>
+                <div class="random-banner ${bannerClass}">
+                    <div class="banner-icon">${bannerIcon}</div>
+                    <div>${bannerText}</div>
+                </div>
+            `;
+            
+            results.forEach((item, index) => {
+                console.log('顯示搜索結果項：', item);
+                
+                const hasAudio = item.audioUrl && item.audioUrl.length > 0;
+                const audioId = `audio-${Date.now()}-${index}`;
+                const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
+                const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
+                
+                const hasExampleAudio = item.例句音頻 && item.例句音頻.length > 0;
+                const exampleAudioId = `example-audio-${Date.now()}-${index}`;
+                const isExamplePreloaded = hasExampleAudio && CONFIG.AUDIO_CACHE.has(item.例句音頻);
+                const hasExample = item.例句 || item.例句BVZ || item.例句翻譯;
+                
+                html += `
+                    <div class="result-item" data-index="${index}">
+                        <div class="character">${item.詞條 || '無詞條'}</div>
+                        <div class="details">
+                            <div class="detail-item">
+                                <span class="label">BVZ：</span> 
+                                <span class="bvz-value">${item.BVZ || '無BVZ'}</span>
+                                ${item.類別 ? `<span class="category-tag">${item.類別}</span>` : ''}
+                                ${hasAudio ? `
+                                <div class="audio-container">
+                                    <button class="audio-play-btn" 
+                                            data-audio-id="${audioId}" 
+                                            data-audio-url="${encodeURIComponent(item.audioUrl)}"
+                                            title="點擊播放發音"
+                                            ${isPreloaded || isTopResult ? '' : 'disabled'}>
+                                    </button>
+                                </div>
+                                ` : ''}
+                            </div>
+                            ${item.釋義 ? `
+                            <div class="detail-item">
+                                <span class="label">釋義：</span> 
+                                <span>${item.釋義}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                        ${hasExample ? `
+                        <div class="example-container">
+                            <div class="example-header">
+                                <span>例句</span>
+                                ${hasExampleAudio ? `
+                                <div class="audio-container">
+                                    <button class="audio-play-btn example-audio-btn" 
+                                            data-audio-id="${exampleAudioId}" 
+                                            data-audio-url="${encodeURIComponent(item.例句音頻)}"
+                                            title="點擊播放例句發音"
+                                            ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
+                                    </button>
+                                </div>
+                                ` : ''}
+                            </div>
+                            ${item.例句 ? `
+                            <div class="example-text">${item.例句}</div>
+                            ` : ''}
+                            ${item.例句BVZ ? `
+                            <div class="example-bvz">${item.例句BVZ}</div>
+                            ` : ''}
+                            ${item.例句翻譯 ? `
+                            <div class="example-translation">${item.例句翻譯}</div>
+                            ` : ''}
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+            
+            resultsContainer.innerHTML = decodeHtmlEntities(html);
+            
+            const audioButtons = resultsContainer.querySelectorAll('.audio-play-btn');
+            audioButtons.forEach(button => {
+                button.addEventListener('click', handleAudioPlay);
+            });
         }
         
         function handleScroll() {
