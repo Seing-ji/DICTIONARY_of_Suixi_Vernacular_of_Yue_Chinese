@@ -690,7 +690,6 @@
         
         .example-container {
             margin-top: 16px;
-            padding: 16px;
             background: #f8f9fa;
             border-radius: 5px;
             border: 1px solid #e9ecef;
@@ -701,7 +700,8 @@
         .example-header {
             font-weight: 500;
             color: #495057;
-            margin-bottom: 12px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e9ecef;
             font-size: 1.1rem;
             display: flex;
             align-items: center;
@@ -710,11 +710,35 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
+        .example-items {
+            padding: 0;
+        }
+        
+        .example-item {
+            padding: 16px;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+        }
+        
+        .example-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* 每个例句右上角的音频按钮容器 */
+        .example-item-audio {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 5px;
+        }
+        
         .example-text {
             font-size: 1.1rem;
             margin-bottom: 10px;
             line-height: 1.6;
             word-wrap: break-word;
+            padding-right: 40px; /* 为音频按钮留出空间 */
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
@@ -724,6 +748,7 @@
             color: #4a6fa5;
             margin-bottom: 12px;
             font-weight: bold;
+            padding-right: 40px; /* 为音频按钮留出空间 */
         }
         
         .example-translation {
@@ -732,6 +757,7 @@
             font-style: italic;
             margin-bottom: 10px;
             word-wrap: break-word;
+            padding-right: 40px; /* 为音频按钮留出空间 */
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
@@ -1092,14 +1118,27 @@
             }
             
             .example-container {
-                padding: 12px;
+                margin-top: 12px;
             }
             
             .example-header {
+                padding: 10px 12px;
                 font-size: 1rem;
             }
             
-            .example-text {
+            .example-item {
+                padding: 12px;
+            }
+            
+            .example-item-audio {
+                top: 8px;
+                right: 8px;
+            }
+            
+            .example-text,
+            .example-bvz,
+            .example-translation {
+                padding-right: 36px; /* 移动端调整 */
                 font-size: 1rem;
             }
             
@@ -1127,6 +1166,11 @@
             }
             
             .audio-play-btn {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .example-audio-btn {
                 width: 28px;
                 height: 28px;
             }
@@ -1215,10 +1259,21 @@
                 width: 100%;
             }
             
+            .example-text,
+            .example-bvz,
+            .example-translation {
+                padding-right: 32px; /* 小屏幕调整 */
+            }
+            
             .audio-play-btn {
                 width: 26px;
                 height: 26px;
                 margin-left: 8px;
+            }
+            
+            .example-audio-btn {
+                width: 26px;
+                height: 26px;
             }
             
             .scroll-to-top {
@@ -2199,7 +2254,9 @@
                             <div class="example-header">
                                 <span>例句 (${item.例句列表.length}個)</span>
                             </div>
-                            ${generateExamplesHtml(item.例句列表, index, isTopResult)}
+                            <div class="example-items">
+                                ${generateExamplesHtml(item.例句列表, index, isTopResult)}
+                            </div>
                         </div>
                         ` : ''}
                     </div>
@@ -2214,7 +2271,7 @@
             });
         }
         
-        // 生成例句HTML
+        // 生成例句HTML（每个例句都有自己的发音按钮在右上角）
         function generateExamplesHtml(examples, itemIndex, isTopResult) {
             let examplesHtml = '';
             
@@ -2225,6 +2282,16 @@
                 
                 examplesHtml += `
                     <div class="example-item">
+                        ${hasExampleAudio ? `
+                        <div class="example-item-audio">
+                            <button class="audio-play-btn example-audio-btn" 
+                                    data-audio-id="${exampleAudioId}" 
+                                    data-audio-url="${encodeURIComponent(example.例句音頻)}"
+                                    title="點擊播放例句發音"
+                                    ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
+                            </button>
+                        </div>
+                        ` : ''}
                         ${example.例句 ? `
                         <div class="example-text">${example.例句}</div>
                         ` : ''}
@@ -2234,17 +2301,6 @@
                         ${example.例句翻譯 ? `
                         <div class="example-translation">${example.例句翻譯}</div>
                         ` : ''}
-                        ${hasExampleAudio ? `
-                        <div class="example-audio-container">
-                            <button class="audio-play-btn example-audio-btn" 
-                                    data-audio-id="${exampleAudioId}" 
-                                    data-audio-url="${encodeURIComponent(example.例句音頻)}"
-                                    title="點擊播放例句發音"
-                                    ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
-                            </button>
-                        </div>
-                        ` : ''}
-                        ${exampleIndex < examples.length - 1 ? '<hr style="margin: 10px 0; border: none; border-top: 1px dashed #ddd;">' : ''}
                     </div>
                 `;
             });
@@ -2859,7 +2915,9 @@
                                 <div class="example-header">
                                     <span>例句 (${item.例句列表.length}個)</span>
                                 </div>
-                                ${generateExamplesHtml(item.例句列表, index, isTopResult)}
+                                <div class="example-items">
+                                    ${generateExamplesHtml(item.例句列表, index, isTopResult)}
+                                </div>
                             </div>
                             ` : ''}
                         </div>
