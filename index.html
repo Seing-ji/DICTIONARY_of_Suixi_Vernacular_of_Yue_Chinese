@@ -1784,14 +1784,19 @@
                 console.log('處理後的詞彙數據：', vocabularyData);
                 if (vocabularyData.length > 0) {
                     console.log('第一條處理後的詞彙數據：', vocabularyData[0]);
+                    if (vocabularyData[0].例句列表) {
+                        console.log('第一條詞彙的例句列表：', vocabularyData[0].例句列表);
+                    }
                 }
                 
                 extractCategories();
                 
                 const dictItemsWithAudio = dictionaryData.filter(item => item.audioUrl).length;
                 const vocabItemsWithAudio = vocabularyData.filter(item => item.audioUrl).length;
-                const vocabItemsWithExample = vocabularyData.filter(item => item.例句 && item.例句.trim()).length;
-                const vocabItemsWithExampleAudio = vocabularyData.filter(item => item.例句音頻 && item.例句音頻.trim()).length;
+                const vocabItemsWithExample = vocabularyData.filter(item => item.例句列表 && item.例句列表.length > 0).length;
+                const totalExampleCount = vocabularyData.reduce((total, item) => {
+                    return total + (item.例句列表 ? item.例句列表.length : 0);
+                }, 0);
                 
                 // 修复Blogger编码问题：使用HTML实体编码显示状态信息
                 const statusText = `數據加載成功！字典：${dictionaryData.length} 條，詞彙：${vocabularyData.length} 條`;
@@ -1800,11 +1805,8 @@
                 if (dictItemsWithAudio + vocabItemsWithAudio > 0) {
                     fullStatusText += ` | 音頻：${dictItemsWithAudio + vocabItemsWithAudio} 條`;
                 }
-                if (vocabItemsWithExample > 0) {
-                    fullStatusText += ` | 例句：${vocabItemsWithExample} 條`;
-                }
-                if (vocabItemsWithExampleAudio > 0) {
-                    fullStatusText += ` | 例句音頻：${vocabItemsWithExampleAudio} 條`;
+                if (totalExampleCount > 0) {
+                    fullStatusText += ` | 例句：${totalExampleCount} 條（${vocabItemsWithExample}個詞條有例句）`;
                 }
                 if (categoryOptions.size > 0) {
                     fullStatusText += ` | 分類：${categoryOptions.size} 個`;
@@ -1873,23 +1875,31 @@
                             .replace('/main/', '/');
                     }
                     
-                    let 例句 = '';
-                    let 例句BVZ = '';
-                    let 例句音頻 = '';
-                    let 例句翻譯 = '';
+                    // 处理多个例句
+                    let 例句列表 = [];
                     
-                    if (item.examples && Array.isArray(item.examples) && item.examples.length > 0) {
-                        const example = item.examples[0];
-                        例句 = decodeHtmlEntities(example.例句 || example.sentence || '');
-                        例句BVZ = decodeHtmlEntities(example.例句的BVZ轉寫 || example.bvzTranscription || example.例句BVZ || '');
-                        例句音頻 = example.exampleAudio || example.audio || '';
-                        例句翻譯 = decodeHtmlEntities(example.translation || '');
-                        
-                        if (例句音頻 && 例句音頻.includes('github.com')) {
-                            例句音頻 = 例句音頻
-                                .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
-                                .replace('/main/', '/');
-                        }
+                    if (item.examples && Array.isArray(item.examples)) {
+                        item.examples.forEach(example => {
+                            let 例句 = decodeHtmlEntities(example.例句 || example.sentence || '');
+                            let 例句BVZ = decodeHtmlEntities(example.例句的BVZ轉寫 || example.bvzTranscription || example.例句BVZ || '');
+                            let 例句音頻 = example.exampleAudio || example.audio || '';
+                            let 例句翻譯 = decodeHtmlEntities(example.translation || '');
+                            
+                            if (例句音頻 && 例句音頻.includes('github.com')) {
+                                例句音頻 = 例句音頻
+                                    .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
+                                    .replace('/main/', '/');
+                            }
+                            
+                            if (例句 || 例句BVZ || 例句翻譯) {
+                                例句列表.push({
+                                    例句: 例句,
+                                    例句BVZ: 例句BVZ,
+                                    例句音頻: 例句音頻,
+                                    例句翻譯: 例句翻譯
+                                });
+                            }
+                        });
                     }
                     
                     const processedItem = {
@@ -1898,10 +1908,7 @@
                         釋義: 釋義,
                         類別: 詞條類別,
                         audioUrl: audioUrl,
-                        例句: 例句,
-                        例句BVZ: 例句BVZ,
-                        例句音頻: 例句音頻,
-                        例句翻譯: 例句翻譯,
+                        例句列表: 例句列表,
                         type: 'vocabulary'
                     };
                     
@@ -2159,10 +2166,7 @@
                 const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
                 const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
                 
-                const hasExampleAudio = item.例句音頻 && item.例句音頻.length > 0;
-                const exampleAudioId = `example-audio-${Date.now()}-${index}`;
-                const isExamplePreloaded = hasExampleAudio && CONFIG.AUDIO_CACHE.has(item.例句音頻);
-                const hasExample = item.例句 || item.例句BVZ || item.例句翻譯;
+                const hasExampleList = item.例句列表 && item.例句列表.length > 0;
                 
                 html += `
                     <div class="result-item" data-index="${index}">
@@ -2190,30 +2194,12 @@
                             </div>
                             ` : ''}
                         </div>
-                        ${hasExample ? `
+                        ${hasExampleList ? `
                         <div class="example-container">
                             <div class="example-header">
-                                <span>例句</span>
-                                ${hasExampleAudio ? `
-                                <div class="audio-container">
-                                    <button class="audio-play-btn example-audio-btn" 
-                                            data-audio-id="${exampleAudioId}" 
-                                            data-audio-url="${encodeURIComponent(item.例句音頻)}"
-                                            title="點擊播放例句發音"
-                                            ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
-                                    </button>
-                                </div>
-                                ` : ''}
+                                <span>例句 (${item.例句列表.length}個)</span>
                             </div>
-                            ${item.例句 ? `
-                            <div class="example-text">${item.例句}</div>
-                            ` : ''}
-                            ${item.例句BVZ ? `
-                            <div class="example-bvz">${item.例句BVZ}</div>
-                            ` : ''}
-                            ${item.例句翻譯 ? `
-                            <div class="example-translation">${item.例句翻譯}</div>
-                            ` : ''}
+                            ${generateExamplesHtml(item.例句列表, index, isTopResult)}
                         </div>
                         ` : ''}
                     </div>
@@ -2226,6 +2212,44 @@
             audioButtons.forEach(button => {
                 button.addEventListener('click', handleAudioPlay);
             });
+        }
+        
+        // 生成例句HTML
+        function generateExamplesHtml(examples, itemIndex, isTopResult) {
+            let examplesHtml = '';
+            
+            examples.forEach((example, exampleIndex) => {
+                const hasExampleAudio = example.例句音頻 && example.例句音頻.length > 0;
+                const exampleAudioId = `example-audio-${Date.now()}-${itemIndex}-${exampleIndex}`;
+                const isExamplePreloaded = hasExampleAudio && CONFIG.AUDIO_CACHE.has(example.例句音頻);
+                
+                examplesHtml += `
+                    <div class="example-item">
+                        ${example.例句 ? `
+                        <div class="example-text">${example.例句}</div>
+                        ` : ''}
+                        ${example.例句BVZ ? `
+                        <div class="example-bvz">${example.例句BVZ}</div>
+                        ` : ''}
+                        ${example.例句翻譯 ? `
+                        <div class="example-translation">${example.例句翻譯}</div>
+                        ` : ''}
+                        ${hasExampleAudio ? `
+                        <div class="example-audio-container">
+                            <button class="audio-play-btn example-audio-btn" 
+                                    data-audio-id="${exampleAudioId}" 
+                                    data-audio-url="${encodeURIComponent(example.例句音頻)}"
+                                    title="點擊播放例句發音"
+                                    ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
+                            </button>
+                        </div>
+                        ` : ''}
+                        ${exampleIndex < examples.length - 1 ? '<hr style="margin: 10px 0; border: none; border-top: 1px dashed #ddd;">' : ''}
+                    </div>
+                `;
+            });
+            
+            return examplesHtml;
         }
         
         function handleScroll() {
@@ -2657,8 +2681,13 @@
                     urls.push(item.audioUrl);
                 }
                 
-                if (item.type === 'vocabulary' && item.例句音頻 && !CONFIG.AUDIO_CACHE.has(item.例句音頻)) {
-                    urls.push(item.例句音頻);
+                // 预加载所有例句音频
+                if (item.type === 'vocabulary' && item.例句列表) {
+                    item.例句列表.forEach(example => {
+                        if (example.例句音頻 && !CONFIG.AUDIO_CACHE.has(example.例句音頻)) {
+                            urls.push(example.例句音頻);
+                        }
+                    });
                 }
             }
             return urls;
@@ -2797,10 +2826,7 @@
                         </div>
                     `;
                 } else if (item.type === 'vocabulary') {
-                    const hasExampleAudio = item.例句音頻 && item.例句音頻.length > 0;
-                    const exampleAudioId = `example-audio-${Date.now()}-${index}`;
-                    const isExamplePreloaded = hasExampleAudio && CONFIG.AUDIO_CACHE.has(item.例句音頻);
-                    const hasExample = item.例句 || item.例句BVZ || item.例句翻譯;
+                    const hasExampleList = item.例句列表 && item.例句列表.length > 0;
                     
                     html += `
                         <div class="result-item" data-index="${index}">
@@ -2828,30 +2854,12 @@
                                 </div>
                                 ` : ''}
                             </div>
-                            ${hasExample ? `
+                            ${hasExampleList ? `
                             <div class="example-container">
                                 <div class="example-header">
-                                    <span>例句</span>
-                                    ${hasExampleAudio ? `
-                                    <div class="audio-container">
-                                        <button class="audio-play-btn example-audio-btn" 
-                                                data-audio-id="${exampleAudioId}" 
-                                                data-audio-url="${encodeURIComponent(item.例句音頻)}"
-                                                title="點擊播放例句發音"
-                                                ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
-                                        </button>
-                                    </div>
-                                    ` : ''}
+                                    <span>例句 (${item.例句列表.length}個)</span>
                                 </div>
-                                ${item.例句 ? `
-                                <div class="example-text">${item.例句}</div>
-                                ` : ''}
-                                ${item.例句BVZ ? `
-                                <div class="example-bvz">${item.例句BVZ}</div>
-                                ` : ''}
-                                ${item.例句翻譯 ? `
-                                <div class="example-translation">${item.例句翻譯}</div>
-                                ` : ''}
+                                ${generateExamplesHtml(item.例句列表, index, isTopResult)}
                             </div>
                             ` : ''}
                         </div>
