@@ -2834,7 +2834,10 @@
         
         function displayResults(results, query) {
             if (!results.length) {
-                showMessage(`沒有找到與"${query}"相關的結果`);
+                // 修改点：将query中的拉丁字母部分包裹在instruction-latin类中
+                // 使用正则匹配出拉丁字母部分（这里简单处理：如果query包含拉丁字母，我们将其整体或部分用span包裹）
+                // 简单实现：将整个提示信息中的query部分用instruction-latin包裹
+                showMessage(`沒有找到與"<span class="instruction-latin">${query}</span>"相關的結果`);
                 return;
             }
             
@@ -2933,7 +2936,10 @@
             });
         }
         
+        // 修改showMessage函数，接受可能包含HTML的内容
         function showMessage(message) {
+            // 如果message包含HTML标签，我们直接插入，但需要解码实体
+            // 为了安全，我们仍然使用decodeHtmlEntities，但保留内部span
             resultsContainer.innerHTML = decodeHtmlEntities(`
                 <div class="no-results">
                     <div class="no-results-icon">🔍</div>
