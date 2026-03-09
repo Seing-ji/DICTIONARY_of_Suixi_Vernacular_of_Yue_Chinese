@@ -1,5 +1,11 @@
 [
   {
+    "單字": "耐",
+    "BVZ": "nài",
+    "Note": "用於除「時間持久」義之外的語義",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/nài.mp3"
+  },
+  {
     "單字": "東",
     "BVZ": "dông",
     "Note": "",
@@ -8966,7 +8972,7 @@
   {
     "單字": "耐",
     "BVZ": "nòi",
-    "Note": "",
+    "Note": "僅用於表示「時間持久」義",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/nòi.mp3"
   },
   {
