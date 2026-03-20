@@ -18,6 +18,14 @@ gu&go/kʷ/	ku&ko/kʷʰ/ lu&lo/lʷ/	bu&bo/pʷ/   瓜	       夸	       迾	      
 
 hg/ʔ/			䊦			
 
+B/p/   P/pʰ/   M/m/   F/f/   ｜ 波 坡 摸 科
+D/t/    T/tʰ/    N/n/    L/l/    ｜ 多 拖 那 咯
+Z/ts/   C/tsʰ/   S/s/    V/ʋ/    ｜ 渣 叉 沙 蛙
+G/k/   K/kʰ/   H/h/    Ng/ŋ/  ｜ 家 卡 哈 枒
+J/j/     X/ɬ/    Nh/ȵ/   ∅/Ø/    ｜ 衣 星 魚 愛
+Mu&Mo/mʷ/  Hu&Ho/hʷ/  Cu&Co/tsʷʰ/  Zu&Zo/tsʷ/  ｜沒 譁 戳 娺
+Gu&Go/kʷ/     Ku&Ko/kʷʰ/   Lu&Lo/lʷ/     Bu&Bo/pʷ/   ｜瓜 夸 迾 縛
+Hg/ʔ/｜䊦
 
 韻母/元音：
 
