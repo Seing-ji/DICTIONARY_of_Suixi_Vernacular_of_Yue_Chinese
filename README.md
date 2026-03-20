@@ -1,23 +1,7 @@
 遂溪遂城白話音係說明及正詞法
 
 聲母/輔音：
-
-b/p/	p/pʰ/	m/m/	f/f/ 波	  坡	   摸	   科
-
-d/t/	t/tʰ/	n/n/	l/l/ 多	  拖	   那	   咯
-
-z/ts/	c/tsʰ/	s/s/	v/ʋ/ 渣	  叉	   沙	   蛙
-
-g/k/	k/kʰ/	h/h/	ng/ŋ/ 家	  卡	   哈	   枒
-
-j/j/	x/ɬ/	nh/ȵ/	∅/Ø/  衣	  星	   魚	   愛     
-
-mu&mo/mʷ/	hu&ho/hʷ/	cu&co/tsʷʰ/	zu&zo/tsʷ/ 沒	       譁	       戳	         娺
-
-gu&go/kʷ/	ku&ko/kʷʰ/ lu&lo/lʷ/	bu&bo/pʷ/   瓜	       夸	       迾	         縛
-
-hg/ʔ/			䊦			
-
+			
 B/p/   P/pʰ/   M/m/   F/f/   ｜ 波 坡 摸 科
 
 D/t/    T/tʰ/    N/n/    L/l/    ｜ 多 拖 那 咯
