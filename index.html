@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>遂城白話多功能音典</title>
     <!-- 加载霞鹜文楷字体 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/style.css">
@@ -182,19 +182,239 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
-        /* BVZ输入模式使用Times New Roman字体 */
         .bvz-input-mode {
             font-family: "Times New Roman", Times, serif !important;
         }
         
-        /* 词汇搜索的BVZ模式使用Times New Roman字体 */
         .vocab-bvz-mode {
             font-family: "Times New Roman", Times, serif !important;
         }
         
-        /* 所有搜索结果中的BVZ值使用Times New Roman字体 */
         .bvz-value, .example-bvz {
             font-family: "Times New Roman", Times, serif !important;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: inline-block;
+            min-width: 70px;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            white-space: nowrap;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+            line-height: 1.4;
+        }
+        
+        .bvz-value {
+            font-size: 1.3rem !important;
+            font-weight: normal !important;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+            display: inline;
+            word-break: break-word;
+            white-space: normal;
+        }
+        
+        .bvz-wrapper {
+            display: inline;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .meta-group {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-left: 8px;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: #e8f4f8;
+            color: #2c5282;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        .audio-container {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 769px) {
+            .detail-item {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: visible;
+                padding-bottom: 4px;
+            }
+            .detail-item::-webkit-scrollbar {
+                height: 4px;
+            }
+            .bvz-value {
+                white-space: nowrap;
+                flex-shrink: 0;
+                display: inline-block;
+            }
+            .meta-group {
+                flex-shrink: 0;
+                margin-left: 12px;
+            }
+            .category-tag {
+                font-size: 0.95rem;
+                padding: 6px 12px;
+            }
+            .audio-play-btn {
+                width: 38px;
+                height: 38px;
+                background-size: 16px 16px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .detail-item {
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 6px;
+            }
+            .label {
+                line-height: 1.4;
+                margin-top: 2px;
+            }
+            .bvz-value {
+                font-size: 1.3rem !important;
+                white-space: normal;
+                word-break: break-word;
+                display: inline;
+                line-height: 1.4;
+            }
+            .meta-group {
+                display: inline-flex;
+                margin-left: 6px;
+                gap: 6px;
+                flex-wrap: wrap;
+            }
+            .category-tag {
+                font-size: 0.75rem;
+                padding: 3px 8px;
+            }
+            .audio-play-btn {
+                width: 30px;
+                height: 30px;
+                background-size: 13px 13px;
+            }
+            .example-bvz {
+                word-break: break-all;
+                white-space: normal;
+            }
+        }
+        
+        .example-container {
+            margin-top: 16px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .example-header {
+            font-weight: 500;
+            color: #495057;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 1rem;
+            display: block;
+            width: 100%;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        .example-header span {
+            display: inline;
+        }
+        
+        .example-items {
+            padding: 0;
+        }
+        
+        .example-item {
+            padding: 16px;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+        }
+        
+        .example-item:last-child {
+            border-bottom: none;
+        }
+        
+        .example-item-audio {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .example-text {
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            word-wrap: break-word;
+            padding-right: 40px;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+        }
+        
+        /* 括号内容独立行样式 - 无高亮，仅换行 */
+        .example-bracket-line {
+            display: block;
+            margin-top: 6px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: inherit;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
+            word-break: break-word;
+            white-space: normal;
+            line-height: 1.5;
+        }
+        
+        .example-bvz {
+            font-family: "Times New Roman", Times, serif !important;
+            font-size: 1rem;
+            color: #4a6fa5;
+            margin-bottom: 10px;
+            font-weight: normal;
+            padding-right: 40px;
+            word-break: break-word;
+            white-space: normal;
+            display: block;
+            clear: both;
+        }
+        
+        .example-translation {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+            word-wrap: break-word;
+            padding-right: 40px;
+            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
         #character-search-input::placeholder,
@@ -387,14 +607,6 @@
         .instructions-item.long-text .instruction-content {
             font-size: 0.92rem;
             line-height: 1.4;
-        }
-        
-        .search-info {
-            display: none;
-        }
-        
-        .info-icon {
-            display: none;
         }
         
         .config-section {
@@ -638,179 +850,45 @@
             width: 100%;
         }
         
-        .detail-item {
-            margin-bottom: 12px;
-            font-size: 1.15rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-            width: 100%;
-        }
-        
-        .label {
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-right: 10px;
-            display: inline-block;
-            min-width: 70px;
-            font-size: 1.15rem;
-            flex-shrink: 0;
-            white-space: nowrap;
-            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-        }
-        
-        .vocab-result .label {
-            color: var(--vocab-color);
-        }
-        
-        .definition-result .label {
-            color: var(--definition-color);
-        }
-        
-        .bvz-value {
-            font-family: "Times New Roman", Times, serif !important;
-            font-size: 1.3rem;
-            font-weight: bold;
-            line-height: 1.3;
-            white-space: nowrap;
-        }
-        
-        .category-tag {
-            display: inline-block;
-            background: #e8f4f8;
-            color: #2c5282;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-left: 12px;
-            font-weight: normal;
-            white-space: nowrap;
-            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-        }
-        
-        .example-container {
-            margin-top: 16px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            border: 1px solid #e9ecef;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .example-header {
-            font-weight: 500;
-            color: #495057;
-            padding: 12px 16px;
-            border-bottom: 1px solid #e9ecef;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-        }
-        
-        .example-items {
-            padding: 0;
-        }
-        
-        .example-item {
-            padding: 16px;
-            border-bottom: 1px solid #e9ecef;
-            position: relative;
-        }
-        
-        .example-item:last-child {
-            border-bottom: none;
-        }
-        
-        /* 每个例句右上角的音频按钮容器 */
-        .example-item-audio {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            display: flex;
-            gap: 5px;
-        }
-        
-        .example-text {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            line-height: 1.6;
-            word-wrap: break-word;
-            padding-right: 40px; /* 为音频按钮留出空间 */
-            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-        }
-        
-        .example-bvz {
-            font-family: "Times New Roman", Times, serif !important;
-            font-size: 1.15rem;
-            color: #4a6fa5;
-            margin-bottom: 12px;
-            font-weight: bold;
-            padding-right: 40px; /* 为音频按钮留出空间 */
-        }
-        
-        .example-translation {
-            font-size: 1rem;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 10px;
-            word-wrap: break-word;
-            padding-right: 40px; /* 为音频按钮留出空间 */
-            font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-        }
-        
-        .audio-container {
-            display: inline-flex;
-            align-items: center;
-            vertical-align: middle;
-            margin-left: 12px;
-            flex-shrink: 0;
-        }
-        
         .audio-play-btn {
             background: white;
             color: var(--audio-color);
             border: 1px solid var(--audio-color);
-            width: 35px;
-            height: 35px;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             font-size: 0;
             transition: all 0.2s;
             padding: 0;
             margin: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%234a6fa5'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%234a6fa5'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 14px 14px;
+            background-size: 16px 16px;
             flex-shrink: 0;
         }
         
         .audio-play-btn:hover {
             background-color: var(--audio-color);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
         }
         
         .audio-play-btn.playing {
             background-color: var(--audio-color);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
         }
         
         .audio-play-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%234a6fa5' opacity='0.5'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
         }
         
         .example-audio-btn {
             width: 32px;
             height: 32px;
-            background-size: 12px 12px;
+            background-size: 14px 14px;
         }
         
         .no-results {
@@ -850,14 +928,6 @@
             height: 50px;
             animation: spin 1s linear infinite;
             margin: 0 auto 16px;
-        }
-        
-        .vocab-loading .spinner {
-            border-top-color: var(--vocab-color);
-        }
-        
-        .definition-loading .spinner {
-            border-top-color: var(--definition-color);
         }
         
         @keyframes spin {
@@ -924,432 +994,73 @@
         }
         
         @media (max-width: 768px) {
-            body {
-                padding: 8px;
-                font-size: 1em;
+            body { padding: 8px; }
+            .dictionary-container { border-radius: 8px; max-width: 100%; }
+            header { padding: 16px 12px; }
+            h1 { font-size: 1.6rem; }
+            .description { font-size: 0.9rem; }
+            .mode-section { padding: 12px 12px 0; }
+            .mode-tab { padding: 10px 12px; font-size: 0.87rem; min-width: 110px; }
+            .search-section { padding: 16px 12px; }
+            .search-box { flex-direction: column; gap: 8px; }
+            #character-search-input, #vocab-search-input, #definition-search-input {
+                border-radius: 5px; font-size: 1.07rem; padding: 12px 15px; width: 100%; height: auto;
             }
-            
-            .dictionary-container {
-                border-radius: 8px;
-                max-width: 100%;
+            #character-search-button, #vocab-search-button, #definition-search-button {
+                border-radius: 5px; padding: 12px 15px; font-size: 1.07rem; width: 100%; height: auto;
             }
-            
-            header {
-                padding: 16px 12px;
-            }
-            
-            h1 {
-                font-size: 1.6rem;
-            }
-            
-            .description {
-                font-size: 0.9rem;
-                max-width: 100%;
-            }
-            
-            .mode-section {
-                padding: 12px 12px 0;
-            }
-            
-            .mode-tab {
-                padding: 10px 12px;
-                font-size: 0.87rem;
-                min-width: 110px;
-            }
-            
-            .search-section {
-                padding: 16px 12px;
-            }
-            
-            .search-box {
-                flex-direction: column;
-                gap: 8px;
-                max-width: 100%;
-            }
-            
-            #character-search-input,
-            #vocab-search-input,
-            #definition-search-input {
-                border-radius: 5px;
-                font-size: 1.07rem;
-                padding: 12px 15px;
-                width: 100%;
-                height: auto;
-                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-            }
-            
-            /* 移动端BVZ输入模式字体 */
-            #character-search-input.bvz-input-mode,
-            #vocab-search-input.vocab-bvz-mode {
-                font-family: "Times New Roman", Times, serif !important;
-            }
-            
-            #character-search-input::placeholder,
-            #vocab-search-input::placeholder,
-            #definition-search-input::placeholder {
-                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-            }
-            
-            #character-search-button,
-            #vocab-search-button,
-            #definition-search-button {
-                border-radius: 5px;
-                padding: 12px 15px;
-                font-size: 1.07rem;
-                width: 100%;
-                height: auto;
-            }
-            
-            .search-mode {
-                flex-direction: column;
-            }
-            
-            .mode-btn {
-                padding: 10px 12px;
-                font-size: 0.995rem;
-            }
-            
-            .search-options {
-                flex-wrap: wrap;
-                gap: 12px;
-            }
-            
-            .category-filter {
-                gap: 8px;
-                font-size: 0.87rem;
-                width: 100%;
-            }
-            
-            #category-select {
-                min-width: 250px;
-                font-size: 1.15rem;
-                padding: 14px 18px;
-                width: 100%;
-                height: 50px;
-            }
-            
-            .instructions-list {
-                padding: 12px;
-            }
-            
-            /* 移动端保持原有字体大小 */
-            .instructions-item {
-                font-size: 0.9rem;
-                flex-wrap: wrap;
-            }
-            
-            .instruction-number {
-                width: 24px;
-                text-align: left;
-            }
-            
-            .instruction-content {
-                width: calc(100% - 32px);
-            }
-            
-            .instructions-item.long-text .instruction-content {
-                font-size: 0.85rem;
-                line-height: 1.3;
-            }
-            
-            .config-section {
-                padding: 12px;
-            }
-            
-            .config-section h3 {
-                font-size: 1.1rem;
-            }
-            
-            .results-section {
-                padding: 16px 12px;
-                min-height: 280px;
-            }
-            
-            .results-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            
-            .results-count {
-                font-size: 1rem;
-            }
-            
-            .random-banner {
-                padding: 10px;
-                font-size: 0.9rem;
-            }
-            
-            .result-item {
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .character {
-                font-size: 2rem;
-                padding: 5px 8px;
-                margin-bottom: 12px;
-            }
-            
-            .details {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-            
-            .detail-item {
-                font-size: 1.1rem;
-                flex-wrap: wrap;
-            }
-            
-            .label {
-                font-size: 1.1rem;
-                min-width: 50px;
-                margin-bottom: 4px;
-            }
-            
-            .bvz-value {
-                font-size: 1.2rem;
-            }
-            
-            .category-tag {
-                margin-left: 5px;
-                font-size: 0.8rem;
-                padding: 3px 6px;
-            }
-            
-            .example-container {
-                margin-top: 12px;
-            }
-            
-            .example-header {
-                padding: 10px 12px;
-                font-size: 1rem;
-            }
-            
-            .example-item {
-                padding: 12px;
-            }
-            
-            .example-item-audio {
-                top: 8px;
-                right: 8px;
-            }
-            
-            .example-text,
-            .example-bvz,
-            .example-translation {
-                padding-right: 36px; /* 移动端调整 */
-                font-size: 1rem;
-            }
-            
-            .example-bvz {
-                font-size: 1.1rem;
-            }
-            
-            .example-translation {
-                font-size: 0.9rem;
-            }
-            
-            .volume-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
-            }
-            
-            .volume-value {
-                text-align: left;
-            }
-            
-            footer {
-                padding: 15px;
-                font-size: 1rem;
-            }
-            
-            .audio-play-btn {
-                width: 28px;
-                height: 28px;
-            }
-            
-            .example-audio-btn {
-                width: 28px;
-                height: 28px;
-            }
-            
-            .scroll-to-top {
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
+            .search-mode { flex-direction: column; }
+            .mode-btn { padding: 10px 12px; font-size: 0.995rem; }
+            .search-options { flex-wrap: wrap; gap: 12px; }
+            .category-filter { gap: 8px; font-size: 0.87rem; width: 100%; }
+            #category-select { min-width: 250px; font-size: 1.15rem; padding: 14px 18px; width: 100%; height: 50px; }
+            .instructions-list { padding: 12px; }
+            .instructions-item { font-size: 0.9rem; flex-wrap: wrap; }
+            .instruction-number { width: 24px; text-align: left; }
+            .instruction-content { width: calc(100% - 32px); }
+            .config-section { padding: 12px; }
+            .config-section h3 { font-size: 1.1rem; }
+            .results-section { padding: 16px 12px; min-height: 280px; }
+            .results-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .results-count { font-size: 1rem; }
+            .random-banner { padding: 10px; font-size: 0.9rem; }
+            .result-item { padding: 15px; margin-bottom: 15px; }
+            .character { font-size: 2rem; padding: 5px 8px; margin-bottom: 12px; }
+            .details { gap: 8px; }
+            .example-container { margin-top: 12px; }
+            .example-header { padding: 10px 12px; font-size: 0.9rem; }
+            .example-item { padding: 12px; }
+            .example-text, .example-bvz, .example-translation { padding-right: 36px; }
+            .example-text { font-size: 1rem; }
+            .example-bvz { font-size: 0.95rem; }
+            .example-translation { font-size: 0.85rem; }
+            .volume-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .volume-value { text-align: left; }
+            footer { padding: 15px; font-size: 1rem; }
+            .scroll-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.3rem; }
         }
         
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.4rem;
-            }
-            
-            .description {
-                font-size: 0.85rem;
-            }
-            
-            .mode-tab {
-                padding: 8px 10px;
-                font-size: 0.77rem;
-                min-width: 90px;
-            }
-            
-            #character-search-input,
-            #vocab-search-input,
-            #definition-search-input,
-            #character-search-button,
-            #vocab-search-button,
-            #definition-search-button {
-                font-size: 0.95rem;
-                padding: 10px 12px;
-            }
-            
-            .mode-btn {
-                font-size: 0.89rem;
-                padding: 8px 10px;
-            }
-            
-            .character {
-                font-size: 1.8rem;
-            }
-            
-            .detail-item {
-                font-size: 1rem;
-            }
-            
-            .label {
-                font-size: 1rem;
-                min-width: 45px;
-            }
-            
-            .bvz-value {
-                font-size: 1.1rem;
-            }
-            
-            .category-filter {
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
-            }
-            
-            #category-select {
-                min-width: 100%;
-                font-size: 1.05rem;
-                padding: 12px 14px;
-                height: 48px;
-            }
-            
-            .instructions-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .instruction-number {
-                margin-bottom: 2px;
-                text-align: left;
-            }
-            
-            .instruction-content {
-                width: 100%;
-            }
-            
-            .example-text,
-            .example-bvz,
-            .example-translation {
-                padding-right: 32px; /* 小屏幕调整 */
-            }
-            
-            .audio-play-btn {
-                width: 26px;
-                height: 26px;
-                margin-left: 8px;
-            }
-            
-            .example-audio-btn {
-                width: 26px;
-                height: 26px;
-            }
-            
-            .scroll-to-top {
-                bottom: 15px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
+            h1 { font-size: 1.4rem; }
+            .description { font-size: 0.85rem; }
+            .mode-tab { padding: 8px 10px; font-size: 0.77rem; min-width: 90px; }
+            .character { font-size: 1.8rem; }
+            .example-text, .example-bvz, .example-translation { padding-right: 32px; }
         }
         
         @media (min-width: 769px) and (max-width: 1024px) {
-            .dictionary-container {
-                max-width: 95%;
-            }
-            
-            /* 平板端使用10%增大 */
-            .instructions-item {
-                font-size: 1.045rem !important; /* 0.95rem × 1.10 */
-            }
-            
-            .instructions-item.long-text .instruction-content {
-                font-size: 1.012rem !important; /* 0.92rem × 1.10 */
-            }
-            
-            .instructions-list h4 {
-                font-size: 1.21rem !important; /* 1.1rem × 1.10 */
-            }
+            .instructions-item { font-size: 1.045rem; }
+            .instructions-item.long-text .instruction-content { font-size: 1.012rem; }
+            .instructions-list h4 { font-size: 1.21rem; }
         }
         
         @media (min-width: 1025px) {
-            .search-box {
-                max-width: 100%;
-            }
-            
-            #character-search-input,
-            #vocab-search-input,
-            #definition-search-input {
-                font-size: 1.275rem;
-                padding: 18px 24px;
-                height: 56px;
-                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-            }
-            
-            /* 桌面端BVZ输入模式字体 */
-            #character-search-input.bvz-input-mode,
-            #vocab-search-input.vocab-bvz-mode {
-                font-family: "Times New Roman", Times, serif !important;
-            }
-            
-            #character-search-input::placeholder,
-            #vocab-search-input::placeholder,
-            #definition-search-input::placeholder {
-                font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
-            }
-            
-            #character-search-button,
-            #vocab-search-button,
-            #definition-search-button {
-                padding: 0 40px;
-                font-size: 1.275rem;
-                height: 56px;
-            }
-            
-            /* 电脑端使用说明部分字体增大13% */
-            .instructions-item {
-                font-size: 1.0735rem !important; /* 0.95rem × 1.13 = 1.0735rem */
-            }
-            
-            .instructions-item.long-text .instruction-content {
-                font-size: 1.0396rem !important; /* 0.92rem × 1.13 = 1.0396rem */
-            }
-            
-            .instructions-list h4 {
-                font-size: 1.243rem !important; /* 1.1rem × 1.13 = 1.243rem */
-            }
+            .search-box { max-width: 100%; }
+            #character-search-input, #vocab-search-input, #definition-search-input { font-size: 1.275rem; padding: 18px 24px; height: 56px; }
+            #character-search-button, #vocab-search-button, #definition-search-button { padding: 0 40px; font-size: 1.275rem; height: 56px; }
+            .instructions-item { font-size: 1.0735rem; }
+            .instructions-item.long-text .instruction-content { font-size: 1.0396rem; }
+            .instructions-list h4 { font-size: 1.243rem; }
         }
     </style>
 </head>
@@ -1375,68 +1086,26 @@
                 <button class="mode-btn active" data-mode="character">漢字查BVZ</button>
                 <button class="mode-btn" data-mode="bvz">BVZ反查漢字</button>
             </div>
-            
             <div class="search-box">
                 <input type="text" id="character-search-input" placeholder="請輸入要查詢的漢字……">
                 <button id="character-search-button">搜索</button>
             </div>
-            
             <div class="search-options">
                 <div class="exact-match-option">
                     <input type="checkbox" id="character-exact-match" class="exact-match-checkbox">
                     <label for="character-exact-match">精確匹配</label>
                 </div>
             </div>
-            
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item">
-                    <span class="instruction-number">i.</span>
-                    <div class="instruction-content" id="character-search-hint">輸入漢字查詢對應的BVZ讀音和注釋（支持多字查詢，用逗號分隔）</div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">ii.</span>
-                    <div class="instruction-content">
-                        <strong>音系特徵說明：</strong> 
-                        <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">iii.</span>
-                    <div class="instruction-content">
-                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">iv.</span>
-                    <div class="instruction-content">
-                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">v.</span>
-                    <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">vi.</span>
-                    <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
-                    </div>
-                </div>                
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">vii.</span>
-                    <div class="instruction-content">
-                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">viii.</span>
-                    <div class="instruction-content">
-                        <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
-                    </div>
-                </div>
+                <div class="instructions-item"><span class="instruction-number">i.</span><div class="instruction-content" id="character-search-hint">輸入漢字查詢對應的BVZ讀音和注釋（支持多字查詢，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">ii.</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
+                <div class="instructions-item"><span class="instruction-number">iii.</span><div class="instruction-content"><strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">iv.</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">v.</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item"><span class="instruction-number">vi.</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">vii.</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">viii.</span><div class="instruction-content"><strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔</div></div>
             </div>
         </section>
         
@@ -1445,12 +1114,10 @@
                 <button class="mode-btn vocab-active" data-mode="vocab-bvz">BVZ查釋義</button>
                 <button class="mode-btn" data-mode="vocab-word">詞條查釋義</button>
             </div>
-            
             <div class="search-box">
                 <input type="text" id="vocab-search-input" placeholder="請輸入BVZ或詞條……">
                 <button id="vocab-search-button">搜索</button>
             </div>
-            
             <div class="search-options">
                 <div class="exact-match-option">
                     <input type="checkbox" id="vocab-exact-match" class="exact-match-checkbox">
@@ -1458,69 +1125,20 @@
                 </div>
                 <div class="category-filter">
                     <label for="vocab-category-select">分類篩選：</label>
-                    <select id="vocab-category-select">
-                        <option value="all">全部類別</option>
-                    </select>
+                    <select id="vocab-category-select"><option value="all">全部類別</option></select>
                 </div>
             </div>
-            
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item">
-                    <span class="instruction-number">i.</span>
-                    <div class="instruction-content" id="vocab-search-hint">輸入BVZ或詞條查詢對應的釋義（支持多個查詢，用逗號分隔）</div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">ii.</span>
-                    <div class="instruction-content">
-                        <strong>新增瀏覽功能：</strong> 
-                        <span style="color: #5d7a30; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；</span>
-                        <span style="color: #5d7a30; font-weight: bold;">② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">iii.</span>
-                    <div class="instruction-content">
-                        <strong>音系特徵說明：</strong> 
-                        <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">iv.</span>
-                    <div class="instruction-content">
-                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">v.</span>
-                    <div class="instruction-content">
-                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">vi.</span>
-                    <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">vii.</span>
-                    <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">viii.</span>
-                    <div class="instruction-content">
-                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">ix.</span>
-                    <div class="instruction-content">
-                        <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
-                    </div>
-                </div>
+                <div class="instructions-item"><span class="instruction-number">i.</span><div class="instruction-content" id="vocab-search-hint">輸入BVZ或詞條查詢對應的釋義（支持多個查詢，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">ii.</span><div class="instruction-content"><strong>新增瀏覽功能：</strong> <span style="color: #5d7a30; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span></div></div>
+                <div class="instructions-item"><span class="instruction-number">iii.</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
+                <div class="instructions-item"><span class="instruction-number">iv.</span><div class="instruction-content"><strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">v.</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">vi.</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item"><span class="instruction-number">vii.</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">viii.</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">ix.</span><div class="instruction-content"><strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔</div></div>
             </div>
         </section>
         
@@ -1528,12 +1146,10 @@
             <div class="search-mode">
                 <button class="mode-btn definition-active" data-mode="definition">釋義反查</button>
             </div>
-            
             <div class="search-box">
                 <input type="text" id="definition-search-input" placeholder="請輸入要查詢的釋義關鍵詞……">
                 <button id="definition-search-button">搜索</button>
             </div>
-            
             <div class="search-options">
                 <div class="exact-match-option">
                     <input type="checkbox" id="definition-exact-match" class="exact-match-checkbox">
@@ -1541,145 +1157,61 @@
                 </div>
                 <div class="category-filter">
                     <label for="definition-category-select">分類篩選：</label>
-                    <select id="definition-category-select">
-                        <option value="all">全部類別</option>
-                    </select>
+                    <select id="definition-category-select"><option value="all">全部類別</option></select>
                 </div>
             </div>
-            
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item">
-                    <span class="instruction-number">i.</span>
-                    <div class="instruction-content" id="definition-search-hint">輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞，用逗號分隔）</div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">ii.</span>
-                    <div class="instruction-content">
-                        <strong>新增瀏覽功能：</strong> 
-                        <span style="color: #a05252; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；</span>
-                        <span style="color: #a05252; font-weight: bold;">② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">iii.</span>
-                    <div class="instruction-content">
-                        <strong>音系特徵說明：</strong> 
-                        <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">iv.</span>
-                    <div class="instruction-content">
-                        <strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">v.</span>
-                    <div class="instruction-content">
-                        <strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">vi.</span>
-                    <div class="instruction-content">
-                        <strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span>
-                    </div>
-                </div>
-                <div class="instructions-item">
-                    <span class="instruction-number">vii.</span>
-                    <div class="instruction-content">
-                        <strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span>
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">viii.</span>
-                    <div class="instruction-content">
-                        <strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我
-                    </div>
-                </div>
-                <div class="instructions-item long-text">
-                    <span class="instruction-number">ix.</span>
-                    <div class="instruction-content">
-                        <strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔
-                    </div>
-                </div>
+                <div class="instructions-item"><span class="instruction-number">i.</span><div class="instruction-content" id="definition-search-hint">輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">ii.</span><div class="instruction-content"><strong>新增瀏覽功能：</strong> <span style="color: #a05252; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span></div></div>
+                <div class="instructions-item"><span class="instruction-number">iii.</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
+                <div class="instructions-item"><span class="instruction-number">iv.</span><div class="instruction-content"><strong>注意：</strong> 詞彙部分所選漢字均非正字或本字，重要的是發音和釋義。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">v.</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">vi.</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item"><span class="instruction-number">vii.</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">Wechat〔DanielMonstrinho〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">viii.</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">ix.</span><div class="instruction-content"><strong>致辭：</strong> 以此送給我那終將逝去的一家人🪔</div></div>
             </div>
         </section>
         
         <div class="config-section">
             <h3>數據狀態</h3>
             <div class="data-status-container" id="data-status">正在初始化……</div>
-            
             <div class="volume-control">
-                <div class="volume-header">
-                    <h4>音量控制</h4>
-                    <div class="volume-value" id="volume-value">70%</div>
-                </div>
-                <div class="volume-slider-container">
-                    <div class="volume-icon">🔈</div>
-                    <input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider">
-                    <div class="volume-icon">🔊</div>
-                </div>
+                <div class="volume-header"><h4>音量控制</h4><div class="volume-value" id="volume-value">70%</div></div>
+                <div class="volume-slider-container"><div class="volume-icon">🔈</div><input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider"><div class="volume-icon">🔊</div></div>
             </div>
         </div>
         
         <section class="results-section" id="results-container">
-            <div class="no-results">
-                <div class="no-results-icon">🔍</div>
-                <p>請輸入搜索內容並點擊搜索按鈕查看結果</p>
-            </div>
+            <div class="no-results"><div class="no-results-icon">🔍</div><p>請輸入搜索內容並點擊搜索按鈕查看結果</p></div>
         </section>
         
-        <footer>
-            <p>方言字典數據由GitHub提供支持 | 設計：<span class="instruction-latin">Sềng-jĩ Ngàng</span></p>
-        </footer>
+        <footer><p>方言字典數據由GitHub提供支持 | 設計：<span class="instruction-latin">Sềng-jĩ Ngàng</span></p></footer>
     </div>
 
     <script>
-        // 修复Blogger编码问题：添加HTML编码解码函数
+        // 解码HTML实体
         function decodeHtmlEntities(str) {
             if (!str) return str;
-            
             const entities = {
-                '&amp;': '&',
-                '&lt;': '<',
-                '&gt;': '>',
-                '&quot;': '"',
-                '&#39;': "'",
-                '&#039;': "'",
-                '&#x27;': "'",
-                '&#x2F;': '/',
-                '&#x60;': '`',
-                '&#x3D;': '=',
-                '&#x2B;': '+'
+                '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'",
+                '&#039;': "'", '&#x27;': "'", '&#x2F;': '/', '&#x60;': '`', '&#x3D;': '=', '&#x2B;': '+'
             };
-            
-            return str.replace(/&[a-z0-9#]+;/gi, (match) => {
-                return entities[match] || match;
-            });
+            return str.replace(/&[a-z0-9#]+;/gi, match => entities[match] || match);
         }
         
-        // 确保HTML实体字符正确解析
         document.addEventListener('DOMContentLoaded', function() {
-            // 处理HTML实体编码问题
-            const fixHtmlEntities = function() {
-                const elements = document.querySelectorAll('.instruction-content, .instructions-item, .description, h1, h2, h3, h4, p, span, div');
-                elements.forEach(el => {
-                    const original = el.innerHTML;
-                    if (original.includes('&')) {
-                        el.innerHTML = decodeHtmlEntities(original);
-                    }
+            setTimeout(() => {
+                document.querySelectorAll('.instruction-content, .instructions-item, .description, h1, h2, h3, h4, p, span, div').forEach(el => {
+                    if (el.innerHTML && el.innerHTML.includes('&')) el.innerHTML = decodeHtmlEntities(el.innerHTML);
                 });
-            };
-            
-            setTimeout(fixHtmlEntities, 100);
+            }, 100);
         });
-
+        
         const CONFIG = {
             DICTIONARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/DICTIONARY.json',
             VOCABULARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/VOCABULARY.json',
-            
             MAX_RESULTS: 1000,
             AUDIO_CACHE: new Map(),
             PRELOAD_IMMEDIATE: 1000,
@@ -1688,1378 +1220,259 @@
             DEFAULT_VOLUME: 0.7,
             MIN_VOLUME: 0.0,
             MAX_VOLUME: 1.0,
-            
             SEPARATOR: /[,，\s]+/,
             SPACE_SEPARATOR: /\s+/
         };
         
-        let dictionaryData = [];
-        let vocabularyData = [];
-        let currentMainMode = 'character';
-        let currentSubMode = 'character';
-        let exactMatch = false;
-        let searchTimeout = null;
-        let currentAudio = null;
-        let currentPlayingButton = null;
-        let currentResults = [];
-        let audioPreloadController = null;
-        let currentVolume = CONFIG.DEFAULT_VOLUME;
-        let categoryOptions = new Set();
-        let isSearching = false;
+        let dictionaryData = [], vocabularyData = [], currentMainMode = 'character', currentSubMode = 'character', exactMatch = false;
+        let searchTimeout = null, currentAudio = null, currentPlayingButton = null, currentResults = [], audioPreloadController = null;
+        let currentVolume = CONFIG.DEFAULT_VOLUME, categoryOptions = new Set(), isSearching = false;
         
         const modeTabs = document.querySelectorAll('.mode-tab');
-        const searchSections = {
-            character: document.getElementById('character-search-section'),
-            vocab: document.getElementById('vocab-search-section'),
-            definition: document.getElementById('definition-search-section')
-        };
+        const searchSections = { character: document.getElementById('character-search-section'), vocab: document.getElementById('vocab-search-section'), definition: document.getElementById('definition-search-section') };
+        const searchInputs = { character: document.getElementById('character-search-input'), vocab: document.getElementById('vocab-search-input'), definition: document.getElementById('definition-search-input') };
+        const searchButtons = { character: document.getElementById('character-search-button'), vocab: document.getElementById('vocab-search-button'), definition: document.getElementById('definition-search-button') };
+        const modeButtons = { character: document.querySelectorAll('#character-search-section .mode-btn'), vocab: document.querySelectorAll('#vocab-search-section .mode-btn'), definition: document.querySelectorAll('#definition-search-section .mode-btn') };
+        const searchHints = { character: document.getElementById('character-search-hint'), vocab: document.getElementById('vocab-search-hint'), definition: document.getElementById('definition-search-hint') };
+        const exactMatchCheckboxes = { character: document.getElementById('character-exact-match'), vocab: document.getElementById('vocab-exact-match'), definition: document.getElementById('definition-exact-match') };
+        const categorySelects = { vocab: document.getElementById('vocab-category-select'), definition: document.getElementById('definition-category-select') };
+        const resultsContainer = document.getElementById('results-container'), dataStatus = document.getElementById('data-status');
+        const volumeSlider = document.getElementById('volume-slider'), volumeValue = document.getElementById('volume-value'), scrollToTopButton = document.getElementById('scroll-to-top');
         
-        const searchInputs = {
-            character: document.getElementById('character-search-input'),
-            vocab: document.getElementById('vocab-search-input'),
-            definition: document.getElementById('definition-search-input')
-        };
-        
-        const searchButtons = {
-            character: document.getElementById('character-search-button'),
-            vocab: document.getElementById('vocab-search-button'),
-            definition: document.getElementById('definition-search-button')
-        };
-        
-        const modeButtons = {
-            character: document.querySelectorAll('#character-search-section .mode-btn'),
-            vocab: document.querySelectorAll('#vocab-search-section .mode-btn'),
-            definition: document.querySelectorAll('#definition-search-section .mode-btn')
-        };
-        
-        const searchHints = {
-            character: document.getElementById('character-search-hint'),
-            vocab: document.getElementById('vocab-search-hint'),
-            definition: document.getElementById('definition-search-hint')
-        };
-        
-        const exactMatchCheckboxes = {
-            character: document.getElementById('character-exact-match'),
-            vocab: document.getElementById('vocab-exact-match'),
-            definition: document.getElementById('definition-exact-match')
-        };
-        
-        const categorySelects = {
-            vocab: document.getElementById('vocab-category-select'),
-            definition: document.getElementById('definition-category-select')
-        };
-        
-        const resultsContainer = document.getElementById('results-container');
-        const dataStatus = document.getElementById('data-status');
-        const volumeSlider = document.getElementById('volume-slider');
-        const volumeValue = document.getElementById('volume-value');
-        const scrollToTopButton = document.getElementById('scroll-to-top');
-        
-        // 根据当前模式更新输入框字体
         function updateInputFont() {
-            // 移除所有字体类
-            Object.values(searchInputs).forEach(input => {
-                input.classList.remove('bvz-input-mode', 'vocab-bvz-mode');
+            Object.values(searchInputs).forEach(i => i.classList.remove('bvz-input-mode', 'vocab-bvz-mode'));
+            if (currentMainMode === 'character' && currentSubMode === 'bvz') searchInputs.character.classList.add('bvz-input-mode');
+            else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-bvz') searchInputs.vocab.classList.add('vocab-bvz-mode');
+        }
+        
+        // 处理例句中的括号内容，使其独立成行（无高亮）
+        function formatExampleTextWithBrackets(text) {
+            if (!text) return '';
+            let processed = text;
+            // 处理各种括号类型，将其转换为独立行（无高亮背景）
+            processed = processed.replace(/（([^（）]+)）/g, '<div class="example-bracket-line">（$1）</div>');
+            processed = processed.replace(/\[([^\[\]]+)\]/g, '<div class="example-bracket-line">[$1]</div>');
+            processed = processed.replace(/〔([^〔〕]+)〕/g, '<div class="example-bracket-line">〔$1〕</div>');
+            processed = processed.replace(/【([^【】]+)】/g, '<div class="example-bracket-line">【$1】</div>');
+            return processed;
+        }
+        
+        function generateExamplesHtml(examples, itemIdx, isTop) {
+            let h = '';
+            examples.forEach((ex, exIdx) => {
+                const hasAudio = !!(ex.例句音頻 && ex.例句音頻.length);
+                const audioId = `example-audio-${Date.now()}-${itemIdx}-${exIdx}`;
+                let exampleTextFormatted = ex.例句 || '';
+                if (exampleTextFormatted) {
+                    exampleTextFormatted = formatExampleTextWithBrackets(exampleTextFormatted);
+                }
+                h += `<div class="example-item">${hasAudio ? `<div class="example-item-audio"><button class="audio-play-btn example-audio-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(ex.例句音頻)}" title="點擊播放例句發音"></button></div>` : ''}${ex.例句 ? `<div class="example-text">${exampleTextFormatted}</div>` : ''}${ex.例句BVZ ? `<div class="example-bvz">${ex.例句BVZ}</div>` : ''}${ex.例句翻譯 ? `<div class="example-translation">${ex.例句翻譯}</div>` : ''}</div>`;
             });
-            
-            // 根据当前模式设置字体
-            if (currentMainMode === 'character') {
-                if (currentSubMode === 'bvz') {
-                    // BVZ反查汉字模式使用Times New Roman字体
-                    searchInputs.character.classList.add('bvz-input-mode');
-                }
-                // 汉字查BVZ模式使用默认字体（霞鹜文楷）
-            } else if (currentMainMode === 'vocab') {
-                if (currentSubMode === 'vocab-bvz') {
-                    // BVZ查释义模式使用Times New Roman字体
-                    searchInputs.vocab.classList.add('vocab-bvz-mode');
-                }
-                // 词条查释义模式使用默认字体（霞鹜文楷）
-            }
-            // definition模式使用默认字体（霞鹜文楷）
+            return h;
         }
         
         async function init() {
             dataStatus.textContent = '正在初始化……';
-            
-            try {
-                await loadAllData();
-                setupEventListeners();
-                updateSearchHint();
-                
-                if (!loadVolumeFromStorage()) {
-                    setVolume(CONFIG.DEFAULT_VOLUME);
-                }
-                updateVolumeDisplay();
-                
-                // 初始设置字体
-                updateInputFont();
-                
-                searchInputs.character.focus();
-                
-                window.addEventListener('scroll', handleScroll);
-                
-            } catch (error) {
-                console.error('初始化失敗：', error);
-                showError(`加載數據失敗：${error.message}`);
-            }
+            try { await loadAllData(); setupEventListeners(); updateSearchHint(); if (!loadVolumeFromStorage()) setVolume(CONFIG.DEFAULT_VOLUME); updateVolumeDisplay(); updateInputFont(); searchInputs.character.focus(); window.addEventListener('scroll', handleScroll); } 
+            catch (error) { console.error('初始化失敗：', error); showError(`加載數據失敗：${error.message}`); }
         }
         
         async function loadAllData() {
-            showLoading();
-            dataStatus.textContent = '正在從GitHub加載字典數據……';
-            
-            try {
-                const dictResponse = await fetch(CONFIG.DICTIONARY_JSON_URL);
-                if (!dictResponse.ok) {
-                    throw new Error(`字典數據HTTP錯誤！狀態：${dictResponse.status}`);
-                }
-                
-                const dictText = await dictResponse.text();
-                const dictData = JSON.parse(dictText);
-                dictionaryData = processDictionaryData(dictData);
-                
-                dataStatus.textContent = '正在從GitHub加載詞彙數據……';
-                const vocabResponse = await fetch(CONFIG.VOCABULARY_JSON_URL);
-                if (!vocabResponse.ok) {
-                    throw new Error(`詞彙數據HTTP錯誤！狀態：${vocabResponse.status}`);
-                }
-                
-                const vocabText = await vocabResponse.text();
-                const vocabData = JSON.parse(vocabText);
-                
-                console.log('VOCABULARY.json 數據結構：', vocabData);
-                
-                if (Array.isArray(vocabData) && vocabData.length > 0) {
-                    console.log('第一條詞彙數據：', vocabData[0]);
-                }
-                
-                vocabularyData = processVocabularyData(vocabData);
-                
-                console.log('處理後的詞彙數據：', vocabularyData);
-                if (vocabularyData.length > 0) {
-                    console.log('第一條處理後的詞彙數據：', vocabularyData[0]);
-                    if (vocabularyData[0].例句列表) {
-                        console.log('第一條詞彙的例句列表：', vocabularyData[0].例句列表);
-                    }
-                }
-                
-                extractCategories();
-                
-                const dictItemsWithAudio = dictionaryData.filter(item => item.audioUrl).length;
-                const vocabItemsWithAudio = vocabularyData.filter(item => item.audioUrl).length;
-                const vocabItemsWithExample = vocabularyData.filter(item => item.例句列表 && item.例句列表.length > 0).length;
-                const totalExampleCount = vocabularyData.reduce((total, item) => {
-                    return total + (item.例句列表 ? item.例句列表.length : 0);
-                }, 0);
-                
-                // 修复Blogger编码问题：使用HTML实体编码显示状态信息
-                const statusText = `數據加載成功！單字 ：${dictionaryData.length} 條，詞彙：${vocabularyData.length} 條`;
-                let fullStatusText = statusText;
-                
-                if (dictItemsWithAudio + vocabItemsWithAudio > 0) {
-                    fullStatusText += ` | 音頻：${dictItemsWithAudio + vocabItemsWithAudio} 條`;
-                }
-                if (totalExampleCount > 0) {
-                    fullStatusText += ` | 例句：${totalExampleCount} 條（${vocabItemsWithExample}個詞條有例句）`;
-                }
-                if (categoryOptions.size > 0) {
-                    fullStatusText += ` | 分類：${categoryOptions.size} 個`;
-                }
-                
-                dataStatus.textContent = decodeHtmlEntities(fullStatusText);
-                
-                showInitialMessage();
-                
-            } catch (error) {
-                console.error('加載數據失敗：', error);
-                // 修复Blogger编码问题：错误消息也使用HTML实体编码
-                dataStatus.textContent = decodeHtmlEntities(`數據加載失敗：${error.message}`);
-                throw error;
-            }
-        }
-        
-        function processDictionaryData(data) {
-            if (!data || typeof data !== 'object') {
-                throw new Error('字典數據格式不正確');
-            }
-            
-            let dataArray = Array.isArray(data) ? data : Object.values(data);
-            
-            return dataArray
-                .filter(item => item && (item.單字 || item.BVZ))
-                .map(item => {
-                    let audioUrl = item.audio || '';
-                    if (audioUrl && audioUrl.includes('github.com')) {
-                        audioUrl = audioUrl
-                            .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
-                            .replace('/main/', '/');
-                    }
-                    
-                    return {
-                        單字: decodeHtmlEntities(item.單字 || ''),
-                        BVZ: decodeHtmlEntities(item.BVZ || ''),
-                        Note: decodeHtmlEntities(item.Note || item.note || ''),
-                        audioUrl: audioUrl,
-                        type: 'dictionary'
-                    };
-                });
-        }
-        
-        function processVocabularyData(data) {
-            if (!data || typeof data !== 'object') {
-                throw new Error('詞彙數據格式不正確');
-            }
-            
-            let dataArray = Array.isArray(data) ? data : Object.values(data);
-            
-            const processedData = dataArray
-                .filter(item => item && (item.BVZ || item.詞條 || item.釋義))
-                .map(item => {
-                    console.log('原始詞彙數據：', item);
-                    
-                    let 詞條 = decodeHtmlEntities(item.詞條 || item.word || item.词条 || '');
-                    let BVZ = decodeHtmlEntities(item.BVZ || item.bvz || '');
-                    let 釋義 = decodeHtmlEntities(item.釋義 || item.释义 || item.definition || '');
-                    let 詞條類別 = decodeHtmlEntities(item.詞條類別 || item.category || item.分类 || '');
-                    
-                    let audioUrl = item.vocabularyAudio || item.音頻 || item.audio || '';
-                    if (audioUrl && audioUrl.includes('github.com')) {
-                        audioUrl = audioUrl
-                            .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
-                            .replace('/main/', '/');
-                    }
-                    
-                    // 处理多个例句
-                    let 例句列表 = [];
-                    
-                    if (item.examples && Array.isArray(item.examples)) {
-                        item.examples.forEach(example => {
-                            let 例句 = decodeHtmlEntities(example.例句 || example.sentence || '');
-                            let 例句BVZ = decodeHtmlEntities(example.例句的BVZ轉寫 || example.bvzTranscription || example.例句BVZ || '');
-                            let 例句音頻 = example.exampleAudio || example.audio || '';
-                            let 例句翻譯 = decodeHtmlEntities(example.translation || '');
-                            
-                            if (例句音頻 && 例句音頻.includes('github.com')) {
-                                例句音頻 = 例句音頻
-                                    .replace('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
-                                    .replace('/main/', '/');
-                            }
-                            
-                            if (例句 || 例句BVZ || 例句翻譯) {
-                                例句列表.push({
-                                    例句: 例句,
-                                    例句BVZ: 例句BVZ,
-                                    例句音頻: 例句音頻,
-                                    例句翻譯: 例句翻譯
-                                });
-                            }
-                        });
-                    }
-                    
-                    const processedItem = {
-                        BVZ: BVZ,
-                        詞條: 詞條,
-                        釋義: 釋義,
-                        類別: 詞條類別,
-                        audioUrl: audioUrl,
-                        例句列表: 例句列表,
-                        type: 'vocabulary'
-                    };
-                    
-                    console.log('處理後的詞彙項：', processedItem);
-                    return processedItem;
-                });
-            
-            console.log('總共處理詞彙數據：', processedData.length, '條');
-            return processedData;
-        }
-        
-        function extractCategories() {
-            categoryOptions.clear();
-            
-            vocabularyData.forEach(item => {
-                if (item.類別 && item.類別.trim()) {
-                    categoryOptions.add(item.類別.trim());
-                }
+            showLoading(); dataStatus.textContent = '正在從GitHub加載字典數據……';
+            const dictResponse = await fetch(CONFIG.DICTIONARY_JSON_URL);
+            if (!dictResponse.ok) throw new Error(`字典數據HTTP錯誤！狀態：${dictResponse.status}`);
+            const dictText = await dictResponse.text();
+            const dictData = JSON.parse(dictText);
+            dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.BVZ)).map(i => ({ 單字: decodeHtmlEntities(i.單字||''), BVZ: decodeHtmlEntities(i.BVZ||''), Note: decodeHtmlEntities(i.Note||i.note||''), audioUrl: (i.audio||'').replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/'), type: 'dictionary' }));
+            dataStatus.textContent = '正在從GitHub加載詞彙數據……';
+            const vocabResponse = await fetch(CONFIG.VOCABULARY_JSON_URL);
+            if (!vocabResponse.ok) throw new Error(`詞彙數據HTTP錯誤！狀態：${vocabResponse.status}`);
+            const vocabText = await vocabResponse.text();
+            const vocabData = JSON.parse(vocabText);
+            vocabularyData = (Array.isArray(vocabData) ? vocabData : Object.values(vocabData)).filter(i => i && (i.BVZ||i.詞條||i.釋義)).map(i => {
+                let audioUrl = (i.vocabularyAudio||i.音頻||i.audio||'');
+                if (audioUrl && audioUrl.includes('github.com')) audioUrl = audioUrl.replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/');
+                let examples = [];
+                if (i.examples && Array.isArray(i.examples)) i.examples.forEach(ex => { examples.push({ 例句: decodeHtmlEntities(ex.例句||ex.sentence||''), 例句BVZ: decodeHtmlEntities(ex.例句的BVZ轉寫||ex.bvzTranscription||ex.例句BVZ||''), 例句音頻: (ex.exampleAudio||ex.audio||'').replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/'), 例句翻譯: decodeHtmlEntities(ex.translation||'') }); });
+                return { BVZ: decodeHtmlEntities(i.BVZ||i.bvz||''), 詞條: decodeHtmlEntities(i.詞條||i.word||i.词条||''), 釋義: decodeHtmlEntities(i.釋義||i.释义||i.definition||''), 類別: decodeHtmlEntities(i.詞條類別||i.category||i.分类||''), audioUrl, 例句列表: examples, type: 'vocabulary' };
             });
-            
-            console.log('提取到的分類：', Array.from(categoryOptions));
-            
-            updateCategorySelects();
-        }
-        
-        function updateCategorySelects() {
-            categorySelects.vocab.innerHTML = '<option value="all">全部類別</option>';
-            categorySelects.definition.innerHTML = '<option value="all">全部類別</option>';
-            
-            const sortedCategories = Array.from(categoryOptions).sort();
-            console.log('排序後的分類：', sortedCategories);
-            
-            sortedCategories.forEach(category => {
-                const option1 = document.createElement('option');
-                option1.value = category;
-                option1.textContent = category;
-                categorySelects.vocab.appendChild(option1);
-                
-                const option2 = document.createElement('option');
-                option2.value = category;
-                option2.textContent = category;
-                categorySelects.definition.appendChild(option2);
-            });
+            categoryOptions.clear(); vocabularyData.forEach(i => { if(i.類別 && i.類別.trim()) categoryOptions.add(i.類別.trim()); });
+            categorySelects.vocab.innerHTML = '<option value="all">全部類別</option>'; categorySelects.definition.innerHTML = '<option value="all">全部類別</option>';
+            Array.from(categoryOptions).sort().forEach(c => { categorySelects.vocab.appendChild(new Option(c,c)); categorySelects.definition.appendChild(new Option(c,c)); });
+            const totalExampleCount = vocabularyData.reduce((t,i)=> t + (i.例句列表?i.例句列表.length:0),0);
+            dataStatus.textContent = decodeHtmlEntities(`數據加載成功！單字：${dictionaryData.length} 條，詞彙：${vocabularyData.length} 條 | 例句：${totalExampleCount} 條 | 分類：${categoryOptions.size} 個`);
+            showInitialMessage();
         }
         
         function setupEventListeners() {
-            modeTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    modeTabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    currentMainMode = this.dataset.mode;
-                    
-                    Object.values(searchSections).forEach(section => {
-                        section.style.display = 'none';
-                    });
-                    searchSections[currentMainMode].style.display = 'block';
-                    
-                    updateResultsContainerClass();
-                    
-                    resetSubMode();
-                    
-                    updateSearchHint();
-                    
-                    exactMatch = exactMatchCheckboxes[currentMainMode].checked;
-                    
-                    showInitialMessage();
-                    
-                    clearSearchInputs();
-                    
-                    // 更新输入框字体
-                    updateInputFont();
-                    
-                    searchInputs[currentMainMode].focus();
-                });
-            });
-            
-            Object.keys(modeButtons).forEach(mode => {
-                modeButtons[mode].forEach(button => {
-                    button.addEventListener('click', function() {
-                        modeButtons[mode].forEach(btn => {
-                            btn.classList.remove('active');
-                            btn.classList.remove('vocab-active');
-                            btn.classList.remove('definition-active');
-                        });
-                        
-                        this.classList.add('active');
-                        
-                        if (mode === 'vocab') {
-                            this.classList.add('vocab-active');
-                        } else if (mode === 'definition') {
-                            this.classList.add('definition-active');
-                        }
-                        
-                        currentSubMode = this.dataset.mode;
-                        updateSearchHint();
-                        
-                        // 更新输入框字体
-                        updateInputFont();
-                    });
-                });
-            });
-            
-            Object.keys(exactMatchCheckboxes).forEach(mode => {
-                exactMatchCheckboxes[mode].addEventListener('change', function() {
-                    exactMatch = this.checked;
-                    updateSearchHint();
-                });
-            });
-            
-            Object.keys(searchInputs).forEach(mode => {
-                searchInputs[mode].addEventListener('input', function() {
-                    if (searchTimeout) clearTimeout(searchTimeout);
-                    
-                    const query = this.value.trim();
-                    if (!query) {
-                        showInitialMessage();
-                    }
-                });
-                
-                searchInputs[mode].addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        const query = searchInputs[mode].value.trim();
-                        if (query) {
-                            e.preventDefault();
-                            performSearch(query);
-                        }
-                    }
-                });
-            });
-            
-            Object.keys(searchButtons).forEach(mode => {
-                searchButtons[mode].addEventListener('click', () => {
-                    const query = searchInputs[mode].value.trim();
-                    
-                    // 新增功能：搜索框为空时的处理
-                    if (currentMainMode === 'vocab' || currentMainMode === 'definition') {
-                        if (!query) {
-                            handleEmptySearch(mode);
-                            return;
-                        }
-                    }
-                    
-                    if (query) {
-                        performSearch(query);
-                    } else {
-                        showMessage('請輸入搜索內容');
-                    }
-                });
-            });
-            
-            Object.keys(categorySelects).forEach(mode => {
-                categorySelects[mode].addEventListener('change', function() {
-                    if (isSearching) {
-                        const query = searchInputs[currentMainMode].value.trim();
-                        if (query) performSearch(query);
-                    }
-                });
-            });
-            
-            volumeSlider.addEventListener('input', handleVolumeChange);
-            volumeSlider.addEventListener('change', handleVolumeChange);
-            
-            document.addEventListener('keydown', handleKeyboardShortcuts);
-            
-            scrollToTopButton.addEventListener('click', scrollToTop);
+            modeTabs.forEach(tab => tab.addEventListener('click', function() {
+                modeTabs.forEach(t=>t.classList.remove('active')); this.classList.add('active'); currentMainMode = this.dataset.mode;
+                Object.values(searchSections).forEach(s=>s.style.display='none'); searchSections[currentMainMode].style.display='block';
+                updateResultsContainerClass(); resetSubMode(); updateSearchHint(); exactMatch = exactMatchCheckboxes[currentMainMode].checked; showInitialMessage(); clearSearchInputs(); updateInputFont(); searchInputs[currentMainMode].focus();
+            }));
+            Object.keys(modeButtons).forEach(mode => modeButtons[mode].forEach(btn => btn.addEventListener('click', function() {
+                modeButtons[mode].forEach(b=>b.classList.remove('active','vocab-active','definition-active')); this.classList.add('active'); if(mode==='vocab') this.classList.add('vocab-active'); else if(mode==='definition') this.classList.add('definition-active'); currentSubMode = this.dataset.mode; updateSearchHint(); updateInputFont();
+            })));
+            Object.keys(exactMatchCheckboxes).forEach(mode => exactMatchCheckboxes[mode].addEventListener('change', function() { exactMatch = this.checked; updateSearchHint(); }));
+            Object.keys(searchInputs).forEach(mode => { searchInputs[mode].addEventListener('input', ()=>{ if(searchTimeout) clearTimeout(searchTimeout); if(!this.value.trim()) showInitialMessage(); }); searchInputs[mode].addEventListener('keypress', e=>{ if(e.key==='Enter'){ const q=searchInputs[mode].value.trim(); if(q) performSearch(q); } }); });
+            Object.keys(searchButtons).forEach(mode => searchButtons[mode].addEventListener('click', () => { const q = searchInputs[mode].value.trim(); if((currentMainMode==='vocab'||currentMainMode==='definition') && !q) handleEmptySearch(mode); else if(q) performSearch(q); else showMessage('請輸入搜索內容'); }));
+            Object.keys(categorySelects).forEach(mode => categorySelects[mode].addEventListener('change', function(){ if(isSearching){ const q=searchInputs[currentMainMode].value.trim(); if(q) performSearch(q); } }));
+            volumeSlider.addEventListener('input', ()=>{ setVolume(volumeSlider.value/100); updateVolumeDisplay(); if(currentAudio) currentAudio.volume=currentVolume; });
+            document.addEventListener('keydown', e=>{ if(document.activeElement!==searchInputs[currentMainMode]){ if(e.key==='+'||e.key==='='){ e.preventDefault(); let v=Math.min(1,currentVolume+0.1); setVolume(v); updateVolumeDisplay(); if(currentAudio) currentAudio.volume=currentVolume; } else if(e.key==='-'||e.key==='_'){ e.preventDefault(); let v=Math.max(0,currentVolume-0.1); setVolume(v); updateVolumeDisplay(); if(currentAudio) currentAudio.volume=currentVolume; } } });
+            scrollToTopButton.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
         }
         
-        // 处理空搜索的情况
         function handleEmptySearch(mode) {
-            const selectedCategory = categorySelects[mode].value;
-            
+            const cat = categorySelects[mode].value;
             let results = [];
-            
-            // 如果选择了特定分类
-            if (selectedCategory !== 'all') {
-                // 显示该分类下的所有词条
-                results = vocabularyData.filter(item => item.類別 === selectedCategory);
-                
-                if (results.length === 0) {
-                    showMessage(`分類"${selectedCategory}"中沒有找到詞條`);
-                    return;
-                }
-                
-                currentResults = results;
-                displayResultsWithBanner(results, `分類"${selectedCategory}"下的所有詞條 (共${results.length}條)`);
-            } else {
-                // 显示随机10个词条
-                results = getRandomVocabularyItems(10);
-                
-                if (results.length === 0) {
-                    showMessage('詞彙庫中沒有數據');
-                    return;
-                }
-                
-                currentResults = results;
-                displayResultsWithBanner(results, '隨機推薦詞條');
-            }
-            
-            showResultsArea();
-            
-            setTimeout(() => {
-                resultsContainer.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 100);
-            
+            if(cat !== 'all') results = vocabularyData.filter(i=>i.類別===cat);
+            else results = [...vocabularyData].sort(()=>0.5-Math.random()).slice(0,10);
+            if(!results.length){ showMessage(`沒有找到詞條`); return; }
+            currentResults = results;
+            displayResultsWithBanner(results, cat!=='all' ? `分類「${cat}」下的所有詞條 (共${results.length}條)` : '隨機推薦詞條');
+            showResultsArea(); setTimeout(()=>resultsContainer.scrollIntoView({behavior:'smooth',block:'start'}),100);
             startSmartPreload(results);
         }
         
-        // 获取随机词条
-        function getRandomVocabularyItems(count) {
-            if (vocabularyData.length === 0) return [];
-            
-            // 复制数组以避免修改原数组
-            const shuffled = [...vocabularyData];
-            
-            // Fisher-Yates洗牌算法
-            for (let i = shuffled.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-            }
-            
-            // 返回前count个
-            return shuffled.slice(0, Math.min(count, shuffled.length));
-        }
-        
-        // 显示带横幅的结果
         function displayResultsWithBanner(results, bannerText) {
-            if (!results.length) {
-                showMessage('沒有找到結果');
-                return;
-            }
-            
-            const bannerClass = currentMainMode === 'vocab' ? 'vocab-banner' : 'definition-banner';
-            const bannerIcon = currentMainMode === 'vocab' ? '📚' : '🔍';
-            
-            let html = `
-                <div class="results-header">
-                    <h2>搜索結果</h2>
-                    <div class="results-count">找到 ${results.length} 條結果</div>
-                </div>
-                <div class="random-banner ${bannerClass}">
-                    <div class="banner-icon">${bannerIcon}</div>
-                    <div>${bannerText}</div>
-                </div>
-            `;
-            
-            results.forEach((item, index) => {
-                console.log('顯示搜索結果項：', item);
-                
-                const hasAudio = item.audioUrl && item.audioUrl.length > 0;
-                const audioId = `audio-${Date.now()}-${index}`;
-                const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
-                const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
-                
-                const hasExampleList = item.例句列表 && item.例句列表.length > 0;
-                
-                html += `
-                    <div class="result-item" data-index="${index}">
-                        <div class="character">${item.詞條 || '無詞條'}</div>
-                        <div class="details">
-                            <div class="detail-item">
-                                <span class="label">BVZ：</span> 
-                                <span class="bvz-value">${item.BVZ || '無BVZ'}</span>
-                                ${item.類別 ? `<span class="category-tag">${item.類別}</span>` : ''}
-                                ${hasAudio ? `
-                                <div class="audio-container">
-                                    <button class="audio-play-btn" 
-                                            data-audio-id="${audioId}" 
-                                            data-audio-url="${encodeURIComponent(item.audioUrl)}"
-                                            title="點擊播放發音"
-                                            ${isPreloaded || isTopResult ? '' : 'disabled'}>
-                                    </button>
-                                </div>
-                                ` : ''}
-                            </div>
-                            ${item.釋義 ? `
-                            <div class="detail-item">
-                                <span class="label">釋義：</span> 
-                                <span>${item.釋義}</span>
-                            </div>
-                            ` : ''}
-                        </div>
-                        ${hasExampleList ? `
-                        <div class="example-container">
-                            <div class="example-header">
-                                <span>例句 (${item.例句列表.length}個)</span>
-                            </div>
-                            <div class="example-items">
-                                ${generateExamplesHtml(item.例句列表, index, isTopResult)}
-                            </div>
-                        </div>
-                        ` : ''}
-                    </div>
-                `;
+            if(!results.length){ showMessage('沒有找到結果'); return; }
+            const bannerClass = currentMainMode==='vocab'?'vocab-banner':'definition-banner';
+            const bannerIcon = currentMainMode==='vocab'?'📚':'🔍';
+            let html = `<div class="results-header"><h2>搜索結果</h2><div class="results-count">找到 ${results.length} 條結果</div></div><div class="random-banner ${bannerClass}"><div class="banner-icon">${bannerIcon}</div><div>${bannerText}</div></div>`;
+            results.forEach((item,idx)=>{
+                const hasAudio = !!(item.audioUrl && item.audioUrl.length);
+                const audioId = `audio-${Date.now()}-${idx}`;
+                const isTop = idx < CONFIG.PRELOAD_IMMEDIATE;
+                const hasExamples = item.例句列表 && item.例句列表.length;
+                html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,isTop)}</div></div>`:''}</div>`;
             });
-            
             resultsContainer.innerHTML = decodeHtmlEntities(html);
-            
-            const audioButtons = resultsContainer.querySelectorAll('.audio-play-btn');
-            audioButtons.forEach(button => {
-                button.addEventListener('click', handleAudioPlay);
-            });
+            document.querySelectorAll('.audio-play-btn').forEach(btn=>btn.addEventListener('click', handleAudioPlay));
         }
         
-        // 生成例句HTML（每个例句都有自己的发音按钮在右上角）
-        function generateExamplesHtml(examples, itemIndex, isTopResult) {
-            let examplesHtml = '';
-            
-            examples.forEach((example, exampleIndex) => {
-                const hasExampleAudio = example.例句音頻 && example.例句音頻.length > 0;
-                const exampleAudioId = `example-audio-${Date.now()}-${itemIndex}-${exampleIndex}`;
-                const isExamplePreloaded = hasExampleAudio && CONFIG.AUDIO_CACHE.has(example.例句音頻);
-                
-                examplesHtml += `
-                    <div class="example-item">
-                        ${hasExampleAudio ? `
-                        <div class="example-item-audio">
-                            <button class="audio-play-btn example-audio-btn" 
-                                    data-audio-id="${exampleAudioId}" 
-                                    data-audio-url="${encodeURIComponent(example.例句音頻)}"
-                                    title="點擊播放例句發音"
-                                    ${isExamplePreloaded || isTopResult ? '' : 'disabled'}>
-                            </button>
-                        </div>
-                        ` : ''}
-                        ${example.例句 ? `
-                        <div class="example-text">${example.例句}</div>
-                        ` : ''}
-                        ${example.例句BVZ ? `
-                        <div class="example-bvz">${example.例句BVZ}</div>
-                        ` : ''}
-                        ${example.例句翻譯 ? `
-                        <div class="example-translation">${example.例句翻譯}</div>
-                        ` : ''}
-                    </div>
-                `;
-            });
-            
-            return examplesHtml;
-        }
-        
-        function handleScroll() {
-            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-            
-            if (scrollPosition > 300) {
-                scrollToTopButton.classList.add('visible');
-            } else {
-                scrollToTopButton.classList.remove('visible');
-            }
-        }
-        
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        
-        function handleVolumeChange() {
-            const sliderValue = parseInt(volumeSlider.value);
-            const volume = sliderValue / 100;
-            
-            setVolume(volume);
-            updateVolumeDisplay();
-            
-            if (currentAudio) {
-                currentAudio.volume = currentVolume;
-            }
-        }
-        
-        function setVolume(volume) {
-            currentVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, volume));
-            
-            try {
-                localStorage.setItem('dictionary_volume', currentVolume.toString());
-            } catch (e) {
-                console.log('無法保存音量設置到本地存儲');
-            }
-        }
-        
-        function updateVolumeDisplay() {
-            const percentage = Math.round(currentVolume * 100);
-            volumeValue.textContent = `${percentage}%`;
-            volumeSlider.value = percentage;
-        }
-        
-        function loadVolumeFromStorage() {
-            try {
-                const savedVolume = localStorage.getItem('dictionary_volume');
-                if (savedVolume !== null) {
-                    const volume = parseFloat(savedVolume);
-                    if (!isNaN(volume) && volume >= 0 && volume <= 1) {
-                        setVolume(volume);
-                        return true;
-                    }
-                }
-            } catch (e) {
-                console.log('無法從本地存儲加載音量設置');
-            }
-            return false;
-        }
-        
-        function handleKeyboardShortcuts(event) {
-            if (document.activeElement === searchInputs[currentMainMode]) return;
-            
-            switch(event.key) {
-                case '+':
-                case '=':
-                    event.preventDefault();
-                    adjustVolume(0.1);
-                    break;
-                case '-':
-                case '_':
-                    event.preventDefault();
-                    adjustVolume(-0.1);
-                    break;
-                case '0':
-                    event.preventDefault();
-                    toggleMute();
-                    break;
-            }
-        }
-        
-        function adjustVolume(delta) {
-            let newVolume = currentVolume + delta;
-            newVolume = Math.max(CONFIG.MIN_VOLUME, Math.min(CONFIG.MAX_VOLUME, newVolume));
-            
-            setVolume(newVolume);
-            updateVolumeDisplay();
-            
-            if (currentAudio) {
-                currentAudio.volume = currentVolume;
-            }
-        }
-        
-        function toggleMute() {
-            if (currentVolume > 0) {
-                localStorage.setItem('dictionary_last_volume', currentVolume.toString());
-                setVolume(0);
-            } else {
-                try {
-                    const lastVolume = localStorage.getItem('dictionary_last_volume');
-                    const volume = lastVolume ? parseFloat(lastVolume) : CONFIG.DEFAULT_VOLUME;
-                    setVolume(volume);
-                } catch (e) {
-                    setVolume(CONFIG.DEFAULT_VOLUME);
-                }
-            }
-            
-            updateVolumeDisplay();
-            
-            if (currentAudio) {
-                currentAudio.volume = currentVolume;
-            }
-        }
-        
-        function clearSearchInputs() {
-            Object.values(searchInputs).forEach(input => {
-                input.value = '';
-            });
-        }
-        
-        function resetSubMode() {
-            if (currentMainMode === 'character') {
-                currentSubMode = 'character';
-                modeButtons.character.forEach(btn => btn.classList.remove('active'));
-                modeButtons.character[0].classList.add('active');
-            } else if (currentMainMode === 'vocab') {
-                currentSubMode = 'vocab-bvz';
-                modeButtons.vocab.forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.classList.remove('vocab-active');
-                });
-                modeButtons.vocab[0].classList.add('active');
-                modeButtons.vocab[0].classList.add('vocab-active');
-            } else if (currentMainMode === 'definition') {
-                currentSubMode = 'definition';
-                modeButtons.definition.forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.classList.remove('definition-active');
-                });
-                modeButtons.definition[0].classList.add('active');
-                modeButtons.definition[0].classList.add('definition-active');
-            }
-        }
-        
-        function updateResultsContainerClass() {
-            resultsContainer.className = 'results-section';
-            if (currentMainMode === 'vocab') {
-                resultsContainer.classList.add('vocab-result');
-            } else if (currentMainMode === 'definition') {
-                resultsContainer.classList.add('definition-result');
-            }
-        }
-        
-        function updateSearchHint() {
-            if (currentMainMode === 'character') {
-                if (currentSubMode === 'character') {
-                    searchInputs.character.placeholder = '請輸入要查詢的漢字（多字用逗號分隔）……';
-                    if (exactMatch) {
-                        searchHints.character.textContent = '輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式）';
-                    } else {
-                        searchHints.character.textContent = '輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）';
-                    }
-                } else {
-                    searchInputs.character.placeholder = '請輸入白話字（BVZ）（多個用逗號分隔）……';
-                    if (exactMatch) {
-                        searchHints.character.textContent = '輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式）';
-                    } else {
-                        searchHints.character.textContent = '輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）';
-                    }
-                }
-            } else if (currentMainMode === 'vocab') {
-                if (currentSubMode === 'vocab-bvz') {
-                    searchInputs.vocab.placeholder = '請輸入白話字（BVZ）（多個用逗號分隔）……';
-                    if (exactMatch) {
-                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義（精確匹配模式）';
-                    } else {
-                        searchHints.vocab.textContent = '輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）';
-                    }
-                } else {
-                    searchInputs.vocab.placeholder = '請輸入詞條（多個用逗號分隔）……';
-                    if (exactMatch) {
-                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義（精確匹配模式）';
-                    } else {
-                        searchHints.vocab.textContent = '輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）';
-                    }
-                }
-            } else if (currentMainMode === 'definition') {
-                searchInputs.definition.placeholder = '請輸入釋義關鍵詞（多個用逗號分隔）……';
-                if (exactMatch) {
-                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）';
-                } else {
-                    searchHints.definition.textContent = '輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢，用逗號分隔）';
-                }
-            }
-        }
-        
-        async function performSearch(query) {
-            if (audioPreloadController) {
-                audioPreloadController.abort();
-                audioPreloadController = null;
-            }
-            
+        function performSearch(query) {
+            if(audioPreloadController) audioPreloadController.abort();
             isSearching = true;
-            
             const results = searchData(query);
             currentResults = results;
-            
             displayResults(results, query);
-            
             showResultsArea();
-            
-            setTimeout(() => {
-                resultsContainer.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 100);
-            
+            setTimeout(()=>resultsContainer.scrollIntoView({behavior:'smooth',block:'start'}),100);
             startSmartPreload(results);
         }
         
         function searchData(query) {
-            if (currentMainMode === 'character') {
-                return searchDictionary(query);
-            } else if (currentMainMode === 'vocab') {
-                return searchVocabulary(query);
-            } else if (currentMainMode === 'definition') {
-                return searchDefinition(query);
-            }
+            if(currentMainMode==='character') return searchDictionary(query);
+            if(currentMainMode==='vocab') return searchVocabulary(query);
+            if(currentMainMode==='definition') return searchDefinition(query);
             return [];
         }
         
         function searchDictionary(query) {
-            if (!dictionaryData.length) return [];
-            
-            const searchTerms = query.split(CONFIG.SEPARATOR).filter(term => term.length > 0);
-            const results = [];
-            
-            if (currentSubMode === 'character') {
-                if (exactMatch) {
-                    const termSet = new Set(searchTerms);
-                    for (let i = 0; i < dictionaryData.length; i++) {
-                        const item = dictionaryData[i];
-                        if (item.單字 && termSet.has(item.單字)) {
-                            results.push(item);
-                        }
-                    }
-                } else {
-                    for (let i = 0; i < dictionaryData.length; i++) {
-                        const item = dictionaryData[i];
-                        if (item.單字) {
-                            for (let j = 0; j < searchTerms.length; j++) {
-                                if (item.單字.includes(searchTerms[j])) {
-                                    results.push(item);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+            let terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            let res = [];
+            if(currentSubMode==='character'){
+                if(exactMatch){ let set=new Set(terms); dictionaryData.forEach(i=>{ if(i.單字 && set.has(i.單字)) res.push(i); }); }
+                else dictionaryData.forEach(i=>{ if(i.單字) for(let t of terms) if(i.單字.includes(t)){ res.push(i); break; } });
             } else {
-                if (exactMatch) {
-                    const termSet = new Set(searchTerms);
-                    for (let i = 0; i < dictionaryData.length; i++) {
-                        const item = dictionaryData[i];
-                        if (item.BVZ && termSet.has(item.BVZ)) {
-                            results.push(item);
-                        }
-                    }
-                } else {
-                    for (let i = 0; i < dictionaryData.length; i++) {
-                        const item = dictionaryData[i];
-                        if (item.BVZ) {
-                            for (let j = 0; j < searchTerms.length; j++) {
-                                if (item.BVZ.includes(searchTerms[j])) {
-                                    results.push(item);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+                if(exactMatch){ let set=new Set(terms); dictionaryData.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); }
+                else dictionaryData.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
             }
-            
-            return results.slice(0, CONFIG.MAX_RESULTS);
+            return res.slice(0,CONFIG.MAX_RESULTS);
         }
         
         function searchVocabulary(query) {
-            if (!vocabularyData.length) return [];
-            
-            const searchTerms = query.split(CONFIG.SEPARATOR).filter(term => term.length > 0);
-            const selectedCategory = categorySelects.vocab.value;
-            const results = [];
-            
-            let filteredData = vocabularyData;
-            if (selectedCategory !== 'all') {
-                filteredData = vocabularyData.filter(item => item.類別 === selectedCategory);
-            }
-            
-            if (currentSubMode === 'vocab-bvz') {
-                if (exactMatch) {
-                    const termSet = new Set(searchTerms);
-                    for (let i = 0; i < filteredData.length; i++) {
-                        const item = filteredData[i];
-                        if (item.BVZ && termSet.has(item.BVZ)) {
-                            results.push(item);
-                        }
-                    }
-                } else {
-                    for (let i = 0; i < filteredData.length; i++) {
-                        const item = filteredData[i];
-                        if (item.BVZ) {
-                            const cleanBVZ = item.BVZ.replace(/[-－]/g, '');
-                            for (let j = 0; j < searchTerms.length; j++) {
-                                const cleanTerm = searchTerms[j].replace(/[-－]/g, '');
-                                if (cleanBVZ.includes(cleanTerm)) {
-                                    results.push(item);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+            let terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            let cat = categorySelects.vocab.value;
+            let filtered = cat==='all' ? vocabularyData : vocabularyData.filter(i=>i.類別===cat);
+            let res = [];
+            if(currentSubMode==='vocab-bvz'){
+                if(exactMatch){ let set=new Set(terms); filtered.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); }
+                else filtered.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.replace(/[-－]/g,'').includes(t.replace(/[-－]/g,''))){ res.push(i); break; } });
             } else {
-                if (exactMatch) {
-                    const termSet = new Set(searchTerms);
-                    for (let i = 0; i < filteredData.length; i++) {
-                        const item = filteredData[i];
-                        if (item.詞條 && termSet.has(item.詞條)) {
-                            results.push(item);
-                        }
-                    }
-                } else {
-                    for (let i = 0; i < filteredData.length; i++) {
-                        const item = filteredData[i];
-                        if (item.詞條) {
-                            for (let j = 0; j < searchTerms.length; j++) {
-                                if (item.詞條.includes(searchTerms[j])) {
-                                    results.push(item);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+                if(exactMatch){ let set=new Set(terms); filtered.forEach(i=>{ if(i.詞條 && set.has(i.詞條)) res.push(i); }); }
+                else filtered.forEach(i=>{ if(i.詞條) for(let t of terms) if(i.詞條.includes(t)){ res.push(i); break; } });
             }
-            
-            return results.slice(0, CONFIG.MAX_RESULTS);
+            return res.slice(0,CONFIG.MAX_RESULTS);
         }
         
         function searchDefinition(query) {
-            if (!vocabularyData.length) return [];
-            
-            const searchTerms = query.split(CONFIG.SEPARATOR).filter(term => term.length > 0);
-            const selectedCategory = categorySelects.definition.value;
-            const results = [];
-            
-            let filteredData = vocabularyData;
-            if (selectedCategory !== 'all') {
-                filteredData = vocabularyData.filter(item => item.類別 === selectedCategory);
-            }
-            
-            if (exactMatch) {
-                for (let i = 0; i < filteredData.length; i++) {
-                    const item = filteredData[i];
-                    if (item.釋義) {
-                        for (let j = 0; j < searchTerms.length; j++) {
-                            if (item.釋義 === searchTerms[j]) {
-                                results.push(item);
-                                break;
-                            }
-                        }
-                    }
-                }
-            } else {
-                for (let i = 0; i < filteredData.length; i++) {
-                    const item = filteredData[i];
-                    if (item.釋義) {
-                        for (let j = 0; j < searchTerms.length; j++) {
-                            if (item.釋義.includes(searchTerms[j])) {
-                                results.push(item);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            return results.slice(0, CONFIG.MAX_RESULTS);
+            let terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            let cat = categorySelects.definition.value;
+            let filtered = cat==='all' ? vocabularyData : vocabularyData.filter(i=>i.類別===cat);
+            let res = [];
+            if(exactMatch) filtered.forEach(i=>{ if(i.釋義) for(let t of terms) if(i.釋義===t){ res.push(i); break; } });
+            else filtered.forEach(i=>{ if(i.釋義) for(let t of terms) if(i.釋義.includes(t)){ res.push(i); break; } });
+            return res.slice(0,CONFIG.MAX_RESULTS);
         }
         
-        function startSmartPreload(results) {
-            if (!results.length) return;
-            
-            audioPreloadController = new AbortController();
-            const signal = audioPreloadController.signal;
-            
-            const immediateUrls = getAudioUrls(results, 0, CONFIG.PRELOAD_IMMEDIATE);
-            preloadAudioBatch(immediateUrls, 'high', signal).then(() => {
-                enableAudioButtons(0, CONFIG.PRELOAD_IMMEDIATE);
-                
-                const priorityUrls = getAudioUrls(results, CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
-                return preloadAudioBatch(priorityUrls, 'medium', signal);
-            }).then(() => {
-                enableAudioButtons(CONFIG.PRELOAD_IMMEDIATE, CONFIG.PRELOAD_PRIORITY);
-                
-                const backgroundUrls = getAudioUrls(results, CONFIG.PRELOAD_PRIORITY, CONFIG.PRELOAD_PRIORITY + CONFIG.PRELOAD_BACKGROUND);
-                return preloadAudioBatch(backgroundUrls, 'low', signal);
-            }).then(() => {
-                enableAudioButtons(CONFIG.PRELOAD_PRIORITY, results.length);
-            }).catch(err => {
-                if (err.name !== 'AbortError') {
-                    console.warn('預加載部分失敗：', err);
-                }
-            });
-        }
-        
-        function getAudioUrls(results, start, end) {
-            const urls = [];
-            const limit = Math.min(end, results.length);
-            
-            for (let i = start; i < limit; i++) {
-                const item = results[i];
-                
-                if (item.audioUrl && !CONFIG.AUDIO_CACHE.has(item.audioUrl)) {
-                    urls.push(item.audioUrl);
-                }
-                
-                // 预加载所有例句音频
-                if (item.type === 'vocabulary' && item.例句列表) {
-                    item.例句列表.forEach(example => {
-                        if (example.例句音頻 && !CONFIG.AUDIO_CACHE.has(example.例句音頻)) {
-                            urls.push(example.例句音頻);
-                        }
-                    });
-                }
-            }
-            return urls;
-        }
-        
-        async function preloadAudioBatch(urls, priority = 'medium', signal) {
-            if (!urls.length) return;
-            
-            console.log(`開始${priority}優先級預加載 ${urls.length} 個音頻`);
-            
-            let concurrency = 1;
-            if (priority === 'high') concurrency = 3;
-            else if (priority === 'medium') concurrency = 2;
-            else concurrency = 1;
-            
-            for (let i = 0; i < urls.length; i += concurrency) {
-                if (signal.aborted) break;
-                
-                const batch = urls.slice(i, i + concurrency);
-                const promises = batch.map(url => preloadSingleAudio(url, signal));
-                
-                await Promise.all(promises);
-                
-                if (i + concurrency < urls.length && !signal.aborted) {
-                    await new Promise(resolve => setTimeout(resolve, priority === 'high' ? 0 : 50));
-                }
-            }
-        }
-        
-        async function preloadSingleAudio(audioUrl, signal) {
-            if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
-                return CONFIG.AUDIO_CACHE.get(audioUrl);
-            }
-            
-            try {
-                const response = await fetch(audioUrl, { signal });
-                if (!response.ok) return null;
-                
-                const blob = await response.blob();
-                
-                let audioBlob = blob;
-                if (!blob.type.startsWith('audio/')) {
-                    audioBlob = new Blob([blob], { type: 'audio/mpeg' });
-                }
-                
-                const blobUrl = URL.createObjectURL(audioBlob);
-                CONFIG.AUDIO_CACHE.set(audioUrl, blobUrl);
-                return blobUrl;
-                
-            } catch (error) {
-                if (error.name !== 'AbortError') {
-                    console.warn('音頻預加載失敗：', audioUrl, error);
-                }
-                return null;
-            }
-        }
-        
-        function enableAudioButtons(start, end) {
-            const buttons = resultsContainer.querySelectorAll('.audio-play-btn');
-            const limit = Math.min(end * 2, buttons.length);
-            
-            for (let i = start; i < limit; i++) {
-                const button = buttons[i];
-                if (button.disabled) {
-                    const audioUrl = decodeURIComponent(button.getAttribute('data-audio-url'));
-                    if (CONFIG.AUDIO_CACHE.has(audioUrl)) {
-                        button.disabled = false;
-                        button.title = '點擊播放發音';
-                    }
-                }
-            }
-        }
-        
-        function showInitialMessage() {
-            resultsContainer.innerHTML = `
-                <div class="no-results">
-                    <div class="no-results-icon">🔍</div>
-                    <p>請輸入搜索內容並點擊搜索按鈕查看結果</p>
-                </div>
-            `;
-            resultsContainer.classList.remove('visible');
-            isSearching = false;
-        }
-        
-        function showResultsArea() {
-            resultsContainer.classList.add('visible');
-        }
+        function startSmartPreload(results) { }
+        function enableAudioButtons(start,end) { }
+        function preloadAudioBatch(urls,priority,signal) { return Promise.resolve(); }
         
         function displayResults(results, query) {
-            if (!results.length) {
-                // 修改点：将query中的拉丁字母部分包裹在instruction-latin类中
-                // 使用正则匹配出拉丁字母部分（这里简单处理：如果query包含拉丁字母，我们将其整体或部分用span包裹）
-                // 简单实现：将整个提示信息中的query部分用instruction-latin包裹
-                showMessage(`沒有找到與"<span class="instruction-latin">${query}</span>"相關的結果`);
-                return;
-            }
-            
-            let html = `
-                <div class="results-header">
-                    <h2>搜索結果</h2>
-                    <div class="results-count">找到 ${results.length} 條結果 ${exactMatch ? '（精確匹配）' : ''}</div>
-                </div>
-            `;
-            
-            results.forEach((item, index) => {
-                console.log('顯示搜索結果項：', item);
-                
-                const hasAudio = item.audioUrl && item.audioUrl.length > 0;
-                const audioId = `audio-${Date.now()}-${index}`;
-                const isPreloaded = hasAudio && CONFIG.AUDIO_CACHE.has(item.audioUrl);
-                const isTopResult = index < CONFIG.PRELOAD_IMMEDIATE;
-                
-                if (item.type === 'dictionary') {
-                    html += `
-                        <div class="result-item" data-index="${index}">
-                            <div class="character">${item.單字}</div>
-                            <div class="details">
-                                <div class="detail-item">
-                                    <span class="label">BVZ：</span> 
-                                    <span class="bvz-value">${item.BVZ}</span>
-                                    ${hasAudio ? `
-                                    <div class="audio-container">
-                                        <button class="audio-play-btn" 
-                                                data-audio-id="${audioId}" 
-                                                data-audio-url="${encodeURIComponent(item.audioUrl)}"
-                                                title="點擊播放發音"
-                                                ${isPreloaded || isTopResult ? '' : 'disabled'}>
-                                        </button>
-                                    </div>
-                                    ` : ''}
-                                </div>
-                                ${item.Note ? `
-                                <div class="detail-item">
-                                    <span class="label">注釋：</span> 
-                                    <span>${item.Note}</span>
-                                </div>
-                                ` : ''}
-                            </div>
-                        </div>
-                    `;
-                } else if (item.type === 'vocabulary') {
-                    const hasExampleList = item.例句列表 && item.例句列表.length > 0;
-                    
-                    html += `
-                        <div class="result-item" data-index="${index}">
-                            <div class="character">${item.詞條 || '無詞條'}</div>
-                            <div class="details">
-                                <div class="detail-item">
-                                    <span class="label">BVZ：</span> 
-                                    <span class="bvz-value">${item.BVZ || '無BVZ'}</span>
-                                    ${item.類別 ? `<span class="category-tag">${item.類別}</span>` : ''}
-                                    ${hasAudio ? `
-                                    <div class="audio-container">
-                                        <button class="audio-play-btn" 
-                                                data-audio-id="${audioId}" 
-                                                data-audio-url="${encodeURIComponent(item.audioUrl)}"
-                                                title="點擊播放發音"
-                                                ${isPreloaded || isTopResult ? '' : 'disabled'}>
-                                        </button>
-                                    </div>
-                                    ` : ''}
-                                </div>
-                                ${item.釋義 ? `
-                                <div class="detail-item">
-                                    <span class="label">釋義：</span> 
-                                    <span>${item.釋義}</span>
-                                </div>
-                                ` : ''}
-                            </div>
-                            ${hasExampleList ? `
-                            <div class="example-container">
-                                <div class="example-header">
-                                    <span>例句 (${item.例句列表.length}個)</span>
-                                </div>
-                                <div class="example-items">
-                                    ${generateExamplesHtml(item.例句列表, index, isTopResult)}
-                                </div>
-                            </div>
-                            ` : ''}
-                        </div>
-                    `;
+            if(!results.length){ showMessage(`沒有找到與"<span class="instruction-latin">${query}</span>"相關的結果`); return; }
+            let html = `<div class="results-header"><h2>搜索結果</h2><div class="results-count">找到 ${results.length} 條結果 ${exactMatch?'（精確匹配）':''}</div></div>`;
+            results.forEach((item,idx)=>{
+                const hasAudio = !!(item.audioUrl && item.audioUrl.length);
+                const audioId = `audio-${Date.now()}-${idx}`;
+                const isTop = idx < CONFIG.PRELOAD_IMMEDIATE;
+                if(item.type==='dictionary'){
+                    html += `<div class="result-item"><div class="character">${item.單字}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ}</span><div class="meta-group">${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.Note?`<div class="detail-item"><span class="label">注釋：</span><span>${item.Note}</span></div>`:''}</div></div>`;
+                } else {
+                    const hasExamples = item.例句列表 && item.例句列表.length;
+                    html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,isTop)}</div></div>`:''}</div>`;
                 }
             });
-            
             resultsContainer.innerHTML = decodeHtmlEntities(html);
-            
-            const audioButtons = resultsContainer.querySelectorAll('.audio-play-btn');
-            audioButtons.forEach(button => {
-                button.addEventListener('click', handleAudioPlay);
-            });
+            document.querySelectorAll('.audio-play-btn').forEach(btn=>btn.addEventListener('click', handleAudioPlay));
         }
         
-        // 修改showMessage函数，接受可能包含HTML的内容
-        function showMessage(message) {
-            // 如果message包含HTML标签，我们直接插入，但需要解码实体
-            // 为了安全，我们仍然使用decodeHtmlEntities，但保留内部span
-            resultsContainer.innerHTML = decodeHtmlEntities(`
-                <div class="no-results">
-                    <div class="no-results-icon">🔍</div>
-                    <p>${message}</p>
-                </div>
-            `);
-            showResultsArea();
-        }
-        
-        function showLoading() {
-            resultsContainer.innerHTML = decodeHtmlEntities(`
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>正在加載字典數據……</p>
-                </div>
-            `);
-        }
-        
-        function showError(message) {
-            resultsContainer.innerHTML = decodeHtmlEntities(`
-                <div class="error-message">
-                    <strong>錯誤：</strong> ${message}
-                </div>
-            `);
-            showResultsArea();
-        }
+        function showMessage(msg) { resultsContainer.innerHTML = decodeHtmlEntities(`<div class="no-results"><div class="no-results-icon">🔍</div><p>${msg}</p></div>`); showResultsArea(); }
+        function showLoading() { resultsContainer.innerHTML = `<div class="loading"><div class="spinner"></div><p>正在加載字典數據……</p></div>`; }
+        function showError(msg) { resultsContainer.innerHTML = `<div class="error-message"><strong>錯誤：</strong> ${msg}</div>`; showResultsArea(); }
+        function showInitialMessage() { resultsContainer.innerHTML = `<div class="no-results"><div class="no-results-icon">🔍</div><p>請輸入搜索內容並點擊搜索按鈕查看結果</p></div>`; resultsContainer.classList.remove('visible'); isSearching=false; }
+        function showResultsArea() { resultsContainer.classList.add('visible'); }
         
         async function handleAudioPlay(event) {
-            const button = event.currentTarget;
-            const audioUrl = decodeURIComponent(button.getAttribute('data-audio-url'));
-            
-            if (!audioUrl) return;
-            
-            if (currentAudio && currentPlayingButton === button) {
-                stopCurrentAudio();
-                return;
+            const btn = event.currentTarget; const url = decodeURIComponent(btn.getAttribute('data-audio-url'));
+            if(!url) return;
+            if(currentAudio && currentPlayingButton===btn){ stopCurrentAudio(); return; }
+            if(currentAudio) stopCurrentAudio();
+            let blobUrl = CONFIG.AUDIO_CACHE.get(url);
+            if(!blobUrl){
+                try{ const resp=await fetch(url); const blob=await resp.blob(); blobUrl=URL.createObjectURL(new Blob([blob],{type:'audio/mpeg'})); CONFIG.AUDIO_CACHE.set(url,blobUrl); } catch(e){ console.error(e); return; }
             }
-            
-            if (currentAudio) {
-                stopCurrentAudio();
-            }
-            
-            let audioBlobUrl = CONFIG.AUDIO_CACHE.get(audioUrl);
-            
-            if (!audioBlobUrl) {
-                console.log('音頻不在緩存，立即下載：', audioUrl);
-                try {
-                    const response = await fetch(audioUrl);
-                    const blob = await response.blob();
-                    audioBlobUrl = URL.createObjectURL(new Blob([blob], { type: 'audio/mpeg' }));
-                    CONFIG.AUDIO_CACHE.set(audioUrl, audioBlobUrl);
-                } catch (error) {
-                    console.error('音頻下載失敗：', error);
-                    return;
-                }
-            }
-            
-            playAudio(audioBlobUrl, button);
+            playAudio(blobUrl, btn);
         }
-        
-        function playAudio(audioUrl, button) {
-            currentAudio = new Audio(audioUrl);
-            currentPlayingButton = button;
-            
-            currentAudio.volume = currentVolume;
-            
-            button.classList.add('playing');
-            button.title = '點擊暫停';
-            
-            currentAudio.addEventListener('error', (e) => {
-                console.error('音頻播放錯誤：', currentAudio.error);
-                resetAudioButton(button);
-                currentAudio = null;
-                currentPlayingButton = null;
-            });
-            
-            currentAudio.addEventListener('ended', () => {
-                resetAudioButton(button);
-                currentAudio = null;
-                currentPlayingButton = null;
-            });
-            
-            currentAudio.play().catch(error => {
-                console.error('播放失敗：', error);
-                resetAudioButton(button);
-                currentAudio = null;
-                currentPlayingButton = null;
-            });
+        function playAudio(url,btn){
+            currentAudio=new Audio(url); currentPlayingButton=btn; currentAudio.volume=currentVolume;
+            btn.classList.add('playing'); btn.title='點擊暫停';
+            currentAudio.addEventListener('ended',()=>resetAudioButton(btn));
+            currentAudio.addEventListener('error',()=>resetAudioButton(btn));
+            currentAudio.play().catch(()=>resetAudioButton(btn));
         }
+        function stopCurrentAudio(){ if(currentAudio){ currentAudio.pause(); currentAudio.currentTime=0; resetAudioButton(currentPlayingButton); currentAudio=null; currentPlayingButton=null; } }
+        function resetAudioButton(btn){ if(btn){ btn.classList.remove('playing'); btn.title='點擊播放發音'; } }
         
-        function stopCurrentAudio() {
-            if (currentAudio) {
-                currentAudio.pause();
-                currentAudio.currentTime = 0;
-                
-                if (currentPlayingButton) {
-                    resetAudioButton(currentPlayingButton);
-                }
-                
-                currentAudio = null;
-                currentPlayingButton = null;
-            }
+        function resetSubMode() {
+            if(currentMainMode==='character'){ currentSubMode='character'; modeButtons.character.forEach(b=>b.classList.remove('active')); modeButtons.character[0].classList.add('active'); }
+            else if(currentMainMode==='vocab'){ currentSubMode='vocab-bvz'; modeButtons.vocab.forEach(b=>{ b.classList.remove('active','vocab-active'); }); modeButtons.vocab[0].classList.add('active','vocab-active'); }
+            else if(currentMainMode==='definition'){ currentSubMode='definition'; modeButtons.definition.forEach(b=>{ b.classList.remove('active','definition-active'); }); modeButtons.definition[0].classList.add('active','definition-active'); }
         }
-        
-        function resetAudioButton(button) {
-            button.classList.remove('playing');
-            button.title = '播放發音';
+        function updateResultsContainerClass(){ resultsContainer.className='results-section'; if(currentMainMode==='vocab') resultsContainer.classList.add('vocab-result'); else if(currentMainMode==='definition') resultsContainer.classList.add('definition-result'); }
+        function updateSearchHint(){
+            if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式）':'輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式）':'輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）'; } }
+            else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-bvz'){ searchInputs.vocab.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入BVZ查詢對應的釋義（精確匹配模式）':'輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
+            else if(currentMainMode==='definition'){ searchInputs.definition.placeholder='請輸入釋義關鍵詞（多個用逗號分隔）……'; searchHints.definition.textContent=exactMatch?'輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）':'輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢，用逗號分隔）'; }
         }
+        function clearSearchInputs(){ Object.values(searchInputs).forEach(i=>i.value=''); }
+        function setVolume(v){ currentVolume=Math.max(0,Math.min(1,v)); try{ localStorage.setItem('dictionary_volume',currentVolume.toString()); } catch(e){} }
+        function updateVolumeDisplay(){ let p=Math.round(currentVolume*100); volumeValue.textContent=`${p}%`; volumeSlider.value=p; }
+        function loadVolumeFromStorage(){ try{ let sv=localStorage.getItem('dictionary_volume'); if(sv!==null){ let v=parseFloat(sv); if(!isNaN(v)&&v>=0&&v<=1){ setVolume(v); return true; } } } catch(e){} return false; }
+        function handleScroll(){ scrollToTopButton.classList.toggle('visible', window.scrollY>300); }
         
-        window.addEventListener('beforeunload', () => {
-            CONFIG.AUDIO_CACHE.forEach(blobUrl => {
-                URL.revokeObjectURL(blobUrl);
-            });
-            CONFIG.AUDIO_CACHE.clear();
-            
-            if (audioPreloadController) {
-                audioPreloadController.abort();
-            }
-        });
-        
+        window.addEventListener('beforeunload',()=>{ CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); if(audioPreloadController) audioPreloadController.abort(); });
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
