@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>遂城白話多功能音典</title>
-    <!-- 加载霞鹜文楷字体 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/style.css">
     <style>
         :root {
@@ -381,7 +380,6 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
-        /* 括号内容独立行样式 - 无高亮，仅换行 */
         .example-bracket-line {
             display: block;
             margin-top: 6px;
@@ -1191,7 +1189,6 @@
     </div>
 
     <script>
-        // 解码HTML实体
         function decodeHtmlEntities(str) {
             if (!str) return str;
             const entities = {
@@ -1221,7 +1218,7 @@
             MIN_VOLUME: 0.0,
             MAX_VOLUME: 1.0,
             SEPARATOR: /[,，\s]+/,
-            SPACE_SEPARATOR: /\s+/
+            COMMA_SEPARATOR: /[,，]+/   // 仅用逗号分割，空格不再作为分割符
         };
         
         let dictionaryData = [], vocabularyData = [], currentMainMode = 'character', currentSubMode = 'character', exactMatch = false;
@@ -1245,11 +1242,9 @@
             else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-bvz') searchInputs.vocab.classList.add('vocab-bvz-mode');
         }
         
-        // 处理例句中的括号内容，使其独立成行（无高亮）
         function formatExampleTextWithBrackets(text) {
             if (!text) return '';
             let processed = text;
-            // 处理各种括号类型，将其转换为独立行（无高亮背景）
             processed = processed.replace(/（([^（）]+)）/g, '<div class="example-bracket-line">（$1）</div>');
             processed = processed.replace(/\[([^\[\]]+)\]/g, '<div class="example-bracket-line">[$1]</div>');
             processed = processed.replace(/〔([^〔〕]+)〕/g, '<div class="example-bracket-line">〔$1〕</div>');
@@ -1331,7 +1326,6 @@
             currentResults = results;
             displayResultsWithBanner(results, cat!=='all' ? `分類「${cat}」下的所有詞條 (共${results.length}條)` : '隨機推薦詞條');
             showResultsArea(); setTimeout(()=>resultsContainer.scrollIntoView({behavior:'smooth',block:'start'}),100);
-            startSmartPreload(results);
         }
         
         function displayResultsWithBanner(results, bannerText) {
@@ -1351,14 +1345,12 @@
         }
         
         function performSearch(query) {
-            if(audioPreloadController) audioPreloadController.abort();
             isSearching = true;
             const results = searchData(query);
             currentResults = results;
             displayResults(results, query);
             showResultsArea();
             setTimeout(()=>resultsContainer.scrollIntoView({behavior:'smooth',block:'start'}),100);
-            startSmartPreload(results);
         }
         
         function searchData(query) {
@@ -1369,28 +1361,58 @@
         }
         
         function searchDictionary(query) {
-            let terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            // 精确匹配时：使用逗号分割，空格不分割，保持完整字符串
+            let terms;
+            if (exactMatch) {
+                // 精确匹配：按逗号分割，每个部分作为完整字符串进行严格匹配
+                terms = query.split(CONFIG.COMMA_SEPARATOR).filter(t=>t.trim().length);
+            } else {
+                // 模糊匹配：按逗号或空格分割
+                terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            }
             let res = [];
             if(currentSubMode==='character'){
-                if(exactMatch){ let set=new Set(terms); dictionaryData.forEach(i=>{ if(i.單字 && set.has(i.單字)) res.push(i); }); }
+                if(exactMatch){ 
+                    let set=new Set(terms.map(t=>t.trim()));
+                    dictionaryData.forEach(i=>{ if(i.單字 && set.has(i.單字)) res.push(i); }); 
+                }
                 else dictionaryData.forEach(i=>{ if(i.單字) for(let t of terms) if(i.單字.includes(t)){ res.push(i); break; } });
             } else {
-                if(exactMatch){ let set=new Set(terms); dictionaryData.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); }
+                if(exactMatch){ 
+                    let set=new Set(terms.map(t=>t.trim()));
+                    dictionaryData.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); 
+                }
                 else dictionaryData.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
             }
             return res.slice(0,CONFIG.MAX_RESULTS);
         }
         
         function searchVocabulary(query) {
-            let terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            // 精确匹配时：使用逗号分割，空格不分割，保持完整字符串（包括空格）
+            let terms;
+            if (exactMatch) {
+                // 精确匹配：按逗号分割，每个部分作为完整字符串进行严格匹配
+                terms = query.split(CONFIG.COMMA_SEPARATOR).filter(t=>t.trim().length);
+            } else {
+                // 模糊匹配：按逗号或空格分割
+                terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
+            }
             let cat = categorySelects.vocab.value;
             let filtered = cat==='all' ? vocabularyData : vocabularyData.filter(i=>i.類別===cat);
             let res = [];
             if(currentSubMode==='vocab-bvz'){
-                if(exactMatch){ let set=new Set(terms); filtered.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); }
-                else filtered.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.replace(/[-－]/g,'').includes(t.replace(/[-－]/g,''))){ res.push(i); break; } });
+                if(exactMatch){ 
+                    let set=new Set(terms.map(t=>t.trim()));
+                    filtered.forEach(i=>{ 
+                        if(i.BVZ && set.has(i.BVZ)) res.push(i); 
+                    }); 
+                }
+                else filtered.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
             } else {
-                if(exactMatch){ let set=new Set(terms); filtered.forEach(i=>{ if(i.詞條 && set.has(i.詞條)) res.push(i); }); }
+                if(exactMatch){ 
+                    let set=new Set(terms.map(t=>t.trim()));
+                    filtered.forEach(i=>{ if(i.詞條 && set.has(i.詞條)) res.push(i); }); 
+                }
                 else filtered.forEach(i=>{ if(i.詞條) for(let t of terms) if(i.詞條.includes(t)){ res.push(i); break; } });
             }
             return res.slice(0,CONFIG.MAX_RESULTS);
@@ -1405,10 +1427,6 @@
             else filtered.forEach(i=>{ if(i.釋義) for(let t of terms) if(i.釋義.includes(t)){ res.push(i); break; } });
             return res.slice(0,CONFIG.MAX_RESULTS);
         }
-        
-        function startSmartPreload(results) { }
-        function enableAudioButtons(start,end) { }
-        function preloadAudioBatch(urls,priority,signal) { return Promise.resolve(); }
         
         function displayResults(results, query) {
             if(!results.length){ showMessage(`沒有找到與"<span class="instruction-latin">${query}</span>"相關的結果`); return; }
@@ -1462,8 +1480,8 @@
         }
         function updateResultsContainerClass(){ resultsContainer.className='results-section'; if(currentMainMode==='vocab') resultsContainer.classList.add('vocab-result'); else if(currentMainMode==='definition') resultsContainer.classList.add('definition-result'); }
         function updateSearchHint(){
-            if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式）':'輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式）':'輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）'; } }
-            else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-bvz'){ searchInputs.vocab.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入BVZ查詢對應的釋義（精確匹配模式）':'輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
+            if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式，多個用逗號分隔）':'輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式，多個用逗號分隔）':'輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）'; } }
+            else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-bvz'){ searchInputs.vocab.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入BVZ查詢對應的釋義（精確匹配模式，完整字符串匹配，含空格）':'輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式，多個用逗號分隔）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
             else if(currentMainMode==='definition'){ searchInputs.definition.placeholder='請輸入釋義關鍵詞（多個用逗號分隔）……'; searchHints.definition.textContent=exactMatch?'輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）':'輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢，用逗號分隔）'; }
         }
         function clearSearchInputs(){ Object.values(searchInputs).forEach(i=>i.value=''); }
@@ -1472,7 +1490,7 @@
         function loadVolumeFromStorage(){ try{ let sv=localStorage.getItem('dictionary_volume'); if(sv!==null){ let v=parseFloat(sv); if(!isNaN(v)&&v>=0&&v<=1){ setVolume(v); return true; } } } catch(e){} return false; }
         function handleScroll(){ scrollToTopButton.classList.toggle('visible', window.scrollY>300); }
         
-        window.addEventListener('beforeunload',()=>{ CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); if(audioPreloadController) audioPreloadController.abort(); });
+        window.addEventListener('beforeunload',()=>{ CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); });
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
