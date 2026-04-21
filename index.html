@@ -371,15 +371,17 @@
             gap: 5px;
         }
         
+        /* 例句文本：正常显示，不额外换行 */
         .example-text {
             font-size: 1.05rem;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             line-height: 1.6;
             word-wrap: break-word;
             padding-right: 40px;
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
+        /* 仅处理〔〕内容独立成行 */
         .example-bracket-line {
             display: block;
             margin-top: 6px;
@@ -396,7 +398,7 @@
             font-family: "Times New Roman", Times, serif !important;
             font-size: 1rem;
             color: #4a6fa5;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             font-weight: normal;
             padding-right: 40px;
             word-break: break-word;
@@ -409,7 +411,7 @@
             font-size: 0.95rem;
             color: #666;
             font-style: italic;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             word-wrap: break-word;
             padding-right: 40px;
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
@@ -1218,7 +1220,7 @@
             MIN_VOLUME: 0.0,
             MAX_VOLUME: 1.0,
             SEPARATOR: /[,，\s]+/,
-            COMMA_SEPARATOR: /[,，]+/   // 仅用逗号分割，空格不再作为分割符
+            COMMA_SEPARATOR: /[,，]+/
         };
         
         let dictionaryData = [], vocabularyData = [], currentMainMode = 'character', currentSubMode = 'character', exactMatch = false;
@@ -1242,13 +1244,12 @@
             else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-bvz') searchInputs.vocab.classList.add('vocab-bvz-mode');
         }
         
+        // 修正后的格式化：仅处理〔〕括号内容独立成行，其他括号原样保留
         function formatExampleTextWithBrackets(text) {
             if (!text) return '';
             let processed = text;
-            processed = processed.replace(/（([^（）]+)）/g, '<div class="example-bracket-line">（$1）</div>');
-            processed = processed.replace(/\[([^\[\]]+)\]/g, '<div class="example-bracket-line">[$1]</div>');
+            // 仅将〔〕内的内容替换为独立块级元素，其他括号（包括（）【】等）不做换行处理
             processed = processed.replace(/〔([^〔〕]+)〕/g, '<div class="example-bracket-line">〔$1〕</div>');
-            processed = processed.replace(/【([^【】]+)】/g, '<div class="example-bracket-line">【$1】</div>');
             return processed;
         }
         
@@ -1361,13 +1362,10 @@
         }
         
         function searchDictionary(query) {
-            // 精确匹配时：使用逗号分割，空格不分割，保持完整字符串
             let terms;
             if (exactMatch) {
-                // 精确匹配：按逗号分割，每个部分作为完整字符串进行严格匹配
                 terms = query.split(CONFIG.COMMA_SEPARATOR).filter(t=>t.trim().length);
             } else {
-                // 模糊匹配：按逗号或空格分割
                 terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
             }
             let res = [];
@@ -1388,13 +1386,10 @@
         }
         
         function searchVocabulary(query) {
-            // 精确匹配时：使用逗号分割，空格不分割，保持完整字符串（包括空格）
             let terms;
             if (exactMatch) {
-                // 精确匹配：按逗号分割，每个部分作为完整字符串进行严格匹配
                 terms = query.split(CONFIG.COMMA_SEPARATOR).filter(t=>t.trim().length);
             } else {
-                // 模糊匹配：按逗号或空格分割
                 terms = query.split(CONFIG.SEPARATOR).filter(t=>t.length);
             }
             let cat = categorySelects.vocab.value;
@@ -1403,9 +1398,7 @@
             if(currentSubMode==='vocab-bvz'){
                 if(exactMatch){ 
                     let set=new Set(terms.map(t=>t.trim()));
-                    filtered.forEach(i=>{ 
-                        if(i.BVZ && set.has(i.BVZ)) res.push(i); 
-                    }); 
+                    filtered.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); 
                 }
                 else filtered.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
             } else {
