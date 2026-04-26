@@ -1879,7 +1879,8 @@
     "BVZ": "dá-gi-ông",
     "詞條類別": "謂詞",
     "釋義": "吃土窯燒雞",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dá-gi-ông.mp3"
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dá-gi-ông.mp3",
+    "examples": []
   },
   {
     "詞條": "嗛",
@@ -2120,16 +2121,16 @@
     "examples": []
   },
   {
-    "詞條": "冇搭𢶍",
-    "BVZ": "mõu-dạp-sạp",
+    "詞條": "冇搭㒎",
+    "BVZ": "mõu-dạp-xạp",
     "詞條類別": "謂詞",
     "釋義": "不當回事，輕蔑對待，不在話下",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-dạp-sạp.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-dạp-xạp.mp3",
     "examples": [
       {
         "例句": "嗰二兩酒都冇撘𢶍。\r\n〔這二兩酒都不在話下。〕",
-        "例句的BVZ轉寫": "Gó Nhì ljớng zấu dou mõu-dạp-sạp.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gó Nhì ljớng zấu dou mõu-dạp-sạp..mp3"
+        "例句的BVZ轉寫": "Gó Nhì ljớng zấu dou mõu-dạp-xạp.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gó Nhì ljớng zấu dou mõu-dạp-xạp..mp3"
       }
     ]
   },
@@ -2483,7 +2484,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-ljậng.mp3",
     "examples": [
       {
-        "例句": "哦豁，今下屌靚囉。\n〔哎呀，這下完蛋了！ 〕",
+        "例句": "哦豁，今下屌靚囉。\r\n〔哎呀，這下完蛋了！ 〕",
         "例句的BVZ轉寫": "O-hõ, ga-hã djâu-ljậng lọ!",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-hõ, ga-hã djâu-ljậng lọ!.mp3"
       }
@@ -3182,10 +3183,10 @@
   },
   {
     "詞條": "□□",
-    "BVZ": "ngjâk-sjâp",
+    "BVZ": "ngjâk-sjâk",
     "詞條類別": "謂詞",
     "釋義": "小氣；鐵公雞",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngjâk-sjâp.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngjâk-sjâk.mp3",
     "examples": []
   },
   {
@@ -4064,7 +4065,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/còu-djâu-gộng-gộng.mp3",
     "examples": [
       {
-        "例句": "班人嘈屌嗊嗊喺道。\n〔那羣人在那吵死了。〕",
+        "例句": "班人嘈屌嗊嗊喺道。\r\n〔那羣人在那吵死了。〕",
         "例句的BVZ轉寫": "Bang nhầng còu-djâu-gộng-gộng hấy-dòu.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Bang nhầng còu-djâu-gộng-gộng hấy-dòu..mp3"
       }
@@ -4396,6 +4397,186 @@
         "例句": "其做功课做到半唥鯁就去睇电视嗲。\r\n〔他作業做一半就去看電視了。〕",
         "例句的BVZ轉寫": "Kẽi gông-fọ zọu dọu bụng-lậng-kậng zầu hợi tấy dìng-sì dè.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi gông-fọ zọu dọu bụng-lậng-kậng zầu hợi tấy dìng-sì dè..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "䣺",
+    "BVZ": "ging",
+    "詞條類別": "謂詞",
+    "釋義": "斟（酒）；將液體從一個容器倒向另一個容器的動作",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ging.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "㷙",
+    "BVZ": "zịng",
+    "詞條類別": "謂詞",
+    "釋義": "多用於「～油」，指將食用油和一些其他的香料一齊下熱鍋煠至油變香",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zịng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "辣",
+    "BVZ": "lạk",
+    "詞條類別": "謂詞",
+    "釋義": "恨，怨恨，埋怨",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lạk.mp3",
+    "examples": [
+      {
+        "例句": "我呶日講嗲其句壞話，其知道後跟道辣欸。\r\n〔我那天說了他一句壞話，他知道之後在那恨得咬牙切齒。〕",
+        "例句的BVZ轉寫": "Ngõ nu-nhầk góng dè kẻi-gẹi vài-và, kẽi zi-dọu hầu gâng-dòu lạk è.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ nu-nhầk góng dè kẻi-gẹi vài-và, kẽi zi-dọu hầu gâng-dòu lạk è..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "撢",
+    "BVZ": "jầm",
+    "詞條類別": "謂詞",
+    "釋義": "掏（錢財等）；從褲袋掏；【引申】索取（錢財等）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jầm.mp3",
+    "examples": [
+      {
+        "例句": "個男箇係老婆奴，每個月箇工資，其老婆幾多都撢了其箇。\r\n〔這男的是個老婆奴，每個月的工資都被老婆悉數拿完。〕",
+        "例句的BVZ轉寫": "Gọ nàm-gọ hầy lõu-pò-nòu, mủi-gọ-nhìk gọ gông-zi, kẽi lõu-pò géi-do dou jầm lĩu kẽi-gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gọ nàm-gọ hầy lõu-pò-nòu, mủi-gọ-nhìk gọ gông-zi, kẽi lõu-pò géi-do dou jầm lĩu kẽi-gọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "禁",
+    "BVZ": "kâm",
+    "詞條類別": "謂詞",
+    "釋義": "禁得住、耐得住（磨損、考驗）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kâm.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "（物品）禁用",
+    "BVZ": "kâm-jồng",
+    "詞條類別": "謂詞",
+    "釋義": "（物品）耐用的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kâm-jồng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "（食物）禁肚",
+    "BVZ": "kâm-tõu",
+    "詞條類別": "謂詞",
+    "釋義": "（食物）有飽複感的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kâm-tõu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "（銭）禁使",
+    "BVZ": "kâm-sấy",
+    "詞條類別": "謂詞",
+    "釋義": "物價低、貨幣升值、（錢）夠用的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kâm-sấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "（銭）冇等使",
+    "BVZ": "mõu-dấng-sấy",
+    "詞條類別": "謂詞",
+    "釋義": "物價高、貨幣貶值、（錢）不夠用的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-dấng-sấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "撩",
+    "BVZ": "ljáo",
+    "詞條類別": "謂詞",
+    "釋義": "用棍子之類物挑、戳、撥；【引申】亂寫亂畫",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ljáo.mp3",
+    "examples": [
+      {
+        "例句": "你拎支棍仔～～個檯底睇睇搵冇搵得倒嗱。\r\n〔你拿一支棍子撥一撥桌底看看能不能夠找到吧。〕",
+        "例句的BVZ轉寫": "Nẽi nêng zi guậng-zấy ljáo-ljáo gọ tòi-dấy tấy-tấy vấng mõu vấng dâk dóu nà.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi nêng zi guậng-zấy ljáo-ljáo gọ tòi-dấy tấy-tấy vấng mõu vấng dâk dóu nà..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "捏",
+    "BVZ": "njèk",
+    "詞條類別": "謂詞",
+    "釋義": "把黏稠物用力抹在物體上",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njèk.mp3",
+    "examples": [
+      {
+        "例句": "咪人～阿鼻屎跟墻上箇？！\r\n〔誰將鼻屎黏在墻上的？〕",
+        "例句的BVZ轉寫": "Mi-nhầng njèk a bèi-sí gâng cjờng sjờng gọ？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Mi-nhầng njèk a bèi-sí gâng cjờng sjờng gọ？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "⿰身𰕎",
+    "BVZ": "tjèk",
+    "詞條類別": "謂詞",
+    "釋義": "賴（在某處）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tjèk.mp3",
+    "examples": [
+      {
+        "例句": "三兩兩行開，冇～我床上！\r\n〔快走開，別賴我床上！〕",
+        "例句的BVZ轉寫": "Xam-ljỡng-ljỡng hàng-hoi, móu tjèk ngỏ-còng sjờng!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Xam-ljỡng-ljỡng hàng-hoi, móu tjèk ngỏ-còng sjờng!.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "濕□□",
+    "BVZ": "sâp-zjèp-zjèp",
+    "詞條類別": "謂詞",
+    "釋義": "濕溚溚貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâp-zjèp-zjèp.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "譅",
+    "BVZ": "xâp",
+    "詞條類別": "謂詞",
+    "釋義": "唆使",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xâp.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "㗺",
+    "BVZ": "xạp",
+    "詞條類別": "謂詞",
+    "釋義": "亂說話",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xạp.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "⿰目宅",
+    "BVZ": "zàk",
+    "詞條類別": "謂詞",
+    "釋義": "遮擋視線",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zàk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "逷馬騮",
+    "BVZ": "têk-mã-lâu",
+    "詞條類別": "謂詞",
+    "釋義": "（小孩子）玩耍",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/têk-mã-lâu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□",
+    "BVZ": "pjèk",
+    "詞條類別": "謂詞",
+    "釋義": "（因身體勞累而）癱倒貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pjèk.mp3",
+    "examples": [
+      {
+        "例句": "其下班返到屋己之後直接～跟床上嗲。\r\n〔他下班回到家之後直接癱在床上了。〕",
+        "例句的BVZ轉寫": "Kẽi hã-bang fang dọu ôk-géi zi-hầu zềk-zịp pjèk gâng còng sjờng dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi hã-bang fang dọu ôk-géi zi-hầu zềk-zịp pjèk gâng còng sjờng dè..mp3"
       }
     ]
   },
@@ -5145,12 +5326,12 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/âm-âm-zấy.mp3",
     "examples": [
       {
-        "例句": "A：鹽要放幾多？\n〔鹽要放多少？〕",
+        "例句": "A：鹽要放幾多？\r\n〔鹽要放多少？〕",
         "例句的BVZ轉寫": "A：A-jìm jịu fọng géi-do？",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A：A-jìm jịu fọng géi-do？.mp3"
       },
       {
-        "例句": "B：奄奄仔放得嗲。\n〔看着放就可以了。〕",
+        "例句": "B：奄奄仔放得嗲。\r\n〔看着放就可以了。〕",
         "例句的BVZ轉寫": "B：Âm-âm-zấy fọng dâk-dè.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/B：Âm-âm-zấy fọng dâk-dè..mp3"
       }
@@ -5829,6 +6010,30 @@
     "examples": []
   },
   {
+    "詞條": "□",
+    "BVZ": "njó",
+    "詞條類別": "稱謂",
+    "釋義": "對自家小孩的親切的稱呼，常用於「～屎」一詞",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "妹屎",
+    "BVZ": "mui-sí",
+    "詞條類別": "稱謂",
+    "釋義": "對自家女兒的親切的稱呼",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mui-sí.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□屎",
+    "BVZ": "njó-sí",
+    "詞條類別": "稱謂",
+    "釋義": "對自家小孩的親切的稱呼",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó-sí.mp3",
+    "examples": []
+  },
+  {
     "詞條": "囉柚",
     "BVZ": "lo-jẫu",
     "詞條類別": "名詞-身體部位",
@@ -6385,14 +6590,16 @@
     "BVZ": "djâu-zi",
     "詞條類別": "名詞-身體部位",
     "釋義": "男陰",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-zi.mp3"
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-zi.mp3",
+    "examples": []
   },
   {
     "詞條": "□□",
     "BVZ": "zjâu-zu",
     "詞條類別": "名詞-身體部位",
     "釋義": "男陰",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zjâu-zu.mp3"
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zjâu-zu.mp3",
+    "examples": []
   },
   {
     "詞條": "簝",
@@ -6699,6 +6906,14 @@
     "examples": []
   },
   {
+    "詞條": "煲甖耳",
+    "BVZ": "bou-ang-nhĩ",
+    "詞條類別": "名詞-海產品",
+    "釋義": "學名喚作「柏氏四盤耳烏賊（Euprymna berryi）」，是一種小型墨魚，頭呈圓球狀，八條腿細短彎曲，身形極小",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bou-ang-nhĩ.mp3",
+    "examples": []
+  },
+  {
     "詞條": "𢆡",
     "BVZ": "njeng",
     "詞條類別": "名詞-身體部位",
@@ -6755,6 +6970,14 @@
     "examples": []
   },
   {
+    "詞條": "口水袈",
+    "BVZ": "hấu-súi-ga",
+    "詞條類別": "名詞-衣着服飾",
+    "釋義": "嬰幼兒的口水圍兜",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hấu-súi-ga.mp3",
+    "examples": []
+  },
+  {
     "詞條": "跟",
     "BVZ": "gâng",
     "詞條類別": "介詞",
@@ -6800,7 +7023,7 @@
     "詞條": "墶",
     "BVZ": "dạk",
     "詞條類別": "量詞",
-    "釋義": "方位量詞：處、塊",
+    "釋義": "方位量詞「處、塊」，修飾地點、方位等",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dạk.mp3",
     "examples": [
       {
@@ -6814,7 +7037,7 @@
     "詞條": "文紙",
     "BVZ": "mâng-zí",
     "詞條類別": "量詞",
-    "釋義": "量詞：錢幣的單位",
+    "釋義": "量詞「圓」，錢幣的單位",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mâng-zí.mp3",
     "examples": [
       {
@@ -6828,7 +7051,7 @@
     "詞條": "㼓",
     "BVZ": "nim",
     "詞條類別": "量詞",
-    "釋義": "量詞：一塊/辦瓜果",
+    "釋義": "量詞：「塊/瓣」，修飾瓜果",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nim.mp3",
     "examples": [
       {
@@ -6842,7 +7065,7 @@
     "詞條": "碌",
     "BVZ": "lôk",
     "詞條類別": "量詞",
-    "釋義": "量詞：段",
+    "釋義": "量詞「段」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lôk.mp3",
     "examples": [
       {
@@ -6856,7 +7079,7 @@
     "詞條": "班",
     "BVZ": "bang",
     "詞條類別": "量詞",
-    "釋義": "量詞：形容複數的人",
+    "釋義": "量詞「群」，修飾複數的人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bang.mp3",
     "examples": [
       {
@@ -6870,7 +7093,7 @@
     "詞條": "帮",
     "BVZ": "bong",
     "詞條類別": "量詞",
-    "釋義": "量詞：形容複數的人",
+    "釋義": "量詞「群」，修飾複數的人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bong.mp3",
     "examples": [
       {
@@ -6884,7 +7107,7 @@
     "詞條": "橛",
     "BVZ": "kjek",
     "詞條類別": "量詞",
-    "釋義": "量詞：段/節（修飾條形物體）",
+    "釋義": "量詞「段/節」，修飾條形物體",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kjek.mp3",
     "examples": [
       {
@@ -6898,7 +7121,7 @@
     "詞條": "迾",
     "BVZ": "luầk",
     "詞條類別": "量詞",
-    "釋義": "量詞：列、排",
+    "釋義": "量詞「列、排」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/luầk.mp3",
     "examples": [
       {
@@ -6912,7 +7135,7 @@
     "詞條": "鋪",
     "BVZ": "pou",
     "詞條類別": "量詞",
-    "釋義": "量詞：副；僅用於表達「樣子」的「相」以及撲克的「一手」牌",
+    "釋義": "量詞「副」，僅用於表達「樣子」的「相」以及撲克的「一手」牌",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pou.mp3",
     "examples": [
       {
@@ -6926,7 +7149,7 @@
     "詞條": "幡",
     "BVZ": "fang",
     "詞條類別": "量詞",
-    "釋義": "量詞：修飾被子、蚊帳等",
+    "釋義": "量詞「張」，修飾被子、蚊帳等",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fang.mp3",
     "examples": [
       {
@@ -6940,7 +7163,7 @@
     "詞條": "樸",
     "BVZ": "buầk",
     "詞條類別": "量詞",
-    "釋義": "【黎話詞】量詞：捆、把（蔬菜）；坨（屎）",
+    "釋義": "①量詞「捆、把（蔬菜）」\r\n②量詞「坨」，修飾屎",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/buầk.mp3",
     "examples": [
       {
@@ -6954,7 +7177,7 @@
     "詞條": "㛇",
     "BVZ": "zong",
     "詞條類別": "量詞",
-    "釋義": "【黎話詞】量詞：群（人）",
+    "釋義": "量詞「群」，修飾人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zong.mp3",
     "examples": [
       {
@@ -6968,7 +7191,7 @@
     "詞條": "坺",
     "BVZ": "pjèk",
     "詞條類別": "量詞",
-    "釋義": "量詞：軟糊狀物",
+    "釋義": "量詞「坨」，修飾軟糊狀物",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pjèk.mp3",
     "examples": [
       {
@@ -6982,7 +7205,7 @@
     "詞條": "條",
     "BVZ": "tìu",
     "詞條類別": "量詞",
-    "釋義": "量詞：修飾衣服、村莊、魚",
+    "釋義": "量詞「件/個/條」，修飾衣服、村莊、魚",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tìu.mp3",
     "examples": []
   },
@@ -6990,7 +7213,7 @@
     "詞條": "䊆",
     "BVZ": "gầu",
     "詞條類別": "量詞",
-    "釋義": "塊",
+    "釋義": "量詞「塊」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gầu.mp3",
     "examples": []
   },
@@ -6998,7 +7221,7 @@
     "詞條": "隻",
     "BVZ": "zjậk",
     "詞條類別": "量詞",
-    "釋義": "類同「個」",
+    "釋義": "用法類同「個」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zjậk.mp3",
     "examples": []
   },
@@ -7041,6 +7264,20 @@
         "例句": "今下阿蠔著春嗲，市場（阿）道笸籮咁多。\r\n〔眼下生蠔正當造，市場裡多得不得了。〕",
         "例句的BVZ轉寫": "Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu po-lo gẫm do.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu po-lo gẫm do..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "□",
+    "BVZ": "zjep",
+    "詞條類別": "量詞",
+    "釋義": "量詞「撮」，五根手指聚攏所能拾取的份量",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zjep.mp3",
+    "examples": [
+      {
+        "例句": "一～仔鹽\r\n〔一小撮鹽〕",
+        "例句的BVZ轉寫": "Jâk zjep-zấy jìm",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jâk zjep-zấy jìm.mp3"
       }
     ]
   },
@@ -7121,7 +7358,8 @@
     "BVZ": "O-sí dầp-zộng djâu",
     "詞條類別": "俗語",
     "釋義": "概率幾乎為零；狗屎運；相當於廣府話的「六合彩都冇咁容易中」",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-sí dầp-zộng djâu.mp3"
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-sí dầp-zộng djâu.mp3",
+    "examples": []
   },
   {
     "詞條": "得嗲。",
@@ -7417,6 +7655,30 @@
     "詞條類別": "俗語",
     "釋義": "形容女性地位低下",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-nìu mõu sjỡng bjậk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "食得飽，冇得餓",
+    "BVZ": "Sềk dâk báo, mõu dâk ngò",
+    "詞條類別": "俗語",
+    "釋義": "吃飽了撐的！",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Sềk dâk báo, mõu dâk ngò.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "做百姓",
+    "BVZ": "zọu bạk-xjậng",
+    "詞條類別": "俗語",
+    "釋義": "【舊詞】種農，做農民",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu bạk-xjậng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "做同志",
+    "BVZ": "zọu tồng-zị",
+    "詞條類別": "俗語",
+    "釋義": "【舊詞】城鎮居民，多指代政府機關或者企業工作者",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu tồng-zị.mp3",
     "examples": []
   }
 ]
