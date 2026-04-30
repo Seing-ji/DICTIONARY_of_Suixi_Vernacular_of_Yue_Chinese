@@ -3889,7 +3889,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sì-lò-sò.mp3",
     "examples": [
       {
-        "例句": "你哋兩隻人佮手佮腳做嘢〔做得〕～去。\r\n〔你們兩個人合作幹活的效率眞高。〕",
+        "例句": "你哋兩隻人佮手佮腳做嘢（做得）～去。\n〔你們兩個人合作幹活的效率眞高。〕",
         "例句的BVZ轉寫": "Nẽi-dì Ljỡng zjậk nhầng gạp-sấu-gạp-gjợk zọu-nhẽ sì-lò-sò hợi.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi-dì Ljỡng zjậk nhầng gạp-sấu-gạp-gjợk zọu-nhẽ sì-lò-sò hợi..mp3"
       }
@@ -6203,9 +6203,8 @@
     "詞條": "□□",
     "BVZ": "zầm-zè",
     "詞條類別": "名詞-動物植物",
-    "釋義": "知了",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zầm-zè.mp3",
-    "examples": []
+    "釋義": "知了，蟬",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zầm-zè.mp3"
   },
   {
     "詞條": "雷公狗",
@@ -6563,9 +6562,8 @@
     "詞條": "□",
     "BVZ": "li-lõ",
     "詞條類別": "名詞-動物植物",
-    "釋義": "【黎話詞】大知了",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/li-lõ.mp3",
-    "examples": []
+    "釋義": "【黎話詞】大知了，大蟬",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/li-lõ.mp3"
   },
   {
     "詞條": "屈爪",
