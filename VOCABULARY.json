@@ -2969,11 +2969,10 @@
   },
   {
     "詞條": "粈牙",
-    "BVZ": "njao-ngà",
+    "BVZ": "njâu-ngà",
     "詞條類別": "謂詞",
-    "釋義": "粘牙的；很粘的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njao-ngà.mp3",
-    "examples": []
+    "釋義": "黏牙的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njâu-ngà.mp3"
   },
   {
     "詞條": "䵒",
@@ -7737,5 +7736,12 @@
     "釋義": "｛舊詞｝城鎮居民，多指代政府機關或者企業工作者",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu tồng-zị.mp3",
     "examples": []
+  },
+  {
+    "詞條": "粈",
+    "BVZ": "njâu",
+    "詞條類別": "謂詞",
+    "釋義": "黏的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njâu.mp3"
   }
 ]
