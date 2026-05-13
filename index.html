@@ -371,7 +371,6 @@
             gap: 5px;
         }
         
-        /* 例句文本：正常显示，不额外换行 */
         .example-text {
             font-size: 1.05rem;
             margin-bottom: 8px;
@@ -381,7 +380,6 @@
             font-family: "LXGW WenKai", "霞鹜文楷", sans-serif;
         }
         
-        /* 仅处理〔〕内容独立成行 */
         .example-bracket-line {
             display: block;
             margin-top: 6px;
@@ -1213,18 +1211,13 @@
             VOCABULARY_JSON_URL: 'https://raw.githubusercontent.com/Seing-ji/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/main/VOCABULARY.json',
             MAX_RESULTS: 1000,
             AUDIO_CACHE: new Map(),
-            PRELOAD_IMMEDIATE: 1000,
-            PRELOAD_PRIORITY: 2000,
-            PRELOAD_BACKGROUND: 3000,
             DEFAULT_VOLUME: 0.7,
-            MIN_VOLUME: 0.0,
-            MAX_VOLUME: 1.0,
             SEPARATOR: /[,，\s]+/,
             COMMA_SEPARATOR: /[,，]+/
         };
         
         let dictionaryData = [], vocabularyData = [], currentMainMode = 'character', currentSubMode = 'character', exactMatch = false;
-        let searchTimeout = null, currentAudio = null, currentPlayingButton = null, currentResults = [], audioPreloadController = null;
+        let searchTimeout = null, currentAudio = null, currentPlayingButton = null, currentResults = [];
         let currentVolume = CONFIG.DEFAULT_VOLUME, categoryOptions = new Set(), isSearching = false;
         
         const modeTabs = document.querySelectorAll('.mode-tab');
@@ -1244,11 +1237,9 @@
             else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-bvz') searchInputs.vocab.classList.add('vocab-bvz-mode');
         }
         
-        // 修正后的格式化：仅处理〔〕括号内容独立成行，其他括号原样保留
         function formatExampleTextWithBrackets(text) {
             if (!text) return '';
             let processed = text;
-            // 仅将〔〕内的内容替换为独立块级元素，其他括号（包括（）【】等）不做换行处理
             processed = processed.replace(/〔([^〔〕]+)〕/g, '<div class="example-bracket-line">〔$1〕</div>');
             return processed;
         }
@@ -1262,7 +1253,8 @@
                 if (exampleTextFormatted) {
                     exampleTextFormatted = formatExampleTextWithBrackets(exampleTextFormatted);
                 }
-                h += `<div class="example-item">${hasAudio ? `<div class="example-item-audio"><button class="audio-play-btn example-audio-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(ex.例句音頻)}" title="點擊播放例句發音"></button></div>` : ''}${ex.例句 ? `<div class="example-text">${exampleTextFormatted}</div>` : ''}${ex.例句BVZ ? `<div class="example-bvz">${ex.例句BVZ}</div>` : ''}${ex.例句翻譯 ? `<div class="example-translation">${ex.例句翻譯}</div>` : ''}</div>`;
+                let audioUrlAttr = hasAudio ? `data-audio-url="${encodeURIComponent(ex.例句音頻)}"` : '';
+                h += `<div class="example-item">${hasAudio ? `<div class="example-item-audio"><button class="audio-play-btn example-audio-btn" ${audioUrlAttr} title="點擊播放例句發音"></button></div>` : ''}${ex.例句 ? `<div class="example-text">${exampleTextFormatted}</div>` : ''}${ex.例句BVZ ? `<div class="example-bvz">${ex.例句BVZ}</div>` : ''}${ex.例句翻譯 ? `<div class="example-translation">${ex.例句翻譯}</div>` : ''}</div>`;
             });
             return h;
         }
@@ -1279,19 +1271,47 @@
             if (!dictResponse.ok) throw new Error(`字典數據HTTP錯誤！狀態：${dictResponse.status}`);
             const dictText = await dictResponse.text();
             const dictData = JSON.parse(dictText);
-            dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.BVZ)).map(i => ({ 單字: decodeHtmlEntities(i.單字||''), BVZ: decodeHtmlEntities(i.BVZ||''), Note: decodeHtmlEntities(i.Note||i.note||''), audioUrl: (i.audio||'').replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/'), type: 'dictionary' }));
+            
+            // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
+            dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.BVZ)).map(i => ({ 
+                單字: decodeHtmlEntities(i.單字||''), 
+                BVZ: decodeHtmlEntities(i.BVZ||''), 
+                Note: decodeHtmlEntities(i.Note||i.note||''), 
+                // 直接使用 JSON 中的原始音频URL（保持 raw 格式）
+                audioUrl: (i.audio||''),
+                type: 'dictionary' 
+            }));
+            
             dataStatus.textContent = '正在從GitHub加載詞彙數據……';
             const vocabResponse = await fetch(CONFIG.VOCABULARY_JSON_URL);
             if (!vocabResponse.ok) throw new Error(`詞彙數據HTTP錯誤！狀態：${vocabResponse.status}`);
             const vocabText = await vocabResponse.text();
             const vocabData = JSON.parse(vocabText);
+            
             vocabularyData = (Array.isArray(vocabData) ? vocabData : Object.values(vocabData)).filter(i => i && (i.BVZ||i.詞條||i.釋義)).map(i => {
                 let audioUrl = (i.vocabularyAudio||i.音頻||i.audio||'');
-                if (audioUrl && audioUrl.includes('github.com')) audioUrl = audioUrl.replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/');
+                // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
                 let examples = [];
-                if (i.examples && Array.isArray(i.examples)) i.examples.forEach(ex => { examples.push({ 例句: decodeHtmlEntities(ex.例句||ex.sentence||''), 例句BVZ: decodeHtmlEntities(ex.例句的BVZ轉寫||ex.bvzTranscription||ex.例句BVZ||''), 例句音頻: (ex.exampleAudio||ex.audio||'').replace('https://raw.githubusercontent.com/','https://cdn.jsdelivr.net/gh/').replace('/main/','/'), 例句翻譯: decodeHtmlEntities(ex.translation||'') }); });
-                return { BVZ: decodeHtmlEntities(i.BVZ||i.bvz||''), 詞條: decodeHtmlEntities(i.詞條||i.word||i.词条||''), 釋義: decodeHtmlEntities(i.釋義||i.释义||i.definition||''), 類別: decodeHtmlEntities(i.詞條類別||i.category||i.分类||''), audioUrl, 例句列表: examples, type: 'vocabulary' };
+                if (i.examples && Array.isArray(i.examples)) i.examples.forEach(ex => { 
+                    let exampleAudio = (ex.exampleAudio||ex.audio||'');
+                    examples.push({ 
+                        例句: decodeHtmlEntities(ex.例句||ex.sentence||''), 
+                        例句BVZ: decodeHtmlEntities(ex.例句的BVZ轉寫||ex.bvzTranscription||ex.例句BVZ||''), 
+                        例句音頻: exampleAudio, 
+                        例句翻譯: decodeHtmlEntities(ex.translation||'') 
+                    }); 
+                });
+                return { 
+                    BVZ: decodeHtmlEntities(i.BVZ||i.bvz||''), 
+                    詞條: decodeHtmlEntities(i.詞條||i.word||i.词条||''), 
+                    釋義: decodeHtmlEntities(i.釋義||i.释义||i.definition||''), 
+                    類別: decodeHtmlEntities(i.詞條類別||i.category||i.分类||''), 
+                    audioUrl, 
+                    例句列表: examples, 
+                    type: 'vocabulary' 
+                };
             });
+            
             categoryOptions.clear(); vocabularyData.forEach(i => { if(i.類別 && i.類別.trim()) categoryOptions.add(i.類別.trim()); });
             categorySelects.vocab.innerHTML = '<option value="all">全部類別</option>'; categorySelects.definition.innerHTML = '<option value="all">全部類別</option>';
             Array.from(categoryOptions).sort().forEach(c => { categorySelects.vocab.appendChild(new Option(c,c)); categorySelects.definition.appendChild(new Option(c,c)); });
@@ -1337,9 +1357,8 @@
             results.forEach((item,idx)=>{
                 const hasAudio = !!(item.audioUrl && item.audioUrl.length);
                 const audioId = `audio-${Date.now()}-${idx}`;
-                const isTop = idx < CONFIG.PRELOAD_IMMEDIATE;
                 const hasExamples = item.例句列表 && item.例句列表.length;
-                html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,isTop)}</div></div>`:''}</div>`;
+                html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
             });
             resultsContainer.innerHTML = decodeHtmlEntities(html);
             document.querySelectorAll('.audio-play-btn').forEach(btn=>btn.addEventListener('click', handleAudioPlay));
@@ -1427,12 +1446,11 @@
             results.forEach((item,idx)=>{
                 const hasAudio = !!(item.audioUrl && item.audioUrl.length);
                 const audioId = `audio-${Date.now()}-${idx}`;
-                const isTop = idx < CONFIG.PRELOAD_IMMEDIATE;
                 if(item.type==='dictionary'){
                     html += `<div class="result-item"><div class="character">${item.單字}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ}</span><div class="meta-group">${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.Note?`<div class="detail-item"><span class="label">注釋：</span><span>${item.Note}</span></div>`:''}</div></div>`;
                 } else {
                     const hasExamples = item.例句列表 && item.例句列表.length;
-                    html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,isTop)}</div></div>`:''}</div>`;
+                    html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
                 }
             });
             resultsContainer.innerHTML = decodeHtmlEntities(html);
@@ -1446,44 +1464,121 @@
         function showResultsArea() { resultsContainer.classList.add('visible'); }
         
         async function handleAudioPlay(event) {
-            const btn = event.currentTarget; const url = decodeURIComponent(btn.getAttribute('data-audio-url'));
-            if(!url) return;
-            if(currentAudio && currentPlayingButton===btn){ stopCurrentAudio(); return; }
-            if(currentAudio) stopCurrentAudio();
-            let blobUrl = CONFIG.AUDIO_CACHE.get(url);
-            if(!blobUrl){
-                try{ const resp=await fetch(url); const blob=await resp.blob(); blobUrl=URL.createObjectURL(new Blob([blob],{type:'audio/mpeg'})); CONFIG.AUDIO_CACHE.set(url,blobUrl); } catch(e){ console.error(e); return; }
+            const btn = event.currentTarget;
+            let originalUrl = decodeURIComponent(btn.getAttribute('data-audio-url'));
+            if (!originalUrl) return;
+            
+            // 保持原始 URL，不做任何转换
+            const audioUrl = originalUrl;
+            console.log('音频加载URL:', audioUrl);
+            
+            if (currentAudio && currentPlayingButton === btn) {
+                stopCurrentAudio();
+                return;
             }
-            playAudio(blobUrl, btn);
+            
+            if (currentAudio) stopCurrentAudio();
+            
+            btn.disabled = true;
+            btn.style.opacity = '0.5';
+            btn.title = '加載中...';
+            
+            let blobUrl = CONFIG.AUDIO_CACHE.get(audioUrl);
+            if (blobUrl) {
+                playAudio(blobUrl, btn);
+                return;
+            }
+            
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 20000);
+                const response = await fetch(audioUrl, { signal: controller.signal });
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const blob = await response.blob();
+                if (blob.size === 0) throw new Error('音频文件为空');
+                
+                blobUrl = URL.createObjectURL(blob);
+                CONFIG.AUDIO_CACHE.set(audioUrl, blobUrl);
+                playAudio(blobUrl, btn);
+            } catch (e) {
+                console.error('音频加载失败:', audioUrl, e);
+                btn.disabled = false;
+                btn.style.opacity = '';
+                btn.title = '加載失敗';
+                setTimeout(() => { if(btn) btn.title = '點擊播放發音'; }, 1500);
+            }
         }
-        function playAudio(url,btn){
-            currentAudio=new Audio(url); currentPlayingButton=btn; currentAudio.volume=currentVolume;
-            btn.classList.add('playing'); btn.title='點擊暫停';
-            currentAudio.addEventListener('ended',()=>resetAudioButton(btn));
-            currentAudio.addEventListener('error',()=>resetAudioButton(btn));
-            currentAudio.play().catch(()=>resetAudioButton(btn));
+        
+        function playAudio(url, btn) {
+            currentAudio = new Audio(url);
+            currentPlayingButton = btn;
+            currentAudio.volume = currentVolume;
+            btn.classList.add('playing');
+            btn.disabled = false;
+            btn.style.opacity = '';
+            btn.title = '點擊暫停';
+            
+            currentAudio.addEventListener('ended', () => resetAudioButton(btn));
+            currentAudio.addEventListener('error', (e) => {
+                console.error('播放错误', e);
+                resetAudioButton(btn);
+                currentAudio = null;
+                currentPlayingButton = null;
+            });
+            
+            currentAudio.play().catch((e) => {
+                console.error('播放失败', e);
+                resetAudioButton(btn);
+                currentAudio = null;
+                currentPlayingButton = null;
+            });
         }
-        function stopCurrentAudio(){ if(currentAudio){ currentAudio.pause(); currentAudio.currentTime=0; resetAudioButton(currentPlayingButton); currentAudio=null; currentPlayingButton=null; } }
-        function resetAudioButton(btn){ if(btn){ btn.classList.remove('playing'); btn.title='點擊播放發音'; } }
+        
+        function stopCurrentAudio() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                resetAudioButton(currentPlayingButton);
+                currentAudio = null;
+                currentPlayingButton = null;
+            }
+        }
+        
+        function resetAudioButton(btn) {
+            if (btn) {
+                btn.classList.remove('playing');
+                btn.title = '點擊播放發音';
+                btn.disabled = false;
+                btn.style.opacity = '';
+            }
+        }
         
         function resetSubMode() {
             if(currentMainMode==='character'){ currentSubMode='character'; modeButtons.character.forEach(b=>b.classList.remove('active')); modeButtons.character[0].classList.add('active'); }
             else if(currentMainMode==='vocab'){ currentSubMode='vocab-bvz'; modeButtons.vocab.forEach(b=>{ b.classList.remove('active','vocab-active'); }); modeButtons.vocab[0].classList.add('active','vocab-active'); }
             else if(currentMainMode==='definition'){ currentSubMode='definition'; modeButtons.definition.forEach(b=>{ b.classList.remove('active','definition-active'); }); modeButtons.definition[0].classList.add('active','definition-active'); }
         }
+        
         function updateResultsContainerClass(){ resultsContainer.className='results-section'; if(currentMainMode==='vocab') resultsContainer.classList.add('vocab-result'); else if(currentMainMode==='definition') resultsContainer.classList.add('definition-result'); }
+        
         function updateSearchHint(){
             if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式，多個用逗號分隔）':'輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式，多個用逗號分隔）':'輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）'; } }
             else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-bvz'){ searchInputs.vocab.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入BVZ查詢對應的釋義（精確匹配模式，完整字符串匹配，含空格）':'輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式，多個用逗號分隔）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
             else if(currentMainMode==='definition'){ searchInputs.definition.placeholder='請輸入釋義關鍵詞（多個用逗號分隔）……'; searchHints.definition.textContent=exactMatch?'輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）':'輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢，用逗號分隔）'; }
         }
+        
         function clearSearchInputs(){ Object.values(searchInputs).forEach(i=>i.value=''); }
         function setVolume(v){ currentVolume=Math.max(0,Math.min(1,v)); try{ localStorage.setItem('dictionary_volume',currentVolume.toString()); } catch(e){} }
         function updateVolumeDisplay(){ let p=Math.round(currentVolume*100); volumeValue.textContent=`${p}%`; volumeSlider.value=p; }
         function loadVolumeFromStorage(){ try{ let sv=localStorage.getItem('dictionary_volume'); if(sv!==null){ let v=parseFloat(sv); if(!isNaN(v)&&v>=0&&v<=1){ setVolume(v); return true; } } } catch(e){} return false; }
         function handleScroll(){ scrollToTopButton.classList.toggle('visible', window.scrollY>300); }
         
-        window.addEventListener('beforeunload',()=>{ CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); });
+        window.addEventListener('beforeunload',()=>{ if(currentAudio) currentAudio.pause(); CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); });
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
