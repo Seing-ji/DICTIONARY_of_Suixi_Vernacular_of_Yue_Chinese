@@ -6077,7 +6077,13 @@
     "詞條類別": "稱謂",
     "釋義": "對自家小孩的親切的稱呼",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó-sí.mp3",
-    "examples": []
+    "examples": [
+      {
+        "例句": "覺覺豬，覺覺豬，～乖乖就覺覺豬。\n〔睡吧，睡吧，我親愛的寶貝。〕",
+        "例句的BVZ轉寫": "Gào-gao-zi, gào-gao-zi, njó-sí goai-goai zầu gào-gao-zi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gào-gao-zi, gào-gao-zi, njó-sí goai-goai zầu gào-gao-zi..mp3"
+      }
+    ]
   },
   {
     "詞條": "囉柚",
