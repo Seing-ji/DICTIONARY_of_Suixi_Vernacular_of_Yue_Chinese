@@ -217,9 +217,9 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djạk&djậk.mp3",
     "examples": [
       {
-        "例句": "你再跟道嘈天巴閉我就趯你出去。\n〔你再在這吵鬧我就〕",
-        "例句的BVZ轉寫": "Nẽi zọi gâng-dòu còu-ting-ba-bậy ngõ zầu djậk nẽi câk-hợi.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi zọi gâng-dòu còu-ting-ba-bậy ngõ zầu djậk nẽi câk-hợi..mp3"
+        "例句": "你再跟道嘈天巴閉我就趯你出去。\r\n〔你再在這吵鬧我就〕",
+        "例句的BVZ轉寫": "Nẽi zọi gâng-dòu còu-ting-ba-bậy ngõ zầu djạk nẽi câk-hợi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi zọi gâng-dòu còu-ting-ba-bậy ngõ zầu djạk nẽi câk-hợi..mp3"
       }
     ]
   },
@@ -231,7 +231,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/páo-páo-djậk-djậk.mp3",
     "examples": [
       {
-        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裡面追逐打鬧。〕",
+        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\r\n〔這些小孩子在公園裡面追逐打鬧。〕",
         "例句的BVZ轉寫": "Dik xậy-mâng-zấy hấy gông-jỉng-dòu páo-páo-djậk-djậk.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dik xậy-mâng-zấy hấy gông-jỉng-dòu páo-páo-djậk-djậk..mp3"
       }
@@ -4627,6 +4627,44 @@
     "examples": []
   },
   {
+    "詞條": "吆",
+    "BVZ": "hgiâu",
+    "詞條類別": "謂詞",
+    "釋義": "①叫喚，叫喊；②招呼，呼喚；③稱呼，稱为",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hgiâu.mp3",
+    "examples": [
+      {
+        "例句": "①你冇吆得咁大聲嗱！\r\n〔你別叫這麼大聲！〕",
+        "例句的BVZ轉寫": "①Nẽi mõu hgiâu dâk gẫm dài-sjâng nà!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Nẽi mõu hgiâu dâk gẫm dài-sjâng nà!.mp3"
+      },
+      {
+        "例句": "②你冇吆其幫你嚒？\r\n〔你不叫他幫你嗎？〕",
+        "例句的BVZ轉寫": "②Nẽi mõu hgiâu kẽi bong nẽi mo？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Nẽi mõu hgiâu kẽi bong nẽi mo？.mp3"
+      },
+      {
+        "例句": "③我吆做妖怪。\r\n〔我叫做妖怪。〕",
+        "例句的BVZ轉寫": "③Ngõ hgiâu zọu jiu-goại.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/③Ngõ hgiâu zọu jiu-goại..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "倒",
+    "BVZ": "tjáo&tjấu",
+    "詞條類別": "謂詞",
+    "釋義": "①傾倒（液體）；②「打～」打翻（液體）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tjáo&tjấu.mp3",
+    "examples": [
+      {
+        "例句": "①倒尐油落阿鑊（阿）道。\r\n〔倒一點兒油到鍋裏。〕",
+        "例句的BVZ轉寫": "①Tjấu dik-zấy jầu lòk a-vỏk-dòu.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Tjấu dik-zấy jầu lòk a-vỏk-dòu..mp3"
+      }
+    ]
+  },
+  {
     "詞條": "嗲",
     "BVZ": "dè",
     "詞條類別": "助詞",
@@ -5656,11 +5694,11 @@
     "詞條": "嗰道",
     "BVZ": "gó-dòu",
     "詞條類別": "代詞",
-    "釋義": "這裡",
+    "釋義": "這裏",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gó-dòu.mp3",
     "examples": [
       {
-        "例句": "我跟南橋河嗰道住嗲廿幾年。\r\n〔我在南橋河這裡住了二十多年。〕",
+        "例句": "我跟南橋河嗰道住嗲廿幾年。\r\n〔我在南橋河這裏住了二十多年。〕",
         "例句的BVZ轉寫": "Ngõ gâng Nàm-kìu Hò gó-dòu zì dè nhà-géi-nìng.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ gâng Nàm-kìu Hò gó-dòu zì dè nhà-géi-nìng..mp3"
       }
@@ -5670,15 +5708,47 @@
     "詞條": "那道/呶道",
     "BVZ": "nu-dòu",
     "詞條類別": "代詞",
-    "釋義": "那裡",
+    "釋義": "那裏",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nu-dòu.mp3",
     "examples": [
       {
-        "例句": "細個（阿）陣時，我哋成日去呶道箇海邊游水。\r\n〔小時候，我們經常去那裡 的海邊游泳。〕",
+        "例句": "細個（阿）陣時，我哋成日去呶道箇海邊游水。\r\n〔小時候，我們經常去那裏的海邊游泳。〕",
         "例句的BVZ轉寫": "Xậy-gỏ-zầng-sì, ngõ-dì sềng-nhầk hợi nu-dòu gọ hói-bing jầu-súi.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Xậy-gỏ-zầng-sì, ngõ-dì sềng-nhầk hợi nu-dòu gọ hói-bing jầu-súi..mp3"
       }
     ]
+  },
+  {
+    "詞條": "嗰橛",
+    "BVZ": "gó-kjek",
+    "詞條類別": "代詞",
+    "釋義": "這裏",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gó-kjek.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "嗰橛仔",
+    "BVZ": "gó-kjek-zấy",
+    "詞條類別": "代詞",
+    "釋義": "這邊邊兒",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gó-kjek-zấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "呶橛",
+    "BVZ": "nu-kjek",
+    "詞條類別": "代詞",
+    "釋義": "那裏",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nu-kjek.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "呶橛仔",
+    "BVZ": "nu-kjek-zấy",
+    "詞條類別": "代詞",
+    "釋義": "那邊邊兒",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nu-kjek-zấy.mp3",
+    "examples": []
   },
   {
     "詞條": "嗰個",
@@ -6079,7 +6149,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó-sí.mp3",
     "examples": [
       {
-        "例句": "覺覺豬，覺覺豬，～乖乖就覺覺豬。\n〔睡吧，睡吧，我親愛的寶貝。〕",
+        "例句": "覺覺豬，覺覺豬，～乖乖就覺覺豬。\r\n〔睡吧，睡吧，我親愛的寶貝。〕",
         "例句的BVZ轉寫": "Gào-gao-zi, gào-gao-zi, njó-sí goai-goai zầu gào-gao-zi.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gào-gao-zi, gào-gao-zi, njó-sí goai-goai zầu gào-gao-zi..mp3"
       }
@@ -6638,7 +6708,7 @@
     "examples": []
   },
   {
-    "詞條": "屌珠",
+    "詞條": "屌𭨪",
     "BVZ": "djâu-zi",
     "詞條類別": "名詞-身體部位",
     "釋義": "男陰",
@@ -7050,6 +7120,14 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jầu zọu gó-dik gông ạ？.mp3"
       }
     ]
+  },
+  {
+    "詞條": "𢆡𭨪",
+    "BVZ": "njeng-zi",
+    "詞條類別": "名詞-身體部位",
+    "釋義": "乳頭",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njeng-zi.mp3",
+    "examples": []
   },
   {
     "詞條": "跟",
