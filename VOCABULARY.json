@@ -2567,11 +2567,10 @@
   },
   {
     "詞條": "嘻囂",
-    "BVZ": "hi-hjao&hi-hjâu",
+    "BVZ": "hi-heo&hi-hjâu",
     "詞條類別": "謂詞",
     "釋義": "騷首弄姿；八卦，愛多管閒事",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hi-hjao&hi-hjâu.mp3",
-    "examples": []
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hi-heo&hi-hjâu.mp3"
   },
   {
     "詞條": "可惱",
@@ -5899,15 +5898,15 @@
   },
   {
     "詞條": "⿰歹交/⿰牛交/⿰丫交",
-    "BVZ": "gjầu-gjâu",
+    "BVZ": "gèo-geo&gjầu-gjâu",
     "詞條類別": "代詞",
     "釋義": "【黎話詞】｛貶義｝事情，勾當，玩意兒",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gjầu-gjâu.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gèo-geo&gjầu-gjâu.mp3",
     "examples": [
       {
         "例句": "你又喺道做咩～嘞？\n〔你在幹啥玩意兒呢？〕",
-        "例句的BVZ轉寫": "Nẽi jầu hấy-dòu zọu me gjầu-gjâu lẹ？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jầu hấy-dòu zọu me gjầu-gjâu lẹ？.mp3"
+        "例句的BVZ轉寫": "Nẽi jầu hấy-dòu zọu me gèo-geo lẹ？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jầu hấy-dòu zọu me gèo-geo lẹ？.mp3"
       }
     ]
   },
