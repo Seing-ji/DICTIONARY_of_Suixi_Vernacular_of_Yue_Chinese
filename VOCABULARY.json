@@ -7116,9 +7116,8 @@
     "詞條": "泥朒",
     "BVZ": "nầy-nôk",
     "詞條類別": "名詞-海產品",
-    "釋義": "一種小魚，習慣貼在岸邊，彈跳力驚人，油炸好吃",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nầy-nôk.mp3",
-    "examples": []
+    "釋義": "黑深鰕虎（黑鰕虎，學名「Bathygobius fuscus」，沿海俗稱石狗、黑石仔、泥虎），成魚僅 5–7 公分，手指頭般大小，屬潮間帶體型最小的鰕虎魚類之一。屬廣鹽性魚類，只棲息在河口、海堤、礁石潮間地帶，長期躲藏於礁石、蠔殼縫隙，不會深入純淡水；湛江、雷州半島水閘、火山岩灘隨處可見。左右腹鰭融合成吸盤，可牢牢吸附在垂直濕石壁，退潮後仍扒在石頭上不會滑落，是牠最具代表性的行為。全身深黑褐色、近乎純黑，只帶少量細碎淺色斑點，和黑石顏色幾乎融為一體。受驚時會連續蹦跳、竄入石縫，淺水、露出水面的礁岩區都能短距離跳動。肉食性，以礁縫小螺、鉤蝦、幼蟹為食；退潮翻開礁石很容易捕捉，肉質細嫩，沿海居民常用來滾湯、香煎或者油焗魚仔。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nầy-nôk.mp3"
   },
   {
     "詞條": "煲甖耳",
@@ -8018,5 +8017,47 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi hóu sêk sềk gọ vạ..mp3"
       }
     ]
+  },
+  {
+    "詞條": "橄欖",
+    "BVZ": "ga-lám",
+    "詞條類別": "名詞-文教娛樂",
+    "釋義": "①食物本身；②撲克花式「方塊」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-lám.mp3"
+  },
+  {
+    "詞條": "欖角",
+    "BVZ": "lám-gọk",
+    "詞條類別": "名詞-文教娛樂",
+    "釋義": "①食物本身；②撲克花式「方塊」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lám-gọk.mp3"
+  },
+  {
+    "詞條": "糠",
+    "BVZ": "hong",
+    "詞條類別": "名詞-飲食烹飪",
+    "釋義": "①穀物外皮，穀物米糠；②舂至細碎、纖維狀的醃漬果醬碎料",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hong.mp3"
+  },
+  {
+    "詞條": "黃欖糠",
+    "BVZ": "vòng-lám-hong",
+    "詞條類別": "名詞-飲食烹飪",
+    "釋義": "黃欖：即黃熟白欖（學名「Canarium album」，橄欖 / 青果），果實轉黃成熟後採收，區分烏欖（黑欖）；湛江、粵西口語直接叫「黃欖」｜主要材料：熟黃欖、粗海鹽、山薑（高良薑，當地俗稱山薑頭），比例約 10 份黃欖配 1 份山薑｜手工步驟：①黃欖洗淨，以木碓踩踏舂爛，舂製過程中撿出硬欖核，僅留果肉碎；②拌入粗鹽、拍碎的山薑頭，充分攪勻；③裝入陶罌密封醃漬，常溫可存放整年，無需防腐劑；④成品呈黃綠細碎纖維狀，鹹中帶甘，混有山薑辛香｜在地經典食法：欖糠煮細海魚、配白粥等。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vòng-lám-hong.mp3"
+  },
+  {
+    "詞條": "橄欖糠",
+    "BVZ": "ga-lám-hong",
+    "詞條類別": "名詞-飲食烹飪",
+    "釋義": "見「黃欖糠」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-lám-hong.mp3"
+  },
+  {
+    "詞條": "山薑糠",
+    "BVZ": "sang-gjơng-hong",
+    "詞條類別": "名詞-飲食烹飪",
+    "釋義": "山薑：本地叫山薑頭、狗薑頭，正式學名高良薑（南姜），薑科山薑屬草本，山邊野生粗生，氣味清甜帶奶香、似五指毛桃香，溫而不燥，和普通生薑風味完全不同。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sang-gjơng-hong.mp3"
   }
 ]
