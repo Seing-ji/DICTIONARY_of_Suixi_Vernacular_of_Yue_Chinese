@@ -58038,12 +58038,6 @@
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bòu.mp3"
   },
   {
-    "單字": "捕",
-    "BVZ": "bòu",
-    "Note": "捕頭",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bòu.mp3"
-  },
-  {
     "單字": "爆",
     "BVZ": "bòu",
     "Note": "爆發",
@@ -58081,9 +58075,9 @@
   },
   {
     "單字": "捕",
-    "BVZ": "bóu",
-    "Note": "捕捉",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bóu.mp3"
+    "BVZ": "bóu&bòu",
+    "Note": "",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bóu&bòu.mp3"
   },
   {
     "單字": "𨰻",
