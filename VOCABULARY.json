@@ -1463,7 +1463,7 @@
     "詞條": "嘔",
     "BVZ": "ấu",
     "詞條類別": "謂詞",
-    "釋義": "表達憤怒、諷刺語氣的「吃」",
+    "釋義": "①嘔吐；②｛貶｝表達憤怒、諷刺語氣的「吃」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu.mp3",
     "examples": [
       {
@@ -1477,7 +1477,7 @@
     "詞條": "死嘔",
     "BVZ": "xéi-ấu",
     "詞條類別": "謂詞",
-    "釋義": "俚語，帶有諷刺語氣的「貪吃」",
+    "釋義": "｛貶｝俚語，帶有諷刺語氣的「貪吃」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xéi-ấu.mp3",
     "examples": []
   },
@@ -4829,6 +4829,159 @@
     ]
   },
   {
+    "詞條": "笮年/矺年/迮年/硩年",
+    "BVZ": "zạk-nìng",
+    "詞條類別": "謂詞",
+    "釋義": "壓年、壓歲，也泛指年三十壓年守歲、擺年貨壓宅鎮宅，祈求來年安穩順遂",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zạk-nìng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "濕淰",
+    "BVZ": "sâp-nầm",
+    "詞條類別": "謂詞",
+    "釋義": "半濕不乾貌，物品因受潮而變得濕軟的狀態，通常以ABAB式呈現",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâp-nầm.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "執",
+    "BVZ": "zâp",
+    "詞條類別": "謂詞",
+    "釋義": "①收拾；②撿，拾；③用手抓取，可引申爲「買」、「配」等義，參攷「執藥」詞條；④倒閉，見「執笠」詞條；⑤模仿；⑥修剪毛髮，見「執髮腳」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zâp.mp3",
+    "examples": [
+      {
+        "例句": "③去執几隻蘋果返來食囉。\n〔去買幾個蘋果回來吃吧。〕",
+        "例句的BVZ轉寫": "③Hợi zâp géi zjậk pềng-gó fang-lòi sềk lo.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/③Hợi zâp géi zjậk pềng-gó fang-lòi sềk lo..mp3"
+      },
+      {
+        "例句": "⑤我冇識執得倒佢啲話呀。\n〔我複述不了他說的話。〕",
+        "例句的BVZ轉寫": "⑤Ngõ mõu sêk zâp dâk dóu kẽi dik và jà.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/⑤Ngõ mõu sêk zâp dâk dóu kẽi dik và jà..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "執笠",
+    "BVZ": "zâp-lâp",
+    "詞條類別": "謂詞",
+    "釋義": "商戶等倒閉、結業、關門大吉",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zâp-lâp.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "執髮腳",
+    "BVZ": "zâp fạk-gjợk",
+    "詞條類別": "謂詞",
+    "釋義": "專門修剪後頸、兩側鬢角的底層短髮",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zâp fạk-gjợk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "執藥",
+    "BVZ": "zâp-jờk",
+    "詞條類別": "謂詞",
+    "釋義": "抓藥、憑藥方配中藥、到藥材舖配藥",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zâp-jờk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "汗流汗倒",
+    "BVZ": "hòng-lầu-hòng-tjấu",
+    "詞條類別": "謂詞",
+    "釋義": "大汗淋漓貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hòng-lầu-hòng-tjấu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "身汗身水",
+    "BVZ": "sâng-hòng-sâng-súi",
+    "詞條類別": "謂詞",
+    "釋義": "大汗淋漓貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâng-hòng-sâng-súi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "爉",
+    "BVZ": "ljàp&ljầp",
+    "詞條類別": "謂詞",
+    "釋義": "（火焰）燒灼、燎",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ljàp&ljầp.mp3",
+    "examples": [
+      {
+        "例句": "冇靠太近阿氣爐，小心阿火爉倒你。\n〔別靠太近煤氣竈，當心被火焰燒傷。〕",
+        "例句的BVZ轉寫": "Mỏu kạo tại kẫng a hẹi-lòu, xíu-xâm a-fó ljầp dóu nẽi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Mỏu kạo tại kẫng a hẹi-lòu, xíu-xâm a-fó ljầp dóu nẽi..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "補膽",
+    "BVZ": "bóu-dám",
+    "詞條類別": "謂詞",
+    "釋義": "壯膽，給自己 / 別人撐膽、提振勇氣；常用於描述小兒做惡夢後，大人一邊拍其胸脯一邊嘴裏念念有詞地說一些壯膽的話的行爲",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bóu-dám.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "嘔飯",
+    "BVZ": "ấu-fàng",
+    "詞條類別": "謂詞",
+    "釋義": "｛貶｝吃飯",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu-fàng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "嘔酒",
+    "BVZ": "ấu-zấu",
+    "詞條類別": "謂詞",
+    "釋義": "｛貶｝喝酒",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu-zấu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□□",
+    "BVZ": "hò-zây",
+    "詞條類別": "謂詞",
+    "釋義": "【赤坎詞】小時候和小夥伴玩遊戲時通過出示手心、手背的方式來甄選隊友、確定分隊的過程",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hò-zây.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "屙",
+    "BVZ": "o",
+    "詞條類別": "謂詞",
+    "釋義": "排泄",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/o.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "屙□",
+    "BVZ": "o-bú",
+    "詞條類別": "謂詞",
+    "釋義": "｛嬰｝（嬰幼兒）排便",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/o-bú.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "屙屁",
+    "BVZ": "o-pẹi",
+    "詞條類別": "謂詞",
+    "釋義": "放屁",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/o-pẹi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "痾肚",
+    "BVZ": "o-tõu",
+    "詞條類別": "謂詞",
+    "釋義": "拉肚子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/o-tõu.mp3",
+    "examples": []
+  },
+  {
     "詞條": "嗲",
     "BVZ": "dè",
     "詞條類別": "助詞",
@@ -6050,7 +6203,7 @@
   {
     "詞條": "妗奶",
     "BVZ": "kẫm-nãi",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "舅媽（舅舅/舅父的老婆）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kẫm-nãi.mp3",
     "examples": []
@@ -6058,7 +6211,7 @@
   {
     "詞條": "細蚊仔",
     "BVZ": "xậy-mâng-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小孩子/寶寶",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xậy-mâng-zấy.mp3",
     "examples": []
@@ -6066,7 +6219,7 @@
   {
     "詞條": "細路仔",
     "BVZ": "xậy-lòu-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小孩子/寶寶",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xậy-lòu-zấy.mp3",
     "examples": []
@@ -6074,7 +6227,7 @@
   {
     "詞條": "孥孥",
     "BVZ": "nù-nú",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小孩子/寶寶",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nù-nú.mp3",
     "examples": []
@@ -6082,7 +6235,7 @@
   {
     "詞條": "外父佬",
     "BVZ": "ngòi-fù-lóu",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "岳父",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngòi-fù-lóu.mp3",
     "examples": []
@@ -6090,7 +6243,7 @@
   {
     "詞條": "外母乸",
     "BVZ": "ngòi-mõu-ná",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "岳母",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngòi-mõu-ná.mp3",
     "examples": []
@@ -6098,7 +6251,7 @@
   {
     "詞條": "婦娘婆",
     "BVZ": "fu-njờng-pò",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "中年女人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fu-njờng-pò.mp3",
     "examples": []
@@ -6106,7 +6259,7 @@
   {
     "詞條": "爺爺",
     "BVZ": "jè-jè",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "爺爺",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jè-jè.mp3",
     "examples": []
@@ -6114,7 +6267,7 @@
   {
     "詞條": "嫲嫲",
     "BVZ": "mà-mà",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "奶奶",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mà-mà.mp3",
     "examples": []
@@ -6122,7 +6275,7 @@
   {
     "詞條": "公公",
     "BVZ": "gồng-gông",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "外公",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gồng-gông.mp3",
     "examples": []
@@ -6130,7 +6283,7 @@
   {
     "詞條": "婆婆",
     "BVZ": "pò-po",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "外婆",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pò-po.mp3",
     "examples": []
@@ -6138,7 +6291,7 @@
   {
     "詞條": "姑仔",
     "BVZ": "gu-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小姑（爸爸的妹妹）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gu-zấy.mp3",
     "examples": []
@@ -6146,7 +6299,7 @@
   {
     "詞條": "𡜵爹",
     "BVZ": "bu-de",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "姑媽或者姨媽的老公，即父母輩的大姊的丈夫",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bu-de.mp3",
     "examples": []
@@ -6154,7 +6307,7 @@
   {
     "詞條": "𡜵奶",
     "BVZ": "bu-nãi",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "父輩的大姊",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bu-nãi.mp3",
     "examples": []
@@ -6162,7 +6315,7 @@
   {
     "詞條": "姨仔",
     "BVZ": "ji-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小姨（媽媽的妹妹）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ji-zấy.mp3",
     "examples": []
@@ -6170,7 +6323,7 @@
   {
     "詞條": "姨媽",
     "BVZ": "jì-ma",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "姨媽（媽媽的姐姐）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jì-ma.mp3",
     "examples": []
@@ -6178,7 +6331,7 @@
   {
     "詞條": "姨丈",
     "BVZ": "ji-zjờng",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "姨丈（小姨的丈夫）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ji-zjờng.mp3",
     "examples": []
@@ -6186,7 +6339,7 @@
   {
     "詞條": "姑丈",
     "BVZ": "gu-zjờng",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "姑丈（小姑的丈夫）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gu-zjờng.mp3",
     "examples": []
@@ -6194,7 +6347,7 @@
   {
     "詞條": "細妹丈",
     "BVZ": "xậy-mùi-cjỡng",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "夫婦雙方的妹夫",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xậy-mùi-cjỡng.mp3",
     "examples": []
@@ -6202,7 +6355,7 @@
   {
     "詞條": "公伯",
     "BVZ": "gông-be",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小老頭",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gông-be.mp3",
     "examples": []
@@ -6210,7 +6363,7 @@
   {
     "詞條": "公仔橛",
     "BVZ": "gông-zấy-kjek",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小老頭",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gông-zấy-kjek.mp3",
     "examples": []
@@ -6218,7 +6371,7 @@
   {
     "詞條": "婆仔橛",
     "BVZ": "pò-zấy-kjek",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "老婆婆",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pò-zấy-kjek.mp3",
     "examples": []
@@ -6226,7 +6379,7 @@
   {
     "詞條": "糞箕",
     "BVZ": "fậng-gei",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "淘氣的小孩子",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fậng-gei.mp3",
     "examples": []
@@ -6234,7 +6387,7 @@
   {
     "詞條": "年青人",
     "BVZ": "nìng-cêng-nhầng",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "年輕人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nìng-cêng-nhầng.mp3",
     "examples": []
@@ -6242,7 +6395,7 @@
   {
     "詞條": "白捻仔",
     "BVZ": "bàk-njâm-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "小偷",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bàk-njâm-zấy.mp3",
     "examples": []
@@ -6250,7 +6403,7 @@
   {
     "詞條": "禿嚕",
     "BVZ": "tu-lũ",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "【黎話詞】〈貶〉傻瓜",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tu-lũ.mp3",
     "examples": []
@@ -6258,7 +6411,7 @@
   {
     "詞條": "咘嚕",
     "BVZ": "bụ-lũ",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "【黎話詞】〈貶〉傻瓜",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bụ-lũ.mp3",
     "examples": []
@@ -6266,7 +6419,7 @@
   {
     "詞條": "雙孖",
     "BVZ": "sjơng-ma",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "雙胞胎",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sjơng-ma.mp3",
     "examples": []
@@ -6274,7 +6427,7 @@
   {
     "詞條": "貨仔",
     "BVZ": "fọ-zấy",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "〈貶〉傢伙",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fọ-zấy.mp3",
     "examples": []
@@ -6282,7 +6435,7 @@
   {
     "詞條": "老㞓妑",
     "BVZ": "lõu-hây-ba",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "〔髒〕老女人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lõu-hây-ba.mp3",
     "examples": []
@@ -6290,7 +6443,7 @@
   {
     "詞條": "老夥",
     "BVZ": "lõu-fó",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "死黨",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lõu-fó.mp3",
     "examples": []
@@ -6298,7 +6451,7 @@
   {
     "詞條": "村仔客",
     "BVZ": "cing-zấy-hạk",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "〈貶〉不夠落落大方的農村人",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cing-zấy-hạk.mp3",
     "examples": []
@@ -6306,7 +6459,7 @@
   {
     "詞條": "□",
     "BVZ": "njó",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "對自家小孩的親切的稱呼，常用於「～屎」一詞",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó.mp3",
     "examples": []
@@ -6314,7 +6467,7 @@
   {
     "詞條": "妹屎",
     "BVZ": "mui-sí",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "對自家女兒的親切的稱呼",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mui-sí.mp3",
     "examples": []
@@ -6322,7 +6475,7 @@
   {
     "詞條": "□屎",
     "BVZ": "njó-sí",
-    "詞條類別": "稱謂",
+    "詞條類別": "名詞-稱呼・身份・交際",
     "釋義": "對自家小孩的親切的稱呼",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njó-sí.mp3",
     "examples": [
@@ -6336,7 +6489,7 @@
   {
     "詞條": "囉柚",
     "BVZ": "lo-jẫu",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "屁股",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lo-jẫu.mp3",
     "examples": []
@@ -6344,7 +6497,7 @@
   {
     "詞條": "䒐䒏",
     "BVZ": "mấng-zấng",
-    "詞條類別": "名詞-性狀狀態",
+    "詞條類別": "名詞-性格・氣質・品行",
     "釋義": "小孩子發的脾氣",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mấng-zấng.mp3",
     "examples": []
@@ -6352,7 +6505,7 @@
   {
     "詞條": "□嫐",
     "BVZ": "nik-nâk",
-    "詞條類別": "名詞-性狀狀態",
+    "詞條類別": "名詞-性格・氣質・品行",
     "釋義": "小孩子發的脾氣",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nik-nâk.mp3",
     "examples": []
@@ -6360,7 +6513,7 @@
   {
     "詞條": "腍匿",
     "BVZ": "nầm-nei",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蜻蜓",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nầm-nei.mp3",
     "examples": []
@@ -6368,7 +6521,7 @@
   {
     "詞條": "封包",
     "BVZ": "fông-bao",
-    "詞條類別": "名詞-婚喪習俗",
+    "詞條類別": "名詞-民俗・禮節・婚喪",
     "釋義": "紅包/利是",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fông-bao.mp3",
     "examples": []
@@ -6376,7 +6529,7 @@
   {
     "詞條": "手乸頭",
     "BVZ": "sấu-ná-tầu",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "拇指",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sấu-ná-tầu.mp3",
     "examples": []
@@ -6384,7 +6537,7 @@
   {
     "詞條": "蠄蜍",
     "BVZ": "kầm-sì",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蛤蟆",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kầm-sì.mp3",
     "examples": []
@@ -6392,7 +6545,7 @@
   {
     "詞條": "蛤朒",
     "BVZ": "gâp-nôk",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蝌蚪",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gâp-nôk.mp3",
     "examples": []
@@ -6400,7 +6553,7 @@
   {
     "詞條": "蛤乸",
     "BVZ": "gâp-ná",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "青蛙",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gâp-ná.mp3",
     "examples": []
@@ -6464,7 +6617,7 @@
   {
     "詞條": "白翼仔",
     "BVZ": "bàk-jềk-zấy",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "飛蛾",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bàk-jềk-zấy.mp3",
     "examples": []
@@ -6472,7 +6625,7 @@
   {
     "詞條": "蠄蟧",
     "BVZ": "kầm-lò",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蜘蛛",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kầm-lò.mp3",
     "examples": []
@@ -6480,7 +6633,7 @@
   {
     "詞條": "樹膠槍",
     "BVZ": "sì-gao-cjơng",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "彈弓",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sì-gao-cjơng.mp3",
     "examples": []
@@ -6488,7 +6641,7 @@
   {
     "詞條": "簷（檐）蛇",
     "BVZ": "jìm-sè",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "壁虎",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jìm-sè.mp3",
     "examples": []
@@ -6496,7 +6649,7 @@
   {
     "詞條": "波士蛋",
     "BVZ": "bo-sì-dàng",
-    "詞條類別": "名詞-衣着服飾",
+    "詞條類別": "名詞-首飾・鞋履・衣着",
     "釋義": "波鞋",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bo-sì-dàng.mp3",
     "examples": []
@@ -6504,7 +6657,7 @@
   {
     "詞條": "□□",
     "BVZ": "zầm-zè",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "知了，蟬",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zầm-zè.mp3",
     "examples": []
@@ -6512,7 +6665,7 @@
   {
     "詞條": "雷公狗",
     "BVZ": "lùi-gông-gấu",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蜥蜴",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lùi-gông-gấu.mp3",
     "examples": []
@@ -6520,7 +6673,7 @@
   {
     "詞條": "一排",
     "BVZ": "jâk-pài",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "（很長）一段時間",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jâk-pài.mp3",
     "examples": []
@@ -6528,7 +6681,7 @@
   {
     "詞條": "樓梯級",
     "BVZ": "lầu-tây-ngâp",
-    "詞條類別": "名詞-房屋建築",
+    "詞條類別": "名詞-建築・房舍・場所",
     "釋義": "台階",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lầu-tây-ngâp.mp3",
     "examples": []
@@ -6536,7 +6689,7 @@
   {
     "詞條": "沙神",
     "BVZ": "sa-sầng",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蠟皮蜥",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sa-sầng.mp3",
     "examples": []
@@ -6552,7 +6705,7 @@
   {
     "詞條": "𪐀𪐀紙",
     "BVZ": "na-na-zí",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "貼紙",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/na-na-zí.mp3",
     "examples": []
@@ -6560,7 +6713,7 @@
   {
     "詞條": "餐紙",
     "BVZ": "cang-zí",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "紙巾",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cang-zí.mp3",
     "examples": []
@@ -6576,7 +6729,7 @@
   {
     "詞條": "脷",
     "BVZ": "lèi",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "舌頭",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lèi.mp3",
     "examples": []
@@ -6584,7 +6737,7 @@
   {
     "詞條": "轆",
     "BVZ": "lôk",
-    "詞條類別": "名詞-交通出行",
+    "詞條類別": "名詞-交通・運輸・出行",
     "釋義": "車輪",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lôk.mp3",
     "examples": []
@@ -6592,7 +6745,7 @@
   {
     "詞條": "窿",
     "BVZ": "lông",
-    "詞條類別": "名詞-方位・地理・氣象",
+    "詞條類別": "名詞-方位・地理・水文",
     "釋義": "洞",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lông.mp3",
     "examples": []
@@ -6600,7 +6753,7 @@
   {
     "詞條": "勾",
     "BVZ": "ngâu",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "歲數（表示歲數之大）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngâu.mp3",
     "examples": []
@@ -6608,7 +6761,7 @@
   {
     "詞條": "胳𦣇□",
     "BVZ": "gạk-lo-gè",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "胳肢窩",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gạk-lo-gè.mp3",
     "examples": []
@@ -6624,23 +6777,23 @@
   {
     "詞條": "𦢊",
     "BVZ": "bồk",
-    "詞條類別": "名詞-疾病醫療",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "疙瘩，腫塊",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bồk.mp3",
     "examples": []
   },
   {
     "詞條": "□",
-    "BVZ": "nạng",
-    "詞條類別": "名詞-疾病醫療",
+    "BVZ": "nâng&nạng",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "疙瘩，腫塊",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nạng.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nâng&nạng.mp3",
     "examples": []
   },
   {
     "詞條": "□",
     "BVZ": "mông",
-    "詞條類別": "名詞-疾病醫療",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "皮膚上的小點，或成片",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mông.mp3",
     "examples": []
@@ -6648,7 +6801,7 @@
   {
     "詞條": "䘿褲",
     "BVZ": "guầk-fụ",
-    "詞條類別": "名詞-衣着服飾",
+    "詞條類別": "名詞-首飾・鞋履・衣着",
     "釋義": "內褲",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/guầk-fụ.mp3",
     "examples": []
@@ -6656,7 +6809,7 @@
   {
     "詞條": "K物街",
     "BVZ": "kei-mầk-gai",
-    "詞條類別": "名詞-方位・地理・氣象",
+    "詞條類別": "名詞-方位・地理・水文",
     "釋義": "步行街",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kei-mầk-gai.mp3",
     "examples": []
@@ -6672,7 +6825,7 @@
   {
     "詞條": "□螉",
     "BVZ": "hgĩng-ỗng",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "花狹口蛙",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hgĩng-ỗng.mp3",
     "examples": []
@@ -6680,7 +6833,7 @@
   {
     "詞條": "撳釘",
     "BVZ": "gầm-djâng",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "圖釘",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gầm-djâng.mp3",
     "examples": []
@@ -6696,7 +6849,7 @@
   {
     "詞條": "沖涼液",
     "BVZ": "công-ljờng-jềk",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "沐浴露",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/công-ljờng-jềk.mp3",
     "examples": []
@@ -6704,7 +6857,7 @@
   {
     "詞條": "洗頭液",
     "BVZ": "xấy-tầu-jềk",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "洗髮露",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xấy-tầu-jềk.mp3",
     "examples": []
@@ -6712,7 +6865,7 @@
   {
     "詞條": "手勢",
     "BVZ": "sấu-sậy",
-    "詞條類別": "名詞-暫未分類",
+    "詞條類別": "名詞-飲食・烹飪・水產",
     "釋義": "做菜的手藝",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sấu-sậy.mp3",
     "examples": []
@@ -6720,7 +6873,7 @@
   {
     "詞條": "椗",
     "BVZ": "dệng",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "植物的柄",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dệng.mp3",
     "examples": []
@@ -6728,7 +6881,7 @@
   {
     "詞條": "鬍鬢鬚",
     "BVZ": "fù-bậng-xou",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "絡腮鬍",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fù-bậng-xou.mp3",
     "examples": []
@@ -6736,7 +6889,7 @@
   {
     "詞條": "煙屎",
     "BVZ": "jing-sí",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「A」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jing-sí.mp3",
     "examples": []
@@ -6744,7 +6897,7 @@
   {
     "詞條": "勾",
     "BVZ": "ngâu",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「J」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngâu.mp3",
     "examples": []
@@ -6752,7 +6905,7 @@
   {
     "詞條": "囡",
     "BVZ": "nui",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「Q」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nui.mp3",
     "examples": []
@@ -6760,7 +6913,7 @@
   {
     "詞條": "娘",
     "BVZ": "njẫng",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "【黎話詞】撲克花式「Q」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njẫng.mp3",
     "examples": []
@@ -6768,7 +6921,7 @@
   {
     "詞條": "王（公）",
     "BVZ": "vòng (gông)",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「K」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vòng (gông).mp3",
     "examples": []
@@ -6776,7 +6929,7 @@
   {
     "詞條": "大葵",
     "BVZ": "dài-kuầy",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「桃花」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dài-kuầy.mp3",
     "examples": []
@@ -6784,7 +6937,7 @@
   {
     "詞條": "凹㧻",
     "BVZ": "nâp-dôk",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「紅心」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nâp-dôk.mp3",
     "examples": []
@@ -6792,7 +6945,7 @@
   {
     "詞條": "梅花",
     "BVZ": "mùi-fa",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「梅花」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mùi-fa.mp3",
     "examples": []
@@ -6800,7 +6953,7 @@
   {
     "詞條": "雞尖",
     "BVZ": "gây-zim",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「方塊」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gây-zim.mp3",
     "examples": []
@@ -6808,7 +6961,7 @@
   {
     "詞條": "方磚",
     "BVZ": "fong-zing",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「方塊」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fong-zing.mp3",
     "examples": []
@@ -6816,7 +6969,7 @@
   {
     "詞條": "舖撈",
     "BVZ": "pou-lou",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「三帶二」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pou-lou.mp3",
     "examples": []
@@ -6824,7 +6977,7 @@
   {
     "詞條": "俘虜",
     "BVZ": "fu-lõu",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「三帶二」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fu-lõu.mp3",
     "examples": []
@@ -6832,7 +6985,7 @@
   {
     "詞條": "拖嘶",
     "BVZ": "to-si",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「四帶一」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/to-si.mp3",
     "examples": []
@@ -6840,7 +6993,7 @@
   {
     "詞條": "身屍",
     "BVZ": "sâng-si",
-    "詞條類別": "名詞-暫未分類",
+    "詞條類別": "名詞-性格・氣質・品行",
     "釋義": "身體；樣子",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâng-si.mp3",
     "examples": []
@@ -6848,7 +7001,7 @@
   {
     "詞條": "相",
     "BVZ": "xjợng",
-    "詞條類別": "名詞-暫未分類",
+    "詞條類別": "名詞-性格・氣質・品行",
     "釋義": "樣子",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/xjợng.mp3",
     "examples": []
@@ -6856,7 +7009,7 @@
   {
     "詞條": "□",
     "BVZ": "zei",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蟎蟲",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zei.mp3",
     "examples": []
@@ -6864,7 +7017,7 @@
   {
     "詞條": "□□",
     "BVZ": "li-lõ",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "【黎話詞】大知了，大蟬",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/li-lõ.mp3",
     "examples": []
@@ -6888,7 +7041,7 @@
   {
     "詞條": "屌𭨪",
     "BVZ": "djâu-zi",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "男陰",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-zi.mp3",
     "examples": []
@@ -6896,7 +7049,7 @@
   {
     "詞條": "□□",
     "BVZ": "zjâu-zu",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "男陰",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zjâu-zu.mp3",
     "examples": []
@@ -6904,7 +7057,7 @@
   {
     "詞條": "簝",
     "BVZ": "ljao&ljâu",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "中間有眼的盆狀塑料容器",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ljao&ljâu.mp3",
     "examples": []
@@ -6920,7 +7073,7 @@
   {
     "詞條": "⿰月香",
     "BVZ": "nhơng",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "瓜果流出的黏稠汁液",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhơng.mp3",
     "examples": []
@@ -6928,7 +7081,7 @@
   {
     "詞條": "大笨象",
     "BVZ": "dài-bầng-zjờng",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "龍眼雞",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dài-bầng-zjờng.mp3",
     "examples": []
@@ -6944,7 +7097,7 @@
   {
     "詞條": "兒",
     "BVZ": "nhi",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "嫩芽",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhi.mp3",
     "examples": []
@@ -6952,7 +7105,7 @@
   {
     "詞條": "𦃑/𥿪",
     "BVZ": "mong",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "可食用薄膜；細網",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mong.mp3",
     "examples": []
@@ -6960,7 +7113,7 @@
   {
     "詞條": "癩渣",
     "BVZ": "lại-za",
-    "詞條類別": "名詞-疾病醫療",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "一種傳染性強的皮膚病，騒癢難奈",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lại-za.mp3",
     "examples": []
@@ -6968,7 +7121,7 @@
   {
     "詞條": "花圈",
     "BVZ": "fa-hing",
-    "詞條類別": "名詞-交通出行",
+    "詞條類別": "名詞-交通・運輸・出行",
     "釋義": "環島",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fa-hing.mp3",
     "examples": []
@@ -6976,7 +7129,7 @@
   {
     "詞條": "𡳞脬",
     "BVZ": "lâm-pao",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "【黎話詞】陰囊",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lâm-pao.mp3",
     "examples": []
@@ -6984,7 +7137,7 @@
   {
     "詞條": "□□雞",
     "BVZ": "e-e-gây",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "飼料雞；用激素喂養大的雞",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/e-e-gây.mp3",
     "examples": []
@@ -7000,7 +7153,7 @@
   {
     "詞條": "上高",
     "BVZ": "sjờng-gou",
-    "詞條類別": "名詞-方位・地理・氣象",
+    "詞條類別": "名詞-方位・地理・水文",
     "釋義": "上面",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sjờng-gou.mp3",
     "examples": []
@@ -7008,7 +7161,7 @@
   {
     "詞條": "下低",
     "BVZ": "hà-dây",
-    "詞條類別": "名詞-方位・地理・氣象",
+    "詞條類別": "名詞-方位・地理・水文",
     "釋義": "下面",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hà-dây.mp3",
     "examples": []
@@ -7016,7 +7169,7 @@
   {
     "詞條": "陣間",
     "BVZ": "zầng-gang",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "一會兒",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zầng-gang.mp3",
     "examples": []
@@ -7024,7 +7177,7 @@
   {
     "詞條": "陣仔",
     "BVZ": "zầng-zấy",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "一會兒",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zầng-zấy.mp3",
     "examples": []
@@ -7032,7 +7185,7 @@
   {
     "詞條": "等間",
     "BVZ": "dầng-gang",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "一會兒（疑似「等陣間」的合音）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dầng-gang.mp3",
     "examples": []
@@ -7040,23 +7193,29 @@
   {
     "詞條": "日間",
     "BVZ": "nhầk-gang",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "平時，平日",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhầk-gang.mp3",
     "examples": []
   },
   {
-    "詞條": "□□",
+    "詞條": "呲呎",
     "BVZ": "ci-cjèk",
     "詞條類別": "名詞-暫未分類",
-    "釋義": "事情（貶義）",
+    "釋義": "①｛貶｝事情；②回應，見「冇呲冇呎」詞條",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ci-cjèk.mp3",
-    "examples": []
+    "examples": [
+      {
+        "例句": "你阿人咁多～箇！\n〔你這人怎麼這麼多事兒！〕",
+        "例句的BVZ轉寫": "Nẽi a-nhầng gẫm-do ci-cjèk gọ!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi a-nhầng gẫm-do ci-cjèk gọ!.mp3"
+      }
+    ]
   },
   {
     "詞條": "包、剪、揼",
     "BVZ": "bao-zíng-dầp",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "石頭剪刀布",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bao-zíng-dầp.mp3",
     "examples": []
@@ -7064,7 +7223,7 @@
   {
     "詞條": "情尋哧",
     "BVZ": "cềng-cầm-cìh",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "【黎話詞】石頭剪刀布",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cềng-cầm-cìh.mp3",
     "examples": []
@@ -7216,7 +7375,7 @@
   {
     "詞條": "𢆡",
     "BVZ": "njeng",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "乳房",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njeng.mp3",
     "examples": []
@@ -7224,7 +7383,7 @@
   {
     "詞條": "𢆡頭",
     "BVZ": "njeng-tầu",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "乳頭",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njeng-tầu.mp3",
     "examples": []
@@ -7232,7 +7391,7 @@
   {
     "詞條": "𫵱",
     "BVZ": "cuầk",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "男性生殖器官",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cuầk.mp3",
     "examples": []
@@ -7240,7 +7399,7 @@
   {
     "詞條": "曱甴",
     "BVZ": "ga-zầk",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蟑螂",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-zầk.mp3",
     "examples": []
@@ -7248,7 +7407,7 @@
   {
     "詞條": "𣆴間",
     "BVZ": "sing-gang",
-    "詞條類別": "名詞-時令時間",
+    "詞條類別": "名詞-時間・年代・時令",
     "釋義": "一會兒",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sing-gang.mp3",
     "examples": []
@@ -7256,7 +7415,7 @@
   {
     "詞條": "篼仔",
     "BVZ": "dâu-zấy",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "飯盅",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dâu-zấy.mp3",
     "examples": []
@@ -7264,7 +7423,7 @@
   {
     "詞條": "甌仔",
     "BVZ": "âu-zấy",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "小型沙煲",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/âu-zấy.mp3",
     "examples": []
@@ -7272,7 +7431,7 @@
   {
     "詞條": "口水袈",
     "BVZ": "hấu-súi-ga",
-    "詞條類別": "名詞-衣着服飾",
+    "詞條類別": "名詞-首飾・鞋履・衣着",
     "釋義": "嬰幼兒的口水圍兜",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hấu-súi-ga.mp3",
     "examples": []
@@ -7280,7 +7439,7 @@
   {
     "詞條": "螆蝍",
     "BVZ": "zi-zâk",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "蟋蟀",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi-zâk.mp3",
     "examples": []
@@ -7289,7 +7448,7 @@
     "詞條": "工",
     "BVZ": "gông",
     "詞條類別": "名詞-暫未分類",
-    "釋義": "｛貶義｝事情",
+    "釋義": "｛貶｝事情",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gông.mp3",
     "examples": [
       {
@@ -7302,7 +7461,7 @@
   {
     "詞條": "𢆡𭨪",
     "BVZ": "njeng-zi",
-    "詞條類別": "名詞-神態・體貌・解剖",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "乳頭",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/njeng-zi.mp3",
     "examples": []
@@ -7310,7 +7469,7 @@
   {
     "詞條": "烏□",
     "BVZ": "vu-hjầm",
-    "詞條類別": "名詞-動物植物",
+    "詞條類別": "名詞-生物・自然・物種",
     "釋義": "【黎話詞】臭屁蟲，臭椿，學名「椿象」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vu-hjầm.mp3",
     "examples": []
@@ -7318,7 +7477,7 @@
   {
     "詞條": "巴乸",
     "BVZ": "ba-ná",
-    "詞條類別": "名詞-暫未分類",
+    "詞條類別": "名詞-醫療・健康・解剖",
     "釋義": "①巴掌；\n②耳光",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ba-ná.mp3",
     "examples": []
@@ -7334,7 +7493,7 @@
   {
     "詞條": "紙粕",
     "BVZ": "zí-pọk",
-    "詞條類別": "名詞-家居生活",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "瓦楞紙",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zí-pọk.mp3",
     "examples": []
@@ -7342,7 +7501,7 @@
   {
     "詞條": "等路",
     "BVZ": "dấng-lòu",
-    "詞條類別": "名詞-婚喪習俗",
+    "詞條類別": "名詞-民俗・禮節・婚喪",
     "釋義": "禮物、手信、探訪時的伴手禮",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng-lòu.mp3",
     "examples": [
@@ -7356,7 +7515,7 @@
   {
     "詞條": "橄欖",
     "BVZ": "ga-lám",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "①食物本身\n②撲克花式「方塊」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-lám.mp3",
     "examples": []
@@ -7364,7 +7523,7 @@
   {
     "詞條": "欖角",
     "BVZ": "lám-gọk",
-    "詞條類別": "名詞-文教娛樂",
+    "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "①醃烏欖\n②撲克花式「方塊」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lám-gọk.mp3",
     "examples": []
@@ -7493,7 +7652,7 @@
     "詞條": "嘈㝿",
     "BVZ": "còu-bây",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "",
+    "釋義": "盲曹/尖吻鲈",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/còu-bây.mp3",
     "examples": []
   },
@@ -7692,9 +7851,285 @@
   {
     "詞條": "雨濛",
     "BVZ": "jĩ-mông",
-    "詞條類別": "名詞-方位・地理・氣象",
+    "詞條類別": "名詞-天文・氣象・曆法",
     "釋義": "毛毛細雨，也稱作「雨濛仔」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jĩ-mông.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "糝身粉",
+    "BVZ": "sấm-sâng-fấng",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "痱子粉；爽身粉",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sấm-sâng-fấng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "天棚",
+    "BVZ": "ting-pàng",
+    "詞條類別": "名詞-建築・房舍・場所",
+    "釋義": "樓頂露天平臺（天台），用於晾衫、乘涼、閒坐",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ting-pàng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "騎樓",
+    "BVZ": "kè-lầu",
+    "詞條類別": "名詞-建築・房舍・場所",
+    "釋義": "沿街商住樓下連廊走道",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kè-lầu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "天井",
+    "BVZ": "ting-zjấng",
+    "詞條類別": "名詞-建築・房舍・場所",
+    "釋義": "老式磚木宅院中央的露天四方小院，負責採光通風",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ting-zjấng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "舖面",
+    "BVZ": "pọu-mìng",
+    "詞條類別": "名詞-建築・房舍・場所",
+    "釋義": "沿街店鋪門前營業場地",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pọu-mìng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "糞",
+    "BVZ": "fậng",
+    "詞條類別": "名詞-暫未分類",
+    "釋義": "｛引申｜貶｝行李，貼身架撐",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fậng.mp3",
+    "examples": [
+      {
+        "例句": "快貱你阿糞返來啊！\n〔快收拾你的行李回來吧！〕",
+        "例句的BVZ轉寫": "Fải bẹ nẽi-a fậng fang-lòi à!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Fải bẹ nẽi-a fậng fang-lòi à!.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "被鋪",
+    "BVZ": "pẽi-pou",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "被子床褥",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pẽi-pou.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "殻",
+    "BVZ": "họk",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "瓢",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/họk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "湯殼",
+    "BVZ": "tong-họk",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "湯勺",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tong-họk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "燈膽",
+    "BVZ": "dâng-dám",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "燈泡",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dâng-dám.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "地拖",
+    "BVZ": "dèi-to",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "拖把",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dèi-to.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "箸",
+    "BVZ": "zì",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "見「筷箸」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zì.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "筷箸",
+    "BVZ": "fại-zì",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "筷子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fại-zì.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "檯",
+    "BVZ": "tòi",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "桌子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tòi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "櫈仔",
+    "BVZ": "dậng-zấy",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "椅子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dậng-zấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "鑊",
+    "BVZ": "vòk",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "鍋",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vòk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "鑊鏟",
+    "BVZ": "vòk-cáng",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "鍋鏟",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vòk-cáng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "遮",
+    "BVZ": "ze",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "傘",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ze.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "田垌",
+    "BVZ": "tìng-dồng",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "田基",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tìng-dồng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "田垌魚",
+    "BVZ": "tìng-dồng-nhì",
+    "詞條類別": "名詞-飲食・烹飪・水產",
+    "釋義": "生活在田基的淡水魚",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tìng-dồng-nhì.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "烏蠅",
+    "BVZ": "vu-jêng",
+    "詞條類別": "名詞-生物・自然・物種",
+    "釋義": "蒼蠅",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vu-jêng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "烏蠅屎",
+    "BVZ": "vu-jêng-sí",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "雀斑",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vu-jêng-sí.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "雞屎□",
+    "BVZ": "gây-sí-nâng",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "雞屎樣的、成片的痣",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gây-sí-nâng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "煲",
+    "BVZ": "bou",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "壁較陡直的鍋",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bou.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "煲甖",
+    "BVZ": "bou-ang",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "同「煲」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bou-ang.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "藥煲",
+    "BVZ": "jờk-bou",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "用來煎中藥的瓦煲或陶瓷煲",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jờk-bou.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "銻煲",
+    "BVZ": "tây-bou",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "鋁鍋",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tây-bou.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "甖",
+    "BVZ": "ang",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "小口大肚的瓶子或罐子，通常為瓦製或玻璃製，用於盛載東西",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ang.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□々",
+    "BVZ": "mữ-mữ",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "｛嬰｝糞便，擬聲詞，據說在大便的時候發出類似的聲音會促進便意；也可活用作動詞",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mữ-mữ.mp3",
+    "examples": [
+      {
+        "例句": "屙～\n〔拉屎〕",
+        "例句的BVZ轉寫": "O mữ-mữ",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O mữ-mữ.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "魚街",
+    "BVZ": "nhì-gai",
+    "詞條類別": "名詞-建築・房舍・場所",
+    "釋義": "｛舊｝【赤坎詞】舊時所稱的市場",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhì-gai.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□",
+    "BVZ": "bú",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "｛嬰｝糞便，見「o-bú（屙～）」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bú.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "屎窟射",
+    "BVZ": "sí-fâk-sè",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "｛創｝糞便，自創於本人年幼時期（大概是幼兒園至小學低年級時期）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sí-fâk-sè.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□□□",
+    "BVZ": "ầng-me-zjâng",
+    "詞條類別": "名詞-稱呼・身份・交際",
+    "釋義": "｛創｝無實際意義的詞，常用於指代智力不正常的傻子或其作出的非正常表情",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ầng-me-zjâng.mp3",
     "examples": []
   },
   {
@@ -7988,7 +8423,7 @@
     ]
   },
   {
-    "詞條": "□",
+    "詞條": "執",
     "BVZ": "zjep",
     "詞條類別": "量詞",
     "釋義": "量詞「撮」，五根手指聚攏所能拾取的份量",
@@ -8399,6 +8834,14 @@
     "詞條類別": "俗語",
     "釋義": "｛舊詞｝城鎮居民，多指代政府機關或者企業工作者",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu tồng-zị.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "點點乒乒誰人做大乒，點點賊賊誰人做大賊。",
+    "BVZ": "Dím-dím bêng bêng sùi-nhầng zọu dài-bêng, dím-dím cầk cầk sùi-nhầng zọu dài-cầk.",
+    "詞條類別": "俗語",
+    "釋義": "【赤坎詞】小時候和夥伴玩遊戲，用來甄選隊友的一種方式，通常以「叠拇指」的方式實現",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dím-dím bêng bêng sùi-nhầng zọu dài-bêng, dím-dím cầk cầk sùi-nhầng zọu dài-cầk..mp3",
     "examples": []
   },
   {
