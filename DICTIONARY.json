@@ -1,17 +1,5 @@
 [
   {
-    "單字": "裂",
-    "BVZ": "ljèk",
-    "Note": "白讀",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/ljèk.mp3"
-  },
-  {
-    "單字": "翻",
-    "BVZ": "fjeng",
-    "Note": "白讀",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/fjeng.mp3"
-  },
-  {
     "單字": "鱮",
     "BVZ": "zùi&zòi",
     "Note": "",
@@ -19256,8 +19244,14 @@
   {
     "單字": "奈",
     "BVZ": "nòi",
-    "Note": "",
+    "Note": "又音",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/nòi.mp3"
+  },
+  {
+    "單字": "奈",
+    "BVZ": "nài",
+    "Note": "好～～：無端端",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/nài.mp3"
   },
   {
     "單字": "佴",
@@ -27490,6 +27484,12 @@
     "BVZ": "lìk",
     "Note": "文讀",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/lìk.mp3"
+  },
+  {
+    "單字": "裂",
+    "BVZ": "ljèk",
+    "Note": "白讀",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/ljèk.mp3"
   },
   {
     "單字": "捩",
@@ -49470,6 +49470,12 @@
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/fang.mp3"
   },
   {
+    "單字": "翻",
+    "BVZ": "fjeng",
+    "Note": "白讀",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/fjeng.mp3"
+  },
+  {
     "單字": "幡",
     "BVZ": "fang",
     "Note": "",
@@ -58038,6 +58044,12 @@
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bòu.mp3"
   },
   {
+    "單字": "捕",
+    "BVZ": "póu",
+    "Note": "",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/póu.mp3"
+  },
+  {
     "單字": "爆",
     "BVZ": "bòu",
     "Note": "爆發",
@@ -58072,12 +58084,6 @@
     "BVZ": "bóu",
     "Note": "",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/bóu.mp3"
-  },
-  {
-    "單字": "捕",
-    "BVZ": "póu",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/póu.mp3"
   },
   {
     "單字": "𨰻",
