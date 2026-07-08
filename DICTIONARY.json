@@ -31015,9 +31015,9 @@
   },
   {
     "單字": "翹",
-    "BVZ": "kịu",
+    "BVZ": "kíu",
     "Note": "翹舌",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/kịu.mp3"
+    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/kíu.mp3"
   },
   {
     "單字": "蹺",
@@ -31034,7 +31034,7 @@
   {
     "單字": "翹",
     "BVZ": "kìu",
-    "Note": "連翹，中藥名",
+    "Note": "翹首；連翹，中藥名",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/kìu.mp3"
   },
   {
@@ -39150,12 +39150,6 @@
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/hjơng.mp3"
   },
   {
-    "單字": "翹",
-    "BVZ": "hjao&hjâu",
-    "Note": "「hiu1」的白讀",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/hjao&hjâu.mp3"
-  },
-  {
     "單字": "喫",
     "BVZ": "hjậk&jạk",
     "Note": "",
@@ -39224,7 +39218,7 @@
   {
     "單字": "翹",
     "BVZ": "hiu",
-    "Note": "",
+    "Note": "白讀",
     "audio": "https://raw.githubusercontent.com/Seing-ji/BVZ_Audio_for_editing/main/hiu.mp3"
   },
   {
