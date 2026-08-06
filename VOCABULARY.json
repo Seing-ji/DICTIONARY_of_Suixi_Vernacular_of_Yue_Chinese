@@ -4992,6 +4992,68 @@
     "examples": []
   },
   {
+    "詞條": "□□",
+    "BVZ": "gầu-gềng",
+    "詞條類別": "謂詞",
+    "釋義": "眼神獃滯貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gầu-gềng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "𣢯",
+    "BVZ": "guk",
+    "詞條類別": "謂詞",
+    "釋義": "喝，大口喝；擬聲詞，由模擬人喝水時所發出的聲音而來",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/guk.mp3",
+    "examples": [
+      {
+        "例句": "一口氣～了去嗱。\n〔一口氣喝完牠吧。〕",
+        "例句的BVZ轉寫": "Jâk hấu-hẹi guk lĩu hợi nà.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jâk hấu-hẹi guk lĩu hợi nà..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "臭□",
+    "BVZ": "cậu-ngâk",
+    "詞條類別": "謂詞",
+    "釋義": "臭變質肉臊味的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cậu-ngâk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "估",
+    "BVZ": "gú&gu",
+    "詞條類別": "謂詞",
+    "釋義": "猜測",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gú&gu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "開估",
+    "BVZ": "hoi-gú",
+    "詞條類別": "謂詞",
+    "釋義": "揭曉答案、公開秘密或者解釋謎底",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hoi-gú.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "眯",
+    "BVZ": "ni",
+    "詞條類別": "謂詞",
+    "釋義": "【黎話詞】閉（目），同「睸眼」，常見組詞「眯眼」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ni.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "眯眼",
+    "BVZ": "ni-ngãng",
+    "詞條類別": "謂詞",
+    "釋義": "閉眼",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ni-ngãng.mp3",
+    "examples": []
+  },
+  {
     "詞條": "嗲",
     "BVZ": "dè",
     "詞條類別": "助詞",
@@ -5516,6 +5578,150 @@
         "例句": "冇理其尐話呀，其嗰人講話就命箇。\n〔不必將他的話放在心上，他這人，見人講人話，見鬼講鬼話的。〕",
         "例句的BVZ轉寫": "Mõu lẽi kẽi dik và jà, kẽi gó nhầng góng-và-zầu-mjầng gọ.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Mõu lẽi kẽi dik và jà, kẽi gó nhầng góng-và-zầu-mjầng gọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "來箇",
+    "BVZ": "lòi-gọ",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，用法同「阿箇」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lòi-gọ.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "阿箇",
+    "BVZ": "a-gọ",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，表示：①判斷或確認（強調事實）；②解釋原因（說明理由）；③原本/本來的狀態。注：可與繫動詞「係」連用構成「係……阿箇」結構，表示正式、強調、甚至帶點辯駁的語氣；通常情況下，若無需表達前述語氣，省略「係」即可。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/a-gọ.mp3",
+    "examples": [
+      {
+        "例句": "①人哋老師阿箇。\n〔別人是老師。〕",
+        "例句的BVZ轉寫": "①Nhầng-dì lõu-si a-gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Nhầng-dì lõu-si a-gọ..mp3"
+      },
+      {
+        "例句": "②佢咁嬲，係因為你遲到阿箇。\n〔他這麼生氣，是因為你遲到來著。〕",
+        "例句的BVZ轉寫": "②Kẽi gẫm nâu, hầy jâng-vầy nẽi cì-dọu a-gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Kẽi gẫm nâu, hầy jâng-vầy nẽi cì-dọu a-gọ..mp3"
+      },
+      {
+        "例句": "③我不遱都係噉勢阿箇。\n〔我向來如此。〕",
+        "例句的BVZ轉寫": "③Ngõ bâk-lâu dou hầy gấm-sậy a-gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/③Ngõ bâk-lâu dou hầy gấm-sậy a-gọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "阿做倒",
+    "BVZ": "a-zọu-dóu",
+    "詞條類別": "助詞",
+    "釋義": "比況語氣助詞，也稱爲「樣態標記」（Manner Marker）或 「比擬助詞短語」（Comparative Particle Phrase）。可與「好似」連用，用以表達「好像……的樣子」的語義。其中，「好似」經常省略。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/a-zọu-dóu.mp3",
+    "examples": [
+      {
+        "例句": "其睇起身好矜貴阿做倒。\n〔他看上去好像很矜貴的樣子。〕",
+        "例句的BVZ轉寫": "Kẽi tấy-héi-sâng hóu gêng-guậy a-zọu-dóu.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi tấy-héi-sâng hóu gêng-guậy a-zọu-dóu..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗟",
+    "BVZ": "zi",
+    "詞條類別": "助詞",
+    "釋義": "句末語氣助詞，表示事情不過如此而已（常用於對某種說法的否定）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi.mp3",
+    "examples": [
+      {
+        "例句": "佢祇係講下笑嗟，冇係真心嫌棄你箇。\n〔他祇不過是開玩笑而已，並非真心嫌棄你的。〕",
+        "例句的BVZ轉寫": "Kẽi zí-hầy góng hã xịu zi, mõu-hầy zâng-xâm hìm-hẹi nẽi gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi zí-hầy góng hã xịu zi, mõu-hầy zâng-xâm hìm-hẹi nẽi gọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗟囉",
+    "BVZ": "zi-lo",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，「而已」之意，同「嗟嗱」、「嗟嘛」、「嗟啊」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi-lo.mp3",
+    "examples": [
+      {
+        "例句": "就幾文紙嗟囉，冇使耿耿於懷嗱。\n〔祇不過是幾塊錢罷了，無須耿耿於懷啊。〕",
+        "例句的BVZ轉寫": "Zầu géi mâng-zí zi-lo, mõu-sấy gấng-gấng-ji-vài nà.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zầu géi mâng-zí zi-lo, mõu-sấy gấng-gấng-ji-vài nà..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗟嗱",
+    "BVZ": "zi-nà",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，「而已」之意，同「嗟囉」、「嗟嘛」、「嗟啊」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi-nà.mp3",
+    "examples": [
+      {
+        "例句": "只係遲到一陣仔嗟嗱，使咁嬲冇嗱？\n〔祇不過遲到一會兒而已，犯不着這麼生氣吧？〕",
+        "例句的BVZ轉寫": "Zí-hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗟嘛",
+    "BVZ": "zi-mạ",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，「而已」之意，多用於辯解、輕化事情，回應旁人猜想；同「嗟囉」、「嗟嗱」、「嗟啊」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi-mạ.mp3",
+    "examples": [
+      {
+        "例句": "我只係想試下味道嗟嘛，又冇係想食了成碗糖水。\n〔我祇打算試一試味道罷了，並沒有打算吃完整碗甜品。〕",
+        "例句的BVZ轉寫": "Ngõ zí-hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu-hầy xjớng sềk lĩu sềng vúng tòng-súi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ zí-hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu-hầy xjớng sềk lĩu sềng vúng tòng-súi..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗟啊",
+    "BVZ": "zi-à",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，「而已、罷了」之意，用於口語語氣偏平和，解釋事實、駁回對方過度想像；同「嗟囉」、「嗟嗱」、「嗟嘛」詞條",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zi-à.mp3",
+    "examples": [
+      {
+        "例句": "祇係隻腳有尐攰嗟啊，休息一陣就可以繼續行嗲。\n〔祇不過雙腳有點疲累而已，歇息一會便能夠繼續走了。〕",
+        "例句的BVZ轉寫": "Zí-hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗲啊",
+    "BVZ": "dè-à",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞；放在謂詞後或者句末，表示動作或變化或已完成；用在句子末尾或句子中停頓的地方，表示變化，表示出現新的情況；具體用法同「嗲¹」、「嗲²」，衹不過語氣中多帶有不耐煩或者慵懶的色彩",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dè-à.mp3",
+    "examples": [
+      {
+        "例句": "啊孥喊嗲啊，你過去𠱁下其囉。\n〔小孩哭了，你過去哄一哄他吧。〕",
+        "例句的BVZ轉寫": "Ạ-nu hạm dè-à, nẽi gọ-hợi tẩm-hã kẽi lo.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ạ-nu hạm dè-à, nẽi gọ-hợi tẩm-hã kẽi lo..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "冇嗱",
+    "BVZ": "mõu-nà",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，用於反問、勸慰、輕度嗔怪，勸告受話人毋須過分介意、動怒",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-nà.mp3",
+    "examples": [
+      {
+        "例句": "你趕倒去搭船嚒？阿酒席佷有好多菜未上在，你使咁狂冇嗱？\n〔你急着要去乘船嗎？酒席還有很多菜式尚未上桌，你何苦這麼心急呢？〕",
+        "例句的BVZ轉寫": "Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng-jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng-jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？.mp3"
       }
     ]
   },
@@ -8108,6 +8314,78 @@
     "examples": []
   },
   {
+    "詞條": "尿殺",
+    "BVZ": "nìu-sạk",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "尿騒味",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nìu-sạk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "兩仔爺",
+    "BVZ": "ljỡng-zấy-jè",
+    "詞條類別": "名詞-稱呼・身份・交際",
+    "釋義": "兩父子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ljỡng-zấy-jè.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "腳底板",
+    "BVZ": "gjợk-dấy-báng",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "見「腳板」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gjợk-dấy-báng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "腳板",
+    "BVZ": "gjợk-báng",
+    "詞條類別": "名詞-醫療・健康・解剖",
+    "釋義": "腳掌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gjợk-báng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "筲",
+    "BVZ": "sao",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "見「網筲」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sao.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "網筲",
+    "BVZ": "mõng-sao",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "隔渣用的漏網",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõng-sao.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "筲箕",
+    "BVZ": "sao-gei",
+    "詞條類別": "名詞-日雜・百貨・傢俬",
+    "釋義": "古代用來裝飯的竹器，可容納一斗二升",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sao-gei.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "估中䊦/古粽䊦",
+    "BVZ": "gú-zộng-hgiẹk",
+    "詞條類別": "名詞-飲食・烹飪・水產",
+    "釋義": "【化州詞】粽子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gú-zộng-hgiẹk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "門角後",
+    "BVZ": "mùng-gọk-hầu",
+    "詞條類別": "名詞-方位・地理・水文",
+    "釋義": "門的背面",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mùng-gọk-hầu.mp3",
+    "examples": []
+  },
+  {
     "詞條": "喺",
     "BVZ": "hấy",
     "詞條類別": "介詞",
@@ -8789,6 +9067,14 @@
     "詞條類別": "俗語",
     "釋義": "【赤坎詞】小時候和夥伴玩遊戲，用來甄選隊友的一種方式，通常以「叠拇指」的方式實現",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dím-dím bêng bêng sùi-nhầng zọu dài-bêng, dím-dím cầk cầk sùi-nhầng zọu dài-cầk..mp3",
+    "examples": []
+  },
+  {
+    "詞條": "阿係噉勢",
+    "BVZ": "Âk-hầy gấm-sậy",
+    "詞條類別": "俗語",
+    "釋義": "①要是如此的話，......；②原來如此",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Âk-hầy gấm-sậy.mp3",
     "examples": []
   },
   {
