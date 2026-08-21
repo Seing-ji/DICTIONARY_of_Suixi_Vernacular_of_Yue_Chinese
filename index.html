@@ -181,15 +181,15 @@
             font-family: "Fangsong", "仿宋", sans-serif;
         }
         
-        .bvz-input-mode {
+        .lmz-input-mode {
             font-family: "Times New Roman", Times, serif !important;
         }
         
-        .vocab-bvz-mode {
+        .vocab-lmz-mode {
             font-family: "Times New Roman", Times, serif !important;
         }
         
-        .bvz-value, .example-bvz {
+        .lmz-value, .example-lmz {
             font-family: "Times New Roman", Times, serif !important;
         }
         
@@ -214,7 +214,7 @@
             line-height: 1.4;
         }
         
-        .bvz-value {
+        .lmz-value {
             font-size: 1.3rem !important;
             font-weight: normal !important;
             line-height: 1.4;
@@ -224,7 +224,7 @@
             white-space: normal;
         }
         
-        .bvz-wrapper {
+        .lmz-wrapper {
             display: inline;
             flex: 1;
             min-width: 0;
@@ -266,7 +266,7 @@
             .detail-item::-webkit-scrollbar {
                 height: 4px;
             }
-            .bvz-value {
+            .lmz-value {
                 white-space: nowrap;
                 flex-shrink: 0;
                 display: inline-block;
@@ -297,7 +297,7 @@
                 line-height: 1.4;
                 margin-top: 2px;
             }
-            .bvz-value {
+            .lmz-value {
                 font-size: 1.3rem !important;
                 white-space: normal;
                 word-break: break-word;
@@ -319,7 +319,7 @@
                 height: 30px;
                 background-size: 13px 13px;
             }
-            .example-bvz {
+            .example-lmz {
                 word-break: break-all;
                 white-space: normal;
             }
@@ -392,7 +392,7 @@
             line-height: 1.5;
         }
         
-        .example-bvz {
+        .example-lmz {
             font-family: "Times New Roman", Times, serif !important;
             font-size: 1.25rem;
             color: #4a6fa5;
@@ -1028,9 +1028,9 @@
             .example-container { margin-top: 12px; }
             .example-header { padding: 10px 12px; font-size: 0.9rem; }
             .example-item { padding: 12px; }
-            .example-text, .example-bvz, .example-translation { padding-right: 36px; }
+            .example-text, .example-lmz, .example-translation { padding-right: 36px; }
             .example-text { font-size: 1rem; }
-            .example-bvz { font-size: 0.95rem; }
+            .example-lmz { font-size: 0.95rem; }
             .example-translation { font-size: 0.85rem; }
             .volume-header { flex-direction: column; align-items: flex-start; gap: 4px; }
             .volume-value { text-align: left; }
@@ -1043,7 +1043,7 @@
             .description { font-size: 0.85rem; }
             .mode-tab { padding: 8px 10px; font-size: 0.77rem; min-width: 90px; }
             .character { font-size: 1.8rem; }
-            .example-text, .example-bvz, .example-translation { padding-right: 32px; }
+            .example-text, .example-lmz, .example-translation { padding-right: 32px; }
         }
         
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -1068,21 +1068,21 @@
     <div class="dictionary-container">
         <header>
             <h1>遂城白話多功能音典</h1>
-            <p class="description">支持漢字和白話字（BVZ）互查、BVZ/詞條查詢釋義、釋義反查功能</p>
+            <p class="description">支持漢字和羅馬字（LMZ）互查、LMZ/詞條查詢釋義、釋義反查功能</p>
         </header>
         
         <section class="mode-section">
             <div class="mode-selector">
-                <div class="mode-tab active" data-mode="character">漢字與BVZ互查</div>
-                <div class="mode-tab vocab-mode" data-mode="vocab">BVZ/詞條查釋義</div>
+                <div class="mode-tab active" data-mode="character">漢字與LMZ互查</div>
+                <div class="mode-tab vocab-mode" data-mode="vocab">LMZ/詞條查釋義</div>
                 <div class="mode-tab definition-mode" data-mode="definition">釋義反查</div>
             </div>
         </section>
         
         <section class="search-section character-search" id="character-search-section">
             <div class="search-mode">
-                <button class="mode-btn active" data-mode="character">漢字查BVZ</button>
-                <button class="mode-btn" data-mode="bvz">BVZ反查漢字</button>
+                <button class="mode-btn active" data-mode="character">漢字查LMZ</button>
+                <button class="mode-btn" data-mode="lmz">LMZ反查漢字</button>
             </div>
             <div class="search-box">
                 <input type="text" id="character-search-input" placeholder="請輸入要查詢的漢字……">
@@ -1096,10 +1096,10 @@
             </div>
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="character-search-hint">輸入漢字查詢對應的BVZ讀音和注釋（支持多字查詢，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="character-search-hint">輸入漢字查詢對應的LMZ讀音和注釋（支持多字查詢，用逗號分隔）</div></div>
                 <div class="instructions-item"><span class="instruction-number">⑵</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑶</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
-                <div class="instructions-item long-text"><span class="instruction-number">⑷</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">⑷</span><div class="instruction-content"><strong>推薦的LMZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑸</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">QQ〔1369176072〕</span></div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑹</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</span></div></div>
             </div>
@@ -1107,11 +1107,11 @@
         
         <section class="search-section vocab-search" id="vocab-search-section" style="display:none;">
             <div class="search-mode">
-                <button class="mode-btn vocab-active" data-mode="vocab-bvz">BVZ查釋義</button>
+                <button class="mode-btn vocab-active" data-mode="vocab-lmz">LMZ查釋義</button>
                 <button class="mode-btn" data-mode="vocab-word">詞條查釋義</button>
             </div>
             <div class="search-box">
-                <input type="text" id="vocab-search-input" placeholder="請輸入BVZ或詞條……">
+                <input type="text" id="vocab-search-input" placeholder="請輸入LMZ或詞條……">
                 <button id="vocab-search-button">搜索</button>
             </div>
             <div class="search-options">
@@ -1126,12 +1126,12 @@
             </div>
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="vocab-search-hint">輸入BVZ或詞條查詢對應的釋義（支持多個查詢，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="vocab-search-hint">輸入LMZ或詞條查詢對應的釋義（支持多個查詢，用逗號分隔）</div></div>
                 <div class="instructions-item"><span class="instruction-number">⑵</span><div class="instruction-content"><strong>新增瀏覽功能：</strong> <span style="color: #5d7a30; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑶</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑷</span><div class="instruction-content"><strong>注意：</strong> 詞彙部分所選漢字均非正字或本字</div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑸</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
-                <div class="instructions-item long-text"><span class="instruction-number">⑹</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">⑹</span><div class="instruction-content"><strong>推薦的LMZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑺</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">QQ〔1369176072〕</span></div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑻</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</span></div></div>
             </div>
@@ -1157,12 +1157,12 @@
             </div>
             <div class="instructions-list">
                 <h4>使用說明：</h4>
-                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="definition-search-hint">輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞，用逗號分隔）</div></div>
+                <div class="instructions-item"><span class="instruction-number">⑴</span><div class="instruction-content" id="definition-search-hint">輸入釋義關鍵詞反查對應的詞條和LMZ（支持多個關鍵詞，用逗號分隔）</div></div>
                 <div class="instructions-item"><span class="instruction-number">⑵</span><div class="instruction-content"><strong>新增瀏覽功能：</strong> <span style="color: #a05252; font-weight: bold;">① 搜索框為空時點擊搜索，將隨機顯示10個詞條；② 選擇分類後搜索框為空時點擊搜索，將顯示該分類下所有詞條。</span></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑶</span><div class="instruction-content"><strong>音系特徵說明：</strong> <a href="https://zhuanlan.zhihu.com/p/664299480" target="_blank" class="instruction-link">查看遂城白話音系特徵說明</a></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑷</span><div class="instruction-content"><strong>注意：</strong> 詞彙部分所選漢字均非正字或本字</div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑸</span><div class="instruction-content"><strong>聲明：</strong> 箇隻《遂城白話多功能音典》衹係對作者及其屋己人所講箇遂城白話作拼寫指導，約束力僅限於個人，並冇代表其他講該方言箇個體以及遂城範圍內箇其他方言。</div></div>
-                <div class="instructions-item long-text"><span class="instruction-number">⑹</span><div class="instruction-content"><strong>推薦的BVZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
+                <div class="instructions-item long-text"><span class="instruction-number">⑹</span><div class="instruction-content"><strong>推薦的LMZ輸入方式：</strong> 電腦端<span class="instruction-latin">〔Unikey-TELEX〕</span>、移動端<span class="instruction-latin">〔Laban Key-TELEX〕</span></div></div>
                 <div class="instructions-item"><span class="instruction-number">⑺</span><div class="instruction-content"><strong>歡迎聯繫我：</strong> <span class="instruction-latin">E-mail〔vamos-daniel@foxmail.com〕</span>、<span class="instruction-latin">QQ〔1369176072〕</span></div></div>
                 <div class="instructions-item long-text"><span class="instruction-number">⑻</span><div class="instruction-content"><strong>我係：</strong> <span class="instruction-latin">「Ngàng Sềng-jĩ」</span>｜一個祖籍廣東化州河西沙堤尾、戶籍湛江赤坎南橋街道、母語爲遂溪遂城街道白話的化籍湛二代｜遂溪外公+赤坎外婆+化州爺爺奶奶=我</span></div></div>
             </div>
@@ -1228,9 +1228,9 @@
         const volumeSlider = document.getElementById('volume-slider'), volumeValue = document.getElementById('volume-value'), scrollToTopButton = document.getElementById('scroll-to-top');
         
         function updateInputFont() {
-            Object.values(searchInputs).forEach(i => i.classList.remove('bvz-input-mode', 'vocab-bvz-mode'));
-            if (currentMainMode === 'character' && currentSubMode === 'bvz') searchInputs.character.classList.add('bvz-input-mode');
-            else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-bvz') searchInputs.vocab.classList.add('vocab-bvz-mode');
+            Object.values(searchInputs).forEach(i => i.classList.remove('lmz-input-mode', 'vocab-lmz-mode'));
+            if (currentMainMode === 'character' && currentSubMode === 'lmz') searchInputs.character.classList.add('lmz-input-mode');
+            else if (currentMainMode === 'vocab' && currentSubMode === 'vocab-lmz') searchInputs.vocab.classList.add('vocab-lmz-mode');
         }
         
         function formatExampleTextWithBrackets(text) {
@@ -1250,7 +1250,7 @@
                     exampleTextFormatted = formatExampleTextWithBrackets(exampleTextFormatted);
                 }
                 let audioUrlAttr = hasAudio ? `data-audio-url="${encodeURIComponent(ex.例句音頻)}"` : '';
-                h += `<div class="example-item">${hasAudio ? `<div class="example-item-audio"><button class="audio-play-btn example-audio-btn" ${audioUrlAttr} title="點擊播放例句發音"></button></div>` : ''}${ex.例句 ? `<div class="example-text">${exampleTextFormatted}</div>` : ''}${ex.例句BVZ ? `<div class="example-bvz">${ex.例句BVZ}</div>` : ''}${ex.例句翻譯 ? `<div class="example-translation">${ex.例句翻譯}</div>` : ''}</div>`;
+                h += `<div class="example-item">${hasAudio ? `<div class="example-item-audio"><button class="audio-play-btn example-audio-btn" ${audioUrlAttr} title="點擊播放例句發音"></button></div>` : ''}${ex.例句 ? `<div class="example-text">${exampleTextFormatted}</div>` : ''}${ex.例句LMZ ? `<div class="example-lmz">${ex.例句LMZ}</div>` : ''}${ex.例句翻譯 ? `<div class="example-translation">${ex.例句翻譯}</div>` : ''}</div>`;
             });
             return h;
         }
@@ -1269,9 +1269,9 @@
             const dictData = JSON.parse(dictText);
             
             // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
-            dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.BVZ)).map(i => ({ 
+            dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.LMZ)).map(i => ({ 
                 單字: decodeHtmlEntities(i.單字||''), 
-                BVZ: decodeHtmlEntities(i.BVZ||''), 
+                LMZ: decodeHtmlEntities(i.LMZ||''), 
                 Note: decodeHtmlEntities(i.Note||i.note||''), 
                 // 直接使用 JSON 中的原始音频URL（保持 raw 格式）
                 audioUrl: (i.audio||''),
@@ -1284,7 +1284,7 @@
             const vocabText = await vocabResponse.text();
             const vocabData = JSON.parse(vocabText);
             
-            vocabularyData = (Array.isArray(vocabData) ? vocabData : Object.values(vocabData)).filter(i => i && (i.BVZ||i.詞條||i.釋義)).map(i => {
+            vocabularyData = (Array.isArray(vocabData) ? vocabData : Object.values(vocabData)).filter(i => i && (i.LMZ||i.詞條||i.釋義)).map(i => {
                 let audioUrl = (i.vocabularyAudio||i.音頻||i.audio||'');
                 // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
                 let examples = [];
@@ -1292,13 +1292,13 @@
                     let exampleAudio = (ex.exampleAudio||ex.audio||'');
                     examples.push({ 
                         例句: decodeHtmlEntities(ex.例句||ex.sentence||''), 
-                        例句BVZ: decodeHtmlEntities(ex.例句的BVZ轉寫||ex.bvzTranscription||ex.例句BVZ||''), 
+                        例句LMZ: decodeHtmlEntities(ex.例句的LMZ轉寫||ex.lmzTranscription||ex.例句LMZ||''), 
                         例句音頻: exampleAudio, 
                         例句翻譯: decodeHtmlEntities(ex.translation||'') 
                     }); 
                 });
                 return { 
-                    BVZ: decodeHtmlEntities(i.BVZ||i.bvz||''), 
+                    LMZ: decodeHtmlEntities(i.LMZ||i.lmz||''), 
                     詞條: decodeHtmlEntities(i.詞條||i.word||i.词条||''), 
                     釋義: decodeHtmlEntities(i.釋義||i.释义||i.definition||''), 
                     類別: decodeHtmlEntities(i.詞條類別||i.category||i.分类||''), 
@@ -1354,7 +1354,7 @@
                 const hasAudio = !!(item.audioUrl && item.audioUrl.length);
                 const audioId = `audio-${Date.now()}-${idx}`;
                 const hasExamples = item.例句列表 && item.例句列表.length;
-                html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
+                html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">LMZ：</span><span class="lmz-value">${item.LMZ||'無LMZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
             });
             resultsContainer.innerHTML = decodeHtmlEntities(html);
             document.querySelectorAll('.audio-play-btn').forEach(btn=>btn.addEventListener('click', handleAudioPlay));
@@ -1393,9 +1393,9 @@
             } else {
                 if(exactMatch){ 
                     let set=new Set(terms.map(t=>t.trim()));
-                    dictionaryData.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); 
+                    dictionaryData.forEach(i=>{ if(i.LMZ && set.has(i.LMZ)) res.push(i); }); 
                 }
-                else dictionaryData.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
+                else dictionaryData.forEach(i=>{ if(i.LMZ) for(let t of terms) if(i.LMZ.includes(t)){ res.push(i); break; } });
             }
             return res.slice(0,CONFIG.MAX_RESULTS);
         }
@@ -1410,12 +1410,12 @@
             let cat = categorySelects.vocab.value;
             let filtered = cat==='all' ? vocabularyData : vocabularyData.filter(i=>i.類別===cat);
             let res = [];
-            if(currentSubMode==='vocab-bvz'){
+            if(currentSubMode==='vocab-lmz'){
                 if(exactMatch){ 
                     let set=new Set(terms.map(t=>t.trim()));
-                    filtered.forEach(i=>{ if(i.BVZ && set.has(i.BVZ)) res.push(i); }); 
+                    filtered.forEach(i=>{ if(i.LMZ && set.has(i.LMZ)) res.push(i); }); 
                 }
-                else filtered.forEach(i=>{ if(i.BVZ) for(let t of terms) if(i.BVZ.includes(t)){ res.push(i); break; } });
+                else filtered.forEach(i=>{ if(i.LMZ) for(let t of terms) if(i.LMZ.includes(t)){ res.push(i); break; } });
             } else {
                 if(exactMatch){ 
                     let set=new Set(terms.map(t=>t.trim()));
@@ -1443,10 +1443,10 @@
                 const hasAudio = !!(item.audioUrl && item.audioUrl.length);
                 const audioId = `audio-${Date.now()}-${idx}`;
                 if(item.type==='dictionary'){
-                    html += `<div class="result-item"><div class="character">${item.單字}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ}</span><div class="meta-group">${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.Note?`<div class="detail-item"><span class="label">注釋：</span><span>${item.Note}</span></div>`:''}</div></div>`;
+                    html += `<div class="result-item"><div class="character">${item.單字}</div><div class="details"><div class="detail-item"><span class="label">LMZ：</span><span class="lmz-value">${item.LMZ}</span><div class="meta-group">${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.Note?`<div class="detail-item"><span class="label">注釋：</span><span>${item.Note}</span></div>`:''}</div></div>`;
                 } else {
                     const hasExamples = item.例句列表 && item.例句列表.length;
-                    html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">BVZ：</span><span class="bvz-value">${item.BVZ||'無BVZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
+                    html += `<div class="result-item"><div class="character">${item.詞條||'無詞條'}</div><div class="details"><div class="detail-item"><span class="label">LMZ：</span><span class="lmz-value">${item.LMZ||'無LMZ'}</span><div class="meta-group">${item.類別?`<span class="category-tag">${item.類別}</span>`:''}${hasAudio?`<div class="audio-container"><button class="audio-play-btn" data-audio-id="${audioId}" data-audio-url="${encodeURIComponent(item.audioUrl)}" title="點擊播放發音"></button></div>`:''}</div></div>${item.釋義?`<div class="detail-item"><span class="label">釋義：</span><span>${item.釋義}</span></div>`:''}</div>${hasExamples?`<div class="example-container"><div class="example-header"><span>📖 例句 (${item.例句列表.length}個)</span></div><div class="example-items">${generateExamplesHtml(item.例句列表,idx,false)}</div></div>`:''}</div>`;
                 }
             });
             resultsContainer.innerHTML = decodeHtmlEntities(html);
@@ -1556,16 +1556,16 @@
         
         function resetSubMode() {
             if(currentMainMode==='character'){ currentSubMode='character'; modeButtons.character.forEach(b=>b.classList.remove('active')); modeButtons.character[0].classList.add('active'); }
-            else if(currentMainMode==='vocab'){ currentSubMode='vocab-bvz'; modeButtons.vocab.forEach(b=>{ b.classList.remove('active','vocab-active'); }); modeButtons.vocab[0].classList.add('active','vocab-active'); }
+            else if(currentMainMode==='vocab'){ currentSubMode='vocab-lmz'; modeButtons.vocab.forEach(b=>{ b.classList.remove('active','vocab-active'); }); modeButtons.vocab[0].classList.add('active','vocab-active'); }
             else if(currentMainMode==='definition'){ currentSubMode='definition'; modeButtons.definition.forEach(b=>{ b.classList.remove('active','definition-active'); }); modeButtons.definition[0].classList.add('active','definition-active'); }
         }
         
         function updateResultsContainerClass(){ resultsContainer.className='results-section'; if(currentMainMode==='vocab') resultsContainer.classList.add('vocab-result'); else if(currentMainMode==='definition') resultsContainer.classList.add('definition-result'); }
         
         function updateSearchHint(){
-            if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的白話字（BVZ）和注釋（精確匹配模式，多個用逗號分隔）':'輸入漢字查詢對應的白話字（BVZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入白話字（BVZ）反查對應的漢字和注釋（精確匹配模式，多個用逗號分隔）':'輸入白話字（BVZ）反查對應的漢字和注釋（支持多個BVZ查詢，用逗號分隔）'; } }
-            else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-bvz'){ searchInputs.vocab.placeholder='請輸入白話字（BVZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入BVZ查詢對應的釋義（精確匹配模式，完整字符串匹配，含空格）':'輸入BVZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式，多個用逗號分隔）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
-            else if(currentMainMode==='definition'){ searchInputs.definition.placeholder='請輸入釋義關鍵詞（多個用逗號分隔）……'; searchHints.definition.textContent=exactMatch?'輸入釋義關鍵詞反查對應的詞條和BVZ（精確匹配模式）':'輸入釋義關鍵詞反查對應的詞條和BVZ（支持多個關鍵詞查詢，用逗號分隔）'; }
+            if(currentMainMode==='character'){ if(currentSubMode==='character'){ searchInputs.character.placeholder='請輸入要查詢的漢字（多字用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入漢字查詢對應的羅馬字（LMZ）和注釋（精確匹配模式，多個用逗號分隔）':'輸入漢字查詢對應的羅馬字（LMZ）和注釋（支持多字查詢，用逗號分隔）'; } else { searchInputs.character.placeholder='請輸入羅馬字（LMZ）（多個用逗號分隔）……'; searchHints.character.textContent=exactMatch?'輸入羅馬字（LMZ）反查對應的漢字和注釋（精確匹配模式，多個用逗號分隔）':'輸入羅馬字（LMZ）反查對應的漢字和注釋（支持多個LMZ查詢，用逗號分隔）'; } }
+            else if(currentMainMode==='vocab'){ if(currentSubMode==='vocab-lmz'){ searchInputs.vocab.placeholder='請輸入羅馬字（LMZ）（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入LMZ查詢對應的釋義（精確匹配模式，完整字符串匹配，含空格）':'輸入LMZ查詢對應的釋義（模糊匹配模式，忽略連字符）'; } else { searchInputs.vocab.placeholder='請輸入詞條（多個用逗號分隔）……'; searchHints.vocab.textContent=exactMatch?'輸入詞條查詢對應的釋義（精確匹配模式，多個用逗號分隔）':'輸入詞條查詢對應的釋義（支持多個詞條查詢，用逗號分隔）'; } }
+            else if(currentMainMode==='definition'){ searchInputs.definition.placeholder='請輸入釋義關鍵詞（多個用逗號分隔）……'; searchHints.definition.textContent=exactMatch?'輸入釋義關鍵詞反查對應的詞條和LMZ（精確匹配模式）':'輸入釋義關鍵詞反查對應的詞條和LMZ（支持多個關鍵詞查詢，用逗號分隔）'; }
         }
         
         function clearSearchInputs(){ Object.values(searchInputs).forEach(i=>i.value=''); }
