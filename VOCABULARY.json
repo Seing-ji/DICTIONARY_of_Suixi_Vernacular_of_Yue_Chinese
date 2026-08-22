@@ -4337,13 +4337,18 @@
     "詞條": "落著",
     "LMZ": "lòk-zjờk",
     "詞條類別": "謂詞",
-    "釋義": "妥當的、完結的、穩定的；多用於「謂詞+得+落著」結構，表示某個動作能夠妥當結束、完成",
+    "釋義": "①妥當的、完結的、穩定的，多用於「動詞+得+落著」結構，表示某個動作能夠妥當、順利地結束、完成，等同於「掂當」；②用於人身上，引申爲「收拾、教訓」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lòk-zjờk.mp3",
     "examples": [
       {
-        "例句": "做得落著\n〔能夠安心、順利地做下去〕",
-        "例句的LMZ轉寫": "Zọu dâk lòk-zjờk",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zọu dâk lòk-zjờk.mp3"
+        "例句": "①你做得落著單嘢冇？\n〔你能順利完成這件事嗎？〕",
+        "例句的LMZ轉寫": "①Nẽi zọu dâk lòk-zjờk dang nhẽ mõu？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Nẽi zọu dâk lòk-zjờk dang nhẽ mõu？.mp3"
+      },
+      {
+        "例句": "②隻糞箕太𠣇嗲，畀我担棍做其落着去𠸎。\n〔這小屁孩太跳皮了，讓我先拿棍子收拾他。〕",
+        "例句的LMZ轉寫": "②Zjậk fậng-gei tại ljéng dè, béi ngõ dam guậng zọu kẽi lòk-zjờk hợi nâk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Zjậk fậng-gei tại ljéng dè, béi ngõ dam guậng zọu kẽi lòk-zjờk hợi nâk..mp3"
       }
     ]
   },
