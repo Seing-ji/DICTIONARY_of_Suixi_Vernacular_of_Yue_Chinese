@@ -1215,6 +1215,97 @@
             COMMA_SEPARATOR: /[,，]+/
         };
         
+        /* ================= 音频多源回退机制 ================= */
+        
+        // 把 raw.githubusercontent.com 转成 jsDelivr
+        function toJsDelivrUrl(url) {
+            if (!url) return null;
+            return url.replace(
+                /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/,
+                'https://cdn.jsdelivr.net/gh/$1/$2@$3/$4'
+            );
+        }
+        
+        // 把 raw.githubusercontent.com 转成 Statically
+        function toStaticallyUrl(url) {
+            if (!url) return null;
+            return url.replace(
+                /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/,
+                'https://cdn.statically.io/gh/$1/$2/$3/$4'
+            );
+        }
+        
+        // 把 raw.githubusercontent.com 转成 GitHub Pages（需要仓库开启 Pages）
+        function toGitHubPagesUrl(url) {
+            if (!url) return null;
+            return url.replace(
+                /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/,
+                'https://$1.github.io/$2/$4'
+            );
+        }
+        
+        // 生成所有可尝试的音频源（按优先级排序）
+        function getAudioSources(originalUrl) {
+            if (!originalUrl) return [];
+            const sources = [];
+            const seen = new Set();
+            const push = (u) => {
+                if (u && !seen.has(u)) {
+                    seen.add(u);
+                    sources.push(u);
+                }
+            };
+            // 1. jsDelivr 优先（已验证可播放）
+            push(toJsDelivrUrl(originalUrl));
+            // 2. Statically
+            push(toStaticallyUrl(originalUrl));
+            // 3. GitHub Pages
+            push(toGitHubPagesUrl(originalUrl));
+            // 4. 原始 raw 作为最后回退
+            push(originalUrl);
+            return sources;
+        }
+        
+        // 逐个源尝试 fetch，返回 Blob 或 null
+        async function fetchAudioWithFallback(sources, timeoutMs = 15000) {
+            for (const src of sources) {
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+                    const response = await fetch(src, { signal: controller.signal });
+                    clearTimeout(timeoutId);
+                    
+                    if (!response.ok) {
+                        console.warn(`[音频源失败] HTTP ${response.status}: ${src}`);
+                        continue;
+                    }
+                    
+                    const blob = await response.blob();
+                    if (!blob || blob.size === 0) {
+                        console.warn(`[音频源失败] 空文件: ${src}`);
+                        continue;
+                    }
+                    
+                    // 简单校验：如果是 audio/* 直接通过；否则看扩展名
+                    const isAudioType = blob.type && blob.type.startsWith('audio/');
+                    const isAudioExt = /\.(mp3|wav|ogg|m4a|aac|flac|opus)(\?|$)/i.test(src);
+                    if (!isAudioType && !isAudioExt) {
+                        console.warn(`[音频源失败] 非音频类型 ${blob.type}: ${src}`);
+                        continue;
+                    }
+                    
+                    console.log(`[音频源成功] ${src} (${blob.size} bytes, ${blob.type})`);
+                    return blob;
+                } catch (e) {
+                    console.warn(`[音频源异常] ${src}`, e.message || e);
+                    // 继续尝试下一个源
+                }
+            }
+            return null;
+        }
+        
+        /* ================= 音频多源回退机制结束 ================= */
+        
         let dictionaryData = [], vocabularyData = [], currentMainMode = 'character', currentSubMode = 'character', exactMatch = false;
         let searchTimeout = null, currentAudio = null, currentPlayingButton = null, currentResults = [];
         let currentVolume = CONFIG.DEFAULT_VOLUME, categoryOptions = new Set(), isSearching = false;
@@ -1271,12 +1362,10 @@
             const dictText = await dictResponse.text();
             const dictData = JSON.parse(dictText);
             
-            // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
             dictionaryData = (Array.isArray(dictData) ? dictData : Object.values(dictData)).filter(i => i && (i.單字 || i.LMZ)).map(i => ({ 
                 單字: decodeHtmlEntities(i.單字||''), 
                 LMZ: decodeHtmlEntities(i.LMZ||''), 
                 Note: decodeHtmlEntities(i.Note||i.note||''), 
-                // 直接使用 JSON 中的原始音频URL（保持 raw 格式）
                 audioUrl: (i.audio||''),
                 type: 'dictionary' 
             }));
@@ -1289,7 +1378,6 @@
             
             vocabularyData = (Array.isArray(vocabData) ? vocabData : Object.values(vocabData)).filter(i => i && (i.LMZ||i.詞條||i.釋義)).map(i => {
                 let audioUrl = (i.vocabularyAudio||i.音頻||i.audio||'');
-                // ===== 关键修改：删除强制转换CDN的代码，保持原始 raw 链接 =====
                 let examples = [];
                 if (i.examples && Array.isArray(i.examples)) i.examples.forEach(ex => { 
                     let exampleAudio = (ex.exampleAudio||ex.audio||'');
@@ -1464,13 +1552,10 @@
         
         async function handleAudioPlay(event) {
             const btn = event.currentTarget;
-            let originalUrl = decodeURIComponent(btn.getAttribute('data-audio-url'));
+            const originalUrl = decodeURIComponent(btn.getAttribute('data-audio-url'));
             if (!originalUrl) return;
             
-            // 保持原始 URL，不做任何转换
-            const audioUrl = originalUrl;
-            console.log('音频加载URL:', audioUrl);
-            
+            // 同一按钮再次点击 = 停止
             if (currentAudio && currentPlayingButton === btn) {
                 stopCurrentAudio();
                 return;
@@ -1482,30 +1567,30 @@
             btn.style.opacity = '0.5';
             btn.title = '加載中...';
             
-            let blobUrl = CONFIG.AUDIO_CACHE.get(audioUrl);
+            // 缓存 key 用原始 URL，保证同一条音频只下载一次
+            const cacheKey = originalUrl;
+            let blobUrl = CONFIG.AUDIO_CACHE.get(cacheKey);
             if (blobUrl) {
                 playAudio(blobUrl, btn);
                 return;
             }
             
+            // 生成多源列表
+            const sources = getAudioSources(originalUrl);
+            console.log('[音频] 原始URL:', originalUrl);
+            console.log('[音频] 尝试源顺序:', sources);
+            
             try {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 20000);
-                const response = await fetch(audioUrl, { signal: controller.signal });
-                clearTimeout(timeoutId);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                const blob = await fetchAudioWithFallback(sources, 15000);
+                if (!blob) {
+                    throw new Error('所有音频源均失败');
                 }
                 
-                const blob = await response.blob();
-                if (blob.size === 0) throw new Error('音频文件为空');
-                
                 blobUrl = URL.createObjectURL(blob);
-                CONFIG.AUDIO_CACHE.set(audioUrl, blobUrl);
+                CONFIG.AUDIO_CACHE.set(cacheKey, blobUrl);
                 playAudio(blobUrl, btn);
             } catch (e) {
-                console.error('音频加载失败:', audioUrl, e);
+                console.error('音频加载失败:', originalUrl, e);
                 btn.disabled = false;
                 btn.style.opacity = '';
                 btn.title = '加載失敗';
