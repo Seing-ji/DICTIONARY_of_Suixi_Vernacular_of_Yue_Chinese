@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>遂城白話多功能音典</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/style.css">
+    <!-- ===== PWA 相关引用 ===== -->
+    <link rel="manifest" href="/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
+    <link rel="apple-touch-icon" href="/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="遂城白話音典">
+    <!-- ===== PWA 相关引用结束 ===== -->
     <style>
         :root {
             --primary-color: #4a6fa5;
@@ -1351,8 +1359,38 @@
         
         async function init() {
             dataStatus.textContent = '正在初始化……';
-            try { await loadAllData(); setupEventListeners(); updateSearchHint(); if (!loadVolumeFromStorage()) setVolume(CONFIG.DEFAULT_VOLUME); updateVolumeDisplay(); updateInputFont(); searchInputs.character.focus(); window.addEventListener('scroll', handleScroll); } 
-            catch (error) { console.error('初始化失敗：', error); showError(`加載數據失敗：${error.message}`); }
+            try { 
+                await loadAllData(); 
+                setupEventListeners(); 
+                updateSearchHint(); 
+                if (!loadVolumeFromStorage()) setVolume(CONFIG.DEFAULT_VOLUME); 
+                updateVolumeDisplay(); 
+                updateInputFont(); 
+                applyModeFromUrl();          // ← 新增：读取 URL 参数切换模式
+                searchInputs.character.focus(); 
+                window.addEventListener('scroll', handleScroll); 
+            } 
+            catch (error) { 
+                console.error('初始化失敗：', error); 
+                showError(`加載數據失敗：${error.message}`); 
+            }
+        }
+        
+        /* --------------------------------------------
+           读取 URL 参数 ?mode=character|vocab|definition
+           自动切换到对应主模式
+           -------------------------------------------- */
+        function applyModeFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const mode = params.get('mode');
+            if (!mode || !['character', 'vocab', 'definition'].includes(mode)) return;
+        
+            // 找到对应的 mode-tab 并触发点击（复用现有切换逻辑）
+            const targetTab = document.querySelector(`.mode-tab[data-mode="${mode}"]`);
+            if (targetTab) {
+                targetTab.click();
+                console.log('[URL模式] 已切换到:', mode);
+            }
         }
         
         async function loadAllData() {
@@ -1665,5 +1703,17 @@
         window.addEventListener('beforeunload',()=>{ if(currentAudio) currentAudio.pause(); CONFIG.AUDIO_CACHE.forEach(u=>URL.revokeObjectURL(u)); CONFIG.AUDIO_CACHE.clear(); });
         document.addEventListener('DOMContentLoaded', init);
     </script>
+
+    <!-- ===== Service Worker 注册 ===== -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/sw.js')
+                    .then(registration => console.log('Service Worker 注册成功，作用域：', registration.scope))
+                    .catch(err => console.log('Service Worker 注册失败：', err));
+            });
+        }
+    </script>
+    <!-- ===== Service Worker 注册结束 ===== -->
 </body>
 </html>

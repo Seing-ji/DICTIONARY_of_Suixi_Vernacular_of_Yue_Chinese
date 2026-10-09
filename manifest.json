@@ -1,0 +1,51 @@
+{
+  "name": "遂城白話多功能音典",
+  "short_name": "遂城音典",
+  "description": "支持漢字和羅馬字（LMZ）互查、LMZ/詞條查詢釋義、釋義反查功能的遂城白話音典",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/",
+  "scope": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/",
+  "id": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f5f7fa",
+  "theme_color": "#4a6fa5",
+  "categories": ["education", "reference", "books"],
+  "icons": [
+    {
+      "src": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "漢字與LMZ互查",
+      "short_name": "漢字查詢",
+      "description": "漢字與羅馬字（LMZ）互相查詢",
+      "url": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/?mode=character"
+    },
+    {
+      "name": "LMZ/詞條查釋義",
+      "short_name": "查釋義",
+      "description": "輸入LMZ或詞條查詢對應釋義",
+      "url": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/?mode=vocab"
+    },
+    {
+      "name": "釋義反查",
+      "short_name": "反查",
+      "description": "輸入釋義關鍵詞反查詞條和LMZ",
+      "url": "/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/?mode=definition"
+    }
+  ],
+  "prefer_related_applications": false
+}
