@@ -7,7 +7,7 @@
      - 音频                     → 不拦截（交给页面自己的多源回退逻辑）
    ============================================ */
 
-const CACHE_NAME = 'suixi-dictionary-v3';
+const CACHE_NAME = 'suixi-dictionary-v4';
 
 // 预缓存的核心资源（首次安装时下载）
 const PRECACHE_URLS = [
