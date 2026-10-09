@@ -1,5 +1,5 @@
 /* ============================================
-   Service Worker for 遂城白話多功能音典 PWA
+   Service Worker for 遂城土白話多功能音典 PWA
    仓库：DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese
    策略：
      - HTML / JSON / JS / CSS → 网络优先，离线回退缓存
