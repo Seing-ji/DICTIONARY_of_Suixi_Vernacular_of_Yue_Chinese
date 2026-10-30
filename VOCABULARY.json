@@ -57,10 +57,10 @@
   },
   {
     "詞條": "塞埞",
-    "LMZ": "tâk-djầng",
+    "LMZ": "tâk djầng",
     "詞條類別": "謂詞",
     "釋義": "阻礙；礙地方；礙手礙腳",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tâk-djầng.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/tâk djầng.mp3",
     "examples": [
       {
         "例句": "你冇使企喺度塞到我（阿）埞啊！\n〔別在這裏礙著我！〕",
@@ -71,10 +71,10 @@
   },
   {
     "詞條": "阻埞",
-    "LMZ": "zó-djầng",
+    "LMZ": "zó djầng",
     "詞條類別": "謂詞",
     "釋義": "阻礙；礙地方；礙手礙腳",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zó-djầng.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zó djầng.mp3",
     "examples": [
       {
         "例句": "你冇使企喺度阻到我（阿）埞啊！\n〔別在這裏礙著我！〕",
@@ -87,7 +87,7 @@
     "詞條": "滿刮",
     "LMZ": "mũng-goạk",
     "詞條類別": "謂詞",
-    "釋義": "（液體）充盈而溢出",
+    "釋義": "（液體）充盈而溢出的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mũng-goạk.mp3",
     "examples": [
       {
@@ -231,7 +231,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/páo-páo-djậk-djậk.mp3",
     "examples": [
       {
-        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裡面追逐打鬧。〕",
+        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裏面追逐打鬧。〕",
         "例句的LMZ轉寫": "Dik xậy-mâng-zấy hấy gông-jỉng-dòu páo-páo-djậk-djậk.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dik xậy-mâng-zấy hấy gông-jỉng-dòu páo-páo-djậk-djậk..mp3"
       }
@@ -574,20 +574,6 @@
     ]
   },
   {
-    "詞條": "鬥毒",
-    "LMZ": "dậu-dồk",
-    "詞條類別": "謂詞",
-    "釋義": "故意使壞",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dậu-dồk.mp3",
-    "examples": [
-      {
-        "例句": "你係要鬥毒係嘛？\n〔你故意的是嗎？〕",
-        "例句的LMZ轉寫": "Nẽi hầy jịu dậu-dồk hầy mà？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi hầy jịu dậu-dồk hầy mà？.mp3"
-      }
-    ]
-  },
-  {
     "詞條": "㓀嘴",
     "LMZ": "bôk-zúi",
     "詞條類別": "謂詞",
@@ -675,7 +661,7 @@
     "詞條": "毆腦",
     "LMZ": "âu-nõu",
     "詞條類別": "謂詞",
-    "釋義": "睡覺",
+    "釋義": "【赤坎詞】睡覺",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/âu-nõu.mp3",
     "examples": []
   },
@@ -683,7 +669,7 @@
     "詞條": "毆猪",
     "LMZ": "âu-zi",
     "詞條類別": "謂詞",
-    "釋義": "睡覺",
+    "釋義": "【赤坎詞】睡覺",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/âu-zi.mp3",
     "examples": []
   },
@@ -691,7 +677,7 @@
     "詞條": "曲兵",
     "LMZ": "kôk-bêng",
     "詞條類別": "謂詞",
-    "釋義": "虧錢",
+    "釋義": "【赤坎詞】虧錢",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kôk-bêng.mp3",
     "examples": []
   },
@@ -1045,7 +1031,7 @@
     "詞條": "𰰁",
     "LMZ": "lúi",
     "詞條類別": "謂詞",
-    "釋義": "食肉吐骨；延伸為「吃」",
+    "釋義": "食肉吐骨；延伸爲「吃」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lúi.mp3",
     "examples": [
       {
@@ -1199,11 +1185,11 @@
     "詞條": "沉",
     "LMZ": "cấm",
     "詞條類別": "謂詞",
-    "釋義": "【黎話詞】將某物件放入水裡輕微抖一下就拿出來的動作",
+    "釋義": "【黎話詞】將某物件放入水裏輕微抖一下就拿出來的動作",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cấm.mp3",
     "examples": [
       {
-        "例句": "畀水沉沉你箇衣服喏。\n〔將你的衣服放進水裡簡單洗一下吧。〕",
+        "例句": "畀水沉沉你箇衣服喏。\n〔將你的衣服放進水裏簡單洗一下吧。〕",
         "例句的LMZ轉寫": "Béi súi cấm-cấm nẽi-gọ ji-fồk nò.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Béi súi cấm-cấm nẽi-gọ ji-fồk nò..mp3"
       }
@@ -1445,7 +1431,7 @@
     "詞條": "𨂵（一）𨂵",
     "LMZ": "cjẩp-cjầp",
     "詞條類別": "謂詞",
-    "釋義": "【黎話詞】引申義：走走逛逛",
+    "釋義": "【黎話詞】｛引｝走走逛逛",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cjẩp-cjầp.mp3",
     "examples": [
       {
@@ -2117,8 +2103,8 @@
     "examples": [
       {
         "例句": "掬氣\n〔憋住呼吸，強行蓄氣〕\n掬力\n〔畜力〕",
-        "例句的LMZ轉寫": "Gôk-hẹi&Gôk-lềk",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gôk-hẹi&Gôk-lềk.mp3"
+        "例句的LMZ轉寫": "Gôk hẹi&Gôk lềk",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gôk hẹi&Gôk lềk.mp3"
       }
     ]
   },
@@ -2132,15 +2118,15 @@
   },
   {
     "詞條": "冇搭㒎",
-    "LMZ": "mõu-dạp-xạp",
+    "LMZ": "mõu dạp-xạp",
     "詞條類別": "謂詞",
     "釋義": "不當回事，輕蔑對待，不在話下",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-dạp-xạp.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu dạp-xạp.mp3",
     "examples": [
       {
         "例句": "嗰二兩酒都冇撘𢶍。\n〔這二兩酒都不在話下。〕",
-        "例句的LMZ轉寫": "Gó Nhì ljớng zấu dou mõu-dạp-xạp.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gó Nhì ljớng zấu dou mõu-dạp-xạp..mp3"
+        "例句的LMZ轉寫": "Gó Nhì ljớng zấu dou mõu dạp-xạp.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gó Nhì ljớng zấu dou mõu dạp-xạp..mp3"
       }
     ]
   },
@@ -2291,14 +2277,6 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ló zi guậng lả-lạ gọ fó-dui..mp3"
       }
     ]
-  },
-  {
-    "詞條": "做钱",
-    "LMZ": "zọu-cìng",
-    "詞條類別": "謂詞",
-    "釋義": "賺錢",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu-cìng.mp3",
-    "examples": []
   },
   {
     "詞條": "□",
@@ -2487,20 +2465,6 @@
     ]
   },
   {
-    "詞條": "屌靚",
-    "LMZ": "djâu-ljậng",
-    "詞條類別": "謂詞",
-    "釋義": "俚語。糟糕，坏了",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-ljậng.mp3",
-    "examples": [
-      {
-        "例句": "哦豁，今下屌靚囉。\n〔哎呀，這下完蛋了！ 〕",
-        "例句的LMZ轉寫": "O-hõ, ga-hã djâu-ljậng lọ!",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-hõ, ga-hã djâu-ljậng lọ!.mp3"
-      }
-    ]
-  },
-  {
     "詞條": "㷫",
     "LMZ": "hệng",
     "詞條類別": "謂詞",
@@ -2641,7 +2605,13 @@
     "詞條類別": "謂詞",
     "釋義": "厲害；犀利",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vây.mp3",
-    "examples": []
+    "examples": [
+      {
+        "例句": "件衫我做媙媙畀你啊！\n〔這件衣服我會給你改得好看的！〕",
+        "例句的LMZ轉寫": "Gìng sam ngõ zọu vây-vây béi nẽi à!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gìng sam ngõ zọu vây-vây béi nẽi à!.mp3"
+      }
+    ]
   },
   {
     "詞條": "鬧/⿰多人",
@@ -2737,7 +2707,7 @@
     "詞條": "吝盡",
     "LMZ": "lầng-zầng",
     "詞條類別": "謂詞",
-    "釋義": "形容一個人 手腳笨拙、行動不便、做事容易出差錯，常給人一種 「笨手笨腳」「毛手毛腳」「不便當」 的感覺；引申為形容事物「礙事」",
+    "釋義": "形容一個人 手腳笨拙、行動不便、做事容易出差錯，常給人一種 「笨手笨腳」「毛手毛腳」「不便當」 的感覺；引申爲形容事物「礙事」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lầng-zầng.mp3",
     "examples": [
       {
@@ -2958,24 +2928,10 @@
     ]
   },
   {
-    "詞條": "好好咬",
-    "LMZ": "hóu-hóu-ngão",
-    "詞條類別": "謂詞",
-    "釋義": "很好吃的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hóu-hóu-ngão.mp3",
-    "examples": [
-      {
-        "例句": "跟菠蘿街呶道有間狗肉店好好咬。\n在菠蘿街那邊有一間很好吃的狗肉店。",
-        "例句的LMZ轉寫": "Gâng Bo-lò Gai nu-dòu jẩu-gang gấu-nhồk-dịm hóu-hóu-ngão.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâng Bo-lò Gai nu-dòu jẩu-gang gấu-nhồk-dịm hóu-hóu-ngão..mp3"
-      }
-    ]
-  },
-  {
     "詞條": "𢈈𤻝",
     "LMZ": "nâp-nệng",
     "詞條類別": "謂詞",
-    "釋義": "浮躁的；（因沒達成目的而變得）坐立不安或者心神不寧",
+    "釋義": "①浮躁的；\n②（因沒達成目的而變得）坐立不安或者心神不寧的；\n③（因身體不舒服而變得）精神痿靡的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nâp-nệng.mp3",
     "examples": [
       {
@@ -3037,7 +2993,7 @@
     "詞條": "囉囉攣",
     "LMZ": "lo-lo-ling",
     "詞條類別": "謂詞",
-    "釋義": "心亂如麻的；心裡七上八下的",
+    "釋義": "心亂如麻的；心裏七上八下的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lo-lo-ling.mp3",
     "examples": []
   },
@@ -3112,14 +3068,6 @@
     "examples": []
   },
   {
-    "詞條": "噻",
-    "LMZ": "sâk&xâk",
-    "詞條類別": "謂詞",
-    "釋義": "某（時/個/隻等），表不確定指代",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâk&xâk.mp3",
-    "examples": []
-  },
-  {
     "詞條": "𤄷潺潺",
     "LMZ": "lò-sàng-sàng",
     "詞條類別": "謂詞",
@@ -3157,14 +3105,6 @@
     "詞條類別": "謂詞",
     "釋義": "搖搖欲墜樣的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lậm-cẹ.mp3",
-    "examples": []
-  },
-  {
-    "詞條": "眼利",
-    "LMZ": "ngãng-lèi",
-    "詞條類別": "謂詞",
-    "釋義": "視力好的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngãng-lèi.mp3",
     "examples": []
   },
   {
@@ -3329,10 +3269,10 @@
   },
   {
     "詞條": "冇夠喉",
-    "LMZ": "mõu-gậu-hầu",
+    "LMZ": "mõu gậu-hầu",
     "詞條類別": "謂詞",
     "釋義": "不夠過嘴癮的；吃了還想吃的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-gậu-hầu.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu gậu-hầu.mp3",
     "examples": []
   },
   {
@@ -3455,7 +3395,7 @@
     "詞條": "□鼻",
     "LMZ": "cọk-bèi",
     "詞條類別": "謂詞",
-    "釋義": "將水吸入鼻子裡再擤出來的動作或者過程",
+    "釋義": "將水吸入鼻子裏再擤出來的動作或者過程",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cọk-bèi.mp3",
     "examples": []
   },
@@ -3465,14 +3405,6 @@
     "詞條類別": "謂詞",
     "釋義": "（食物）Q彈的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sầu-ngà.mp3",
-    "examples": []
-  },
-  {
-    "詞條": "□友",
-    "LMZ": "sok-jẫu",
-    "詞條類別": "謂詞",
-    "釋義": "騙人；慫恿",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sok-jẫu.mp3",
     "examples": []
   },
   {
@@ -3500,7 +3432,7 @@
     "examples": []
   },
   {
-    "詞條": "□",
+    "詞條": "趲",
     "LMZ": "sáng",
     "詞條類別": "謂詞",
     "釋義": "搬動，移動",
@@ -3525,7 +3457,7 @@
     "詞條": "惡做",
     "LMZ": "ọk-zọu",
     "詞條類別": "謂詞",
-    "釋義": "麻煩的，複雜的",
+    "釋義": "麻煩的，複雜的，難對付的，棘手的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ọk-zọu.mp3",
     "examples": []
   },
@@ -3533,7 +3465,7 @@
     "詞條": "惡搞",
     "LMZ": "ọk-gáo",
     "詞條類別": "謂詞",
-    "釋義": "麻煩的，複雜的",
+    "釋義": "麻煩的，複雜的，難對付的，棘手的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ọk-gáo.mp3",
     "examples": []
   },
@@ -3557,7 +3489,7 @@
     "詞條": "□",
     "LMZ": "cêk&cek",
     "詞條類別": "謂詞",
-    "釋義": "查詢，檢查〈借自英文：check〉",
+    "釋義": "【音譯詞】〈英：check〉查詢，檢查",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cêk&cek.mp3",
     "examples": []
   },
@@ -3565,7 +3497,7 @@
     "詞條": "□□",
     "LMZ": "he-pí",
     "詞條類別": "謂詞",
-    "釋義": "開心的〈借自英文：happy〉",
+    "釋義": "【音譯詞】〈英：happy〉開心的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/he-pí.mp3",
     "examples": []
   },
@@ -3573,7 +3505,7 @@
     "詞條": "□",
     "LMZ": "fjeng",
     "詞條類別": "謂詞",
-    "釋義": "合拍的；友好的〈借自英文：friend〉",
+    "釋義": "【音譯詞】〈英：friend〉合拍的；友好的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/fjeng.mp3",
     "examples": []
   },
@@ -3581,7 +3513,7 @@
     "詞條": "□□",
     "LMZ": "so-lì",
     "詞條類別": "謂詞",
-    "釋義": "對不起〈借自英文：sorry〉",
+    "釋義": "【音譯詞】〈英：sorry〉對不起",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/so-lì.mp3",
     "examples": []
   },
@@ -3603,7 +3535,7 @@
     "詞條": "𠹭",
     "LMZ": "ko",
     "詞條類別": "謂詞",
-    "釋義": "打電話〈借自英文：call〉",
+    "釋義": "【音譯詞】〈英：call〉打電話",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ko.mp3",
     "examples": [
       {
@@ -3663,7 +3595,7 @@
     "詞條": "喡",
     "LMZ": "hgũi",
     "詞條類別": "謂詞",
-    "釋義": "哭聲，引申爲「哭泣」",
+    "釋義": "【黎話詞】哭聲，引申爲「哭泣」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hgũi.mp3",
     "examples": [
       {
@@ -3691,7 +3623,7 @@
     "詞條": "𱍣",
     "LMZ": "goàng",
     "詞條類別": "謂詞",
-    "釋義": "扔",
+    "釋義": "【僮話詞】扔，丟棄",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/goàng.mp3",
     "examples": [
       {
@@ -3889,7 +3821,7 @@
     "詞條": "鍛",
     "LMZ": "dìng",
     "詞條類別": "謂詞",
-    "釋義": "將液體澆往滾燙的物體上。清明拜祭祖先時，在完成了跪拜、燒金銀紙寳等儀式後，會往燒火桶裡倒茶、倒酒，這個儀式我們稱之爲「~酒」或者「~茶」",
+    "釋義": "將液體澆往滾燙的物體上。清明拜祭祖先時，在完成跪拜、燒金銀紙寳等儀式後，人們會往燒火桶裏倒茶、倒酒，這個儀式稱爲「~酒」或者「~茶」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dìng.mp3",
     "examples": []
   },
@@ -3933,7 +3865,7 @@
     "詞條": "大種",
     "LMZ": "dài-zống",
     "詞條類別": "謂詞",
-    "釋義": "【黎話詞】（人）脾氣大的、架子大的、很傲慢的",
+    "釋義": "【黎話詞】（人）脾氣大的、架子大的、很傲慢的、愛搞特殊的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dài-zống.mp3",
     "examples": [
       {
@@ -3945,10 +3877,10 @@
   },
   {
     "詞條": "冇成種",
-    "LMZ": "mõu-sềng-zống",
+    "LMZ": "mõu sềng-zống",
     "詞條類別": "謂詞",
     "釋義": "（人）不成器的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu-sềng-zống.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu sềng-zống.mp3",
     "examples": [
       {
         "例句": "其屋己箇二世祖冇成種箇啊。\n〔他家那個紈絝子弟，根本不成器。〕",
@@ -3961,11 +3893,11 @@
     "詞條": "出種",
     "LMZ": "câk-zống",
     "詞條類別": "謂詞",
-    "釋義": "後輩的性格等方面全部繼承或遺傳自父輩；骨子裡帶出來的",
+    "釋義": "後輩的性格等方面全部繼承或遺傳自父輩；骨子裏帶出來的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/câk-zống.mp3",
     "examples": [
       {
-        "例句": "睇其講嘢箇手势同佢老豆係（一）個餅印印出來噉，嗰尐就係出種。\n〔看他說話的手勢和他老爸像一個模子刻出來的，這就是骨子裡帶出來的。〕",
+        "例句": "睇其講嘢箇手势同佢老豆係（一）個餅印印出來噉，嗰尐就係出種。\n〔看他說話的手勢和他老爸像一個模子刻出來的，這就是骨子裏帶出來的。〕",
         "例句的LMZ轉寫": "Tấy kẽi góng nhẽ gọ sấu-sậy tồng kẽi lõu-dầu hẩy-gọ bjấng-jậng jậng câk-lòi gấm, gó-dik zầu hầy câk-zống.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Tấy kẽi góng nhẽ gọ sấu-sậy tồng kẽi lõu-dầu hẩy-gọ bjấng-jậng jậng câk-lòi gấm, gó-dik zầu hầy câk-zống..mp3"
       }
@@ -4087,7 +4019,7 @@
     "詞條": "吵叼唝唝",
     "LMZ": "còu-djâu-gộng-gộng",
     "詞條類別": "謂詞",
-    "釋義": "吵鬧；引申為「話多」",
+    "釋義": "吵鬧；引申爲「話多」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/còu-djâu-gộng-gộng.mp3",
     "examples": [
       {
@@ -4154,20 +4086,6 @@
     "釋義": "【黎話詞】特別結實貎",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sầk-gi-gi.mp3",
     "examples": []
-  },
-  {
-    "詞條": "媙□",
-    "LMZ": "vây-zei",
-    "詞條類別": "謂詞",
-    "釋義": "（人）美麗的，靚的；威風的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vây-zei.mp3",
-    "examples": [
-      {
-        "例句": "著新衫，好～。\n〔穿新衣，好靚麗。〕",
-        "例句的LMZ轉寫": "Zjợk xâng sam, hóu vây-zei.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zjợk xâng sam, hóu vây-zei..mp3"
-      }
-    ]
   },
   {
     "詞條": "冇在",
@@ -4484,7 +4402,7 @@
     "examples": []
   },
   {
-    "詞條": "（物品）禁用",
+    "詞條": "禁用",
     "LMZ": "kâm-jồng",
     "詞條類別": "謂詞",
     "釋義": "（物品）耐用的",
@@ -4492,7 +4410,7 @@
     "examples": []
   },
   {
-    "詞條": "（食物）禁肚",
+    "詞條": "禁肚",
     "LMZ": "kâm-tõu",
     "詞條類別": "謂詞",
     "釋義": "（食物）有飽複感的",
@@ -4500,19 +4418,11 @@
     "examples": []
   },
   {
-    "詞條": "（銭）禁使",
+    "詞條": "禁使",
     "LMZ": "kâm-sấy",
     "詞條類別": "謂詞",
-    "釋義": "物價低、貨幣升值、（錢）夠用的",
+    "釋義": "（事物）经得起消耗/使用",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/kâm-sấy.mp3",
-    "examples": []
-  },
-  {
-    "詞條": "（銭）冇等使",
-    "LMZ": "mõu dấng-sấy",
-    "詞條類別": "謂詞",
-    "釋義": "物價高、貨幣貶值、（錢）不夠用的",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mõu dấng-sấy.mp3",
     "examples": []
   },
   {
@@ -4719,7 +4629,7 @@
     "詞條": "惡",
     "LMZ": "ọk",
     "詞條類別": "謂詞",
-    "釋義": "表示做某件事「麻煩、費勁、令人為難」；常用語法結構爲「惡+動詞短語」，整個結構充當謂語",
+    "釋義": "表示做某件事「麻煩、費勁、令人爲難」；常用語法結構爲「惡+動詞短語」，整個結構充當謂語",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ọk.mp3",
     "examples": [
       {
@@ -4741,7 +4651,7 @@
     "詞條": "□",
     "LMZ": "ngeo",
     "詞條類別": "謂詞",
-    "釋義": "①（用手、勺子等工具）撩一點兒、撈一點兒、取一點兒；\n②引申爲「賺（錢財、利益等）」",
+    "釋義": "【黎話詞】①（用手、勺子等工具）撩一點兒、撈一點兒、取一點兒；\n②引申爲「賺（錢財、利益等）」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngeo.mp3",
     "examples": [
       {
@@ -4838,8 +4748,8 @@
     "examples": [
       {
         "例句": "②其餓仔都餓傷嗲囖！\n〔他特別想要兒子，盼得心急難耐！〕",
-        "例句的LMZ轉寫": "②Kẽi ngò-zấy dou ngò sjơng dè lọ!",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Kẽi ngò-zấy dou ngò sjơng dè lọ!.mp3"
+        "例句的LMZ轉寫": "②Kẽi ngò zấy dou ngò sjơng dè lọ!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Kẽi ngò zấy dou ngò sjơng dè lọ!.mp3"
       }
     ]
   },
@@ -4933,27 +4843,19 @@
     ]
   },
   {
-    "詞條": "補膽",
-    "LMZ": "bóu-dám",
-    "詞條類別": "謂詞",
-    "釋義": "壯膽，給自己 / 別人撐膽、提振勇氣；常用於描述小兒做惡夢後，大人一邊拍其胸脯一邊嘴裏念念有詞地說一些壯膽的話的行爲",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bóu-dám.mp3",
-    "examples": []
-  },
-  {
     "詞條": "嘔飯",
-    "LMZ": "ấu-fàng",
+    "LMZ": "ấu fàng",
     "詞條類別": "謂詞",
     "釋義": "｛貶｝吃飯",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu-fàng.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu fàng.mp3",
     "examples": []
   },
   {
     "詞條": "嘔酒",
-    "LMZ": "ấu-zấu",
+    "LMZ": "ấu zấu",
     "詞條類別": "謂詞",
     "釋義": "｛貶｝喝酒",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu-zấu.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ấu zấu.mp3",
     "examples": []
   },
   {
@@ -5105,14 +5007,6 @@
     "examples": []
   },
   {
-    "詞條": "𠺘口",
-    "LMZ": "lóng-hấu",
-    "詞條類別": "謂詞",
-    "釋義": "漱口",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lóng-hấu.mp3",
-    "examples": []
-  },
-  {
     "詞條": "交帶",
     "LMZ": "gao-dại",
     "詞條類別": "謂詞",
@@ -5174,21 +5068,21 @@
   },
   {
     "詞條": "勾柴",
-    "LMZ": "ngâu-cài",
+    "LMZ": "ngâu cài",
     "詞條類別": "謂詞",
     "釋義": "砍伐柴火",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngâu-cài.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngâu cài.mp3",
     "examples": []
   },
   {
     "詞條": "打卷",
     "LMZ": "dá-gíng",
     "詞條類別": "謂詞",
-    "釋義": "形容人在喝醉酒後胡言亂語、語無倫次的狀態，常與「脷」搭配",
+    "釋義": "形容人在喝醉酒後說話含糊的狀態，常與「脷（舌頭）」搭配，直譯就是舌頭捋不直的狀態",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dá-gíng.mp3",
     "examples": [
       {
-        "例句": "佢肯定係□嗲，講話箇時候阿脷打卷打卷箇。",
+        "例句": "佢肯定係□嗲，講話箇時候阿脷打卷打卷箇。\n〔他肯定是醉了，說話的時候含含糊糊的〕",
         "例句的LMZ轉寫": "Kẽi hấng-dềng hầy xêng dè, góng-và gọ sì-hầu a-lèi dá-gíng dá-gíng gọ.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi hấng-dềng hầy xêng dè, góng-và gọ sì-hầu a-lèi dá-gíng dá-gíng gọ..mp3"
       }
@@ -5201,6 +5095,369 @@
     "釋義": "排位在最後一名的",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bao-mei.mp3",
     "examples": []
+  },
+  {
+    "詞條": "便宜啞啞",
+    "LMZ": "pjầng-jì-á-á",
+    "詞條類別": "謂詞",
+    "釋義": "非常便宜的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pjầng-jì-á-á.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "共",
+    "LMZ": "gồng",
+    "詞條類別": "謂詞",
+    "釋義": "①伺候，見詞條「共仔」；\n②凑（錢）、出（錢），見詞條「共錢」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gồng.mp3",
+    "examples": [
+      {
+        "例句": "②今次箇同學聚會，佢共嗲倆千文紙喔。\n〔這次的同學聚會，他居然出了倆千塊。〕",
+        "例句的LMZ轉寫": "Gâm-cị gọ tồng-hòk zòi-vùi, kẽi gồng dè Ljỡng-cing mâng-zí ọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-cị gọ tồng-hòk zòi-vùi, kẽi gồng dè Ljỡng-cing mâng-zí ọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "共仔",
+    "LMZ": "gồng zấy",
+    "詞條類別": "謂詞",
+    "釋義": "照顧小孩子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gồng zấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "共錢",
+    "LMZ": "gồng cìng",
+    "詞條類別": "謂詞",
+    "釋義": "凑錢",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gồng cìng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "臭糢",
+    "LMZ": "cậu-môk",
+    "詞條類別": "謂詞",
+    "釋義": "臭食物變質之味的，類同「臭餿」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cậu-môk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "臭腥",
+    "LMZ": "cậu-xjâng",
+    "詞條類別": "謂詞",
+    "釋義": "臭腥味的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cậu-xjâng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "臭餿",
+    "LMZ": "cậu-sâu&cậu-xôk",
+    "詞條類別": "謂詞",
+    "釋義": "臭澱粉、飯菜發酵味的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cậu-sâu&cậu-xôk.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "臭油膉",
+    "LMZ": "cậu-jầu-jêk",
+    "詞條類別": "謂詞",
+    "釋義": "臭油脂氧化敗壞味的，相當於普通話的「哈喇味」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cậu-jầu-jêk.mp3",
+    "examples": [
+      {
+        "例句": "尐鹹魚好臭油膉。\n〔這些鹹魚一股哈喇味兒。〕",
+        "例句的LMZ轉寫": "Dik hàm-nhì hóu cậu-jầu-jêk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dik hàm-nhì hóu cậu-jầu-jêk..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "等",
+    "LMZ": "dấng",
+    "詞條類別": "謂詞",
+    "釋義": "①等待；\n②｛引｝经得起，見詞條「等使」；\n③｛引｝接住、承接，見詞條「等水」；\n④見詞條「等路」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "等水",
+    "LMZ": "dấng súi",
+    "詞條類別": "謂詞",
+    "釋義": "儲水，用容器接住水、把水儲存起來",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng súi.mp3",
+    "examples": [
+      {
+        "例句": "阿公告寫倒天日要停水講，今晚要提前等水哇哈。\n〔公告說明天要停水來著，今晚要提前儲水喔。〕",
+        "例句的LMZ轉寫": "A gông-gọu xé dóu ting-nhầk jịu tềng súi góng, gâm-mãng jịu tầy-cìng dấng súi vạ-hàhk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A gông-gọu xé dóu ting-nhầk jịu tềng súi góng, gâm-mãng jịu tầy-cìng dấng súi vạ-hàhk..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "等使",
+    "LMZ": "dấng-sấy",
+    "詞條類別": "謂詞",
+    "釋義": "（事物）经得起消耗/使用",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng-sấy.mp3",
+    "examples": [
+      {
+        "例句": "家下阿錢都冇等使嗲。\n〔如今貨幣都貶值了。〕",
+        "例句的LMZ轉寫": "Ga-hã a-cìng dou mõu dấng-sấy dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hã a-cìng dou mõu dấng-sấy dè..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "等路",
+    "LMZ": "dấng-lòu",
+    "詞條類別": "謂詞",
+    "釋義": "意爲｛用作探訪親友之見面禮、作爲手信｝，是一個表示目的的動詞性成分，一般在句中充當補足語",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng-lòu.mp3",
+    "examples": [
+      {
+        "例句": "你去探舅父箇時候買尐水果等路囉。\n〔你去探望舅父的時候買些水果作爲伴手禮吧。〕",
+        "例句的LMZ轉寫": "Nẽi hợi tạm kẫu-fù gọ sì-hầu mãi dik súi-gó dấng-lòu lo.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi hợi tạm kẫu-fù gọ sì-hầu mãi dik súi-gó dấng-lòu lo..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "補膽",
+    "LMZ": "bóu-dám",
+    "詞條類別": "謂詞",
+    "釋義": "壯膽，給自己 / 別人撐膽、提振勇氣；常用於描述小兒做惡夢後，大人一邊拍其胸脯一邊嘴裏念念有詞地說一些壯膽的話的行爲",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bóu-dám.mp3",
+    "examples": [
+      {
+        "例句": "牀頭婆婆補補膽，一覺睡到大天光。\n〔愿牀頭婆婆給我一覺睡到天亮的勇氣。〕",
+        "例句的LMZ轉寫": "Còng-tầu-pò-po bóu-bóu-dám, jâk gạo sùi dọu dài ting-gong.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Còng-tầu-pò-po bóu-bóu-dám, jâk gạo sùi dọu dài ting-gong..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "做",
+    "LMZ": "zọu",
+    "詞條類別": "謂詞",
+    "釋義": "①從事某种工作或活動；\n②用作；\n③充當，作爲，例：「～人」；\n④結成某种關係，例：「～朋友」；\n⑤舉辦，例「做酒」；\n⑥（讓他人幫忙）修剪衣服；\n⑦使得，致使連接標記（致使動詞），意爲｛使得、搞得、讓｝",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu.mp3",
+    "examples": [
+      {
+        "例句": "①做工\n〔工作〕",
+        "例句的LMZ轉寫": "zọu gông",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu gông.mp3"
+      },
+      {
+        "例句": "②阿沼氣可以做燃料。\n〔沼氣可以做燃料。〕",
+        "例句的LMZ轉寫": "A zíu-hẹi hó-jị zọu jìng-lìu.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A zíu-hẹi hó-jị zọu jìng-lìu..mp3"
+      },
+      {
+        "例句": "⑥我去做做褲腳𠸎。\n〔我先出門去修一下褲腿。〕",
+        "例句的LMZ轉寫": "Ngõ hợi zỏu-zọu fu-gjợk nâk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ hợi zỏu-zọu fu-gjợk nâk..mp3"
+      },
+      {
+        "例句": "⑦你拖地又冇講我聽，做我跌跤去。\n〔你沒和我說你拖地了，搞得我摔跤了。〕",
+        "例句的LMZ轉寫": "Nẽi to-dèi jầu mõu góng ngõ tjâng, zọu ngõ dik-gao hợi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi to-dèi jầu mõu góng ngõ tjâng, zọu ngõ dik-gao hợi..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "做钱",
+    "LMZ": "zọu-cìng",
+    "詞條類別": "謂詞",
+    "釋義": "賺錢",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu-cìng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "媙□□",
+    "LMZ": "vây-sầm-sầm",
+    "詞條類別": "謂詞",
+    "釋義": "（人或物）美麗的，靚的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vây-sầm-sầm.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "媙姿",
+    "LMZ": "vây-zei",
+    "詞條類別": "謂詞",
+    "釋義": "①（人）美麗的，靚的；\n②威風的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vây-zei.mp3",
+    "examples": [
+      {
+        "例句": "著新衫，好~。\n〔穿新衣，好靚麗。〕",
+        "例句的LMZ轉寫": "Zjợk xâng sam, hóu vây-zei.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zjợk xâng sam, hóu vây-zei..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "鬥毒",
+    "LMZ": "dậu-dồk",
+    "詞條類別": "謂詞",
+    "釋義": "故意使壊、針對",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dậu-dồk.mp3",
+    "examples": [
+      {
+        "例句": "你係要鬥毒係嘛？\n〔你故意的是嗎？〕",
+        "例句的LMZ轉寫": "Nẽi hầy jịu dậu-dồk hầy mà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi hầy jịu dậu-dồk hầy mà？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "□",
+    "LMZ": "sok&xok",
+    "詞條類別": "謂詞",
+    "釋義": "｛俚｝騙，慫恿",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sok&xok.mp3",
+    "examples": [
+      {
+        "例句": "係呀，你聽佢～！\n〔他在那信口雌黃！〕",
+        "例句的LMZ轉寫": "Hầy jà, nẽi tjâng kẽi xok!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Hầy jà, nẽi tjâng kẽi xok!.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "□友",
+    "LMZ": "sok-jẫu&xok-jẫu",
+    "詞條類別": "謂詞",
+    "釋義": "｛俚｝騙人，慫恿人",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sok-jẫu&xok-jẫu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "好咬",
+    "LMZ": "hóu-ngão",
+    "詞條類別": "謂詞",
+    "釋義": "好吃的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hóu-ngão.mp3",
+    "examples": [
+      {
+        "例句": "跟菠蘿街呶道有間狗肉店好好咬喔。\n在菠蘿街那邊有一間很好吃的狗肉店。",
+        "例句的LMZ轉寫": "Gâng Bo-lo Gai nu-dòu jẩu-gang gấu-nhồk-dịm hóu hóu-ngão ọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâng Bo-lo Gai nu-dòu jẩu-gang gấu-nhồk-dịm hóu hóu-ngão ọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "利",
+    "LMZ": "lèi",
+    "詞條類別": "謂詞",
+    "釋義": "①鋒利的；\n②視聽能力好的，見詞條「眼利」、「耳利」；\n③說話尖酸刻薄的、得理不饒人的，見詞條「牙尖嘴利」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lèi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "眼利",
+    "LMZ": "ngãng lèi",
+    "詞條類別": "謂詞",
+    "釋義": "視力好的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngãng lèi.mp3",
+    "examples": [
+      {
+        "例句": "你放阿眼利尐。\n〔你看仔细點兒。〕",
+        "例句的LMZ轉寫": "Nẽi fỏng-ngãng lèi dik.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi fỏng-ngãng lèi dik..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "耳利",
+    "LMZ": "nhĩ lèi",
+    "詞條類別": "謂詞",
+    "釋義": "聽力好的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhĩ lèi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "牙尖嘴利",
+    "LMZ": "ngà-zim-zúi-lèi",
+    "詞條類別": "謂詞",
+    "釋義": "說話尖酸刻薄的、得理不饒人的",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngà-zim-zúi-lèi.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "餓錢",
+    "LMZ": "ngò cìng",
+    "詞條類別": "謂詞",
+    "釋義": "極度渴望擁有錢財",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngò cìng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "餓仔",
+    "LMZ": "ngò zấy",
+    "詞條類別": "謂詞",
+    "釋義": "極度渴望擁有兒子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngò zấy.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "餓孫",
+    "LMZ": "ngò xing",
+    "詞條類別": "謂詞",
+    "釋義": "極度渴望抱孫子",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngò xing.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "打倒",
+    "LMZ": "dá-tjấu&dá-tjáo",
+    "詞條類別": "謂詞",
+    "釋義": "打翻（液體）",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dá-tjấu&dá-tjáo.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "𠺘口",
+    "LMZ": "lóng-hấu",
+    "詞條類別": "謂詞",
+    "釋義": "漱口",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lóng-hấu.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "𠺘碗",
+    "LMZ": "lóng vúng",
+    "詞條類別": "謂詞",
+    "釋義": "洗涮碗具",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lóng vúng.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "□",
+    "LMZ": "hjò",
+    "詞條類別": "謂詞",
+    "釋義": "四處講述他人祕密",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hjò.mp3",
+    "examples": [
+      {
+        "例句": "佢～了我啲醜事出去嗲！\n〔他將我的糗事全抖出去了！〕",
+        "例句的LMZ轉寫": "Kẽi hjò lĩu ngõ-dik cấu-sì câk-hợi dè!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi hjò lĩu ngõ-dik cấu-sì câk-hợi dè!.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "□",
+    "LMZ": "meo",
+    "詞條類別": "謂詞",
+    "釋義": "嘴脣因年老而顯得乾癟凹陷貌",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/meo.mp3",
+    "examples": [
+      {
+        "例句": "隻婆仔橛阿嘴～～箇。\n〔那個老太婆的的嘴脣乾癟而凹陷。〕",
+        "例句的LMZ轉寫": "Zjậk pò-zấy-kjek a-zúi meo-meo gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zjậk pò-zấy-kjek a-zúi meo-meo gọ..mp3"
+      }
+    ]
   },
   {
     "詞條": "嗲",
@@ -5225,7 +5482,7 @@
     "詞條": "阿",
     "LMZ": "a",
     "詞條類別": "助詞",
-    "釋義": "①【黎話詞】表示所屬的關係的詞；\n②【黎話詞】置於名詞前，表定指",
+    "釋義": "①【黎話詞】表示所屬的關係的詞；\n②【黎話詞】置於名詞前，表定指；\n③【黎話詞】用作中綴，連接限定詞與方位、樣貌詞，構成方位短語或樣貌短語，通常的格式爲「限定詞+阿+方位、樣貌詞」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/a.mp3",
     "examples": [
       {
@@ -5239,7 +5496,12 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hã a gông-zi mõu gịng sêng, a mâk-gạ nìh zầu nhầk-nhầk gou..mp3"
       },
       {
-        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裡面追逐打鬧。〕",
+        "例句": "③喺我阿道；喺公園阿道；似中午阿勢\n〔在我這裏；在公園那邊；像中午那樣〕",
+        "例句的LMZ轉寫": "hấy ngõ a-dòu; hấy gông-jìng a-dòu; cĩ zông-mữ a-sậy",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hấy ngõ a-dòu; hấy gông-jìng a-dòu; cĩ zông-mữ a-sậy.mp3"
+      },
+      {
+        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裏面追逐打鬧。〕",
         "例句的LMZ轉寫": "Dik xậy-mâng-zấy hấy gông-jỉ-dòu páo-páo djậk-djậk.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dik xậy-mâng-zấy hấy gông-jỉ-dòu páo-páo djậk-djậk..mp3"
       }
@@ -5258,14 +5520,14 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ ấng gâng-dòu sềk-fàng cụi..mp3"
       },
       {
-        "例句": "②煲甖裡頭箇水佷跟度滾啐。\n〔鍋裡的水還沸騰著。〕",
+        "例句": "②煲甖裏頭箇水佷跟度滾啐。\n〔鍋裏的水還沸騰著。〕",
         "例句的LMZ轉寫": "Bou-ang lẽi-tầu gọ súi ấng gâng-dòu guấng cụi.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Bou-ang lẽi-tầu gọ súi ấng gâng-dòu guấng cụi..mp3"
       },
       {
         "例句": "③冇使狂，佷有大把時間啐。\n〔別着急，時間還充足得很。〕",
-        "例句的LMZ轉寫": "Mõu sấy kòng, ấng-jẫu dài-bá sì-gạng cụi.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Mõu sấy kòng, ấng-jẫu dài-bá sì-gạng cụi..mp3"
+        "例句的LMZ轉寫": "Mõu sấy kòng, ấng jẫu dài-bá sì-gạng cụi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Mõu sấy kòng, ấng jẫu dài-bá sì-gạng cụi..mp3"
       }
     ]
   },
@@ -5358,13 +5620,18 @@
     "詞條": "箇",
     "LMZ": "gọ",
     "詞條類別": "助詞",
-    "釋義": "結構助詞，表示從屬關係【的】",
+    "釋義": "①結構助詞，表示從屬關係，相當於普通話的「的」；\n②句末語氣助詞，作用是加強肯定、解釋、申明事實或強調客觀情況、常理，語氣偏穩重",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gọ.mp3",
     "examples": [
       {
-        "例句": "我箇手機\n〔我的手機〕",
+        "例句": "①我箇手機\n〔我的手機〕",
         "例句的LMZ轉寫": "ngõ gọ sấu-gei",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngõ gọ sấu-gei.mp3"
+      },
+      {
+        "例句": "②你噉勢係冇啱箇！\n〔你這樣是不對的！〕",
+        "例句的LMZ轉寫": "Nẽi gấm-sậy hầy mõu ngam gọ!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi gấm-sậy hầy mõu ngam gọ!.mp3"
       }
     ]
   },
@@ -5461,8 +5728,8 @@
     "examples": [
       {
         "例句": "你婆婆箇媽媽好好走喔，佢當時跟道梳頭，梳梳下就走嗲。\n〔你外婆的媽媽走得很安詳，她當時在梳頭，梳著梳著就去世了。〕",
-        "例句的LMZ轉寫": "Nẽi pò-po gọ mà-ma hóu-hóu zấu ọ, kẽi dong-sì gâng-dòu so-tầu, so-so-hã zầu zấu dè.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi pò-po gọ mà-ma hóu-hóu zấu ọ, kẽi dong-sì gâng-dòu so-tầu, so-so-hã zầu zấu dè..mp3"
+        "例句的LMZ轉寫": "Nẽi pò-po gọ mà-ma hóu hóu-zấu ọ, kẽi dong-sì gâng-dòu so-tầu, so-so-hã zầu zấu dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi pò-po gọ mà-ma hóu hóu-zấu ọ, kẽi dong-sì gâng-dòu so-tầu, so-so-hã zầu zấu dè..mp3"
       }
     ]
   },
@@ -5484,7 +5751,7 @@
     "詞條": "去",
     "LMZ": "hụi&hợi&họi",
     "詞條類別": "助詞",
-    "釋義": "①緊跟形容詞的後面或者句末，表示強調，或加深程度，或渲染情緒；\n②緊跟在動詞後面，形成「動詞 + 去」的結構，來表達「經歷體」",
+    "釋義": "①緊跟形容詞的後面或者句末，表示強調，或加深程度，或渲染情緒；\n②緊跟在動詞後面，形成「VP + 去」的結構，來表達「經歷體」，相當於普通話的「VP+過」結構",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hụi&hợi&họi.mp3",
     "examples": [
       {
@@ -5507,7 +5774,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/è.mp3",
     "examples": [
       {
-        "例句": "人哋都冇show你欸，你緟跟道做鬼做怪去。\n〔別人都不理睬你，你還在這裡搞鬼搞怪。〕",
+        "例句": "人哋都冇show你欸，你緟跟道做鬼做怪去。\n〔別人都不理睬你，你還在這裏搞鬼搞怪。〕",
         "例句的LMZ轉寫": "Nhầng-dì dou mõu sou nẽi è, nẽi zồng gâng-dòu zọu-guấy-zọu-guại hợi.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nhầng-dì dou mõu sou nẽi è, nẽi zồng gâng-dòu zọu-guấy-zọu-guại hợi..mp3"
       }
@@ -5751,14 +6018,14 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Nhầng-dì lõu-si a-gọ..mp3"
       },
       {
-        "例句": "②佢咁嬲，係因為你遲到阿箇。\n〔他這麼生氣，是因為你遲到來著。〕",
+        "例句": "②佢咁嬲，係因爲你遲到阿箇。\n〔他這麼生氣，是因爲你遲到來著。〕",
         "例句的LMZ轉寫": "②Kẽi gẫm nâu, hầy jâng-vầy nẽi cì-dọu a-gọ.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Kẽi gẫm nâu, hầy jâng-vầy nẽi cì-dọu a-gọ..mp3"
       },
       {
         "例句": "③我不遱都係噉勢阿箇。\n〔我向來如此。〕",
-        "例句的LMZ轉寫": "③Ngõ bâk-lâu dou-hầy gấm-sậy a-gọ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/③Ngõ bâk-lâu dou-hầy gấm-sậy a-gọ..mp3"
+        "例句的LMZ轉寫": "③Ngõ bâk-lâu dou hầy gấm-sậy a-gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/③Ngõ bâk-lâu dou hầy gấm-sậy a-gọ..mp3"
       }
     ]
   },
@@ -5785,8 +6052,8 @@
     "examples": [
       {
         "例句": "佢祇係講下笑嗟，冇係真心嫌棄你箇。\n〔他祇不過是開玩笑而已，並非真心嫌棄你的。〕",
-        "例句的LMZ轉寫": "Kẽi zí-hầy góng hã xịu zi, mõu hầy zâng-xâm hìm-hẹi nẽi gọ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi zí-hầy góng hã xịu zi, mõu hầy zâng-xâm hìm-hẹi nẽi gọ..mp3"
+        "例句的LMZ轉寫": "Kẽi zí hầy góng hã xịu zi, mõu hầy zâng-xâm hìm-hẹi nẽi gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi zí hầy góng hã xịu zi, mõu hầy zâng-xâm hìm-hẹi nẽi gọ..mp3"
       }
     ]
   },
@@ -5813,8 +6080,8 @@
     "examples": [
       {
         "例句": "只係遲到一陣仔嗟嗱，使咁嬲冇嗱？\n〔祇不過遲到一會兒而已，犯不着這麼生氣吧？〕",
-        "例句的LMZ轉寫": "Zí-hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？.mp3"
+        "例句的LMZ轉寫": "Zí hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí hầy cì-dọu âk-zầng-zấy zi-nà, sấy gẫm nâu mõu-nà？.mp3"
       }
     ]
   },
@@ -5827,8 +6094,8 @@
     "examples": [
       {
         "例句": "我只係想試下味道嗟嘛，又冇係想食了成碗糖水。\n〔我祇打算試一試味道罷了，並沒有打算吃完整碗甜品。〕",
-        "例句的LMZ轉寫": "Ngõ zí-hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu hầy xjớng sềk lĩu sềng vúng tòng-súi.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ zí-hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu hầy xjớng sềk lĩu sềng vúng tòng-súi..mp3"
+        "例句的LMZ轉寫": "Ngõ zí hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu hầy xjớng sềk lĩu sềng vúng tòng-súi.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ zí hầy xjớng sị hã mèi-dòu zi-mạ, jầu mõu hầy xjớng sềk lĩu sềng vúng tòng-súi..mp3"
       }
     ]
   },
@@ -5841,8 +6108,8 @@
     "examples": [
       {
         "例句": "祇係隻腳有尐攰嗟啊，休息一陣就可以繼續行嗲。\n〔祇不過雙腳有點疲累而已，歇息一會便能夠繼續走了。〕",
-        "例句的LMZ轉寫": "Zí-hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè..mp3"
+        "例句的LMZ轉寫": "Zí hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí hầy zjậk gjợk jẫu-dik gùi zi-à, jâu-xêk âk-zầng zầu hó-jị gậy-zồk hàng dè..mp3"
       }
     ]
   },
@@ -5869,8 +6136,8 @@
     "examples": [
       {
         "例句": "你趕倒去搭船嚒？阿酒席佷有好多菜未上在，你使咁狂冇嗱？\n〔你急着要去乘船嗎？酒席還有很多菜式尚未上桌，你何苦這麼心急呢？〕",
-        "例句的LMZ轉寫": "Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng-jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng-jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？.mp3"
+        "例句的LMZ轉寫": "Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi gúng dóu hợi dạp-sìng mo？A zấu-zềk ấng jẫu hóu-do cọi mèi sjỡng cụi, nẽi sấy gẫm kòng mõu-nà？.mp3"
       }
     ]
   },
@@ -5883,7 +6150,7 @@
     "examples": []
   },
   {
-    "詞條": "嗟哇",
+    "詞條": "嗟哇²",
     "LMZ": "zi-vạ",
     "詞條類別": "助詞",
     "釋義": "複合式句末語氣助詞，「而已、罷了」之意，用於口語語氣偏平和，解釋事實",
@@ -5925,7 +6192,7 @@
     ]
   },
   {
-    "詞條": "啊咯¹",
+    "詞條": "啊咯",
     "LMZ": "a-lò",
     "詞條類別": "助詞",
     "釋義": "句末語氣助詞，用於標記帶有埋怨、質疑等情感色彩的反問句",
@@ -6001,24 +6268,10 @@
     ]
   },
   {
-    "詞條": "嚒",
-    "LMZ": "mo&mòh",
-    "詞條類別": "助詞",
-    "釋義": "句末語氣助詞，表示疑問語氣，相當於普通話的「嗎」",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mo&mòh.mp3",
-    "examples": [
-      {
-        "例句": "真係噉勢嚒？\n〔眞的是這樣嗎？〕",
-        "例句的LMZ轉寫": "Zâng hầy gấm-sậy mòh？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zâng hầy gấm-sậy mòh？.mp3"
-      }
-    ]
-  },
-  {
     "詞條": "嗲嚒",
     "LMZ": "dè-mo",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣、動態助詞，標記疑問語氣的同時表示動作或變化或已完成，一般用在疑問句末尾或句子中停頓的地方；具體用法同「嗲¹」、「嗲²」，相當於普通話的「……了嗎？」",
+    "釋義": "複合式句末語氣、動態助詞，標記有預設的疑問句的同時表示動作或變化或已完成，一般用在疑問句末尾或句子中停頓的地方；具體用法同「嗲¹」、「嗲²」、「嚒」，相當於普通話的「……了嗎？」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dè-mo.mp3",
     "examples": [
       {
@@ -6029,10 +6282,10 @@
     ]
   },
   {
-    "詞條": "嗲哇",
+    "詞條": "嗲哇²",
     "LMZ": "dè-vạ",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣、動態助詞，標記陳述語氣的同時表示動作或變化或已完成，一般用在陳述句末尾或句子中停頓的地方；具體用法同「嗲¹」、「嗲²」；類似於普通話的「……了哦」",
+    "釋義": "複合式句末語氣、動態助詞，標記陳述語氣的同時表示動作或變化或已完成，一般用在陳述句末尾或句子中停頓的地方；具體用法同「嗲¹」、「嗲²」，比起單獨使用的「嗲」，「嗲哇²」實際上更具強調色彩，表明說話者想引起聽話者的注意",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dè-vạ.mp3",
     "examples": [
       {
@@ -6060,7 +6313,7 @@
     "詞條": "㗎啊",
     "LMZ": "gạ-à",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣，可同時標記陳述語氣以及帶有責備色彩的疑問語氣。",
+    "釋義": "複合式句末語氣助詞，可同時標記陳述語氣以及帶有責備色彩的疑問語氣。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gạ-à.mp3",
     "examples": [
       {
@@ -6074,7 +6327,7 @@
     "詞條": "嗱哈",
     "LMZ": "nà-ha&nà-hàhk",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣，標記命令語氣",
+    "釋義": "複合式句末語氣助詞，標記命令語氣",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nà-ha&nà-hàhk.mp3",
     "examples": [
       {
@@ -6085,10 +6338,10 @@
     ]
   },
   {
-    "詞條": "哇哈",
+    "詞條": "哇²哈",
     "LMZ": "vạ-ha&vạ-hàhk",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣，標記命令語氣",
+    "釋義": "複合式句末語氣助詞，標記命令語氣",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vạ-ha&vạ-hàhk.mp3",
     "examples": [
       {
@@ -6099,10 +6352,10 @@
     ]
   },
   {
-    "詞條": "箇哇",
+    "詞條": "箇哇²",
     "LMZ": "gọ-vạ",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣，標記陳述語氣，一般用於描述屬性",
+    "釋義": "複合式句末語氣助詞，標記陳述語氣，一般用於描述屬性",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gọ-vạ.mp3",
     "examples": [
       {
@@ -6116,13 +6369,102 @@
     "詞條": "箇嗱",
     "LMZ": "gọ-nà",
     "詞條類別": "助詞",
-    "釋義": "複合式句末語氣，標記陳述語氣，一般用於描述屬性，通常帶有不耐煩、無奈、哀嘆等情感色彩",
+    "釋義": "複合式句末語氣助詞，標記陳述語氣，一般用於描述屬性，通常帶有不耐煩、無奈、哀嘆等情感色彩",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gọ-nà.mp3",
     "examples": [
       {
         "例句": "你都𢶍𫵱戇箇嗱！\n〔你神經病呢吧！/你發癲呢吧！〕",
         "例句的LMZ轉寫": "Nẽi dou xạp-cuầk-ngọng gọ-nà!",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi dou xạp-cuầk-ngọng gọ-nà!.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "箇哇¹",
+    "LMZ": "gọ-va",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，由結構助詞「箇」和語氣助詞「哇¹」構成，標記疑問語氣，一般用於詢問屬性",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gọ-va.mp3",
+    "examples": [
+      {
+        "例句": "佢不遱都冇食芫茜箇哇？\n〔他向來都不吃香菜的吧？〕",
+        "例句的LMZ轉寫": "Kẽi bâk-lâu dou mõu sềk jìm-xây gọ-va？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi bâk-lâu dou mõu sềk jìm-xây gọ-va？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "在喔",
+    "LMZ": "cụi-ọ",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣、動態助詞，標記陳述語氣的同時表示狀態的延續",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cụi-ọ.mp3",
+    "examples": [
+      {
+        "例句": "條魚好新鮮，我買嗰陣時佢佷喺道逷在喔。\n〔這魚很新鮮，我買的時候牠還跳著呢。〕",
+        "例句的LMZ轉寫": "Tìu nhì hóu xâng-xing, ngõ mãi gó zầng-sì kẽi ấng hấy-dòu têk cụi-ọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Tìu nhì hóu xâng-xing, ngõ mãi gó zầng-sì kẽi ấng hấy-dòu têk cụi-ọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "啦",
+    "LMZ": "làh&lầhk&làhk",
+    "詞條類別": "助詞",
+    "釋義": "句末語氣助詞，標記陳述句，表示表示確認、認定，多用於說話人覺得是明顯事實，希望對方接受這個結論的場合",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/làh&lầhk&làhk.mp3",
+    "examples": [
+      {
+        "例句": "佢嗰人就係咁硬頸啦。\n〔他這人就是這麼倔強。〕",
+        "例句的LMZ轉寫": "Kẽi gó nhầng zầu hầy gẫm ngàng-gjấng lầhk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi gó nhầng zầu hầy gẫm ngàng-gjấng lầhk..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "哇²呵",
+    "LMZ": "vạ-ho",
+    "詞條類別": "助詞",
+    "釋義": "複合式句末語氣助詞，標記疑問句，用於尋求對方認同、徵求對方意見，等同於「呵」；相當於普通話的「……，對吧？」「……，是吧？」；它將陳述句轉為確認問句，預設說話者已有傾向，認為對方會同意",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/vạ-ho.mp3",
+    "examples": [
+      {
+        "例句": "今日阿天夠好哇呵？\n〔今天天氣眞好，對吧？〕",
+        "例句的LMZ轉寫": "Gâm-nhầk a-ting gậu hóu vạ-ho？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-nhầk a-ting gậu hóu vạ-ho？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嗎",
+    "LMZ": "mà",
+    "詞條類別": "助詞",
+    "釋義": "句末語氣助詞，標記中性是非疑問句，通常提問者是無預設的，單純尋求信息，或者對命題的真假進行提問；相當於普通話的「嗎」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mà.mp3",
+    "examples": [
+      {
+        "例句": "啊噉你識講黎嗎？\n〔那你會講黎話嗎？〕",
+        "例句的LMZ轉寫": "A-gấm nẽi sêk góng lầy mà？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A-gấm nẽi sêk góng lầy mà？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "嚒",
+    "LMZ": "mo&mòh",
+    "詞條類別": "助詞",
+    "釋義": "句末語氣助詞，標記說話者已有預設的疑問。預設可以是肯定（本以爲某事成立）或否定（本以爲某事不成立）；問句的功能是求證（開放，願意接受對方回答）或反問（封閉，質疑對方）；肯定預設的標記相當於普通話的「……嗎？」，否定預設相當於普通話的「……的呀？」或者「難道……嗎？」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/mo&mòh.mp3",
+    "examples": [
+      {
+        "例句": "你哋識得嚒？\n〔你倆認識嗎？〕",
+        "例句的LMZ轉寫": "Nẽi-dì sêk-dâk mo？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi-dì sêk-dâk mo？.mp3"
+      },
+      {
+        "例句": "你識講黎箇嚒？\n〔剛發現對方會講黎話，感到意外｜｛原來你會講黎話的呀？｝〕",
+        "例句的LMZ轉寫": "Nẽi sêk góng lầy gọ-mo？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi sêk góng lầy gọ-mo？.mp3"
       }
     ]
   },
@@ -6140,8 +6482,8 @@
       },
       {
         "例句": "②今晚箇晚餐好豐盛，除開常見箇五杯鴨之外，仲有好好食箇「一夜埕」。\n〔今晚的晚餐很豐盛，除了常見的五杯鴨之外，還有很美味的淡晒鹹魚。〕",
-        "例句的LMZ轉寫": "Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, zồng-jẫu hóu-hóu-sềk gọ jâk-jè-cềng.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, zồng-jẫu hóu-hóu-sềk gọ jâk-jè-cềng..mp3"
+        "例句的LMZ轉寫": "Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, zồng jẫu hóu hóu-sềk gọ jâk-jè-cềng.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, zồng jẫu hóu hóu-sềk gọ jâk-jè-cềng..mp3"
       },
       {
         "例句": "③佢哭嗲，仲哭得好傷心在。\n〔他哭了，還哭得很傷心。〕",
@@ -6179,8 +6521,8 @@
       },
       {
         "例句": "②今晚箇晚餐好豐盛，除開常見箇五杯鴨之外，仲有好好食箇「一夜埕」。\n〔今晚的晚餐很豐盛，除了常見的五杯鴨之外，還有很美味的淡晒鹹魚。〕",
-        "例句的LMZ轉寫": "Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, ấng-jẫu hóu-hóu-sềk gọ jâk-jè-cềng.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, ấng-jẫu hóu-hóu-sềk gọ jâk-jè-cềng..mp3"
+        "例句的LMZ轉寫": "Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, ấng jẫu hóu hóu-sềk gọ jâk-jè-cềng.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-mãng gọ mãng-cang hóu fông-sềng, cùi-hoi sjờng-gịng gọ mữ-bui-ạp zi-ngòi, ấng jẫu hóu hóu-sềk gọ jâk-jè-cềng..mp3"
       },
       {
         "例句": "③佢哭嗲，佷哭得好傷心在。\n〔他哭了，佷哭得很傷心。〕",
@@ -6233,8 +6575,8 @@
       },
       {
         "例句": "⑥祇有放棄𠸎可以得到解脫。\n〔唯有放棄，纔能解脫。〕",
-        "例句的LMZ轉寫": "Zí-jẫu fọng-hẹi nâk hó-jị dâk-dọu gái-tịk.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-jẫu fọng-hẹi nâk hó-jị dâk-dọu gái-tịk..mp3"
+        "例句的LMZ轉寫": "Zí-jẫu fọng-hẹi nâk hó-jị dâk-dóu gái-tịk.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zí-jẫu fọng-hẹi nâk hó-jị dâk-dóu gái-tịk..mp3"
       }
     ]
   },
@@ -6401,7 +6743,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nã.mp3",
     "examples": [
       {
-        "例句": "你㑚踎喺屋己就得嗲嗱哈！\n〔你宅在家裡就行了！〕",
+        "例句": "你㑚踎喺屋己就得嗲嗱哈！\n〔你宅在家裏就行了！〕",
         "例句的LMZ轉寫": "Nẽi nã mâu hấy ôk-géi zầu dâk-dè nà hàhk.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi nã mâu hấy ôk-géi zầu dâk-dè nà hàhk..mp3"
       }
@@ -6527,20 +6869,20 @@
   },
   {
     "詞條": "都係",
-    "LMZ": "dou-hầy",
+    "LMZ": "dou hầy",
     "詞條類別": "副詞",
     "釋義": "①也是；\n②還是",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dou-hầy.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dou hầy.mp3",
     "examples": [
       {
         "例句": "①我都係噉勢箇。\n〔我也是這樣的。〕",
-        "例句的LMZ轉寫": "①Ngõ dou-hầy gấm-sậy gọ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Ngõ dou-hầy gấm-sậy gọ..mp3"
+        "例句的LMZ轉寫": "①Ngõ dou hầy gấm-sậy gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/①Ngõ dou hầy gấm-sậy gọ..mp3"
       },
       {
         "例句": "②我都係冇去嗲囖。\n〔我還是不去了吧。〕",
-        "例句的LMZ轉寫": "②Ngõ dou-hầy mõu hợi dè-lọ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Ngõ dou-hầy mõu hợi dè-lọ..mp3"
+        "例句的LMZ轉寫": "②Ngõ dou hầy mõu hợi dè-lọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/②Ngõ dou hầy mõu hợi dè-lọ..mp3"
       }
     ]
   },
@@ -6560,15 +6902,15 @@
   },
   {
     "詞條": "也係",
-    "LMZ": "jà-hầy",
+    "LMZ": "jà hầy",
     "詞條類別": "副詞",
     "釋義": "也是，同「都係」",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jà-hầy.mp3",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jà hầy.mp3",
     "examples": [
       {
         "例句": "其也係噉箇嘢㗎啊。\n〔他也是一丘之貉。〕",
-        "例句的LMZ轉寫": "Kẽi jà-hầy gấm gọ nhẽ gạ-à.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi jà-hầy gấm gọ nhẽ gạ-à..mp3"
+        "例句的LMZ轉寫": "Kẽi jà hầy gấm gọ nhẽ gạ-à.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi jà hầy gấm gọ nhẽ gạ-à..mp3"
       }
     ]
   },
@@ -6868,6 +7210,20 @@
         "例句": "你又喺道做咩～嘞？\n〔你在幹啥玩意兒呢？〕",
         "例句的LMZ轉寫": "Nẽi jầu hấy-dòu zọu me gèo-geo lẹ？",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jầu hấy-dòu zọu me gèo-geo lẹ？.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "噻",
+    "LMZ": "sâk&xâk",
+    "詞條類別": "代詞",
+    "釋義": "①某（時/個/隻等），表不確定指代；\n②表示｛若干｝義",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/sâk&xâk.mp3",
+    "examples": [
+      {
+        "例句": "②A：外出落雨嗎？B：落噻噻粒。\n〔A：外面下雨嗎？B：有零星小雨。〕",
+        "例句的LMZ轉寫": "A：Ngòi-câk lòk-jĩ mà？B：Lòk xâk-xâk nâp.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A：Ngòi-câk lòk-jĩ mà？B：Lòk xâk-xâk nâp..mp3"
       }
     ]
   },
@@ -7241,7 +7597,7 @@
     "詞條": "䊦",
     "LMZ": "hgiẹk",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "糯米製品；糍粑；〔田艾䊦〕：是廣東湛江遂溪縣一帶的傳統民間小食，尤其在春季與清明時節盛行。這種小吃以田間採摘的「田艾」（又稱鼠麴草）為主要材料，搭配糯米粉製作外皮，內裹鹹甜不一的餡料，呈現出獨特的草清香與軟糯口感。傳統餡料可分鹹甜兩類：鹹餡常用花生、蝦米、蘿蔔絲、椰絲等；甜餡則以椰絲、花生、紅棗、瓜糖、陳皮等為主。",
+    "釋義": "糯米製品；糍粑；〔田艾䊦〕：是廣東湛江遂溪縣一帶的傳統民間小食，尤其在春季與清明時節盛行。這種小吃以田間採摘的「田艾」（又稱鼠麴草）爲主要材料，搭配糯米粉製作外皮，內裹鹹甜不一的餡料，呈現出獨特的草清香與軟糯口感。傳統餡料可分鹹甜兩類：鹹餡常用花生、蝦米、蘿蔔絲、椰絲等；甜餡則以椰絲、花生、紅棗、瓜糖、陳皮等爲主。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hgiẹk.mp3",
     "examples": []
   },
@@ -7959,7 +8315,7 @@
     "詞條": "油鯧",
     "LMZ": "jầu-cjơng",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "名稱由來：魚肉皮下油脂豐厚，煎煮會滲出大量魚油，油潤感遠勝普通白鯧，故此民間稱「油鯧」；市場有時會和金䱽（金鯧）混淆，實為完全不同科屬。亦叫黑鯧、灰油鯧（Pampus cinereus）。其背部青灰、深銀灰，色調暗沉；腹部淺銀，全體無金黃色魚鰭；背鰭、臀鰭、尾鰭呈灰褐，邊緣帶暗黑紋，和金䱽滿身金黃魚鰭一眼區分。鱗片細小圓鱗，極易脫落；皮下脂肪層厚，摸魚身能感受到濕潤油膩感，油脂含量高於銀鯧。",
+    "釋義": "名稱由來：魚肉皮下油脂豐厚，煎煮會滲出大量魚油，油潤感遠勝普通白鯧，故此民間稱「油鯧」；市場有時會和金䱽（金鯧）混淆，實爲完全不同科屬。亦叫黑鯧、灰油鯧（Pampus cinereus）。其背部青灰、深銀灰，色調暗沉；腹部淺銀，全體無金黃色魚鰭；背鰭、臀鰭、尾鰭呈灰褐，邊緣帶暗黑紋，和金䱽滿身金黃魚鰭一眼區分。鱗片細小圓鱗，極易脫落；皮下脂肪層厚，摸魚身能感受到濕潤油膩感，油脂含量高於銀鯧。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jầu-cjơng.mp3",
     "examples": []
   },
@@ -8023,7 +8379,7 @@
     "詞條": "泥朒",
     "LMZ": "nầy-nôk",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "黑深鰕虎（黑鰕虎，學名「Bathygobius fuscus」，沿海俗稱石狗、黑石仔、泥虎），成魚僅 5–7 公分，手指頭般大小，屬潮間帶體型最小的鰕虎魚類之一。屬廣鹽性魚類，只棲息在河口、海堤、礁石潮間地帶，長期躲藏於礁石、蠔殼縫隙，不會深入純淡水；湛江、雷州半島水閘、火山岩灘隨處可見。左右腹鰭融合成吸盤，可牢牢吸附在垂直濕石壁，退潮後仍扒在石頭上不會滑落，是牠最具代表性的行為。全身深黑褐色、近乎純黑，只帶少量細碎淺色斑點，和黑石顏色幾乎融為一體。受驚時會連續蹦跳、竄入石縫，淺水、露出水面的礁岩區都能短距離跳動。肉食性，以礁縫小螺、鉤蝦、幼蟹為食；退潮翻開礁石很容易捕捉，肉質細嫩，沿海居民常用來滾湯、香煎或者油焗魚仔。",
+    "釋義": "黑深鰕虎（黑鰕虎，學名「Bathygobius fuscus」，沿海俗稱石狗、黑石仔、泥虎），成魚僅 5–7 公分，手指頭般大小，屬潮間帶體型最小的鰕虎魚類之一。屬廣鹽性魚類，只棲息在河口、海堤、礁石潮間地帶，長期躲藏於礁石、蠔殼縫隙，不會深入純淡水；湛江、雷州半島水閘、火山岩灘隨處可見。左右腹鰭融合成吸盤，可牢牢吸附在垂直濕石壁，退潮後仍扒在石頭上不會滑落，是牠最具代表性的行爲。全身深黑褐色、近乎純黑，只帶少量細碎淺色斑點，和黑石顏色幾乎融爲一體。受驚時會連續蹦跳、竄入石縫，淺水、露出水面的礁岩區都能短距離跳動。肉食性，以礁縫小螺、鉤蝦、幼蟹爲食；退潮翻開礁石很容易捕捉，肉質細嫩，沿海居民常用來滾湯、香煎或者油焗魚仔。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nầy-nôk.mp3",
     "examples": []
   },
@@ -8162,20 +8518,6 @@
     "examples": []
   },
   {
-    "詞條": "等路",
-    "LMZ": "dấng-lòu",
-    "詞條類別": "名詞-民俗・禮節・婚喪",
-    "釋義": "禮物、手信、探訪時的伴手禮",
-    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/dấng-lòu.mp3",
-    "examples": [
-      {
-        "例句": "你去探舅父箇時候買尐水果等路囉。\n〔你去探望舅父的時候買些水果作爲伴手禮吧。〕",
-        "例句的LMZ轉寫": "Nẽi hợi tạm kẫu-fù gọ sì-hầu mãi dik súi-gó dấng-lòu lo.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi hợi tạm kẫu-fù gọ sì-hầu mãi dik súi-gó dấng-lòu lo..mp3"
-      }
-    ]
-  },
-  {
     "詞條": "橄欖",
     "LMZ": "ga-lám",
     "詞條類別": "名詞-文教・娛樂・技藝",
@@ -8267,7 +8609,7 @@
     "詞條": "魚仔湯",
     "LMZ": "nhì-zấy-tong",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "本地亦稱雜魚湯。魚仔湯是湛江、雷州半島代表性海鮮湯品，源自傳統漁民生活：早年出海捕魚，體型大、賣相佳的魚會揀出來販售，剩餘各式巴掌大、手指粗細的淺海小魚丟棄可惜，直接清水下鍋熬湯，多種小魚同煮熬出的鮮甜遠勝單一大魚，代代流傳成為全地老幼都喜愛的早餐、家常菜。一鍋正宗魚仔湯至少搭配 3 至 6 款當日捕獲的活淺海小魚，常見品種：博米、泥猛、沙尖、剝皮牛（扒皮魚）、石九公、流唇、黃花仔、狗公魚、塌沙；店家亦常加入小海蝦、花甲、小蟹、薄殼同煮，堆疊多層海產鮮味。重點精髓：必須使用當天現捕活魚，冰鮮魚熬不出天然清甜，魚體越小鮮味越濃厚。",
+    "釋義": "本地亦稱雜魚湯。魚仔湯是湛江、雷州半島代表性海鮮湯品，源自傳統漁民生活：早年出海捕魚，體型大、賣相佳的魚會揀出來販售，剩餘各式巴掌大、手指粗細的淺海小魚丟棄可惜，直接清水下鍋熬湯，多種小魚同煮熬出的鮮甜遠勝單一大魚，代代流傳成爲全地老幼都喜愛的早餐、家常菜。一鍋正宗魚仔湯至少搭配 3 至 6 款當日捕獲的活淺海小魚，常見品種：博米、泥猛、沙尖、剝皮牛（扒皮魚）、石九公、流唇、黃花仔、狗公魚、塌沙；店家亦常加入小海蝦、花甲、小蟹、薄殼同煮，堆疊多層海產鮮味。重點精髓：必須使用當天現捕活魚，冰鮮魚熬不出天然清甜，魚體越小鮮味越濃厚。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhì-zấy-tong.mp3",
     "examples": []
   },
@@ -8275,7 +8617,7 @@
     "詞條": "博米",
     "LMZ": "bọk-mẫy",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "「博米」是雷州半島漁民本土俗名，音譯源自閩南漁民舊稱；因為體型細小、色澤雪白，像一粒粒米，故名博米。成魚大多 6–15 公分，身體細長柔軟、半透明白色，無厚鱗，摸起來滑潤膠質感重。棲息環境：淺海沙泥灘、鹹淡水交匯河口，地籠、圍網隨便就能大量捕獲，價格平價家常。",
+    "釋義": "「博米」是雷州半島漁民本土俗名，音譯源自閩南漁民舊稱；因爲體型細小、色澤雪白，像一粒粒米，故名博米。成魚大多 6–15 公分，身體細長柔軟、半透明白色，無厚鱗，摸起來滑潤膠質感重。棲息環境：淺海沙泥灘、鹹淡水交匯河口，地籠、圍網隨便就能大量捕獲，價格平價家常。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bọk-mẫy.mp3",
     "examples": []
   },
@@ -8291,7 +8633,7 @@
     "詞條": "厚鱗",
     "LMZ": "hẫu-lầng&hâu-lâng",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "亦稱作「hâu-lâng」，在湛江地區的白話中，俗稱的「厚鱗魚」或「厚鱗」，通常指的是鱻科（Mugilidae） 魚類中的幾種。由於這類魚的鱗片相對較大且明顯，因此民間常根據這個特徵來命名。具體來說，它可能指以下幾種魚——烏頭（鲻, Mugil cephalus）：在湛江也被叫做「厚鱗斎」，是這個類別裏最常見、產量最大的一種。它的口感相對粗一些，湛江人常用它來煲瘦肉湯。黃斎（鮻, Liza haematocheila）：味道比烏頭更鮮美些，價格也稍高，在當地市場也很常見。蚬魚（前鱗骨鱻, Osteomugil ophuyseni）：也被稱為「蟲魚」，眼睛虹膜是黃色的，肉質肥美，很受歡迎，常用來乾煎。",
+    "釋義": "亦稱作「hâu-lâng」，在湛江地區的白話中，俗稱的「厚鱗魚」或「厚鱗」，通常指的是鱻科（Mugilidae） 魚類中的幾種。由於這類魚的鱗片相對較大且明顯，因此民間常根據這個特徵來命名。具體來說，它可能指以下幾種魚——烏頭（鲻, Mugil cephalus）：在湛江也被叫做「厚鱗斎」，是這個類別裏最常見、產量最大的一種。它的口感相對粗一些，湛江人常用它來煲瘦肉湯。黃斎（鮻, Liza haematocheila）：味道比烏頭更鮮美些，價格也稍高，在當地市場也很常見。蚬魚（前鱗骨鱻, Osteomugil ophuyseni）：也被稱爲「蟲魚」，眼睛虹膜是黃色的，肉質肥美，很受歡迎，常用來乾煎。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hẫu-lầng&hâu-lâng.mp3",
     "examples": []
   },
@@ -8299,7 +8641,7 @@
     "詞條": "金絲魚",
     "LMZ": "gâm-si-nhì",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "標準正式中文名爲「金線魚（黃線金線魚/Nemipterus virgatus）」，亦稱作「紅三、紅衫」。魚身底色淡粉紅、淺緋紅，腹部銀白；體側有多條連續金黃色縱紋，從頭部一路延伸至尾鰭，陽光下金紋清晰閃亮，因此民間叫「金絲」；尾鰭深叉形，上葉會拉出一條細長金黃絲線，是金線魚最關鍵辨認點。棲息環境於北部灣外海沙泥底（水深 20–100 米），拖網捕撈為主。",
+    "釋義": "標準正式中文名爲「金線魚（黃線金線魚/Nemipterus virgatus）」，亦稱作「紅三、紅衫」。魚身底色淡粉紅、淺緋紅，腹部銀白；體側有多條連續金黃色縱紋，從頭部一路延伸至尾鰭，陽光下金紋清晰閃亮，因此民間叫「金絲」；尾鰭深叉形，上葉會拉出一條細長金黃絲線，是金線魚最關鍵辨認點。棲息環境於北部灣外海沙泥底（水深 20–100 米），拖網捕撈爲主。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gâm-si-nhì.mp3",
     "examples": []
   },
@@ -8331,7 +8673,7 @@
     "詞條": "鯆魚",
     "LMZ": "pòu-nhì",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "因身體扁圓如蒲扇，故此得名「蒲魚」，是魟類軟骨魚的統稱，市場最常見品種為赤魟、黃魟。標準中文名爲「赤魟（黃貂魚/Hemitrygon akajei）」。全身完全扁平，體盤呈斜圓蒲扇狀，寬度遠大於長度；無一般硬骨魚的側扁身形，身體後方拖一條細長如鞭子的尾柄，尾上帶有毒棘，處理時必須切除；尾皮粗糙帶橫紋。棲息於淺海沙泥灘、河口鹹淡水交匯地，底棲覓食貝類、小蝦。",
+    "釋義": "因身體扁圓如蒲扇，故此得名「蒲魚」，是魟類軟骨魚的統稱，市場最常見品種爲赤魟、黃魟。標準中文名爲「赤魟（黃貂魚/Hemitrygon akajei）」。全身完全扁平，體盤呈斜圓蒲扇狀，寬度遠大於長度；無一般硬骨魚的側扁身形，身體後方拖一條細長如鞭子的尾柄，尾上帶有毒棘，處理時必須切除；尾皮粗糙帶橫紋。棲息於淺海沙泥灘、河口鹹淡水交匯地，底棲覓食貝類、小蝦。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pòu-nhì.mp3",
     "examples": []
   },
@@ -8355,7 +8697,7 @@
     "詞條": "黑鯧",
     "LMZ": "hâk-cjơng",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "霞山、赤坎統稱烏鯧（Parastromateus niger）；民間常容易和「油鯧（灰鯧）」混淆，實為完全不同科屬兩種魚。名稱由來：全身體色深灰近烏黑、鱗片帶烏光，身形厚實如鐵板，故此得名黑鯧。體色（黑鯧關鍵標記）：全體均勻深灰褐、烏銀色，光線下帶烏金屬光澤；所有魚鰭（背鰭、臀鰭、尾鰭）呈暗黑色，無金黃色調。全身覆細小圓鱗，摸起來偏粗，油脂含量低於油鯧。棲息於北部灣外海中上層暖水魚，水深 15–40 公尺沙泥底，春夏季洄游近岸。",
+    "釋義": "霞山、赤坎統稱烏鯧（Parastromateus niger）；民間常容易和「油鯧（灰鯧）」混淆，實爲完全不同科屬兩種魚。名稱由來：全身體色深灰近烏黑、鱗片帶烏光，身形厚實如鐵板，故此得名黑鯧。體色（黑鯧關鍵標記）：全體均勻深灰褐、烏銀色，光線下帶烏金屬光澤；所有魚鰭（背鰭、臀鰭、尾鰭）呈暗黑色，無金黃色調。全身覆細小圓鱗，摸起來偏粗，油脂含量低於油鯧。棲息於北部灣外海中上層暖水魚，水深 15–40 公尺沙泥底，春夏季洄游近岸。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hâk-cjơng.mp3",
     "examples": []
   },
@@ -8395,7 +8737,7 @@
     "詞條": "南乳包",
     "LMZ": "nàm-nhũi-bao",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "遂溪南乳包是廣東湛江遂溪當地經典發麵蒸製點心，爲城區茶樓、墟鎮麪食鋪常供的早餐與宴席茶點。核心餡料與調味體系｜主料：選肥瘦均勻的三層五花肉切細粒，生肉直接調味醃製，無預先炒熟工序；靈魂調料：以紅南乳（紅腐乳）、南乳汁作為風味基底，輔以少量本地甘蔗紅糖、五香粉、生粉抓拌均勻，冷藏隔夜充分入味；風味特徵：整體以南乳醇厚鹹香為主，紅糖僅作中和腐乳腥澀之用，呈現輕微底甜，屬鹹甜平衡型肉餡，而非純甜口點心。蒸制過程中生五花肉釋放油脂形成濃潤肉汁，咬開有爆汁口感，肉質軟嫩不柴、肥油化渣不膩滯。｜區別於冰肉包：冰肉包僅以白糖、白酒醃製純肥肉，無瘦肉、無南乳，屬全甜點心；南乳包搭配肥瘦五花肉，以鹹香為主，二者原料、味型完全獨立。",
+    "釋義": "遂溪南乳包是廣東湛江遂溪當地經典發麵蒸製點心，爲城區茶樓、墟鎮麪食鋪常供的早餐與宴席茶點。核心餡料與調味體系｜主料：選肥瘦均勻的三層五花肉切細粒，生肉直接調味醃製，無預先炒熟工序；靈魂調料：以紅南乳（紅腐乳）、南乳汁作爲風味基底，輔以少量本地甘蔗紅糖、五香粉、生粉抓拌均勻，冷藏隔夜充分入味；風味特徵：整體以南乳醇厚鹹香爲主，紅糖僅作中和腐乳腥澀之用，呈現輕微底甜，屬鹹甜平衡型肉餡，而非純甜口點心。蒸制過程中生五花肉釋放油脂形成濃潤肉汁，咬開有爆汁口感，肉質軟嫩不柴、肥油化渣不膩滯。｜區別於冰肉包：冰肉包僅以白糖、白酒醃製純肥肉，無瘦肉、無南乳，屬全甜點心；南乳包搭配肥瘦五花肉，以鹹香爲主，二者原料、味型完全獨立。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nàm-nhũi-bao.mp3",
     "examples": []
   },
@@ -8403,7 +8745,7 @@
     "詞條": "嘉應子",
     "LMZ": "ga-jệng-zí",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "嘉應子古稱嘉慶子，源於唐代「嘉慶李」之說，後因口語諧音訛寫為嘉應子；廣東粵西民間沿用此稱，兼具兩層含義：一是指原生果實李子，二是指以李子乾製作的傳統蜜餞。主原料為芙蓉李乾，輔以白砂糖、食鹽、陳皮、草本香料；工序分鹽漬去澀、晾曬半乾、糖漿反覆熬煮入味、烘乾定型，分帶核嘉應子與去核嘉應子兩種規格。是過年期間家家戶戶必備的「札年果」。",
+    "釋義": "嘉應子古稱嘉慶子，源於唐代「嘉慶李」之說，後因口語諧音訛寫爲嘉應子；廣東粵西民間沿用此稱，兼具兩層含義：一是指原生果實李子，二是指以李子乾製作的傳統蜜餞。主原料爲芙蓉李乾，輔以白砂糖、食鹽、陳皮、草本香料；工序分鹽漬去澀、晾曬半乾、糖漿反覆熬煮入味、烘乾定型，分帶核嘉應子與去核嘉應子兩種規格。是過年期間家家戶戶必備的「札年果」。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ga-jệng-zí.mp3",
     "examples": []
   },
@@ -8451,7 +8793,7 @@
     "詞條": "軟壳蝦",
     "LMZ": "nhĩng-họk-ha",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "蝦類在蛻殼後、新殼尚未變硬時的一個短暫階段。｜食用價值：最大的好處是可以連殼一併進食，口感特別，亦被認為是補鈣的好選擇。由於連殼吃，體積看起來較小，部分餐廳可能不選用，但在家常食用則很受歡迎。",
+    "釋義": "蝦類在蛻殼後、新殼尚未變硬時的一個短暫階段。｜食用價值：最大的好處是可以連殼一併進食，口感特別，亦被認爲是補鈣的好選擇。由於連殼吃，體積看起來較小，部分餐廳可能不選用，但在家常食用則很受歡迎。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nhĩng-họk-ha.mp3",
     "examples": []
   },
@@ -8467,7 +8809,7 @@
     "詞條": "蟛蜞",
     "LMZ": "pàng-kèi",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "是一種棲息於海邊灘塗或鹹淡水交界處的小型蟹類，亦是製作粵西地區（如湛江、吳川）特色調味品「蟛蜞汁」的主要原料。｜外形：體型細小，大約只有拇指般大小，最大的亦僅長約 3 至 4 厘米，外觀像微型的螃蟹。｜品種與顏色：在湛江一帶，蟛蜞又被稱為「黃鉗」或「紅鉗」。按螯足顏色主要分為白螯和紅螯兩類。民間認為，以棲息於潮間帶的「白螯」品種製成的蟛蜞汁味道最佳。｜學名分類：牠屬於方蟹科（Grapsidae）的相手蟹屬，是一種偏向淡水性的小型蟹類。",
+    "釋義": "是一種棲息於海邊灘塗或鹹淡水交界處的小型蟹類，亦是製作粵西地區（如湛江、吳川）特色調味品「蟛蜞汁」的主要原料。｜外形：體型細小，大約只有拇指般大小，最大的亦僅長約 3 至 4 厘米，外觀像微型的螃蟹。｜品種與顏色：在湛江一帶，蟛蜞又被稱爲「黃鉗」或「紅鉗」。按螯足顏色主要分爲白螯和紅螯兩類。民間認爲，以棲息於潮間帶的「白螯」品種製成的蟛蜞汁味道最佳。｜學名分類：牠屬於方蟹科（Grapsidae）的相手蟹屬，是一種偏向淡水性的小型蟹類。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/pàng-kèi.mp3",
     "examples": []
   },
@@ -8483,7 +8825,7 @@
     "詞條": "青蟹",
     "LMZ": "cêng-hãi",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "擬穴青蟹（學名：Scylla paramamosain）或鋸緣青蟹（學名：Scylla serrata），是華南沿岸最常見且最具經濟價值的食用蟹類之一。｜外形：青蟹的頭胸甲呈橢圓形，表面光滑，顏色一般為青綠色或深綠色，螯足粗大有力。｜棲息環境：主要棲息於鹹淡水交匯的河口、紅樹林灘塗及淺海泥底區域。湛江沿海的灘塗環境正適合其生長，因此當地是青蟹的著名產區。",
+    "釋義": "擬穴青蟹（學名：Scylla paramamosain）或鋸緣青蟹（學名：Scylla serrata），是華南沿岸最常見且最具經濟價值的食用蟹類之一。｜外形：青蟹的頭胸甲呈橢圓形，表面光滑，顏色一般爲青綠色或深綠色，螯足粗大有力。｜棲息環境：主要棲息於鹹淡水交匯的河口、紅樹林灘塗及淺海泥底區域。湛江沿海的灘塗環境正適合其生長，因此當地是青蟹的著名產區。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/cêng-hãi.mp3",
     "examples": []
   },
@@ -8745,7 +9087,7 @@
     "詞條": "甖",
     "LMZ": "ang",
     "詞條類別": "名詞-日雜・百貨・傢俬",
-    "釋義": "小口大肚的瓶子或罐子，通常為瓦製或玻璃製，用於盛載東西",
+    "釋義": "小口大肚的瓶子或罐子，通常爲瓦製或玻璃製，用於盛載東西",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ang.mp3",
     "examples": []
   },
@@ -8871,7 +9213,7 @@
     "詞條": "筆錔仔",
     "LMZ": "bâk-tâp-zấy",
     "詞條類別": "名詞-飲食・烹飪・水產",
-    "釋義": "短型小槍烏賊，學名多為杜氏槍烏賊 / 日本槍烏賊（短槍烏賊），屬槍烏賊科，十隻觸手、身軀細圓筒狀，",
+    "釋義": "短型小槍烏賊，學名多爲杜氏槍烏賊 / 日本槍烏賊（短槍烏賊），屬槍烏賊科，十隻觸手、身軀細圓筒狀，",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/bâk-tâp-zấy.mp3",
     "examples": []
   },
@@ -9237,7 +9579,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jâk-ce-bạk-dạm.mp3",
     "examples": [
       {
-        "例句": "今下阿蠔著春嗲，市場（阿）道車八担咁多。\n〔眼下生蠔正當造，市場裡多得不得了。〕",
+        "例句": "今下阿蠔著春嗲，市場（阿）道車八担咁多。\n〔眼下生蠔正當造，市場裏多得不得了。〕",
         "例句的LMZ轉寫": "Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu ce-bạk-dạm gẫm do.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu ce-bạk-dạm gẫm do..mp3"
       }
@@ -9251,7 +9593,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jâk-ce-lò.mp3",
     "examples": [
       {
-        "例句": "今下阿蠔著春嗲，市場（阿）道車籮咁多。\n〔眼下生蠔正當造，市場裡多得不得了。〕",
+        "例句": "今下阿蠔著春嗲，市場（阿）道車籮咁多。\n〔眼下生蠔正當造，市場裏多得不得了。〕",
         "例句的LMZ轉寫": "Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu ce-lò gẫm do.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu ce-lò gẫm do..mp3"
       }
@@ -9265,7 +9607,7 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jâk-po-lo.mp3",
     "examples": [
       {
-        "例句": "今下阿蠔著春嗲，市場（阿）道笸籮咁多。\n〔眼下生蠔正當造，市場裡多得不得了。〕",
+        "例句": "今下阿蠔著春嗲，市場（阿）道笸籮咁多。\n〔眼下生蠔正當造，市場裏多得不得了。〕",
         "例句的LMZ轉寫": "Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu po-lo gẫm do.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ga-hả-hòu zjờk-câng dè, sĩ-cjởng-dòu po-lo gẫm do..mp3"
       }
@@ -9337,7 +9679,7 @@
     "詞條": "樣衰衰，似煎䭔，出到門口被狗追。",
     "LMZ": "Jớng sui-sui, cĩ zing-dui, câk dọu mùng-hấu béi gấu zui.",
     "詞條類別": "俗語",
-    "釋義": "嘲笑一個人長得難看或胖，連狗都看不順眼（或以為是食物）要追他；「長得醜醜，像個煎堆，一出門口就被狗追。」",
+    "釋義": "嘲笑一個人長得難看或胖，連狗都看不順眼（或以爲是食物）要追他；「長得醜醜，像個煎堆，一出門口就被狗追。」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jớng sui-sui, cĩ zing-dui, câk dọu mùng-hấu béi gấu zui..mp3",
     "examples": []
   },
@@ -9361,7 +9703,7 @@
     "詞條": "屙屎㧺中屌",
     "LMZ": "O-sí dầp-zộng djâu",
     "詞條類別": "俗語",
-    "釋義": "概率幾乎為零；狗屎運；相當於廣府話的「六合彩都冇咁容易中」",
+    "釋義": "概率幾乎爲零；狗屎運；相當於廣府話的「六合彩都冇咁容易中」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-sí dầp-zộng djâu.mp3",
     "examples": []
   },
@@ -9561,7 +9903,7 @@
     "詞條": "豬骨換糖膠。",
     "LMZ": "Zi-guâk vùng tòng-gjâu.",
     "詞條類別": "俗語",
-    "釋義": "描述的是一種表面看似等價交換，實則價值嚴重不對等、一方明顯吃虧的交易或行為。",
+    "釋義": "描述的是一種表面看似等價交換，實則價值嚴重不對等、一方明顯吃虧的交易或行爲。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Zi-guâk vùng tòng-gjâu..mp3",
     "examples": []
   },
@@ -9617,7 +9959,7 @@
     "詞條": "聲喉大，使假銀。",
     "LMZ": "Sjâng-hầu dài, sấy gá-ngầng.",
     "詞條類別": "俗語",
-    "釋義": "一個人說話的聲勢很大（聲喉大），但實際上他的行為或能力卻是假的、虛的、不實在的（使假銀）",
+    "釋義": "一個人說話的聲勢很大（聲喉大），但實際上他的行爲或能力卻是假的、虛的、不實在的（使假銀）",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Sjâng-hầu dài, sấy gá-ngầng..mp3",
     "examples": []
   },
@@ -9633,7 +9975,7 @@
     "詞條": "老虎借豬——有借冇還。",
     "LMZ": "Lõu-fú zẹ zi, jẫu zẹ mõu vàng.",
     "詞條類別": "俗語",
-    "釋義": "比喻東西一旦借給（或落到）某些特定對象手裡，就絕對不可能要回來。強調的不是對方“忘記還”或“暫時還不了”，而是從一開始就根本沒打算還，或者根本沒有能力（或意願）保障歸還。",
+    "釋義": "比喻東西一旦借給（或落到）某些特定對象手裏，就絕對不可能要回來。強調的不是對方“忘記還”或“暫時還不了”，而是從一開始就根本沒打算還，或者根本沒有能力（或意願）保障歸還。",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Lõu-fú zẹ zi, jẫu zẹ mõu vàng..mp3",
     "examples": []
   },
@@ -9732,6 +10074,20 @@
     "釋義": "收拾你",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/zọu nẽi-a sậy-gại hợi.mp3",
     "examples": []
+  },
+  {
+    "詞條": "屌靚",
+    "LMZ": "djâu-ljậng",
+    "詞條類別": "俗語",
+    "釋義": "｛俚｝糟糕，坏了",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/djâu-ljậng.mp3",
+    "examples": [
+      {
+        "例句": "哦豁，今下屌靚囉。\n〔哎呀，這下完蛋了！ 〕",
+        "例句的LMZ轉寫": "O-hõ, ga-hã djâu-ljậng lọ!",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/O-hõ, ga-hã djâu-ljậng lọ!.mp3"
+      }
+    ]
   },
   {
     "詞條": "肯",
