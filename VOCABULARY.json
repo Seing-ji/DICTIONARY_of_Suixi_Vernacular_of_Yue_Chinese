@@ -916,16 +916,6 @@
         "例句": "你撈我焗一壺綠茶囉。\n〔你幫我泡一壺綠茶吧。〕",
         "例句的LMZ轉寫": "Nẽi lou ngõ gồk Jâk fù lồk-cà lo.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi lou ngõ gồk Jâk fù lồk-cà lo..mp3"
-      },
-      {
-        "例句": "我冇撈你撩嗲！\n（我不和你玩了！）",
-        "例句的LMZ轉寫": "Ngõ mõu lou nẽi lìu dè.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ mõu lou nẽi lìu dè..mp3"
-      },
-      {
-        "例句": "今日下晝我行撈海平村那個方向去散步嗲。\n〔今天下午我朝海平村那個方向去散步了。〕",
-        "例句的LMZ轉寫": "Gâm-nhầk hà-zậu ngõ hàng lou Hói-pềng Cing nu-gọ fong-hjợng hợi sạng-bòu dè.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-nhầk hà-zậu ngõ hàng lou Hói-pềng Cing nu-gọ fong-hjợng hợi sạng-bòu dè..mp3"
       }
     ]
   },
@@ -5501,7 +5491,7 @@
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hấy ngõ a-dòu; hấy gông-jìng a-dòu; cĩ zông-mữ a-sậy.mp3"
       },
       {
-        "例句": "尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園裏面追逐打鬧。〕",
+        "例句": "③尐細蚊仔喺公園（阿）道跑跑趯趯。\n〔這些小孩子在公園那裏追逐打鬧。〕",
         "例句的LMZ轉寫": "Dik xậy-mâng-zấy hấy gông-jỉ-dòu páo-páo djậk-djậk.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Dik xậy-mâng-zấy hấy gông-jỉ-dòu páo-páo djậk-djậk..mp3"
       }
@@ -6589,18 +6579,13 @@
     "examples": [
       {
         "例句": "①啊噉你畀啲銭我使囉。\n（那你給點錢給我花吧。）",
-        "例句的LMZ轉寫": "A gấm nẽi béi dik cìng ngõ sấy lo.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A gấm nẽi béi dik cìng ngõ sấy lo..mp3"
+        "例句的LMZ轉寫": "A-gấm nẽi béi dik cìng ngõ sấy lo.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A-gấm nẽi béi dik cìng ngõ sấy lo..mp3"
       },
       {
         "例句": "②多謝你噉幫我。\n〔多謝你這樣幫助我。〕",
         "例句的LMZ轉寫": "Do-zè nẽi gấm bong ngõ.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Do-zè nẽi gấm bong ngõ..mp3"
-      },
-      {
-        "例句": "噉係冇得箇。\n〔這樣是不行的。〕",
-        "例句的LMZ轉寫": "Gấm hầy mõu dâk gọ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gấm hầy mõu dâk gọ..mp3"
       }
     ]
   },
@@ -6915,6 +6900,20 @@
     ]
   },
   {
+    "詞條": "撈",
+    "LMZ": "lou",
+    "詞條類別": "連詞",
+    "釋義": "和",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lou.mp3",
+    "examples": [
+      {
+        "例句": "我冇撈你撩嗲！\n（我不和你玩了！）",
+        "例句的LMZ轉寫": "Ngõ mõu lou nẽi lìu dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ mõu lou nẽi lìu dè..mp3"
+      }
+    ]
+  },
+  {
     "詞條": "跟",
     "LMZ": "gâng",
     "詞條類別": "連詞",
@@ -6925,11 +6924,6 @@
         "例句": "我冇跟你撩嗲！\n（我不和你玩了！）",
         "例句的LMZ轉寫": "Ngõ mõu gâng nẽi lìu dè.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ mõu gâng nẽi lìu dè..mp3"
-      },
-      {
-        "例句": "你而家跟𪤆坭咯？\n〔你現在在哪裏呢？〕",
-        "例句的LMZ轉寫": "Nẽi jì-ga gâng sing-nây lo？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jì-ga gâng sing-nây lo？.mp3"
       }
     ]
   },
@@ -7136,6 +7130,28 @@
     "詞條類別": "代詞",
     "釋義": "那個",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/nu-gọ.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "噉",
+    "LMZ": "gấm",
+    "詞條類別": "代詞",
+    "釋義": "用來指代一種方式、情況或狀態，相當於普通話的「這樣」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gấm.mp3",
+    "examples": [
+      {
+        "例句": "噉係冇得箇。\n〔這樣是不行的。〕",
+        "例句的LMZ轉寫": "Gấm hầy mõu dâk gọ.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gấm hầy mõu dâk gọ..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "阿",
+    "LMZ": "a",
+    "詞條類別": "代詞",
+    "釋義": "指示詞，可近指也可遠指，使用範圍較窄，通常限定在前面有明確對象的情況下。",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/a.mp3",
     "examples": []
   },
   {
@@ -7919,6 +7935,14 @@
     "詞條類別": "名詞-文教・娛樂・技藝",
     "釋義": "撲克花式「A」",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/jing-sí.mp3",
+    "examples": []
+  },
+  {
+    "詞條": "勾",
+    "LMZ": "ngâu",
+    "詞條類別": "名詞-文教・娛樂・技藝",
+    "釋義": "撲克花式「J」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ngâu.mp3",
     "examples": []
   },
   {
@@ -9223,13 +9247,7 @@
     "詞條類別": "名詞-日雜・百貨・傢俬",
     "釋義": "（放行李或雜物的）小箱子，行李箱",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gip.mp3",
-    "examples": [
-      {
-        "例句": "一篋油\n〔一桶油〕",
-        "例句的LMZ轉寫": "Jâk gip jầu",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jâk gip jầu.mp3"
-      }
-    ]
+    "examples": []
   },
   {
     "詞條": "㞘",
@@ -9352,6 +9370,20 @@
     "examples": []
   },
   {
+    "詞條": "跟",
+    "LMZ": "gâng",
+    "詞條類別": "介詞",
+    "釋義": "在；位於",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gâng.mp3",
+    "examples": [
+      {
+        "例句": "你而家跟𪤆坭咯？\n〔你現在在哪裏呢？〕",
+        "例句的LMZ轉寫": "Nẽi jì-ga gâng sing-nây lo？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Nẽi jì-ga gâng sing-nây lo？.mp3"
+      }
+    ]
+  },
+  {
     "詞條": "喺",
     "LMZ": "hấy",
     "詞條類別": "介詞",
@@ -9362,6 +9394,20 @@
         "例句": "我喺赤坎菠蘿街嗰道。\n〔我在赤坎菠蘿街這裏。〕",
         "例句的LMZ轉寫": "Ngõ hấy Cjậk-hậm Bo-lò Gai gó-dòu.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Ngõ hấy Cjậk-hậm Bo-lò Gai gó-dòu..mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "撈",
+    "LMZ": "lou",
+    "詞條類別": "介詞",
+    "釋義": "朝向（方位）\n公式：動詞+撈+方位詞",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/lou.mp3",
+    "examples": [
+      {
+        "例句": "今日下晝我行撈海平村那個方向去散步嗲。\n〔今天下午我朝海平村那個方向去散步了。〕",
+        "例句的LMZ轉寫": "Gâm-nhầk hà-zậu ngõ hàng lou Hói-pềng Cing nu-gọ fong-hjợng hợi sạng-bòu dè.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Gâm-nhầk hà-zậu ngõ hàng lou Hói-pềng Cing nu-gọ fong-hjợng hợi sạng-bòu dè..mp3"
       }
     ]
   },
@@ -9624,6 +9670,20 @@
         "例句": "一～仔鹽\n〔一小撮鹽〕",
         "例句的LMZ轉寫": "Jâk zjep-zấy jìm",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jâk zjep-zấy jìm.mp3"
+      }
+    ]
+  },
+  {
+    "詞條": "篋",
+    "LMZ": "gip",
+    "詞條類別": "量詞",
+    "釋義": "量詞「桶」或「箱」",
+    "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/gip.mp3",
+    "examples": [
+      {
+        "例句": "一篋油\n〔一桶油〕",
+        "例句的LMZ轉寫": "Jâk gip jầu",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Jâk gip jầu.mp3"
       }
     ]
   },
