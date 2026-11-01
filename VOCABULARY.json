@@ -2132,11 +2132,11 @@
     "詞條": "㗾",
     "LMZ": "hjơ",
     "詞條類別": "謂詞",
-    "釋義": "【黎話詞】大幅向後運動貌",
+    "釋義": "【黎話詞】後仰貌",
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/hjơ.mp3",
     "examples": [
       {
-        "例句": "佢阿頭都㗾撈後面去嗲。\n〔他的頭都極力向後仰了〕",
+        "例句": "佢阿頭都㗾撈後面去嗲。\n〔他的頭都向後仰了。〕",
         "例句的LMZ轉寫": "Kẽi-a tầu dou hjơ lou hầu-ming hợi dè.",
         "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/Kẽi-a tầu dou hjơ lou hầu-ming hợi dè..mp3"
       }
@@ -6579,8 +6579,8 @@
     "examples": [
       {
         "例句": "①啊噉你畀啲銭我使囉。\n（那你給點錢給我花吧。）",
-        "例句的LMZ轉寫": "A-gấm nẽi béi dik cìng ngõ sấy lo.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A-gấm nẽi béi dik cìng ngõ sấy lo..mp3"
+        "例句的LMZ轉寫": "A gấm nẽi béi dik cìng ngõ sấy lo.",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A gấm nẽi béi dik cìng ngõ sấy lo..mp3"
       },
       {
         "例句": "②多謝你噉幫我。\n〔多謝你這樣幫助我。〕",
@@ -6949,14 +6949,9 @@
     "vocabularyAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/ha-lè.mp3",
     "examples": [
       {
-        "例句": "A：弟哥今晚又來食飯哇。\n（表哥今晚也來吃飯哦。〕",
-        "例句的LMZ轉寫": "A：Dí-go gâm-mãng jầu lòi sềk-fàng vạ.",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A：Dí-go gâm-mãng jầu lòi sềk-fàng vạ..mp3"
-      },
-      {
-        "例句": "B：哈咧佢又撈我講冇來？\n〔但是他又跟我說他不來？〕",
-        "例句的LMZ轉寫": "B：Ha-lè kẽi jầu lou ngõ góng mõu lòi？",
-        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/B：Ha-lè kẽi jầu lou ngõ góng mõu lòi？.mp3"
+        "例句": "A：弟哥今晚又來食飯哇。\n〔表哥今晚也來吃飯哦。〕\nB：哈咧佢又撈我講冇來？\n〔但是他又跟我說他不來？〕",
+        "例句的LMZ轉寫": "A：Dí-go gâm-mãng jầu lòi sềk-fàng vạ.｜B：Ha-lè kẽi jầu lou ngõ góng mõu lòi？",
+        "exampleAudio": "https://raw.githubusercontent.com/Seing-ji/Audio_for_Vocabulary_of_DICTIONARY/main/A：Dí-go gâm-mãng jầu lòi sềk-fàng vạ.｜B：Ha-lè kẽi jầu lou ngõ góng mõu lòi？.mp3"
       }
     ]
   },
