@@ -14,6 +14,16 @@
     <meta name="apple-mobile-web-app-title" content="遂城土白話音典">
     <!-- ===== PWA 相关引用结束 ===== -->
     <style>
+        /* ===== Gentium SemiBold Italic 网络字体 ===== */
+        @font-face {
+            font-family: "Gentium SemiBold Italic";
+            src: url("/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/fonts/Gentium-SemiBoldItalic.woff2") format("woff2");
+            font-weight: 600;
+            font-style: italic;
+            font-display: swap;
+        }
+        /* ===== Gentium 字体声明结束 ===== */
+
         :root {
             --primary-color: #4a6fa5;
             --secondary-color: #6b8cbc;
@@ -190,15 +200,19 @@
         }
         
         .lmz-input-mode {
-            font-family: "Times New Roman", Times, serif !important;
+            font-family: "Gentium SemiBold Italic", "Times New Roman", Times, serif !important;
+            font-style: italic;
         }
         
         .vocab-lmz-mode {
-            font-family: "Times New Roman", Times, serif !important;
+            font-family: "Gentium SemiBold Italic", "Times New Roman", Times, serif !important;
+            font-style: italic;
         }
         
         .lmz-value, .example-lmz {
-            font-family: "Times New Roman", Times, serif !important;
+            font-family: "Gentium SemiBold Italic", "Times New Roman", Times, serif !important;
+            font-weight: 600 !important;
+            font-style: italic;
         }
         
         .detail-item {
@@ -401,11 +415,12 @@
         }
         
         .example-lmz {
-            font-family: "Times New Roman", Times, serif !important;
+            font-family: "Gentium SemiBold Italic", "Times New Roman", Times, serif !important;
             font-size: 1.25rem;
             color: #4a6fa5;
             margin-bottom: 4px;
-            font-weight: normal;
+            font-weight: 600;
+            font-style: italic;
             padding-right: 40px;
             word-break: break-word;
             white-space: normal;
@@ -596,7 +611,9 @@
         }
         
         .instruction-latin {
-            font-family: "Times New Roman", Times, serif !important;
+            font-family: "Gentium SemiBold Italic", "Times New Roman", Times, serif !important;
+            font-weight: 600;
+            font-style: italic;
         }
         
         .instruction-link {
