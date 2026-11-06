@@ -281,22 +281,21 @@
         
         @media (min-width: 769px) {
             .detail-item {
-                flex-wrap: wrap;
-                overflow: visible;
+                display: block; /* 改回块级元素，回归自然文本流 */
                 padding-bottom: 4px;
-            }
-            .detail-item::-webkit-scrollbar {
-                height: 4px;
+                overflow: visible;
             }
             .lmz-value {
-                white-space: normal;
-                word-break: break-word;
+                white-space: normal !important; /* 允许换行 */
+                word-break: break-word; /* 防止超长单词撑破 */
+                display: inline !important; /* 行内显示，紧跟在标签后面 */
                 flex-shrink: 1;
-                display: inline;
             }
             .meta-group {
-                flex-shrink: 0;
+                display: inline-flex; /* 行内弹性盒，紧跟在文字末尾 */
+                vertical-align: middle;
                 margin-left: 12px;
+                flex-wrap: wrap;
             }
             .category-tag {
                 font-size: 0.95rem;
@@ -324,7 +323,7 @@
                 font-size: 1.3rem !important;
                 white-space: normal;
                 word-break: break-word;
-                display: inline;
+                display: inline !important;
                 line-height: 1.4;
             }
             .meta-group {
