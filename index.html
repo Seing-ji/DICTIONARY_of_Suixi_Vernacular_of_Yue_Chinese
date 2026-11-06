@@ -227,8 +227,9 @@
         .detail-item > span:not(.label):not(.lmz-value) {
             font-size: 1.15rem; /* 这里调整大小，原来是继承 body 的 1em */
             color: #222; /* 稍微深一点的灰，看起来更清晰 */
-            vertical-align: middle;
             line-height: 1.5;
+            position: relative; /* 新增 */
+            top: 1px; /* 新增：往下压 1 像素。如果觉得高，可以改 2px */
         }
         
         .label {
@@ -251,7 +252,8 @@
             display: inline;
             word-break: break-word;
             white-space: normal;
-            vertical-align: middle; /* 新增：垂直居中对齐 */
+            position: relative; /* 新增 */
+            top: -2px; /* 新增：往上提 2 像素。如果还觉得低，可以改 -3px 或 -4px */
         }
         
         .lmz-wrapper {
