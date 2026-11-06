@@ -255,7 +255,7 @@
             word-break: break-word;
             white-space: normal;
             position: relative; /* 新增 */
-            top: 0.5px; /* 往上为负，往下为正 */
+            top: 0.8px; /* 往上为负，往下为正 */
         }
         
         .lmz-wrapper {
@@ -325,11 +325,22 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                gap: 6px;
+                gap: 0px;
+                display: block; /* 关键：改成 block，让文字像文章一样自然流式排版 */
+            }
+            /* 新增：让手机端的释义值跟标签对齐 */
+            .detail-item > span:not(.label):not(.lmz-value) {
+                display: inline; /* 关键：确保它紧跟在标签后面，而不是独立成块 */
+                position: relative;
+                top: 0px; /* 如果值偏高，就往下沉 1-2px；如果偏低，就写 -1px */
             }
             .label {
                 line-height: 1.4;
                 margin-top: 2px;
+                display: inline-block; /* 确保它和后面的文字在一行 */
+                margin-right: 6px; /* 增加一点右侧间距，代替原来的 gap */
+                position: relative;
+                top: 0px; /* 如果标签偏低，就往上提 1px */
             }
             .lmz-value {
                 font-size: 1.3rem !important;
@@ -337,6 +348,8 @@
                 word-break: break-word;
                 display: inline !important;
                 line-height: 1.4;
+                position: relative;
+                top: 0px; /* 调整 LMZ 的上下位置 */
             }
             .meta-group {
                 display: inline-flex;
