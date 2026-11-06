@@ -257,7 +257,8 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 8px;
-            margin-left: 8px;
+            margin-left: 12px;
+            vertical-align: middle;
         }
         
         .category-tag {
@@ -280,18 +281,18 @@
         
         @media (min-width: 769px) {
             .detail-item {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                overflow-y: visible;
+                flex-wrap: wrap;
+                overflow: visible;
                 padding-bottom: 4px;
             }
             .detail-item::-webkit-scrollbar {
                 height: 4px;
             }
             .lmz-value {
-                white-space: nowrap;
-                flex-shrink: 0;
-                display: inline-block;
+                white-space: normal;
+                word-break: break-word;
+                flex-shrink: 1;
+                display: inline;
             }
             .meta-group {
                 flex-shrink: 0;
@@ -431,7 +432,7 @@
         .example-translation {
             font-size: 0.95rem;
             color: #666;
-            font-style: italic;
+            font-style: normal;
             margin-bottom: 4px;
             word-wrap: break-word;
             padding-right: 40px;
