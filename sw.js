@@ -7,7 +7,7 @@
      - 音频                     → 不拦截（交给页面自己的多源回退逻辑）
    ============================================ */
 
-const CACHE_NAME = 'suixi-dictionary-v5';
+const CACHE_NAME = 'suixi-dictionary-v6';
 
 // 预缓存的核心资源（首次安装时下载）
 const PRECACHE_URLS = [
@@ -16,7 +16,7 @@ const PRECACHE_URLS = [
   '/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/manifest.json',
   '/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/icons/icon-192.png',
   '/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/icons/icon-512.png',
-  '/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/fonts/Gentium-SemiBoldItalic.woff2'
+  '/DICTIONARY_of_Suixi_Vernacular_of_Yue_Chinese/fonts/be-vietnam-pro-vietnamese-500-normal.woff2'
 ];
 
 /* --------------------------------------------
