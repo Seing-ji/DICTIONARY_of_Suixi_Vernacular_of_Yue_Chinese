@@ -12805,9 +12805,9 @@
   },
   {
     "單字": "湍",
-    "LMZ": "tâng",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/tâng.mp3"
+    "LMZ": "ting",
+    "Note": "推導音，他端切",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/ting.mp3"
   },
   {
     "單字": "檀",
@@ -30997,15 +30997,15 @@
   },
   {
     "單字": "劇",
-    "LMZ": "kjầk&kjàk",
+    "LMZ": "gjầk",
     "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/kjầk&kjàk.mp3"
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/gjầk.mp3"
   },
   {
     "單字": "屐",
-    "LMZ": "kjầk&kjàk",
+    "LMZ": "gjầk",
     "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/kjầk&kjàk.mp3"
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/gjầk.mp3"
   },
   {
     "單字": "躈",
@@ -52111,45 +52111,39 @@
   },
   {
     "單字": "蹋",
-    "LMZ": "dàp",
+    "LMZ": "tạp",
     "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/tạp.mp3"
   },
   {
     "單字": "錔",
-    "LMZ": "dàp",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "LMZ": "tâp",
+    "Note": "推導音，他合切",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/tâp.mp3"
   },
   {
     "單字": "踏",
-    "LMZ": "dàp",
+    "LMZ": "dầp",
     "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dầp.mp3"
   },
   {
     "單字": "遝",
-    "LMZ": "dàp",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
-  },
-  {
-    "單字": "遝",
-    "LMZ": "dàp",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "LMZ": "dầp",
+    "Note": "推導音，達合切",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dầp.mp3"
   },
   {
     "單字": "龘",
-    "LMZ": "dàp",
-    "Note": "同「龖」，龍騰飛的樣子。",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "LMZ": "dầp",
+    "Note": "推導音，音沓，同「龖」，龍騰飛的樣子",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dầp.mp3"
   },
   {
     "單字": "龖",
-    "LMZ": "dàp",
-    "Note": "",
-    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dàp.mp3"
+    "LMZ": "dầp",
+    "Note": "推導音，達合切",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dầp.mp3"
   },
   {
     "單字": "盾",
@@ -61018,5 +61012,11 @@
     "LMZ": "a",
     "Note": "",
     "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/a.mp3"
+  },
+  {
+    "單字": "沓",
+    "LMZ": "dầp",
+    "Note": "推導音，達合切",
+    "audio": "https://raw.githubusercontent.com/Seing-ji/LMZ_Audio_for_editing/main/dầp.mp3"
   }
 ]
